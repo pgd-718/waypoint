@@ -767,6 +767,39 @@
             "collectionFormat": "multi"
           },
           {
+            "name": "deprecated_pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "deprecated_pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
             "name": "pagination.page_size",
             "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
             "in": "query",
@@ -787,6 +820,17 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -924,6 +968,39 @@
             "collectionFormat": "multi"
           },
           {
+            "name": "deprecated_pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "deprecated_pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
             "name": "pagination.page_size",
             "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
             "in": "query",
@@ -944,6 +1021,17 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -1049,6 +1137,39 @@
             "format": "uint64"
           },
           {
+            "name": "deprecated_pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "deprecated_pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
             "name": "pagination.page_size",
             "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
             "in": "query",
@@ -1069,6 +1190,17 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -1246,6 +1378,39 @@
             "collectionFormat": "multi"
           },
           {
+            "name": "deprecated_pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "deprecated_pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
             "name": "pagination.page_size",
             "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
             "in": "query",
@@ -1266,6 +1431,17 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -1371,6 +1547,39 @@
             "format": "uint64"
           },
           {
+            "name": "deprecated_pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "deprecated_pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "deprecated_sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          },
+          {
             "name": "pagination.page_size",
             "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
             "in": "query",
@@ -1391,6 +1600,17 @@
             "in": "query",
             "required": false,
             "type": "string"
+          },
+          {
+            "name": "sorting.order_by",
+            "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order.",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
           }
         ],
         "tags": [
@@ -5838,6 +6058,69 @@
         ]
       }
     },
+    "/ui/deployment/{ref.id}": {
+      "get": {
+        "summary": "GetDeployment returns a deployment",
+        "operationId": "Waypoint_UI_GetDeployment",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/hashicorp.waypoint.UI.GetDeploymentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/grpc.gateway.runtime.Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ref.id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ref.sequence.application.application",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ref.sequence.application.project",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "ref.sequence.number",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "load_details",
+            "description": "Indicate if the fetched deployments should include additional information\nabout each deployment.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "NONE",
+              "ARTIFACT",
+              "BUILD"
+            ],
+            "default": "NONE"
+          }
+        ],
+        "tags": [
+          "Waypoint"
+        ]
+      }
+    },
     "/ui/deployments/application/{application.application}": {
       "get": {
         "summary": "List deployments for a given application.",
@@ -6196,6 +6479,169 @@
             "name": "project.project",
             "in": "path",
             "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Waypoint"
+        ]
+      }
+    },
+    "/ui/project/{project.project}/pipelines": {
+      "get": {
+        "summary": "List pipelines with last run for each for a given project.",
+        "operationId": "Waypoint_UI_ListPipelines",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/hashicorp.waypoint.UI.ListPipelinesResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/grpc.gateway.runtime.Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "project.project",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Waypoint"
+        ]
+      }
+    },
+    "/ui/project/{ref.sequence.application.project}/application/{ref.sequence.application.application}/deployment/{ref.sequence.number}": {
+      "get": {
+        "summary": "GetDeployment returns a deployment",
+        "operationId": "Waypoint_UI_GetDeployment2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/hashicorp.waypoint.UI.GetDeploymentResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/grpc.gateway.runtime.Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "ref.sequence.application.project",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ref.sequence.application.application",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ref.sequence.number",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "uint64"
+          },
+          {
+            "name": "ref.id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "load_details",
+            "description": "Indicate if the fetched deployments should include additional information\nabout each deployment.",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "NONE",
+              "ARTIFACT",
+              "BUILD"
+            ],
+            "default": "NONE"
+          }
+        ],
+        "tags": [
+          "Waypoint"
+        ]
+      }
+    },
+    "/ui/projects": {
+      "get": {
+        "summary": "List full projects (not just refs)",
+        "operationId": "Waypoint_UI_ListProjects",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/hashicorp.waypoint.UI.ListProjectsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/grpc.gateway.runtime.Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pagination.page_size",
+            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pagination.next_page_token",
+            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "pagination.previous_page_token",
+            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
+            "in": "query",
+            "required": false,
             "type": "string"
           }
         ],
@@ -6741,53 +7187,6 @@
             }
           }
         },
-        "tags": [
-          "Waypoint"
-        ]
-      }
-    },
-    "/v1/ui/projects": {
-      "get": {
-        "summary": "List full projects (not just refs)",
-        "operationId": "Waypoint_UI_ListProjects",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/hashicorp.waypoint.UI.ListProjectsResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/grpc.gateway.runtime.Error"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "pagination.page_size",
-            "description": "The max number of results per page that should be returned. If the number\nof available results is larger than `page_size`, a `next_page_token` is\nreturned which can be used to get the next page of results in subsequent\nrequests. A value of zero will cause `page_size` to be defaulted.",
-            "in": "query",
-            "required": false,
-            "type": "integer",
-            "format": "int64"
-          },
-          {
-            "name": "pagination.next_page_token",
-            "description": "Specifies a page token to use to retrieve the next page. Set this to the\n`next_page_token` returned by previous list requests to get the next page of\nresults. If set, `previous_page_token` must not be set.",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "pagination.previous_page_token",
-            "description": "Specifies a page token to use to retrieve the previous page. Set this to\nthe `previous_page_token` returned by previous list requests to get the\nprevious page of results. If set, `next_page_token` must not be set.",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          }
-        ],
         "tags": [
           "Waypoint"
         ]
@@ -11303,6 +11702,19 @@
         }
       }
     },
+    "hashicorp.waypoint.SortingRequest": {
+      "type": "object",
+      "properties": {
+        "order_by": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specifies the list of per field ordering that should be used for sorting.\nThe order matters as rows are sorted in order by fields and when the field\nmatches, the next field is used to tie break the ordering.\nThe per field default ordering is ascending.\n\nThe fields should be immutable, unique, and orderable. If the field is\nnot unique, more than one sort fields should be passed.\n\nExample: order_by=name,age desc,created_at asc\nIn that case, 'name' will get the default 'ascending' order."
+        }
+      },
+      "description": "https://github.com/hashicorp/cloud-api/blob/master/hashicorp/cloud/common/sorting.proto\nSortingRequest are the parameters for a sorted list request."
+    },
     "hashicorp.waypoint.Status": {
       "type": "object",
       "properties": {
@@ -11951,6 +12363,20 @@
         }
       }
     },
+    "hashicorp.waypoint.UI.ListPipelinesResponse": {
+      "type": "object",
+      "properties": {
+        "pipelines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hashicorp.waypoint.UI.PipelineBundle"
+          }
+        },
+        "pagination": {
+          "$ref": "#/definitions/hashicorp.waypoint.PaginationResponse"
+        }
+      }
+    },
     "hashicorp.waypoint.UI.ListProjectsResponse": {
       "type": "object",
       "properties": {
@@ -11978,6 +12404,39 @@
             "$ref": "#/definitions/hashicorp.waypoint.UI.ReleaseBundle"
           },
           "description": "The list of releases with related messages prefetched."
+        }
+      }
+    },
+    "hashicorp.waypoint.UI.PipelineBundle": {
+      "type": "object",
+      "properties": {
+        "pipeline": {
+          "$ref": "#/definitions/hashicorp.waypoint.Pipeline"
+        },
+        "last_run": {
+          "$ref": "#/definitions/hashicorp.waypoint.UI.PipelineRunBundle"
+        },
+        "total_runs": {
+          "type": "string",
+          "format": "uint64"
+        }
+      }
+    },
+    "hashicorp.waypoint.UI.PipelineRunBundle": {
+      "type": "object",
+      "properties": {
+        "pipeline_run": {
+          "$ref": "#/definitions/hashicorp.waypoint.PipelineRun"
+        },
+        "queue_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "application": {
+          "$ref": "#/definitions/hashicorp.waypoint.Ref.Application"
+        },
+        "data_source_ref": {
+          "$ref": "#/definitions/hashicorp.waypoint.Job.DataSource.Ref"
         }
       }
     },

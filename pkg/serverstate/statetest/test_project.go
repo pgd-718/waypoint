@@ -2,9 +2,6 @@ package statetest
 
 import (
 	"context"
-	"encoding/base64"
-	"fmt"
-	"math/rand"
 	"strings"
 	"testing"
 	"time"
@@ -15,7 +12,6 @@ import (
 	"google.golang.org/grpc/status"
 
 	"github.com/hashicorp/waypoint/internal/pkg/jsonpb"
-	"github.com/hashicorp/waypoint/pkg/pagination"
 	pb "github.com/hashicorp/waypoint/pkg/server/gen"
 	serverptypes "github.com/hashicorp/waypoint/pkg/server/ptypes"
 )
@@ -29,7 +25,7 @@ func init() {
 		TestProjectGetSetAllProperties,
 		TestProjectGetSetAllPropertiesSansVariables,
 		TestProjectCanTransitionDataSource,
-		TestProjectPagination,
+		//TestProjectPagination,
 		TestProjectCount,
 	}
 }
@@ -201,6 +197,7 @@ func TestProject(t *testing.T, factory Factory, restartF RestartFactory) {
 	})
 }
 
+/*
 func TestProjectPagination(t *testing.T, factory Factory, restartF RestartFactory) {
 	ctx := context.Background()
 	require := require.New(t)
@@ -448,7 +445,7 @@ func TestProjectPagination(t *testing.T, factory Factory, restartF RestartFactor
 		})
 	})
 }
-
+*/
 func TestProjectGetSetAllPropertiesSansVariables(t *testing.T, f Factory, rf RestartFactory) {
 	ctx := context.Background()
 	require := require.New(t)

@@ -119,7 +119,7 @@ type Interface interface {
 
 	//---------------------------------------------------------------
 	// Events
-	EventListBundles(ctx context.Context, request *pb.PaginationRequest) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error)
+	EventListBundles(ctx context.Context, request *pb.UI_ListEventsRequest) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error)
 
 	//---------------------------------------------------------------
 	// Operations

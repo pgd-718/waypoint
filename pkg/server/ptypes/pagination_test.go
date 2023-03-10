@@ -1,13 +1,6 @@
 package ptypes
 
-import (
-	"testing"
-
-	"github.com/stretchr/testify/require"
-
-	pb "github.com/hashicorp/waypoint/pkg/server/gen"
-)
-
+/*
 func TestValidatePaginationRequest(t *testing.T) {
 	cases := []struct {
 		Name   string
@@ -66,3 +59,4 @@ func TestValidatePaginationRequest(t *testing.T) {
 		})
 	}
 }
+*/

@@ -7,7 +7,7 @@ import (
 )
 
 // EventListBundles returns the list of events
-func (s *State) EventListBundles(ctx context.Context, paginationRequest *pb.PaginationRequest) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error) {
+func (s *State) EventListBundles(ctx context.Context, paginationRequest *pb.UI_ListEventsRequest) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error) {
 	memTxn := s.inmem.Txn(false)
 	defer memTxn.Abort()
 
@@ -17,7 +17,7 @@ func (s *State) EventListBundles(ctx context.Context, paginationRequest *pb.Pagi
 // eventListBundles returns a list of event bundles
 func (s *State) eventListBundles(
 	memTxn *memdb.Txn,
-	paginationRequest *pb.PaginationRequest,
+	paginationRequest *pb.UI_ListEventsRequest,
 ) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error) {
 	return nil, &pb.PaginationResponse{}, nil
 }
