@@ -15,6 +15,7 @@ import (
 func init() {
 	tests["ui_pipeline"] = []testFunc{
 		TestServiceUI_ListPipelines,
+		TestServiceUI_GetPipelineRun,
 	}
 }
 

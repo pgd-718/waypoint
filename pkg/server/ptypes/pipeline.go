@@ -20,6 +20,64 @@ func PipelineGraph(v *pb.Pipeline) (*graph.Graph, error) {
 	return pipelineGraph(v.Steps)
 }
 
+func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, error) {
+	var rootNode *pb.UI_PipelineRunTreeNode
+
+	// Populate nodeMap
+	nodeMap := make(map[string]*pb.UI_PipelineRunTreeNode)
+	for _, job := range jobs {
+		step := job.GetPipelineStep().Step
+		node := &pb.UI_PipelineRunTreeNode{
+			Step:      step,
+			Job:       &pb.Ref_Job{Id: job.Id},
+			State:     computeTreeNodeState(job),
+			StartTime: job.AckTime,
+			// TODO(jgwhite): CompleteTime *timestamppb.Timestamp
+			// TODO(jgwhite): Application: *pb.Ref_Application
+			// TODO(jgwhite): Workspace: *pb.Ref_Workspace
+			// TODO(jgwhite): Result: nil,
+			// TODO(jgwhite): LatestStatusReport: *pb.StatusReport
+			Children: &pb.UI_PipelineRunTreeNode_Children{
+				Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
+				Nodes: []*pb.UI_PipelineRunTreeNode{},
+			},
+		}
+		nodeMap[step.Name] = node
+		if len(step.DependsOn) == 0 {
+			rootNode = node
+		}
+	}
+
+	// Populate edges
+	for _, node := range nodeMap {
+		for _, name := range node.Step.DependsOn {
+			antecedent := nodeMap[name]
+			antecedent.Children.Nodes = append(antecedent.Children.Nodes, node)
+		}
+	}
+
+	return rootNode, nil
+}
+
+func computeTreeNodeState(j *pb.Job) pb.UI_PipelineRunTreeNode_State {
+	switch j.State {
+	case pb.Job_QUEUED, pb.Job_WAITING:
+		return pb.UI_PipelineRunTreeNode_QUEUED
+	case pb.Job_RUNNING:
+		return pb.UI_PipelineRunTreeNode_RUNNING
+	case pb.Job_ERROR:
+		if j.CancelTime != nil {
+			return pb.UI_PipelineRunTreeNode_CANCELLED
+		} else {
+			return pb.UI_PipelineRunTreeNode_ERROR
+		}
+	case pb.Job_SUCCESS:
+		return pb.UI_PipelineRunTreeNode_SUCCESS
+	}
+
+	return pb.UI_PipelineRunTreeNode_UNKNOWN
+}
+
 // TestPipeline returns a valid pipeline proto for tests.
 func TestPipeline(t testing.T, src *pb.Pipeline) *pb.Pipeline {
 	t.Helper()

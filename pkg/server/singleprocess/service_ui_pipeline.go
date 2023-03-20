@@ -109,3 +109,43 @@ func (s *Service) UI_ListPipelines(
 		Pagination: &pb.PaginationResponse{},
 	}, nil
 }
+
+// UI_GetPipeline returns detail for a pipeline run.
+// TODO: A bit more detail please.
+func (s *Service) UI_GetPipelineRun(
+	ctx context.Context,
+	req *pb.UI_GetPipelineRunRequest,
+) (*pb.UI_GetPipelineRunResponse, error) {
+	// TODO(jgwhite): request validation
+
+	runResp, err := s.GetPipelineRun(ctx, &pb.GetPipelineRunRequest{
+		Pipeline: req.Pipeline,
+		Sequence: req.Sequence,
+	})
+	if err != nil {
+		return nil, err
+	}
+	run := runResp.PipelineRun
+
+	// Fetch full jobs
+	// TODO(jgwhite): serverstate.Interfaace.GetJobsById
+	var jobs []*pb.Job
+	for _, ref := range run.Jobs {
+		job, err := s.GetJob(ctx, &pb.GetJobRequest{JobId: ref.Id})
+		if err != nil {
+			return nil, err
+		}
+
+		jobs = append(jobs, job)
+	}
+
+	rootNode, err := serverptypes.UI_PipelineRunTreeFromJobs(jobs)
+	if err != nil {
+		return nil, err
+	}
+
+	return &pb.UI_GetPipelineRunResponse{
+		PipelineRun:  run,
+		RootTreeNode: rootNode,
+	}, nil
+}
