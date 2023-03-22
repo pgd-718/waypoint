@@ -91,6 +91,110 @@ func (ResourceCategoryDisplayHint) EnumDescriptor() ([]byte, []int) {
 	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0}
 }
 
+type UI_PipelineRunTreeNode_State int32
+
+const (
+	UI_PipelineRunTreeNode_UNKNOWN   UI_PipelineRunTreeNode_State = 0
+	UI_PipelineRunTreeNode_QUEUED    UI_PipelineRunTreeNode_State = 1
+	UI_PipelineRunTreeNode_RUNNING   UI_PipelineRunTreeNode_State = 2
+	UI_PipelineRunTreeNode_ERROR     UI_PipelineRunTreeNode_State = 3
+	UI_PipelineRunTreeNode_CANCELLED UI_PipelineRunTreeNode_State = 4
+	UI_PipelineRunTreeNode_SUCCESS   UI_PipelineRunTreeNode_State = 5
+)
+
+// Enum value maps for UI_PipelineRunTreeNode_State.
+var (
+	UI_PipelineRunTreeNode_State_name = map[int32]string{
+		0: "UNKNOWN",
+		1: "QUEUED",
+		2: "RUNNING",
+		3: "ERROR",
+		4: "CANCELLED",
+		5: "SUCCESS",
+	}
+	UI_PipelineRunTreeNode_State_value = map[string]int32{
+		"UNKNOWN":   0,
+		"QUEUED":    1,
+		"RUNNING":   2,
+		"ERROR":     3,
+		"CANCELLED": 4,
+		"SUCCESS":   5,
+	}
+)
+
+func (x UI_PipelineRunTreeNode_State) Enum() *UI_PipelineRunTreeNode_State {
+	p := new(UI_PipelineRunTreeNode_State)
+	*p = x
+	return p
+}
+
+func (x UI_PipelineRunTreeNode_State) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (UI_PipelineRunTreeNode_State) Descriptor() protoreflect.EnumDescriptor {
+	return file_pkg_server_proto_server_proto_enumTypes[1].Descriptor()
+}
+
+func (UI_PipelineRunTreeNode_State) Type() protoreflect.EnumType {
+	return &file_pkg_server_proto_server_proto_enumTypes[1]
+}
+
+func (x UI_PipelineRunTreeNode_State) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use UI_PipelineRunTreeNode_State.Descriptor instead.
+func (UI_PipelineRunTreeNode_State) EnumDescriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 13, 0}
+}
+
+type UI_PipelineRunTreeNode_Children_Mode int32
+
+const (
+	UI_PipelineRunTreeNode_Children_SERIAL   UI_PipelineRunTreeNode_Children_Mode = 0
+	UI_PipelineRunTreeNode_Children_PARALLEL UI_PipelineRunTreeNode_Children_Mode = 1
+)
+
+// Enum value maps for UI_PipelineRunTreeNode_Children_Mode.
+var (
+	UI_PipelineRunTreeNode_Children_Mode_name = map[int32]string{
+		0: "SERIAL",
+		1: "PARALLEL",
+	}
+	UI_PipelineRunTreeNode_Children_Mode_value = map[string]int32{
+		"SERIAL":   0,
+		"PARALLEL": 1,
+	}
+)
+
+func (x UI_PipelineRunTreeNode_Children_Mode) Enum() *UI_PipelineRunTreeNode_Children_Mode {
+	p := new(UI_PipelineRunTreeNode_Children_Mode)
+	*p = x
+	return p
+}
+
+func (x UI_PipelineRunTreeNode_Children_Mode) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (UI_PipelineRunTreeNode_Children_Mode) Descriptor() protoreflect.EnumDescriptor {
+	return file_pkg_server_proto_server_proto_enumTypes[2].Descriptor()
+}
+
+func (UI_PipelineRunTreeNode_Children_Mode) Type() protoreflect.EnumType {
+	return &file_pkg_server_proto_server_proto_enumTypes[2]
+}
+
+func (x UI_PipelineRunTreeNode_Children_Mode) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use UI_PipelineRunTreeNode_Children_Mode.Descriptor instead.
+func (UI_PipelineRunTreeNode_Children_Mode) EnumDescriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 13, 0, 0}
+}
+
 type ServerFeaturesFeature int32
 
 const (
@@ -122,11 +226,11 @@ func (x ServerFeaturesFeature) String() string {
 }
 
 func (ServerFeaturesFeature) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[1].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[3].Descriptor()
 }
 
 func (ServerFeaturesFeature) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[1]
+	return &file_pkg_server_proto_server_proto_enumTypes[3]
 }
 
 func (x ServerFeaturesFeature) Number() protoreflect.EnumNumber {
@@ -188,11 +292,11 @@ func (x Variable_FinalValue_Source) String() string {
 }
 
 func (Variable_FinalValue_Source) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[2].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[4].Descriptor()
 }
 
 func (Variable_FinalValue_Source) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[2]
+	return &file_pkg_server_proto_server_proto_enumTypes[4]
 }
 
 func (x Variable_FinalValue_Source) Number() protoreflect.EnumNumber {
@@ -236,11 +340,11 @@ func (x Project_ProjectState) String() string {
 }
 
 func (Project_ProjectState) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[3].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[5].Descriptor()
 }
 
 func (Project_ProjectState) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[3]
+	return &file_pkg_server_proto_server_proto_enumTypes[5]
 }
 
 func (x Project_ProjectState) Number() protoreflect.EnumNumber {
@@ -294,11 +398,11 @@ func (x Component_Type) String() string {
 }
 
 func (Component_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[4].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[6].Descriptor()
 }
 
 func (Component_Type) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[4]
+	return &file_pkg_server_proto_server_proto_enumTypes[6]
 }
 
 func (x Component_Type) Number() protoreflect.EnumNumber {
@@ -346,11 +450,11 @@ func (x Status_State) String() string {
 }
 
 func (Status_State) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[5].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[7].Descriptor()
 }
 
 func (Status_State) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[5]
+	return &file_pkg_server_proto_server_proto_enumTypes[7]
 }
 
 func (x Status_State) Number() protoreflect.EnumNumber {
@@ -401,11 +505,11 @@ func (x Operation_PhysicalState) String() string {
 }
 
 func (Operation_PhysicalState) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[6].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[8].Descriptor()
 }
 
 func (Operation_PhysicalState) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[6]
+	return &file_pkg_server_proto_server_proto_enumTypes[8]
 }
 
 func (x Operation_PhysicalState) Number() protoreflect.EnumNumber {
@@ -450,11 +554,11 @@ func (x OperationOrder_Order) String() string {
 }
 
 func (OperationOrder_Order) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[7].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[9].Descriptor()
 }
 
 func (OperationOrder_Order) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[7]
+	return &file_pkg_server_proto_server_proto_enumTypes[9]
 }
 
 func (x OperationOrder_Order) Number() protoreflect.EnumNumber {
@@ -517,11 +621,11 @@ func (x Task_State) String() string {
 }
 
 func (Task_State) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[8].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[10].Descriptor()
 }
 
 func (Task_State) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[8]
+	return &file_pkg_server_proto_server_proto_enumTypes[10]
 }
 
 func (x Task_State) Number() protoreflect.EnumNumber {
@@ -566,11 +670,11 @@ func (x OIDCAuthMethod_Kind) String() string {
 }
 
 func (OIDCAuthMethod_Kind) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[9].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[11].Descriptor()
 }
 
 func (OIDCAuthMethod_Kind) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[9]
+	return &file_pkg_server_proto_server_proto_enumTypes[11]
 }
 
 func (x OIDCAuthMethod_Kind) Number() protoreflect.EnumNumber {
@@ -624,11 +728,11 @@ func (x Job_State) String() string {
 }
 
 func (Job_State) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[10].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[12].Descriptor()
 }
 
 func (Job_State) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[10]
+	return &file_pkg_server_proto_server_proto_enumTypes[12]
 }
 
 func (x Job_State) Number() protoreflect.EnumNumber {
@@ -684,11 +788,11 @@ func (x Job_Config_Source) String() string {
 }
 
 func (Job_Config_Source) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[11].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[13].Descriptor()
 }
 
 func (Job_Config_Source) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[11]
+	return &file_pkg_server_proto_server_proto_enumTypes[13]
 }
 
 func (x Job_Config_Source) Number() protoreflect.EnumNumber {
@@ -757,11 +861,11 @@ func (x Runner_AdoptionState) String() string {
 }
 
 func (Runner_AdoptionState) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[12].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[14].Descriptor()
 }
 
 func (Runner_AdoptionState) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[12]
+	return &file_pkg_server_proto_server_proto_enumTypes[14]
 }
 
 func (x Runner_AdoptionState) Number() protoreflect.EnumNumber {
@@ -806,11 +910,11 @@ func (x UpsertDeploymentRequest_Tristate) String() string {
 }
 
 func (UpsertDeploymentRequest_Tristate) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[13].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[15].Descriptor()
 }
 
 func (UpsertDeploymentRequest_Tristate) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[13]
+	return &file_pkg_server_proto_server_proto_enumTypes[15]
 }
 
 func (x UpsertDeploymentRequest_Tristate) Number() protoreflect.EnumNumber {
@@ -855,11 +959,11 @@ func (x Deployment_LoadDetails) String() string {
 }
 
 func (Deployment_LoadDetails) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[14].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[16].Descriptor()
 }
 
 func (Deployment_LoadDetails) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[14]
+	return &file_pkg_server_proto_server_proto_enumTypes[16]
 }
 
 func (x Deployment_LoadDetails) Number() protoreflect.EnumNumber {
@@ -912,11 +1016,11 @@ func (x Instance_Type) String() string {
 }
 
 func (Instance_Type) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[15].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[17].Descriptor()
 }
 
 func (Instance_Type) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[15]
+	return &file_pkg_server_proto_server_proto_enumTypes[17]
 }
 
 func (x Instance_Type) Number() protoreflect.EnumNumber {
@@ -964,11 +1068,11 @@ func (x Release_LoadDetails) String() string {
 }
 
 func (Release_LoadDetails) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[16].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[18].Descriptor()
 }
 
 func (Release_LoadDetails) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[16]
+	return &file_pkg_server_proto_server_proto_enumTypes[18]
 }
 
 func (x Release_LoadDetails) Number() protoreflect.EnumNumber {
@@ -1023,11 +1127,11 @@ func (x StatusReport_Resource_Health) String() string {
 }
 
 func (StatusReport_Resource_Health) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[17].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[19].Descriptor()
 }
 
 func (StatusReport_Resource_Health) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[17]
+	return &file_pkg_server_proto_server_proto_enumTypes[19]
 }
 
 func (x StatusReport_Resource_Health) Number() protoreflect.EnumNumber {
@@ -1072,11 +1176,11 @@ func (x LogBatch_Entry_Source) String() string {
 }
 
 func (LogBatch_Entry_Source) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[18].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[20].Descriptor()
 }
 
 func (LogBatch_Entry_Source) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[18]
+	return &file_pkg_server_proto_server_proto_enumTypes[20]
 }
 
 func (x LogBatch_Entry_Source) Number() protoreflect.EnumNumber {
@@ -1121,11 +1225,11 @@ func (x ExecStreamResponse_Output_Channel) String() string {
 }
 
 func (ExecStreamResponse_Output_Channel) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[19].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[21].Descriptor()
 }
 
 func (ExecStreamResponse_Output_Channel) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[19]
+	return &file_pkg_server_proto_server_proto_enumTypes[21]
 }
 
 func (x ExecStreamResponse_Output_Channel) Number() protoreflect.EnumNumber {
@@ -1170,11 +1274,11 @@ func (x EntrypointExecRequest_Output_Channel) String() string {
 }
 
 func (EntrypointExecRequest_Output_Channel) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[20].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[22].Descriptor()
 }
 
 func (EntrypointExecRequest_Output_Channel) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[20]
+	return &file_pkg_server_proto_server_proto_enumTypes[22]
 }
 
 func (x EntrypointExecRequest_Output_Channel) Number() protoreflect.EnumNumber {
@@ -1231,11 +1335,11 @@ func (x PipelineRun_State) String() string {
 }
 
 func (PipelineRun_State) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[21].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[23].Descriptor()
 }
 
 func (PipelineRun_State) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[21]
+	return &file_pkg_server_proto_server_proto_enumTypes[23]
 }
 
 func (x PipelineRun_State) Number() protoreflect.EnumNumber {
@@ -1277,11 +1381,11 @@ func (x GetPipelineResponse_Graph_Format) String() string {
 }
 
 func (GetPipelineResponse_Graph_Format) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[22].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[24].Descriptor()
 }
 
 func (GetPipelineResponse_Graph_Format) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[22]
+	return &file_pkg_server_proto_server_proto_enumTypes[24]
 }
 
 func (x GetPipelineResponse_Graph_Format) Number() protoreflect.EnumNumber {
@@ -1323,11 +1427,11 @@ func (x Snapshot_Header_Format) String() string {
 }
 
 func (Snapshot_Header_Format) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[23].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[25].Descriptor()
 }
 
 func (Snapshot_Header_Format) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[23]
+	return &file_pkg_server_proto_server_proto_enumTypes[25]
 }
 
 func (x Snapshot_Header_Format) Number() protoreflect.EnumNumber {
@@ -1372,11 +1476,11 @@ func (x Hcl_Format) String() string {
 }
 
 func (Hcl_Format) Descriptor() protoreflect.EnumDescriptor {
-	return file_pkg_server_proto_server_proto_enumTypes[24].Descriptor()
+	return file_pkg_server_proto_server_proto_enumTypes[26].Descriptor()
 }
 
 func (Hcl_Format) Type() protoreflect.EnumType {
-	return &file_pkg_server_proto_server_proto_enumTypes[24]
+	return &file_pkg_server_proto_server_proto_enumTypes[26]
 }
 
 func (x Hcl_Format) Number() protoreflect.EnumNumber {
@@ -17687,6 +17791,116 @@ func (x *UI_ListPipelineRunsResponse) GetPagination() *PaginationResponse {
 	return nil
 }
 
+type UI_GetPipelineRunRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Pipeline *Ref_Pipeline `protobuf:"bytes,1,opt,name=pipeline,proto3" json:"pipeline,omitempty"`
+	Sequence uint64        `protobuf:"varint,2,opt,name=sequence,proto3" json:"sequence,omitempty"`
+}
+
+func (x *UI_GetPipelineRunRequest) Reset() {
+	*x = UI_GetPipelineRunRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pkg_server_proto_server_proto_msgTypes[224]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UI_GetPipelineRunRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UI_GetPipelineRunRequest) ProtoMessage() {}
+
+func (x *UI_GetPipelineRunRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_pkg_server_proto_server_proto_msgTypes[224]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UI_GetPipelineRunRequest.ProtoReflect.Descriptor instead.
+func (*UI_GetPipelineRunRequest) Descriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 9}
+}
+
+func (x *UI_GetPipelineRunRequest) GetPipeline() *Ref_Pipeline {
+	if x != nil {
+		return x.Pipeline
+	}
+	return nil
+}
+
+func (x *UI_GetPipelineRunRequest) GetSequence() uint64 {
+	if x != nil {
+		return x.Sequence
+	}
+	return 0
+}
+
+type UI_GetPipelineRunResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PipelineRun  *PipelineRun            `protobuf:"bytes,1,opt,name=pipeline_run,json=pipelineRun,proto3" json:"pipeline_run,omitempty"`
+	RootTreeNode *UI_PipelineRunTreeNode `protobuf:"bytes,2,opt,name=root_tree_node,json=rootTreeNode,proto3" json:"root_tree_node,omitempty"`
+}
+
+func (x *UI_GetPipelineRunResponse) Reset() {
+	*x = UI_GetPipelineRunResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pkg_server_proto_server_proto_msgTypes[225]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UI_GetPipelineRunResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UI_GetPipelineRunResponse) ProtoMessage() {}
+
+func (x *UI_GetPipelineRunResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_pkg_server_proto_server_proto_msgTypes[225]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UI_GetPipelineRunResponse.ProtoReflect.Descriptor instead.
+func (*UI_GetPipelineRunResponse) Descriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 10}
+}
+
+func (x *UI_GetPipelineRunResponse) GetPipelineRun() *PipelineRun {
+	if x != nil {
+		return x.PipelineRun
+	}
+	return nil
+}
+
+func (x *UI_GetPipelineRunResponse) GetRootTreeNode() *UI_PipelineRunTreeNode {
+	if x != nil {
+		return x.RootTreeNode
+	}
+	return nil
+}
+
 type UI_PipelineBundle struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -17700,7 +17914,7 @@ type UI_PipelineBundle struct {
 func (x *UI_PipelineBundle) Reset() {
 	*x = UI_PipelineBundle{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[224]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[226]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -17713,7 +17927,7 @@ func (x *UI_PipelineBundle) String() string {
 func (*UI_PipelineBundle) ProtoMessage() {}
 
 func (x *UI_PipelineBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[224]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[226]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -17726,7 +17940,7 @@ func (x *UI_PipelineBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_PipelineBundle.ProtoReflect.Descriptor instead.
 func (*UI_PipelineBundle) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 9}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 11}
 }
 
 func (x *UI_PipelineBundle) GetPipeline() *Pipeline {
@@ -17764,7 +17978,7 @@ type UI_PipelineRunBundle struct {
 func (x *UI_PipelineRunBundle) Reset() {
 	*x = UI_PipelineRunBundle{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[225]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[227]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -17777,7 +17991,7 @@ func (x *UI_PipelineRunBundle) String() string {
 func (*UI_PipelineRunBundle) ProtoMessage() {}
 
 func (x *UI_PipelineRunBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[225]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[227]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -17790,7 +18004,7 @@ func (x *UI_PipelineRunBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_PipelineRunBundle.ProtoReflect.Descriptor instead.
 func (*UI_PipelineRunBundle) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 10}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 12}
 }
 
 func (x *UI_PipelineRunBundle) GetPipelineRun() *PipelineRun {
@@ -17821,6 +18035,175 @@ func (x *UI_PipelineRunBundle) GetDataSourceRef() *Job_DataSource_Ref {
 	return nil
 }
 
+type UI_PipelineRunTreeNode struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// If step is absent then the node is “virtual” — it represents a set of
+	// concurrent steps/jobs.
+	Step         *Pipeline_Step               `protobuf:"bytes,1,opt,name=step,proto3" json:"step,omitempty"`
+	State        UI_PipelineRunTreeNode_State `protobuf:"varint,2,opt,name=state,proto3,enum=hashicorp.waypoint.UI_PipelineRunTreeNode_State" json:"state,omitempty"`
+	StartTime    *timestamppb.Timestamp       `protobuf:"bytes,3,opt,name=start_time,json=startTime,proto3" json:"start_time,omitempty"`
+	CompleteTime *timestamppb.Timestamp       `protobuf:"bytes,4,opt,name=complete_time,json=completeTime,proto3" json:"complete_time,omitempty"`
+	Application  *Ref_Application             `protobuf:"bytes,5,opt,name=application,proto3" json:"application,omitempty"`
+	Workspace    *Ref_Workspace               `protobuf:"bytes,6,opt,name=workspace,proto3" json:"workspace,omitempty"`
+	Job          *Ref_Job                     `protobuf:"bytes,7,opt,name=job,proto3" json:"job,omitempty"`
+	// Types that are assignable to Result:
+	//
+	//	*UI_PipelineRunTreeNode_Build
+	//	*UI_PipelineRunTreeNode_Deployment
+	//	*UI_PipelineRunTreeNode_Release
+	Result             isUI_PipelineRunTreeNode_Result  `protobuf_oneof:"result"`
+	LatestStatusReport *StatusReport                    `protobuf:"bytes,11,opt,name=latest_status_report,json=latestStatusReport,proto3" json:"latest_status_report,omitempty"`
+	Children           *UI_PipelineRunTreeNode_Children `protobuf:"bytes,12,opt,name=children,proto3" json:"children,omitempty"`
+}
+
+func (x *UI_PipelineRunTreeNode) Reset() {
+	*x = UI_PipelineRunTreeNode{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pkg_server_proto_server_proto_msgTypes[228]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UI_PipelineRunTreeNode) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UI_PipelineRunTreeNode) ProtoMessage() {}
+
+func (x *UI_PipelineRunTreeNode) ProtoReflect() protoreflect.Message {
+	mi := &file_pkg_server_proto_server_proto_msgTypes[228]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UI_PipelineRunTreeNode.ProtoReflect.Descriptor instead.
+func (*UI_PipelineRunTreeNode) Descriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 13}
+}
+
+func (x *UI_PipelineRunTreeNode) GetStep() *Pipeline_Step {
+	if x != nil {
+		return x.Step
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetState() UI_PipelineRunTreeNode_State {
+	if x != nil {
+		return x.State
+	}
+	return UI_PipelineRunTreeNode_UNKNOWN
+}
+
+func (x *UI_PipelineRunTreeNode) GetStartTime() *timestamppb.Timestamp {
+	if x != nil {
+		return x.StartTime
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetCompleteTime() *timestamppb.Timestamp {
+	if x != nil {
+		return x.CompleteTime
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetApplication() *Ref_Application {
+	if x != nil {
+		return x.Application
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetWorkspace() *Ref_Workspace {
+	if x != nil {
+		return x.Workspace
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetJob() *Ref_Job {
+	if x != nil {
+		return x.Job
+	}
+	return nil
+}
+
+func (m *UI_PipelineRunTreeNode) GetResult() isUI_PipelineRunTreeNode_Result {
+	if m != nil {
+		return m.Result
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetBuild() *Build {
+	if x, ok := x.GetResult().(*UI_PipelineRunTreeNode_Build); ok {
+		return x.Build
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetDeployment() *Deployment {
+	if x, ok := x.GetResult().(*UI_PipelineRunTreeNode_Deployment); ok {
+		return x.Deployment
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetRelease() *Release {
+	if x, ok := x.GetResult().(*UI_PipelineRunTreeNode_Release); ok {
+		return x.Release
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetLatestStatusReport() *StatusReport {
+	if x != nil {
+		return x.LatestStatusReport
+	}
+	return nil
+}
+
+func (x *UI_PipelineRunTreeNode) GetChildren() *UI_PipelineRunTreeNode_Children {
+	if x != nil {
+		return x.Children
+	}
+	return nil
+}
+
+type isUI_PipelineRunTreeNode_Result interface {
+	isUI_PipelineRunTreeNode_Result()
+}
+
+type UI_PipelineRunTreeNode_Build struct {
+	Build *Build `protobuf:"bytes,8,opt,name=build,proto3,oneof"`
+}
+
+type UI_PipelineRunTreeNode_Deployment struct {
+	Deployment *Deployment `protobuf:"bytes,9,opt,name=deployment,proto3,oneof"`
+}
+
+type UI_PipelineRunTreeNode_Release struct {
+	Release *Release `protobuf:"bytes,10,opt,name=release,proto3,oneof"`
+}
+
+func (*UI_PipelineRunTreeNode_Build) isUI_PipelineRunTreeNode_Result() {}
+
+func (*UI_PipelineRunTreeNode_Deployment) isUI_PipelineRunTreeNode_Result() {}
+
+func (*UI_PipelineRunTreeNode_Release) isUI_PipelineRunTreeNode_Result() {}
+
 type UI_ListDeploymentsRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -17843,7 +18226,7 @@ type UI_ListDeploymentsRequest struct {
 func (x *UI_ListDeploymentsRequest) Reset() {
 	*x = UI_ListDeploymentsRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[226]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[229]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -17856,7 +18239,7 @@ func (x *UI_ListDeploymentsRequest) String() string {
 func (*UI_ListDeploymentsRequest) ProtoMessage() {}
 
 func (x *UI_ListDeploymentsRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[226]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[229]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -17869,7 +18252,7 @@ func (x *UI_ListDeploymentsRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_ListDeploymentsRequest.ProtoReflect.Descriptor instead.
 func (*UI_ListDeploymentsRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 11}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 14}
 }
 
 func (x *UI_ListDeploymentsRequest) GetApplication() *Ref_Application {
@@ -17919,7 +18302,7 @@ type UI_ListDeploymentsResponse struct {
 func (x *UI_ListDeploymentsResponse) Reset() {
 	*x = UI_ListDeploymentsResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[227]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[230]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -17932,7 +18315,7 @@ func (x *UI_ListDeploymentsResponse) String() string {
 func (*UI_ListDeploymentsResponse) ProtoMessage() {}
 
 func (x *UI_ListDeploymentsResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[227]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[230]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -17945,7 +18328,7 @@ func (x *UI_ListDeploymentsResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_ListDeploymentsResponse.ProtoReflect.Descriptor instead.
 func (*UI_ListDeploymentsResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 12}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 15}
 }
 
 func (x *UI_ListDeploymentsResponse) GetDeployments() []*UI_DeploymentBundle {
@@ -17969,7 +18352,7 @@ type UI_GetDeploymentRequest struct {
 func (x *UI_GetDeploymentRequest) Reset() {
 	*x = UI_GetDeploymentRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[228]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[231]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -17982,7 +18365,7 @@ func (x *UI_GetDeploymentRequest) String() string {
 func (*UI_GetDeploymentRequest) ProtoMessage() {}
 
 func (x *UI_GetDeploymentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[228]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[231]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -17995,7 +18378,7 @@ func (x *UI_GetDeploymentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_GetDeploymentRequest.ProtoReflect.Descriptor instead.
 func (*UI_GetDeploymentRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 13}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 16}
 }
 
 func (x *UI_GetDeploymentRequest) GetRef() *Ref_Operation {
@@ -18024,7 +18407,7 @@ type UI_GetDeploymentResponse struct {
 func (x *UI_GetDeploymentResponse) Reset() {
 	*x = UI_GetDeploymentResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[229]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[232]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18037,7 +18420,7 @@ func (x *UI_GetDeploymentResponse) String() string {
 func (*UI_GetDeploymentResponse) ProtoMessage() {}
 
 func (x *UI_GetDeploymentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[229]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[232]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18050,7 +18433,7 @@ func (x *UI_GetDeploymentResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_GetDeploymentResponse.ProtoReflect.Descriptor instead.
 func (*UI_GetDeploymentResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 14}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 17}
 }
 
 func (x *UI_GetDeploymentResponse) GetDeployment() *UI_DeploymentBundle {
@@ -18095,7 +18478,7 @@ type UI_DeploymentBundle struct {
 func (x *UI_DeploymentBundle) Reset() {
 	*x = UI_DeploymentBundle{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[230]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[233]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18108,7 +18491,7 @@ func (x *UI_DeploymentBundle) String() string {
 func (*UI_DeploymentBundle) ProtoMessage() {}
 
 func (x *UI_DeploymentBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[230]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[233]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18121,7 +18504,7 @@ func (x *UI_DeploymentBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_DeploymentBundle.ProtoReflect.Descriptor instead.
 func (*UI_DeploymentBundle) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 15}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 18}
 }
 
 func (x *UI_DeploymentBundle) GetDeployment() *Deployment {
@@ -18188,7 +18571,7 @@ type UI_ListReleasesRequest struct {
 func (x *UI_ListReleasesRequest) Reset() {
 	*x = UI_ListReleasesRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[231]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[234]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18201,7 +18584,7 @@ func (x *UI_ListReleasesRequest) String() string {
 func (*UI_ListReleasesRequest) ProtoMessage() {}
 
 func (x *UI_ListReleasesRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[231]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[234]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18214,7 +18597,7 @@ func (x *UI_ListReleasesRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_ListReleasesRequest.ProtoReflect.Descriptor instead.
 func (*UI_ListReleasesRequest) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 16}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 19}
 }
 
 func (x *UI_ListReleasesRequest) GetApplication() *Ref_Application {
@@ -18264,7 +18647,7 @@ type UI_ListReleasesResponse struct {
 func (x *UI_ListReleasesResponse) Reset() {
 	*x = UI_ListReleasesResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[232]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[235]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18277,7 +18660,7 @@ func (x *UI_ListReleasesResponse) String() string {
 func (*UI_ListReleasesResponse) ProtoMessage() {}
 
 func (x *UI_ListReleasesResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[232]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[235]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18290,7 +18673,7 @@ func (x *UI_ListReleasesResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_ListReleasesResponse.ProtoReflect.Descriptor instead.
 func (*UI_ListReleasesResponse) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 17}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 20}
 }
 
 func (x *UI_ListReleasesResponse) GetReleases() []*UI_ReleaseBundle {
@@ -18315,7 +18698,7 @@ type UI_ReleaseBundle struct {
 func (x *UI_ReleaseBundle) Reset() {
 	*x = UI_ReleaseBundle{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[233]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[236]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18328,7 +18711,7 @@ func (x *UI_ReleaseBundle) String() string {
 func (*UI_ReleaseBundle) ProtoMessage() {}
 
 func (x *UI_ReleaseBundle) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[233]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[236]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18341,7 +18724,7 @@ func (x *UI_ReleaseBundle) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UI_ReleaseBundle.ProtoReflect.Descriptor instead.
 func (*UI_ReleaseBundle) Descriptor() ([]byte, []int) {
-	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 18}
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 21}
 }
 
 func (x *UI_ReleaseBundle) GetRelease() *Release {
@@ -18358,6 +18741,61 @@ func (x *UI_ReleaseBundle) GetLatestStatusReport() *StatusReport {
 	return nil
 }
 
+type UI_PipelineRunTreeNode_Children struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Mode  UI_PipelineRunTreeNode_Children_Mode `protobuf:"varint,1,opt,name=mode,proto3,enum=hashicorp.waypoint.UI_PipelineRunTreeNode_Children_Mode" json:"mode,omitempty"`
+	Nodes []*UI_PipelineRunTreeNode            `protobuf:"bytes,2,rep,name=nodes,proto3" json:"nodes,omitempty"`
+}
+
+func (x *UI_PipelineRunTreeNode_Children) Reset() {
+	*x = UI_PipelineRunTreeNode_Children{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pkg_server_proto_server_proto_msgTypes[237]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UI_PipelineRunTreeNode_Children) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UI_PipelineRunTreeNode_Children) ProtoMessage() {}
+
+func (x *UI_PipelineRunTreeNode_Children) ProtoReflect() protoreflect.Message {
+	mi := &file_pkg_server_proto_server_proto_msgTypes[237]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UI_PipelineRunTreeNode_Children.ProtoReflect.Descriptor instead.
+func (*UI_PipelineRunTreeNode_Children) Descriptor() ([]byte, []int) {
+	return file_pkg_server_proto_server_proto_rawDescGZIP(), []int{0, 13, 0}
+}
+
+func (x *UI_PipelineRunTreeNode_Children) GetMode() UI_PipelineRunTreeNode_Children_Mode {
+	if x != nil {
+		return x.Mode
+	}
+	return UI_PipelineRunTreeNode_Children_SERIAL
+}
+
+func (x *UI_PipelineRunTreeNode_Children) GetNodes() []*UI_PipelineRunTreeNode {
+	if x != nil {
+		return x.Nodes
+	}
+	return nil
+}
+
 type VersionInfo_ProtocolVersion struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -18370,7 +18808,7 @@ type VersionInfo_ProtocolVersion struct {
 func (x *VersionInfo_ProtocolVersion) Reset() {
 	*x = VersionInfo_ProtocolVersion{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[234]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[238]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18383,7 +18821,7 @@ func (x *VersionInfo_ProtocolVersion) String() string {
 func (*VersionInfo_ProtocolVersion) ProtoMessage() {}
 
 func (x *VersionInfo_ProtocolVersion) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[234]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[238]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18425,7 +18863,7 @@ type Variable_File struct {
 func (x *Variable_File) Reset() {
 	*x = Variable_File{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[235]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[239]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18438,7 +18876,7 @@ func (x *Variable_File) String() string {
 func (*Variable_File) ProtoMessage() {}
 
 func (x *Variable_File) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[235]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[239]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18480,7 +18918,7 @@ type Variable_VCS struct {
 func (x *Variable_VCS) Reset() {
 	*x = Variable_VCS{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[236]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[240]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18493,7 +18931,7 @@ func (x *Variable_VCS) String() string {
 func (*Variable_VCS) ProtoMessage() {}
 
 func (x *Variable_VCS) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[236]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[240]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18537,7 +18975,7 @@ type Variable_HclPos struct {
 func (x *Variable_HclPos) Reset() {
 	*x = Variable_HclPos{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[237]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[241]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18550,7 +18988,7 @@ func (x *Variable_HclPos) String() string {
 func (*Variable_HclPos) ProtoMessage() {}
 
 func (x *Variable_HclPos) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[237]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[241]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18600,7 +19038,7 @@ type Variable_HclRange struct {
 func (x *Variable_HclRange) Reset() {
 	*x = Variable_HclRange{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[238]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[242]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18613,7 +19051,7 @@ func (x *Variable_HclRange) String() string {
 func (*Variable_HclRange) ProtoMessage() {}
 
 func (x *Variable_HclRange) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[238]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[242]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18672,7 +19110,7 @@ type Variable_FinalValue struct {
 func (x *Variable_FinalValue) Reset() {
 	*x = Variable_FinalValue{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[239]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[243]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18685,7 +19123,7 @@ func (x *Variable_FinalValue) String() string {
 func (*Variable_FinalValue) ProtoMessage() {}
 
 func (x *Variable_FinalValue) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[239]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[243]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18803,7 +19241,7 @@ type Project_Poll struct {
 func (x *Project_Poll) Reset() {
 	*x = Project_Poll{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[240]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[244]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18816,7 +19254,7 @@ func (x *Project_Poll) String() string {
 func (*Project_Poll) ProtoMessage() {}
 
 func (x *Project_Poll) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[240]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[244]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18862,7 +19300,7 @@ type Project_AppStatusPoll struct {
 func (x *Project_AppStatusPoll) Reset() {
 	*x = Project_AppStatusPoll{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[241]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[245]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18875,7 +19313,7 @@ func (x *Project_AppStatusPoll) String() string {
 func (*Project_AppStatusPoll) ProtoMessage() {}
 
 func (x *Project_AppStatusPoll) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[241]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[245]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -18931,7 +19369,7 @@ type Workspace_Project struct {
 func (x *Workspace_Project) Reset() {
 	*x = Workspace_Project{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[242]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[246]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -18944,7 +19382,7 @@ func (x *Workspace_Project) String() string {
 func (*Workspace_Project) ProtoMessage() {}
 
 func (x *Workspace_Project) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[242]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[246]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19009,7 +19447,7 @@ type Workspace_Application struct {
 func (x *Workspace_Application) Reset() {
 	*x = Workspace_Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[243]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[247]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19022,7 +19460,7 @@ func (x *Workspace_Application) String() string {
 func (*Workspace_Application) ProtoMessage() {}
 
 func (x *Workspace_Application) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[243]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[247]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19070,7 +19508,7 @@ type User_Link struct {
 func (x *User_Link) Reset() {
 	*x = User_Link{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[244]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[248]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19083,7 +19521,7 @@ func (x *User_Link) String() string {
 func (*User_Link) ProtoMessage() {}
 
 func (x *User_Link) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[244]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[248]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19136,7 +19574,7 @@ type User_Link_OIDC struct {
 func (x *User_Link_OIDC) Reset() {
 	*x = User_Link_OIDC{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[245]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[249]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19149,7 +19587,7 @@ func (x *User_Link_OIDC) String() string {
 func (*User_Link_OIDC) ProtoMessage() {}
 
 func (x *User_Link_OIDC) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[245]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[249]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19190,7 +19628,7 @@ type Ref_Global struct {
 func (x *Ref_Global) Reset() {
 	*x = Ref_Global{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[246]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[250]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19203,7 +19641,7 @@ func (x *Ref_Global) String() string {
 func (*Ref_Global) ProtoMessage() {}
 
 func (x *Ref_Global) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[246]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[250]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19233,7 +19671,7 @@ type Ref_Application struct {
 func (x *Ref_Application) Reset() {
 	*x = Ref_Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[247]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[251]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19246,7 +19684,7 @@ func (x *Ref_Application) String() string {
 func (*Ref_Application) ProtoMessage() {}
 
 func (x *Ref_Application) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[247]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[251]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19288,7 +19726,7 @@ type Ref_Project struct {
 func (x *Ref_Project) Reset() {
 	*x = Ref_Project{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[248]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[252]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19301,7 +19739,7 @@ func (x *Ref_Project) String() string {
 func (*Ref_Project) ProtoMessage() {}
 
 func (x *Ref_Project) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[248]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[252]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19336,7 +19774,7 @@ type Ref_Workspace struct {
 func (x *Ref_Workspace) Reset() {
 	*x = Ref_Workspace{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[249]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[253]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19349,7 +19787,7 @@ func (x *Ref_Workspace) String() string {
 func (*Ref_Workspace) ProtoMessage() {}
 
 func (x *Ref_Workspace) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[249]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[253]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19389,7 +19827,7 @@ type Ref_Deployment struct {
 func (x *Ref_Deployment) Reset() {
 	*x = Ref_Deployment{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[250]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[254]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19402,7 +19840,7 @@ func (x *Ref_Deployment) String() string {
 func (*Ref_Deployment) ProtoMessage() {}
 
 func (x *Ref_Deployment) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[250]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[254]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19472,7 +19910,7 @@ type Ref_Artifact struct {
 func (x *Ref_Artifact) Reset() {
 	*x = Ref_Artifact{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[251]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[255]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19485,7 +19923,7 @@ func (x *Ref_Artifact) String() string {
 func (*Ref_Artifact) ProtoMessage() {}
 
 func (x *Ref_Artifact) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[251]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[255]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19551,7 +19989,7 @@ type Ref_Component struct {
 func (x *Ref_Component) Reset() {
 	*x = Ref_Component{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[252]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[256]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19564,7 +20002,7 @@ func (x *Ref_Component) String() string {
 func (*Ref_Component) ProtoMessage() {}
 
 func (x *Ref_Component) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[252]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[256]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19611,7 +20049,7 @@ type Ref_Operation struct {
 func (x *Ref_Operation) Reset() {
 	*x = Ref_Operation{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[253]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[257]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19624,7 +20062,7 @@ func (x *Ref_Operation) String() string {
 func (*Ref_Operation) ProtoMessage() {}
 
 func (x *Ref_Operation) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[253]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[257]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19690,7 +20128,7 @@ type Ref_OperationSeq struct {
 func (x *Ref_OperationSeq) Reset() {
 	*x = Ref_OperationSeq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[254]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[258]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19703,7 +20141,7 @@ func (x *Ref_OperationSeq) String() string {
 func (*Ref_OperationSeq) ProtoMessage() {}
 
 func (x *Ref_OperationSeq) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[254]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[258]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19753,7 +20191,7 @@ type Ref_Runner struct {
 func (x *Ref_Runner) Reset() {
 	*x = Ref_Runner{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[255]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[259]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19766,7 +20204,7 @@ func (x *Ref_Runner) String() string {
 func (*Ref_Runner) ProtoMessage() {}
 
 func (x *Ref_Runner) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[255]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[259]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19842,7 +20280,7 @@ type Ref_RunnerAny struct {
 func (x *Ref_RunnerAny) Reset() {
 	*x = Ref_RunnerAny{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[256]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[260]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19855,7 +20293,7 @@ func (x *Ref_RunnerAny) String() string {
 func (*Ref_RunnerAny) ProtoMessage() {}
 
 func (x *Ref_RunnerAny) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[256]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[260]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19883,7 +20321,7 @@ type Ref_RunnerId struct {
 func (x *Ref_RunnerId) Reset() {
 	*x = Ref_RunnerId{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[257]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[261]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19896,7 +20334,7 @@ func (x *Ref_RunnerId) String() string {
 func (*Ref_RunnerId) ProtoMessage() {}
 
 func (x *Ref_RunnerId) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[257]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[261]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19932,7 +20370,7 @@ type Ref_RunnerLabels struct {
 func (x *Ref_RunnerLabels) Reset() {
 	*x = Ref_RunnerLabels{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[258]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[262]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19945,7 +20383,7 @@ func (x *Ref_RunnerLabels) String() string {
 func (*Ref_RunnerLabels) ProtoMessage() {}
 
 func (x *Ref_RunnerLabels) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[258]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[262]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -19986,7 +20424,7 @@ type Ref_User struct {
 func (x *Ref_User) Reset() {
 	*x = Ref_User{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[259]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[263]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -19999,7 +20437,7 @@ func (x *Ref_User) String() string {
 func (*Ref_User) ProtoMessage() {}
 
 func (x *Ref_User) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[259]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[263]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20064,7 +20502,7 @@ type Ref_UserId struct {
 func (x *Ref_UserId) Reset() {
 	*x = Ref_UserId{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[260]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[264]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20077,7 +20515,7 @@ func (x *Ref_UserId) String() string {
 func (*Ref_UserId) ProtoMessage() {}
 
 func (x *Ref_UserId) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[260]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[264]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20114,7 +20552,7 @@ type Ref_UserUsername struct {
 func (x *Ref_UserUsername) Reset() {
 	*x = Ref_UserUsername{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[261]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[265]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20127,7 +20565,7 @@ func (x *Ref_UserUsername) String() string {
 func (*Ref_UserUsername) ProtoMessage() {}
 
 func (x *Ref_UserUsername) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[261]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[265]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20162,7 +20600,7 @@ type Ref_AuthMethod struct {
 func (x *Ref_AuthMethod) Reset() {
 	*x = Ref_AuthMethod{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[262]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[266]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20175,7 +20613,7 @@ func (x *Ref_AuthMethod) String() string {
 func (*Ref_AuthMethod) ProtoMessage() {}
 
 func (x *Ref_AuthMethod) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[262]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[266]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20210,7 +20648,7 @@ type Ref_DeclaredResource struct {
 func (x *Ref_DeclaredResource) Reset() {
 	*x = Ref_DeclaredResource{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[263]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[267]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20223,7 +20661,7 @@ func (x *Ref_DeclaredResource) String() string {
 func (*Ref_DeclaredResource) ProtoMessage() {}
 
 func (x *Ref_DeclaredResource) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[263]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[267]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20260,7 +20698,7 @@ type Ref_OnDemandRunnerConfig struct {
 func (x *Ref_OnDemandRunnerConfig) Reset() {
 	*x = Ref_OnDemandRunnerConfig{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[264]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[268]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20273,7 +20711,7 @@ func (x *Ref_OnDemandRunnerConfig) String() string {
 func (*Ref_OnDemandRunnerConfig) ProtoMessage() {}
 
 func (x *Ref_OnDemandRunnerConfig) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[264]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[268]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20316,7 +20754,7 @@ type Ref_Trigger struct {
 func (x *Ref_Trigger) Reset() {
 	*x = Ref_Trigger{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[265]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[269]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20329,7 +20767,7 @@ func (x *Ref_Trigger) String() string {
 func (*Ref_Trigger) ProtoMessage() {}
 
 func (x *Ref_Trigger) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[265]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[269]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20364,7 +20802,7 @@ type Ref_Job struct {
 func (x *Ref_Job) Reset() {
 	*x = Ref_Job{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[266]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[270]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20377,7 +20815,7 @@ func (x *Ref_Job) String() string {
 func (*Ref_Job) ProtoMessage() {}
 
 func (x *Ref_Job) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[266]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[270]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20416,7 +20854,7 @@ type Ref_Task struct {
 func (x *Ref_Task) Reset() {
 	*x = Ref_Task{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[267]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[271]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20429,7 +20867,7 @@ func (x *Ref_Task) String() string {
 func (*Ref_Task) ProtoMessage() {}
 
 func (x *Ref_Task) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[267]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[271]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20500,7 +20938,7 @@ type Ref_Pipeline struct {
 func (x *Ref_Pipeline) Reset() {
 	*x = Ref_Pipeline{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[268]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[272]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20513,7 +20951,7 @@ func (x *Ref_Pipeline) String() string {
 func (*Ref_Pipeline) ProtoMessage() {}
 
 func (x *Ref_Pipeline) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[268]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[272]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20584,7 +21022,7 @@ type Ref_PipelineOwner struct {
 func (x *Ref_PipelineOwner) Reset() {
 	*x = Ref_PipelineOwner{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[269]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[273]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20597,7 +21035,7 @@ func (x *Ref_PipelineOwner) String() string {
 func (*Ref_PipelineOwner) ProtoMessage() {}
 
 func (x *Ref_PipelineOwner) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[269]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[273]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20645,7 +21083,7 @@ type Ref_PipelineStep struct {
 func (x *Ref_PipelineStep) Reset() {
 	*x = Ref_PipelineStep{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[270]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[274]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20658,7 +21096,7 @@ func (x *Ref_PipelineStep) String() string {
 func (*Ref_PipelineStep) ProtoMessage() {}
 
 func (x *Ref_PipelineStep) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[270]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[274]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20716,7 +21154,7 @@ type StatusFilter_Filter struct {
 func (x *StatusFilter_Filter) Reset() {
 	*x = StatusFilter_Filter{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[272]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[276]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20729,7 +21167,7 @@ func (x *StatusFilter_Filter) String() string {
 func (*StatusFilter_Filter) ProtoMessage() {}
 
 func (x *StatusFilter_Filter) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[272]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[276]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20812,7 +21250,7 @@ type AuthMethod_OIDC struct {
 func (x *AuthMethod_OIDC) Reset() {
 	*x = AuthMethod_OIDC{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[274]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[278]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20825,7 +21263,7 @@ func (x *AuthMethod_OIDC) String() string {
 func (*AuthMethod_OIDC) ProtoMessage() {}
 
 func (x *AuthMethod_OIDC) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[274]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[278]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -20929,7 +21367,7 @@ type Job_TaskOverride struct {
 func (x *Job_TaskOverride) Reset() {
 	*x = Job_TaskOverride{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[277]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[281]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -20942,7 +21380,7 @@ func (x *Job_TaskOverride) String() string {
 func (*Job_TaskOverride) ProtoMessage() {}
 
 func (x *Job_TaskOverride) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[277]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[281]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21000,7 +21438,7 @@ type Job_Result struct {
 func (x *Job_Result) Reset() {
 	*x = Job_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[281]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[285]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21013,7 +21451,7 @@ func (x *Job_Result) String() string {
 func (*Job_Result) ProtoMessage() {}
 
 func (x *Job_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[281]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[285]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21167,7 +21605,7 @@ type Job_Config struct {
 func (x *Job_Config) Reset() {
 	*x = Job_Config{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[282]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[286]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21180,7 +21618,7 @@ func (x *Job_Config) String() string {
 func (*Job_Config) ProtoMessage() {}
 
 func (x *Job_Config) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[282]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[286]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21219,7 +21657,7 @@ type Job_DataSource struct {
 func (x *Job_DataSource) Reset() {
 	*x = Job_DataSource{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[283]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[287]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21232,7 +21670,7 @@ func (x *Job_DataSource) String() string {
 func (*Job_DataSource) ProtoMessage() {}
 
 func (x *Job_DataSource) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[283]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[287]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21314,7 +21752,7 @@ type Job_Local struct {
 func (x *Job_Local) Reset() {
 	*x = Job_Local{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[284]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[288]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21327,7 +21765,7 @@ func (x *Job_Local) String() string {
 func (*Job_Local) ProtoMessage() {}
 
 func (x *Job_Local) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[284]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[288]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21362,7 +21800,7 @@ type Job_Remote struct {
 func (x *Job_Remote) Reset() {
 	*x = Job_Remote{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[285]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[289]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21375,7 +21813,7 @@ func (x *Job_Remote) String() string {
 func (*Job_Remote) ProtoMessage() {}
 
 func (x *Job_Remote) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[285]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[289]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21453,7 +21891,7 @@ type Job_Git struct {
 func (x *Job_Git) Reset() {
 	*x = Job_Git{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[286]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[290]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21466,7 +21904,7 @@ func (x *Job_Git) String() string {
 func (*Job_Git) ProtoMessage() {}
 
 func (x *Job_Git) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[286]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[290]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21567,7 +22005,7 @@ type Job_Noop struct {
 func (x *Job_Noop) Reset() {
 	*x = Job_Noop{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[287]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[291]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21580,7 +22018,7 @@ func (x *Job_Noop) String() string {
 func (*Job_Noop) ProtoMessage() {}
 
 func (x *Job_Noop) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[287]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[291]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21614,7 +22052,7 @@ type Job_UpOp struct {
 func (x *Job_UpOp) Reset() {
 	*x = Job_UpOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[288]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[292]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21627,7 +22065,7 @@ func (x *Job_UpOp) String() string {
 func (*Job_UpOp) ProtoMessage() {}
 
 func (x *Job_UpOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[288]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[292]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21682,7 +22120,7 @@ type Job_UpResult struct {
 func (x *Job_UpResult) Reset() {
 	*x = Job_UpResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[289]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[293]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21695,7 +22133,7 @@ func (x *Job_UpResult) String() string {
 func (*Job_UpResult) ProtoMessage() {}
 
 func (x *Job_UpResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[289]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[293]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21742,7 +22180,7 @@ type Job_ValidateOp struct {
 func (x *Job_ValidateOp) Reset() {
 	*x = Job_ValidateOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[290]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[294]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21755,7 +22193,7 @@ func (x *Job_ValidateOp) String() string {
 func (*Job_ValidateOp) ProtoMessage() {}
 
 func (x *Job_ValidateOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[290]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[294]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21780,7 +22218,7 @@ type Job_ValidateResult struct {
 func (x *Job_ValidateResult) Reset() {
 	*x = Job_ValidateResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[291]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[295]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21793,7 +22231,7 @@ func (x *Job_ValidateResult) String() string {
 func (*Job_ValidateResult) ProtoMessage() {}
 
 func (x *Job_ValidateResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[291]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[295]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21827,7 +22265,7 @@ type Job_AuthOp struct {
 func (x *Job_AuthOp) Reset() {
 	*x = Job_AuthOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[292]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[296]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21840,7 +22278,7 @@ func (x *Job_AuthOp) String() string {
 func (*Job_AuthOp) ProtoMessage() {}
 
 func (x *Job_AuthOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[292]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[296]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21882,7 +22320,7 @@ type Job_AuthResult struct {
 func (x *Job_AuthResult) Reset() {
 	*x = Job_AuthResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[293]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[297]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21895,7 +22333,7 @@ func (x *Job_AuthResult) String() string {
 func (*Job_AuthResult) ProtoMessage() {}
 
 func (x *Job_AuthResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[293]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[297]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21930,7 +22368,7 @@ type Job_BuildOp struct {
 func (x *Job_BuildOp) Reset() {
 	*x = Job_BuildOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[294]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[298]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21943,7 +22381,7 @@ func (x *Job_BuildOp) String() string {
 func (*Job_BuildOp) ProtoMessage() {}
 
 func (x *Job_BuildOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[294]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[298]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -21980,7 +22418,7 @@ type Job_BuildResult struct {
 func (x *Job_BuildResult) Reset() {
 	*x = Job_BuildResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[295]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[299]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -21993,7 +22431,7 @@ func (x *Job_BuildResult) String() string {
 func (*Job_BuildResult) ProtoMessage() {}
 
 func (x *Job_BuildResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[295]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[299]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22035,7 +22473,7 @@ type Job_PushOp struct {
 func (x *Job_PushOp) Reset() {
 	*x = Job_PushOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[296]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[300]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22048,7 +22486,7 @@ func (x *Job_PushOp) String() string {
 func (*Job_PushOp) ProtoMessage() {}
 
 func (x *Job_PushOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[296]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[300]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22082,7 +22520,7 @@ type Job_PushResult struct {
 func (x *Job_PushResult) Reset() {
 	*x = Job_PushResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[297]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[301]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22095,7 +22533,7 @@ func (x *Job_PushResult) String() string {
 func (*Job_PushResult) ProtoMessage() {}
 
 func (x *Job_PushResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[297]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[301]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22130,7 +22568,7 @@ type Job_DeployOp struct {
 func (x *Job_DeployOp) Reset() {
 	*x = Job_DeployOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[298]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[302]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22143,7 +22581,7 @@ func (x *Job_DeployOp) String() string {
 func (*Job_DeployOp) ProtoMessage() {}
 
 func (x *Job_DeployOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[298]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[302]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22177,7 +22615,7 @@ type Job_DeployResult struct {
 func (x *Job_DeployResult) Reset() {
 	*x = Job_DeployResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[299]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[303]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22190,7 +22628,7 @@ func (x *Job_DeployResult) String() string {
 func (*Job_DeployResult) ProtoMessage() {}
 
 func (x *Job_DeployResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[299]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[303]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22231,7 +22669,7 @@ type Job_ExecOp struct {
 func (x *Job_ExecOp) Reset() {
 	*x = Job_ExecOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[300]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[304]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22244,7 +22682,7 @@ func (x *Job_ExecOp) String() string {
 func (*Job_ExecOp) ProtoMessage() {}
 
 func (x *Job_ExecOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[300]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[304]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22283,7 +22721,7 @@ type Job_ExecResult struct {
 func (x *Job_ExecResult) Reset() {
 	*x = Job_ExecResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[301]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[305]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22296,7 +22734,7 @@ func (x *Job_ExecResult) String() string {
 func (*Job_ExecResult) ProtoMessage() {}
 
 func (x *Job_ExecResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[301]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[305]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22335,7 +22773,7 @@ type Job_LogsOp struct {
 func (x *Job_LogsOp) Reset() {
 	*x = Job_LogsOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[302]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[306]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22348,7 +22786,7 @@ func (x *Job_LogsOp) String() string {
 func (*Job_LogsOp) ProtoMessage() {}
 
 func (x *Job_LogsOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[302]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[306]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22409,7 +22847,7 @@ type Job_DestroyOp struct {
 func (x *Job_DestroyOp) Reset() {
 	*x = Job_DestroyOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[303]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[307]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22422,7 +22860,7 @@ func (x *Job_DestroyOp) String() string {
 func (*Job_DestroyOp) ProtoMessage() {}
 
 func (x *Job_DestroyOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[303]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[307]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22495,7 +22933,7 @@ type Job_ReleaseOp struct {
 func (x *Job_ReleaseOp) Reset() {
 	*x = Job_ReleaseOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[304]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[308]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22508,7 +22946,7 @@ func (x *Job_ReleaseOp) String() string {
 func (*Job_ReleaseOp) ProtoMessage() {}
 
 func (x *Job_ReleaseOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[304]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[308]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22568,7 +23006,7 @@ type Job_ReleaseResult struct {
 func (x *Job_ReleaseResult) Reset() {
 	*x = Job_ReleaseResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[305]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[309]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22581,7 +23019,7 @@ func (x *Job_ReleaseResult) String() string {
 func (*Job_ReleaseResult) ProtoMessage() {}
 
 func (x *Job_ReleaseResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[305]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[309]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22623,7 +23061,7 @@ type Job_TaskPluginParams struct {
 func (x *Job_TaskPluginParams) Reset() {
 	*x = Job_TaskPluginParams{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[306]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[310]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22636,7 +23074,7 @@ func (x *Job_TaskPluginParams) String() string {
 func (*Job_TaskPluginParams) ProtoMessage() {}
 
 func (x *Job_TaskPluginParams) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[306]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[310]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22687,7 +23125,7 @@ type Job_StartTaskLaunchOp struct {
 func (x *Job_StartTaskLaunchOp) Reset() {
 	*x = Job_StartTaskLaunchOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[307]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[311]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22700,7 +23138,7 @@ func (x *Job_StartTaskLaunchOp) String() string {
 func (*Job_StartTaskLaunchOp) ProtoMessage() {}
 
 func (x *Job_StartTaskLaunchOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[307]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[311]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22742,7 +23180,7 @@ type Job_StartTaskResult struct {
 func (x *Job_StartTaskResult) Reset() {
 	*x = Job_StartTaskResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[308]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[312]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22755,7 +23193,7 @@ func (x *Job_StartTaskResult) String() string {
 func (*Job_StartTaskResult) ProtoMessage() {}
 
 func (x *Job_StartTaskResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[308]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[312]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22797,7 +23235,7 @@ type Job_StopTaskLaunchOp struct {
 func (x *Job_StopTaskLaunchOp) Reset() {
 	*x = Job_StopTaskLaunchOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[309]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[313]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22810,7 +23248,7 @@ func (x *Job_StopTaskLaunchOp) String() string {
 func (*Job_StopTaskLaunchOp) ProtoMessage() {}
 
 func (x *Job_StopTaskLaunchOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[309]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[313]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22885,7 +23323,7 @@ type Job_WatchTaskOp struct {
 func (x *Job_WatchTaskOp) Reset() {
 	*x = Job_WatchTaskOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[310]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[314]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22898,7 +23336,7 @@ func (x *Job_WatchTaskOp) String() string {
 func (*Job_WatchTaskOp) ProtoMessage() {}
 
 func (x *Job_WatchTaskOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[310]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[314]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22932,7 +23370,7 @@ type Job_WatchTaskResult struct {
 func (x *Job_WatchTaskResult) Reset() {
 	*x = Job_WatchTaskResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[311]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[315]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22945,7 +23383,7 @@ func (x *Job_WatchTaskResult) String() string {
 func (*Job_WatchTaskResult) ProtoMessage() {}
 
 func (x *Job_WatchTaskResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[311]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[315]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -22983,7 +23421,7 @@ type Job_StatusReportOp struct {
 func (x *Job_StatusReportOp) Reset() {
 	*x = Job_StatusReportOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[312]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[316]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -22996,7 +23434,7 @@ func (x *Job_StatusReportOp) String() string {
 func (*Job_StatusReportOp) ProtoMessage() {}
 
 func (x *Job_StatusReportOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[312]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[316]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23065,7 +23503,7 @@ type Job_StatusReportResult struct {
 func (x *Job_StatusReportResult) Reset() {
 	*x = Job_StatusReportResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[313]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[317]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23078,7 +23516,7 @@ func (x *Job_StatusReportResult) String() string {
 func (*Job_StatusReportResult) ProtoMessage() {}
 
 func (x *Job_StatusReportResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[313]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[317]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23110,7 +23548,7 @@ type Job_DocsOp struct {
 func (x *Job_DocsOp) Reset() {
 	*x = Job_DocsOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[314]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[318]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23123,7 +23561,7 @@ func (x *Job_DocsOp) String() string {
 func (*Job_DocsOp) ProtoMessage() {}
 
 func (x *Job_DocsOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[314]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[318]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23151,7 +23589,7 @@ type Job_DocsResult struct {
 func (x *Job_DocsResult) Reset() {
 	*x = Job_DocsResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[315]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[319]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23164,7 +23602,7 @@ func (x *Job_DocsResult) String() string {
 func (*Job_DocsResult) ProtoMessage() {}
 
 func (x *Job_DocsResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[315]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[319]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23196,7 +23634,7 @@ type Job_ConfigSyncOp struct {
 func (x *Job_ConfigSyncOp) Reset() {
 	*x = Job_ConfigSyncOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[316]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[320]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23209,7 +23647,7 @@ func (x *Job_ConfigSyncOp) String() string {
 func (*Job_ConfigSyncOp) ProtoMessage() {}
 
 func (x *Job_ConfigSyncOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[316]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[320]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23234,7 +23672,7 @@ type Job_ConfigSyncResult struct {
 func (x *Job_ConfigSyncResult) Reset() {
 	*x = Job_ConfigSyncResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[317]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[321]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23247,7 +23685,7 @@ func (x *Job_ConfigSyncResult) String() string {
 func (*Job_ConfigSyncResult) ProtoMessage() {}
 
 func (x *Job_ConfigSyncResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[317]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[321]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23276,7 +23714,7 @@ type Job_PipelineConfigSyncResult struct {
 func (x *Job_PipelineConfigSyncResult) Reset() {
 	*x = Job_PipelineConfigSyncResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[318]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[322]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23289,7 +23727,7 @@ func (x *Job_PipelineConfigSyncResult) String() string {
 func (*Job_PipelineConfigSyncResult) ProtoMessage() {}
 
 func (x *Job_PipelineConfigSyncResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[318]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[322]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23323,7 +23761,7 @@ type Job_ProjectDestroyResult struct {
 func (x *Job_ProjectDestroyResult) Reset() {
 	*x = Job_ProjectDestroyResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[319]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[323]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23336,7 +23774,7 @@ func (x *Job_ProjectDestroyResult) String() string {
 func (*Job_ProjectDestroyResult) ProtoMessage() {}
 
 func (x *Job_ProjectDestroyResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[319]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[323]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23374,7 +23812,7 @@ type Job_PollOp struct {
 func (x *Job_PollOp) Reset() {
 	*x = Job_PollOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[320]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[324]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23387,7 +23825,7 @@ func (x *Job_PollOp) String() string {
 func (*Job_PollOp) ProtoMessage() {}
 
 func (x *Job_PollOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[320]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[324]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23422,7 +23860,7 @@ type Job_PollResult struct {
 func (x *Job_PollResult) Reset() {
 	*x = Job_PollResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[321]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[325]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23435,7 +23873,7 @@ func (x *Job_PollResult) String() string {
 func (*Job_PollResult) ProtoMessage() {}
 
 func (x *Job_PollResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[321]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[325]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23484,7 +23922,7 @@ type Job_InitOp struct {
 func (x *Job_InitOp) Reset() {
 	*x = Job_InitOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[322]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[326]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23497,7 +23935,7 @@ func (x *Job_InitOp) String() string {
 func (*Job_InitOp) ProtoMessage() {}
 
 func (x *Job_InitOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[322]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[326]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23522,7 +23960,7 @@ type Job_InitResult struct {
 func (x *Job_InitResult) Reset() {
 	*x = Job_InitResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[323]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[327]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23535,7 +23973,7 @@ func (x *Job_InitResult) String() string {
 func (*Job_InitResult) ProtoMessage() {}
 
 func (x *Job_InitResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[323]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[327]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23564,7 +24002,7 @@ type Job_PipelineStepOp struct {
 func (x *Job_PipelineStepOp) Reset() {
 	*x = Job_PipelineStepOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[324]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[328]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23577,7 +24015,7 @@ func (x *Job_PipelineStepOp) String() string {
 func (*Job_PipelineStepOp) ProtoMessage() {}
 
 func (x *Job_PipelineStepOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[324]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[328]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23615,7 +24053,7 @@ type Job_DestroyProjectOp struct {
 func (x *Job_DestroyProjectOp) Reset() {
 	*x = Job_DestroyProjectOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[325]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[329]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23628,7 +24066,7 @@ func (x *Job_DestroyProjectOp) String() string {
 func (*Job_DestroyProjectOp) ProtoMessage() {}
 
 func (x *Job_DestroyProjectOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[325]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[329]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23673,7 +24111,7 @@ type Job_PipelineStepResult struct {
 func (x *Job_PipelineStepResult) Reset() {
 	*x = Job_PipelineStepResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[326]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[330]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23686,7 +24124,7 @@ func (x *Job_PipelineStepResult) String() string {
 func (*Job_PipelineStepResult) ProtoMessage() {}
 
 func (x *Job_PipelineStepResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[326]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[330]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23727,7 +24165,7 @@ type Job_QueueProjectOp struct {
 func (x *Job_QueueProjectOp) Reset() {
 	*x = Job_QueueProjectOp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[327]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[331]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23740,7 +24178,7 @@ func (x *Job_QueueProjectOp) String() string {
 func (*Job_QueueProjectOp) ProtoMessage() {}
 
 func (x *Job_QueueProjectOp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[327]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[331]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23777,7 +24215,7 @@ type Job_QueueProjectResult struct {
 func (x *Job_QueueProjectResult) Reset() {
 	*x = Job_QueueProjectResult{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[328]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[332]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23790,7 +24228,7 @@ func (x *Job_QueueProjectResult) String() string {
 func (*Job_QueueProjectResult) ProtoMessage() {}
 
 func (x *Job_QueueProjectResult) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[328]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[332]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23829,7 +24267,7 @@ type Job_DataSource_Ref struct {
 func (x *Job_DataSource_Ref) Reset() {
 	*x = Job_DataSource_Ref{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[329]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[333]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23842,7 +24280,7 @@ func (x *Job_DataSource_Ref) String() string {
 func (*Job_DataSource_Ref) ProtoMessage() {}
 
 func (x *Job_DataSource_Ref) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[329]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[333]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23915,7 +24353,7 @@ type Job_Git_Basic struct {
 func (x *Job_Git_Basic) Reset() {
 	*x = Job_Git_Basic{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[330]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[334]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23928,7 +24366,7 @@ func (x *Job_Git_Basic) String() string {
 func (*Job_Git_Basic) ProtoMessage() {}
 
 func (x *Job_Git_Basic) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[330]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[334]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -23976,7 +24414,7 @@ type Job_Git_SSH struct {
 func (x *Job_Git_SSH) Reset() {
 	*x = Job_Git_SSH{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[331]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[335]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -23989,7 +24427,7 @@ func (x *Job_Git_SSH) String() string {
 func (*Job_Git_SSH) ProtoMessage() {}
 
 func (x *Job_Git_SSH) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[331]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[335]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24043,7 +24481,7 @@ type Job_Git_Ref struct {
 func (x *Job_Git_Ref) Reset() {
 	*x = Job_Git_Ref{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[332]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[336]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24056,7 +24494,7 @@ func (x *Job_Git_Ref) String() string {
 func (*Job_Git_Ref) ProtoMessage() {}
 
 func (x *Job_Git_Ref) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[332]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[336]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24122,7 +24560,7 @@ type Job_AuthResult_Result struct {
 func (x *Job_AuthResult_Result) Reset() {
 	*x = Job_AuthResult_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[333]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[337]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24135,7 +24573,7 @@ func (x *Job_AuthResult_Result) String() string {
 func (*Job_AuthResult_Result) ProtoMessage() {}
 
 func (x *Job_AuthResult_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[333]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[337]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24206,7 +24644,7 @@ type Job_DocsResult_Result struct {
 func (x *Job_DocsResult_Result) Reset() {
 	*x = Job_DocsResult_Result{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[334]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[338]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24219,7 +24657,7 @@ func (x *Job_DocsResult_Result) String() string {
 func (*Job_DocsResult_Result) ProtoMessage() {}
 
 func (x *Job_DocsResult_Result) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[334]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[338]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24263,7 +24701,7 @@ type Job_QueueProjectResult_Application struct {
 func (x *Job_QueueProjectResult_Application) Reset() {
 	*x = Job_QueueProjectResult_Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[336]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[340]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24276,7 +24714,7 @@ func (x *Job_QueueProjectResult_Application) String() string {
 func (*Job_QueueProjectResult_Application) ProtoMessage() {}
 
 func (x *Job_QueueProjectResult_Application) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[336]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[340]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24323,7 +24761,7 @@ type Documentation_Field struct {
 func (x *Documentation_Field) Reset() {
 	*x = Documentation_Field{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[338]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[342]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24336,7 +24774,7 @@ func (x *Documentation_Field) String() string {
 func (*Documentation_Field) ProtoMessage() {}
 
 func (x *Documentation_Field) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[338]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[342]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24414,7 +24852,7 @@ type Documentation_Mapper struct {
 func (x *Documentation_Mapper) Reset() {
 	*x = Documentation_Mapper{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[339]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[343]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24427,7 +24865,7 @@ func (x *Documentation_Mapper) String() string {
 func (*Documentation_Mapper) ProtoMessage() {}
 
 func (x *Documentation_Mapper) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[339]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[343]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24473,7 +24911,7 @@ type GetJobStreamResponse_Open struct {
 func (x *GetJobStreamResponse_Open) Reset() {
 	*x = GetJobStreamResponse_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[340]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[344]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24486,7 +24924,7 @@ func (x *GetJobStreamResponse_Open) String() string {
 func (*GetJobStreamResponse_Open) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[340]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[344]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24521,7 +24959,7 @@ type GetJobStreamResponse_State struct {
 func (x *GetJobStreamResponse_State) Reset() {
 	*x = GetJobStreamResponse_State{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[341]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[345]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24534,7 +24972,7 @@ func (x *GetJobStreamResponse_State) String() string {
 func (*GetJobStreamResponse_State) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_State) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[341]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[345]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24590,7 +25028,7 @@ type GetJobStreamResponse_JobChange struct {
 func (x *GetJobStreamResponse_JobChange) Reset() {
 	*x = GetJobStreamResponse_JobChange{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[342]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[346]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24603,7 +25041,7 @@ func (x *GetJobStreamResponse_JobChange) String() string {
 func (*GetJobStreamResponse_JobChange) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_JobChange) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[342]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[346]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24640,7 +25078,7 @@ type GetJobStreamResponse_Download struct {
 func (x *GetJobStreamResponse_Download) Reset() {
 	*x = GetJobStreamResponse_Download{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[343]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[347]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24653,7 +25091,7 @@ func (x *GetJobStreamResponse_Download) String() string {
 func (*GetJobStreamResponse_Download) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Download) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[343]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[347]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24692,7 +25130,7 @@ type GetJobStreamResponse_Terminal struct {
 func (x *GetJobStreamResponse_Terminal) Reset() {
 	*x = GetJobStreamResponse_Terminal{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[344]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[348]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24705,7 +25143,7 @@ func (x *GetJobStreamResponse_Terminal) String() string {
 func (*GetJobStreamResponse_Terminal) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[344]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[348]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24746,7 +25184,7 @@ type GetJobStreamResponse_Error struct {
 func (x *GetJobStreamResponse_Error) Reset() {
 	*x = GetJobStreamResponse_Error{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[345]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[349]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24759,7 +25197,7 @@ func (x *GetJobStreamResponse_Error) String() string {
 func (*GetJobStreamResponse_Error) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Error) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[345]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[349]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24798,7 +25236,7 @@ type GetJobStreamResponse_Complete struct {
 func (x *GetJobStreamResponse_Complete) Reset() {
 	*x = GetJobStreamResponse_Complete{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[346]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[350]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24811,7 +25249,7 @@ func (x *GetJobStreamResponse_Complete) String() string {
 func (*GetJobStreamResponse_Complete) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Complete) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[346]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[350]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -24865,7 +25303,7 @@ type GetJobStreamResponse_Terminal_Event struct {
 func (x *GetJobStreamResponse_Terminal_Event) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[347]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[351]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -24878,7 +25316,7 @@ func (x *GetJobStreamResponse_Terminal_Event) String() string {
 func (*GetJobStreamResponse_Terminal_Event) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[347]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[351]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25018,7 +25456,7 @@ type GetJobStreamResponse_Terminal_Event_Status struct {
 func (x *GetJobStreamResponse_Terminal_Event_Status) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_Status{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[348]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[352]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25031,7 +25469,7 @@ func (x *GetJobStreamResponse_Terminal_Event_Status) String() string {
 func (*GetJobStreamResponse_Terminal_Event_Status) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_Status) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[348]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[352]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25080,7 +25518,7 @@ type GetJobStreamResponse_Terminal_Event_Line struct {
 func (x *GetJobStreamResponse_Terminal_Event_Line) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_Line{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[349]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[353]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25093,7 +25531,7 @@ func (x *GetJobStreamResponse_Terminal_Event_Line) String() string {
 func (*GetJobStreamResponse_Terminal_Event_Line) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_Line) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[349]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[353]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25135,7 +25573,7 @@ type GetJobStreamResponse_Terminal_Event_Raw struct {
 func (x *GetJobStreamResponse_Terminal_Event_Raw) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_Raw{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[350]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[354]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25148,7 +25586,7 @@ func (x *GetJobStreamResponse_Terminal_Event_Raw) String() string {
 func (*GetJobStreamResponse_Terminal_Event_Raw) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_Raw) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[350]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[354]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25190,7 +25628,7 @@ type GetJobStreamResponse_Terminal_Event_NamedValue struct {
 func (x *GetJobStreamResponse_Terminal_Event_NamedValue) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_NamedValue{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[351]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[355]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25203,7 +25641,7 @@ func (x *GetJobStreamResponse_Terminal_Event_NamedValue) String() string {
 func (*GetJobStreamResponse_Terminal_Event_NamedValue) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_NamedValue) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[351]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[355]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25244,7 +25682,7 @@ type GetJobStreamResponse_Terminal_Event_NamedValues struct {
 func (x *GetJobStreamResponse_Terminal_Event_NamedValues) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_NamedValues{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[352]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[356]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25257,7 +25695,7 @@ func (x *GetJobStreamResponse_Terminal_Event_NamedValues) String() string {
 func (*GetJobStreamResponse_Terminal_Event_NamedValues) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_NamedValues) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[352]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[356]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25292,7 +25730,7 @@ type GetJobStreamResponse_Terminal_Event_TableEntry struct {
 func (x *GetJobStreamResponse_Terminal_Event_TableEntry) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_TableEntry{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[353]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[357]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25305,7 +25743,7 @@ func (x *GetJobStreamResponse_Terminal_Event_TableEntry) String() string {
 func (*GetJobStreamResponse_Terminal_Event_TableEntry) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_TableEntry) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[353]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[357]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25346,7 +25784,7 @@ type GetJobStreamResponse_Terminal_Event_TableRow struct {
 func (x *GetJobStreamResponse_Terminal_Event_TableRow) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_TableRow{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[354]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[358]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25359,7 +25797,7 @@ func (x *GetJobStreamResponse_Terminal_Event_TableRow) String() string {
 func (*GetJobStreamResponse_Terminal_Event_TableRow) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_TableRow) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[354]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[358]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25394,7 +25832,7 @@ type GetJobStreamResponse_Terminal_Event_Table struct {
 func (x *GetJobStreamResponse_Terminal_Event_Table) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_Table{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[355]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[359]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25407,7 +25845,7 @@ func (x *GetJobStreamResponse_Terminal_Event_Table) String() string {
 func (*GetJobStreamResponse_Terminal_Event_Table) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_Table) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[355]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[359]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25448,7 +25886,7 @@ type GetJobStreamResponse_Terminal_Event_StepGroup struct {
 func (x *GetJobStreamResponse_Terminal_Event_StepGroup) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_StepGroup{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[356]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[360]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25461,7 +25899,7 @@ func (x *GetJobStreamResponse_Terminal_Event_StepGroup) String() string {
 func (*GetJobStreamResponse_Terminal_Event_StepGroup) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_StepGroup) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[356]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[360]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25499,7 +25937,7 @@ type GetJobStreamResponse_Terminal_Event_Step struct {
 func (x *GetJobStreamResponse_Terminal_Event_Step) Reset() {
 	*x = GetJobStreamResponse_Terminal_Event_Step{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[357]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[361]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25512,7 +25950,7 @@ func (x *GetJobStreamResponse_Terminal_Event_Step) String() string {
 func (*GetJobStreamResponse_Terminal_Event_Step) ProtoMessage() {}
 
 func (x *GetJobStreamResponse_Terminal_Event_Step) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[357]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[361]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25574,7 +26012,7 @@ type Runner_ODR struct {
 func (x *Runner_ODR) Reset() {
 	*x = Runner_ODR{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[359]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[363]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25587,7 +26025,7 @@ func (x *Runner_ODR) String() string {
 func (*Runner_ODR) ProtoMessage() {}
 
 func (x *Runner_ODR) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[359]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[363]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25619,7 +26057,7 @@ type Runner_Local struct {
 func (x *Runner_Local) Reset() {
 	*x = Runner_Local{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[360]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[364]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25632,7 +26070,7 @@ func (x *Runner_Local) String() string {
 func (*Runner_Local) ProtoMessage() {}
 
 func (x *Runner_Local) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[360]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[364]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25657,7 +26095,7 @@ type Runner_Remote struct {
 func (x *Runner_Remote) Reset() {
 	*x = Runner_Remote{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[361]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[365]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25670,7 +26108,7 @@ func (x *Runner_Remote) String() string {
 func (*Runner_Remote) ProtoMessage() {}
 
 func (x *Runner_Remote) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[361]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[365]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25700,7 +26138,7 @@ type RunnerConfigRequest_Open struct {
 func (x *RunnerConfigRequest_Open) Reset() {
 	*x = RunnerConfigRequest_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[362]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[366]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25713,7 +26151,7 @@ func (x *RunnerConfigRequest_Open) String() string {
 func (*RunnerConfigRequest_Open) ProtoMessage() {}
 
 func (x *RunnerConfigRequest_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[362]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[366]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25756,7 +26194,7 @@ type RunnerJobStreamRequest_Request struct {
 func (x *RunnerJobStreamRequest_Request) Reset() {
 	*x = RunnerJobStreamRequest_Request{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[363]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[367]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25769,7 +26207,7 @@ func (x *RunnerJobStreamRequest_Request) String() string {
 func (*RunnerJobStreamRequest_Request) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[363]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[367]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25808,7 +26246,7 @@ type RunnerJobStreamRequest_Ack struct {
 func (x *RunnerJobStreamRequest_Ack) Reset() {
 	*x = RunnerJobStreamRequest_Ack{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[364]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[368]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25821,7 +26259,7 @@ func (x *RunnerJobStreamRequest_Ack) String() string {
 func (*RunnerJobStreamRequest_Ack) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_Ack) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[364]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[368]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25848,7 +26286,7 @@ type RunnerJobStreamRequest_Complete struct {
 func (x *RunnerJobStreamRequest_Complete) Reset() {
 	*x = RunnerJobStreamRequest_Complete{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[365]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[369]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25861,7 +26299,7 @@ func (x *RunnerJobStreamRequest_Complete) String() string {
 func (*RunnerJobStreamRequest_Complete) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_Complete) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[365]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[369]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25895,7 +26333,7 @@ type RunnerJobStreamRequest_Error struct {
 func (x *RunnerJobStreamRequest_Error) Reset() {
 	*x = RunnerJobStreamRequest_Error{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[366]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[370]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25908,7 +26346,7 @@ func (x *RunnerJobStreamRequest_Error) String() string {
 func (*RunnerJobStreamRequest_Error) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_Error) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[366]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[370]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25940,7 +26378,7 @@ type RunnerJobStreamRequest_Heartbeat struct {
 func (x *RunnerJobStreamRequest_Heartbeat) Reset() {
 	*x = RunnerJobStreamRequest_Heartbeat{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[367]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[371]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25953,7 +26391,7 @@ func (x *RunnerJobStreamRequest_Heartbeat) String() string {
 func (*RunnerJobStreamRequest_Heartbeat) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_Heartbeat) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[367]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[371]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -25981,7 +26419,7 @@ type RunnerJobStreamRequest_ConfigLoad struct {
 func (x *RunnerJobStreamRequest_ConfigLoad) Reset() {
 	*x = RunnerJobStreamRequest_ConfigLoad{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[368]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[372]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -25994,7 +26432,7 @@ func (x *RunnerJobStreamRequest_ConfigLoad) String() string {
 func (*RunnerJobStreamRequest_ConfigLoad) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_ConfigLoad) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[368]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[372]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26028,7 +26466,7 @@ type RunnerJobStreamRequest_VariableValuesSet struct {
 func (x *RunnerJobStreamRequest_VariableValuesSet) Reset() {
 	*x = RunnerJobStreamRequest_VariableValuesSet{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[369]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[373]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26041,7 +26479,7 @@ func (x *RunnerJobStreamRequest_VariableValuesSet) String() string {
 func (*RunnerJobStreamRequest_VariableValuesSet) ProtoMessage() {}
 
 func (x *RunnerJobStreamRequest_VariableValuesSet) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[369]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[373]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26078,7 +26516,7 @@ type RunnerJobStreamResponse_JobAssignment struct {
 func (x *RunnerJobStreamResponse_JobAssignment) Reset() {
 	*x = RunnerJobStreamResponse_JobAssignment{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[371]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[375]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26091,7 +26529,7 @@ func (x *RunnerJobStreamResponse_JobAssignment) String() string {
 func (*RunnerJobStreamResponse_JobAssignment) ProtoMessage() {}
 
 func (x *RunnerJobStreamResponse_JobAssignment) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[371]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[375]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26132,7 +26570,7 @@ type RunnerJobStreamResponse_JobCancel struct {
 func (x *RunnerJobStreamResponse_JobCancel) Reset() {
 	*x = RunnerJobStreamResponse_JobCancel{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[372]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[376]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26145,7 +26583,7 @@ func (x *RunnerJobStreamResponse_JobCancel) String() string {
 func (*RunnerJobStreamResponse_JobCancel) ProtoMessage() {}
 
 func (x *RunnerJobStreamResponse_JobCancel) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[372]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[376]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26181,7 +26619,7 @@ type ServerConfig_AdvertiseAddr struct {
 func (x *ServerConfig_AdvertiseAddr) Reset() {
 	*x = ServerConfig_AdvertiseAddr{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[373]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[377]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26194,7 +26632,7 @@ func (x *ServerConfig_AdvertiseAddr) String() string {
 func (*ServerConfig_AdvertiseAddr) ProtoMessage() {}
 
 func (x *ServerConfig_AdvertiseAddr) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[373]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[377]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26245,7 +26683,7 @@ type Hostname_Target struct {
 func (x *Hostname_Target) Reset() {
 	*x = Hostname_Target{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[375]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[379]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26258,7 +26696,7 @@ func (x *Hostname_Target) String() string {
 func (*Hostname_Target) ProtoMessage() {}
 
 func (x *Hostname_Target) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[375]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[379]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26313,7 +26751,7 @@ type Hostname_TargetApp struct {
 func (x *Hostname_TargetApp) Reset() {
 	*x = Hostname_TargetApp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[376]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[380]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26326,7 +26764,7 @@ func (x *Hostname_TargetApp) String() string {
 func (*Hostname_TargetApp) ProtoMessage() {}
 
 func (x *Hostname_TargetApp) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[376]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[380]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26377,7 +26815,7 @@ type Build_Preload struct {
 func (x *Build_Preload) Reset() {
 	*x = Build_Preload{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[378]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[382]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26390,7 +26828,7 @@ func (x *Build_Preload) String() string {
 func (*Build_Preload) ProtoMessage() {}
 
 func (x *Build_Preload) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[378]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[382]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26434,7 +26872,7 @@ type PushedArtifact_Preload struct {
 func (x *PushedArtifact_Preload) Reset() {
 	*x = PushedArtifact_Preload{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[381]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[385]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26447,7 +26885,7 @@ func (x *PushedArtifact_Preload) String() string {
 func (*PushedArtifact_Preload) ProtoMessage() {}
 
 func (x *PushedArtifact_Preload) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[381]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[385]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26500,7 +26938,7 @@ type Deployment_Preload struct {
 func (x *Deployment_Preload) Reset() {
 	*x = Deployment_Preload{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[383]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[387]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26513,7 +26951,7 @@ func (x *Deployment_Preload) String() string {
 func (*Deployment_Preload) ProtoMessage() {}
 
 func (x *Deployment_Preload) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[383]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[387]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26572,7 +27010,7 @@ type ListInstancesRequest_Application struct {
 func (x *ListInstancesRequest_Application) Reset() {
 	*x = ListInstancesRequest_Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[384]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[388]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26585,7 +27023,7 @@ func (x *ListInstancesRequest_Application) String() string {
 func (*ListInstancesRequest_Application) ProtoMessage() {}
 
 func (x *ListInstancesRequest_Application) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[384]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[388]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26642,7 +27080,7 @@ type Release_Preload struct {
 func (x *Release_Preload) Reset() {
 	*x = Release_Preload{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[386]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[390]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26655,7 +27093,7 @@ func (x *Release_Preload) String() string {
 func (*Release_Preload) ProtoMessage() {}
 
 func (x *Release_Preload) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[386]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[390]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26736,7 +27174,7 @@ type StatusReport_Resource struct {
 func (x *StatusReport_Resource) Reset() {
 	*x = StatusReport_Resource{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[387]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[391]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26749,7 +27187,7 @@ func (x *StatusReport_Resource) String() string {
 func (*StatusReport_Resource) ProtoMessage() {}
 
 func (x *StatusReport_Resource) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[387]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[391]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26872,7 +27310,7 @@ type StatusReport_Health struct {
 func (x *StatusReport_Health) Reset() {
 	*x = StatusReport_Health{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[388]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[392]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26885,7 +27323,7 @@ func (x *StatusReport_Health) String() string {
 func (*StatusReport_Health) ProtoMessage() {}
 
 func (x *StatusReport_Health) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[388]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[392]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26941,7 +27379,7 @@ type GetLogStreamRequest_Application struct {
 func (x *GetLogStreamRequest_Application) Reset() {
 	*x = GetLogStreamRequest_Application{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[389]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[393]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -26954,7 +27392,7 @@ func (x *GetLogStreamRequest_Application) String() string {
 func (*GetLogStreamRequest_Application) ProtoMessage() {}
 
 func (x *GetLogStreamRequest_Application) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[389]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[393]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -26997,7 +27435,7 @@ type LogBatch_Entry struct {
 func (x *LogBatch_Entry) Reset() {
 	*x = LogBatch_Entry{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[390]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[394]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27010,7 +27448,7 @@ func (x *LogBatch_Entry) String() string {
 func (*LogBatch_Entry) ProtoMessage() {}
 
 func (x *LogBatch_Entry) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[390]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[394]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27064,7 +27502,7 @@ type ConfigVar_DynamicVal struct {
 func (x *ConfigVar_DynamicVal) Reset() {
 	*x = ConfigVar_DynamicVal{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[391]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[395]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27077,7 +27515,7 @@ func (x *ConfigVar_DynamicVal) String() string {
 func (*ConfigVar_DynamicVal) ProtoMessage() {}
 
 func (x *ConfigVar_DynamicVal) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[391]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[395]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27152,7 +27590,7 @@ type ConfigVar_Target struct {
 func (x *ConfigVar_Target) Reset() {
 	*x = ConfigVar_Target{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[392]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[396]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27165,7 +27603,7 @@ func (x *ConfigVar_Target) String() string {
 func (*ConfigVar_Target) ProtoMessage() {}
 
 func (x *ConfigVar_Target) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[392]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[396]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27271,7 +27709,7 @@ type ExecStreamRequest_Start struct {
 func (x *ExecStreamRequest_Start) Reset() {
 	*x = ExecStreamRequest_Start{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[396]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[400]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27284,7 +27722,7 @@ func (x *ExecStreamRequest_Start) String() string {
 func (*ExecStreamRequest_Start) ProtoMessage() {}
 
 func (x *ExecStreamRequest_Start) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[396]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[400]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27367,7 +27805,7 @@ type ExecStreamRequest_Input struct {
 func (x *ExecStreamRequest_Input) Reset() {
 	*x = ExecStreamRequest_Input{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[397]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[401]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27380,7 +27818,7 @@ func (x *ExecStreamRequest_Input) String() string {
 func (*ExecStreamRequest_Input) ProtoMessage() {}
 
 func (x *ExecStreamRequest_Input) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[397]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[401]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27418,7 +27856,7 @@ type ExecStreamRequest_PTY struct {
 func (x *ExecStreamRequest_PTY) Reset() {
 	*x = ExecStreamRequest_PTY{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[398]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[402]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27431,7 +27869,7 @@ func (x *ExecStreamRequest_PTY) String() string {
 func (*ExecStreamRequest_PTY) ProtoMessage() {}
 
 func (x *ExecStreamRequest_PTY) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[398]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[402]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27482,7 +27920,7 @@ type ExecStreamRequest_WindowSize struct {
 func (x *ExecStreamRequest_WindowSize) Reset() {
 	*x = ExecStreamRequest_WindowSize{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[399]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[403]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27495,7 +27933,7 @@ func (x *ExecStreamRequest_WindowSize) String() string {
 func (*ExecStreamRequest_WindowSize) ProtoMessage() {}
 
 func (x *ExecStreamRequest_WindowSize) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[399]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[403]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27548,7 +27986,7 @@ type ExecStreamResponse_Open struct {
 func (x *ExecStreamResponse_Open) Reset() {
 	*x = ExecStreamResponse_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[400]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[404]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27561,7 +27999,7 @@ func (x *ExecStreamResponse_Open) String() string {
 func (*ExecStreamResponse_Open) ProtoMessage() {}
 
 func (x *ExecStreamResponse_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[400]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[404]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27588,7 +28026,7 @@ type ExecStreamResponse_Exit struct {
 func (x *ExecStreamResponse_Exit) Reset() {
 	*x = ExecStreamResponse_Exit{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[401]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[405]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27601,7 +28039,7 @@ func (x *ExecStreamResponse_Exit) String() string {
 func (*ExecStreamResponse_Exit) ProtoMessage() {}
 
 func (x *ExecStreamResponse_Exit) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[401]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[405]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27636,7 +28074,7 @@ type ExecStreamResponse_Output struct {
 func (x *ExecStreamResponse_Output) Reset() {
 	*x = ExecStreamResponse_Output{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[402]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[406]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27649,7 +28087,7 @@ func (x *ExecStreamResponse_Output) String() string {
 func (*ExecStreamResponse_Output) ProtoMessage() {}
 
 func (x *ExecStreamResponse_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[402]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[406]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27692,7 +28130,7 @@ type EntrypointConfig_Exec struct {
 func (x *EntrypointConfig_Exec) Reset() {
 	*x = EntrypointConfig_Exec{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[403]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[407]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27705,7 +28143,7 @@ func (x *EntrypointConfig_Exec) String() string {
 func (*EntrypointConfig_Exec) ProtoMessage() {}
 
 func (x *EntrypointConfig_Exec) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[403]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[407]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27757,7 +28195,7 @@ type EntrypointConfig_URLService struct {
 func (x *EntrypointConfig_URLService) Reset() {
 	*x = EntrypointConfig_URLService{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[404]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[408]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27770,7 +28208,7 @@ func (x *EntrypointConfig_URLService) String() string {
 func (*EntrypointConfig_URLService) ProtoMessage() {}
 
 func (x *EntrypointConfig_URLService) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[404]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[408]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27821,7 +28259,7 @@ type EntrypointConfig_DeploymentInfo struct {
 func (x *EntrypointConfig_DeploymentInfo) Reset() {
 	*x = EntrypointConfig_DeploymentInfo{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[405]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[409]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27834,7 +28272,7 @@ func (x *EntrypointConfig_DeploymentInfo) String() string {
 func (*EntrypointConfig_DeploymentInfo) ProtoMessage() {}
 
 func (x *EntrypointConfig_DeploymentInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[405]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[409]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27876,7 +28314,7 @@ type EntrypointExecRequest_Open struct {
 func (x *EntrypointExecRequest_Open) Reset() {
 	*x = EntrypointExecRequest_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[407]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[411]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27889,7 +28327,7 @@ func (x *EntrypointExecRequest_Open) String() string {
 func (*EntrypointExecRequest_Open) ProtoMessage() {}
 
 func (x *EntrypointExecRequest_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[407]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[411]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27930,7 +28368,7 @@ type EntrypointExecRequest_Exit struct {
 func (x *EntrypointExecRequest_Exit) Reset() {
 	*x = EntrypointExecRequest_Exit{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[408]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[412]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27943,7 +28381,7 @@ func (x *EntrypointExecRequest_Exit) String() string {
 func (*EntrypointExecRequest_Exit) ProtoMessage() {}
 
 func (x *EntrypointExecRequest_Exit) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[408]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[412]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -27978,7 +28416,7 @@ type EntrypointExecRequest_Output struct {
 func (x *EntrypointExecRequest_Output) Reset() {
 	*x = EntrypointExecRequest_Output{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[409]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[413]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -27991,7 +28429,7 @@ func (x *EntrypointExecRequest_Output) String() string {
 func (*EntrypointExecRequest_Output) ProtoMessage() {}
 
 func (x *EntrypointExecRequest_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[409]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[413]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28032,7 +28470,7 @@ type EntrypointExecRequest_Error struct {
 func (x *EntrypointExecRequest_Error) Reset() {
 	*x = EntrypointExecRequest_Error{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[410]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[414]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28045,7 +28483,7 @@ func (x *EntrypointExecRequest_Error) String() string {
 func (*EntrypointExecRequest_Error) ProtoMessage() {}
 
 func (x *EntrypointExecRequest_Error) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[410]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[414]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28105,7 +28543,7 @@ type Pipeline_Step struct {
 func (x *Pipeline_Step) Reset() {
 	*x = Pipeline_Step{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[412]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[416]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28118,7 +28556,7 @@ func (x *Pipeline_Step) String() string {
 func (*Pipeline_Step) ProtoMessage() {}
 
 func (x *Pipeline_Step) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[412]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[416]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28274,7 +28712,7 @@ type Pipeline_Step_Exec struct {
 func (x *Pipeline_Step_Exec) Reset() {
 	*x = Pipeline_Step_Exec{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[413]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[417]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28287,7 +28725,7 @@ func (x *Pipeline_Step_Exec) String() string {
 func (*Pipeline_Step_Exec) ProtoMessage() {}
 
 func (x *Pipeline_Step_Exec) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[413]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[417]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28338,7 +28776,7 @@ type Pipeline_Step_Build struct {
 func (x *Pipeline_Step_Build) Reset() {
 	*x = Pipeline_Step_Build{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[414]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[418]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28351,7 +28789,7 @@ func (x *Pipeline_Step_Build) String() string {
 func (*Pipeline_Step_Build) ProtoMessage() {}
 
 func (x *Pipeline_Step_Build) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[414]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[418]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28388,7 +28826,7 @@ type Pipeline_Step_Deploy struct {
 func (x *Pipeline_Step_Deploy) Reset() {
 	*x = Pipeline_Step_Deploy{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[415]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[419]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28401,7 +28839,7 @@ func (x *Pipeline_Step_Deploy) String() string {
 func (*Pipeline_Step_Deploy) ProtoMessage() {}
 
 func (x *Pipeline_Step_Deploy) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[415]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[419]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28441,7 +28879,7 @@ type Pipeline_Step_Release struct {
 func (x *Pipeline_Step_Release) Reset() {
 	*x = Pipeline_Step_Release{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[416]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[420]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28454,7 +28892,7 @@ func (x *Pipeline_Step_Release) String() string {
 func (*Pipeline_Step_Release) ProtoMessage() {}
 
 func (x *Pipeline_Step_Release) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[416]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[420]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28514,7 +28952,7 @@ type Pipeline_Step_Up struct {
 func (x *Pipeline_Step_Up) Reset() {
 	*x = Pipeline_Step_Up{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[417]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[421]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28527,7 +28965,7 @@ func (x *Pipeline_Step_Up) String() string {
 func (*Pipeline_Step_Up) ProtoMessage() {}
 
 func (x *Pipeline_Step_Up) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[417]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[421]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28575,7 +29013,7 @@ type Pipeline_Step_Pipeline struct {
 func (x *Pipeline_Step_Pipeline) Reset() {
 	*x = Pipeline_Step_Pipeline{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[418]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[422]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28588,7 +29026,7 @@ func (x *Pipeline_Step_Pipeline) String() string {
 func (*Pipeline_Step_Pipeline) ProtoMessage() {}
 
 func (x *Pipeline_Step_Pipeline) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[418]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[422]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28625,7 +29063,7 @@ type GetPipelineResponse_Graph struct {
 func (x *GetPipelineResponse_Graph) Reset() {
 	*x = GetPipelineResponse_Graph{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[419]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[423]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28638,7 +29076,7 @@ func (x *GetPipelineResponse_Graph) String() string {
 func (*GetPipelineResponse_Graph) ProtoMessage() {}
 
 func (x *GetPipelineResponse_Graph) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[419]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[423]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28687,7 +29125,7 @@ type TokenTransport_OAuthCredentials struct {
 func (x *TokenTransport_OAuthCredentials) Reset() {
 	*x = TokenTransport_OAuthCredentials{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[423]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[427]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28700,7 +29138,7 @@ func (x *TokenTransport_OAuthCredentials) String() string {
 func (*TokenTransport_OAuthCredentials) ProtoMessage() {}
 
 func (x *TokenTransport_OAuthCredentials) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[423]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[427]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28755,7 +29193,7 @@ type Token_Login struct {
 func (x *Token_Login) Reset() {
 	*x = Token_Login{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[424]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[428]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28768,7 +29206,7 @@ func (x *Token_Login) String() string {
 func (*Token_Login) ProtoMessage() {}
 
 func (x *Token_Login) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[424]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[428]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28816,7 +29254,7 @@ type Token_Runner struct {
 func (x *Token_Runner) Reset() {
 	*x = Token_Runner{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[425]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[429]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28829,7 +29267,7 @@ func (x *Token_Runner) String() string {
 func (*Token_Runner) ProtoMessage() {}
 
 func (x *Token_Runner) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[425]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[429]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28880,7 +29318,7 @@ type Token_Invite struct {
 func (x *Token_Invite) Reset() {
 	*x = Token_Invite{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[426]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[430]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28893,7 +29331,7 @@ func (x *Token_Invite) String() string {
 func (*Token_Invite) ProtoMessage() {}
 
 func (x *Token_Invite) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[426]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[430]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28942,7 +29380,7 @@ type Token_Entrypoint struct {
 func (x *Token_Entrypoint) Reset() {
 	*x = Token_Entrypoint{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[427]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[431]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -28955,7 +29393,7 @@ func (x *Token_Entrypoint) String() string {
 func (*Token_Entrypoint) ProtoMessage() {}
 
 func (x *Token_Entrypoint) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[427]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[431]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -28993,7 +29431,7 @@ type Token_Trigger struct {
 func (x *Token_Trigger) Reset() {
 	*x = Token_Trigger{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[428]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[432]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29006,7 +29444,7 @@ func (x *Token_Trigger) String() string {
 func (*Token_Trigger) ProtoMessage() {}
 
 func (x *Token_Trigger) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[428]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[432]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29043,7 +29481,7 @@ type Token_Invite_Signup struct {
 func (x *Token_Invite_Signup) Reset() {
 	*x = Token_Invite_Signup{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[429]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[433]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29056,7 +29494,7 @@ func (x *Token_Invite_Signup) String() string {
 func (*Token_Invite_Signup) ProtoMessage() {}
 
 func (x *Token_Invite_Signup) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[429]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[433]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29089,7 +29527,7 @@ type CreateSnapshotResponse_Open struct {
 func (x *CreateSnapshotResponse_Open) Reset() {
 	*x = CreateSnapshotResponse_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[431]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[435]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29102,7 +29540,7 @@ func (x *CreateSnapshotResponse_Open) String() string {
 func (*CreateSnapshotResponse_Open) ProtoMessage() {}
 
 func (x *CreateSnapshotResponse_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[431]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[435]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29134,7 +29572,7 @@ type RestoreSnapshotRequest_Open struct {
 func (x *RestoreSnapshotRequest_Open) Reset() {
 	*x = RestoreSnapshotRequest_Open{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[432]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[436]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29147,7 +29585,7 @@ func (x *RestoreSnapshotRequest_Open) String() string {
 func (*RestoreSnapshotRequest_Open) ProtoMessage() {}
 
 func (x *RestoreSnapshotRequest_Open) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[432]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[436]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29187,7 +29625,7 @@ type Snapshot_Header struct {
 func (x *Snapshot_Header) Reset() {
 	*x = Snapshot_Header{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[433]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[437]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29200,7 +29638,7 @@ func (x *Snapshot_Header) String() string {
 func (*Snapshot_Header) ProtoMessage() {}
 
 func (x *Snapshot_Header) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[433]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[437]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29249,7 +29687,7 @@ type Snapshot_Trailer struct {
 func (x *Snapshot_Trailer) Reset() {
 	*x = Snapshot_Trailer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[434]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[438]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29262,7 +29700,7 @@ func (x *Snapshot_Trailer) String() string {
 func (*Snapshot_Trailer) ProtoMessage() {}
 
 func (x *Snapshot_Trailer) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[434]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[438]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29326,7 +29764,7 @@ type Snapshot_BoltChunk struct {
 func (x *Snapshot_BoltChunk) Reset() {
 	*x = Snapshot_BoltChunk{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pkg_server_proto_server_proto_msgTypes[435]
+		mi := &file_pkg_server_proto_server_proto_msgTypes[439]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -29339,7 +29777,7 @@ func (x *Snapshot_BoltChunk) String() string {
 func (*Snapshot_BoltChunk) ProtoMessage() {}
 
 func (x *Snapshot_BoltChunk) ProtoReflect() protoreflect.Message {
-	mi := &file_pkg_server_proto_server_proto_msgTypes[435]
+	mi := &file_pkg_server_proto_server_proto_msgTypes[439]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -29388,7 +29826,7 @@ var file_pkg_server_proto_server_proto_rawDesc = []byte{
 	0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x1a, 0x17, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x72, 0x70, 0x63, 0x2f, 0x73, 0x74,
 	0x61, 0x74, 0x75, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x09, 0x61, 0x6e, 0x79, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x9a, 0x1b, 0x0a, 0x02, 0x55, 0x49, 0x1a, 0x5c, 0x0a, 0x13,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xfa, 0x25, 0x0a, 0x02, 0x55, 0x49, 0x1a, 0x5c, 0x0a, 0x13,
 	0x4c, 0x69, 0x73, 0x74, 0x50, 0x72, 0x6f, 0x6a, 0x65, 0x63, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75,
 	0x65, 0x73, 0x74, 0x12, 0x45, 0x0a, 0x0a, 0x70, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69, 0x6f,
 	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x25, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63,
@@ -29468,37 +29906,123 @@ var file_pkg_server_proto_server_proto_rawDesc = []byte{
 	0x28, 0x0b, 0x32, 0x26, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77,
 	0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x50, 0x61, 0x67, 0x69, 0x6e, 0x61, 0x74, 0x69,
 	0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x0a, 0x70, 0x61, 0x67, 0x69,
-	0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x1a, 0xae, 0x01, 0x0a, 0x0e, 0x50, 0x69, 0x70, 0x65, 0x6c,
-	0x69, 0x6e, 0x65, 0x42, 0x75, 0x6e, 0x64, 0x6c, 0x65, 0x12, 0x38, 0x0a, 0x08, 0x70, 0x69, 0x70,
-	0x65, 0x6c, 0x69, 0x6e, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x68, 0x61,
-	0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74,
-	0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x08, 0x70, 0x69, 0x70, 0x65, 0x6c,
-	0x69, 0x6e, 0x65, 0x12, 0x43, 0x0a, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x5f, 0x72, 0x75, 0x6e, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
+	0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x1a, 0x71, 0x0a, 0x15, 0x47, 0x65, 0x74, 0x50, 0x69, 0x70,
+	0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
+	0x3c, 0x0a, 0x08, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x20, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61,
+	0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c,
+	0x69, 0x6e, 0x65, 0x52, 0x08, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x12, 0x1a, 0x0a,
+	0x08, 0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x04, 0x52,
+	0x08, 0x73, 0x65, 0x71, 0x75, 0x65, 0x6e, 0x63, 0x65, 0x1a, 0xae, 0x01, 0x0a, 0x16, 0x47, 0x65,
+	0x74, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x42, 0x0a, 0x0c, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65,
+	0x5f, 0x72, 0x75, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x68, 0x61, 0x73,
+	0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e,
+	0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x0b, 0x70, 0x69, 0x70,
+	0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x12, 0x50, 0x0a, 0x0e, 0x72, 0x6f, 0x6f, 0x74,
+	0x5f, 0x74, 0x72, 0x65, 0x65, 0x5f, 0x6e, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x2a, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79,
+	0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e,
+	0x65, 0x52, 0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64, 0x65, 0x52, 0x0c, 0x72, 0x6f,
+	0x6f, 0x74, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64, 0x65, 0x1a, 0xae, 0x01, 0x0a, 0x0e, 0x50,
+	0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x42, 0x75, 0x6e, 0x64, 0x6c, 0x65, 0x12, 0x38, 0x0a,
+	0x08, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x1c, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
+	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x08, 0x70,
+	0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x12, 0x43, 0x0a, 0x08, 0x6c, 0x61, 0x73, 0x74, 0x5f,
+	0x72, 0x75, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x28, 0x2e, 0x68, 0x61, 0x73, 0x68,
+	0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55,
+	0x49, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x42, 0x75, 0x6e,
+	0x64, 0x6c, 0x65, 0x52, 0x07, 0x6c, 0x61, 0x73, 0x74, 0x52, 0x75, 0x6e, 0x12, 0x1d, 0x0a, 0x0a,
+	0x74, 0x6f, 0x74, 0x61, 0x6c, 0x5f, 0x72, 0x75, 0x6e, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04,
+	0x52, 0x09, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x52, 0x75, 0x6e, 0x73, 0x1a, 0xa9, 0x02, 0x0a, 0x11,
+	0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x42, 0x75, 0x6e, 0x64, 0x6c,
+	0x65, 0x12, 0x42, 0x0a, 0x0c, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x5f, 0x72, 0x75,
+	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63,
+	0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x50, 0x69, 0x70,
+	0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x0b, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69,
+	0x6e, 0x65, 0x52, 0x75, 0x6e, 0x12, 0x39, 0x0a, 0x0a, 0x71, 0x75, 0x65, 0x75, 0x65, 0x5f, 0x74,
+	0x69, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
+	0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65,
+	0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09, 0x71, 0x75, 0x65, 0x75, 0x65, 0x54, 0x69, 0x6d, 0x65,
+	0x12, 0x45, 0x0a, 0x0b, 0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x23, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
+	0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x41,
+	0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0b, 0x61, 0x70, 0x70, 0x6c,
+	0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12, 0x4e, 0x0a, 0x0f, 0x64, 0x61, 0x74, 0x61, 0x5f,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x5f, 0x72, 0x65, 0x66, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x26, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79,
+	0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x4a, 0x6f, 0x62, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f,
+	0x75, 0x72, 0x63, 0x65, 0x2e, 0x52, 0x65, 0x66, 0x52, 0x0d, 0x64, 0x61, 0x74, 0x61, 0x53, 0x6f,
+	0x75, 0x72, 0x63, 0x65, 0x52, 0x65, 0x66, 0x1a, 0xb9, 0x08, 0x0a, 0x13, 0x50, 0x69, 0x70, 0x65,
+	0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64, 0x65, 0x12,
+	0x35, 0x0a, 0x04, 0x73, 0x74, 0x65, 0x70, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e,
+	0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69,
+	0x6e, 0x74, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x2e, 0x53, 0x74, 0x65, 0x70,
+	0x52, 0x04, 0x73, 0x74, 0x65, 0x70, 0x12, 0x46, 0x0a, 0x05, 0x73, 0x74, 0x61, 0x74, 0x65, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x30, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
 	0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x50, 0x69,
-	0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x42, 0x75, 0x6e, 0x64, 0x6c, 0x65, 0x52,
-	0x07, 0x6c, 0x61, 0x73, 0x74, 0x52, 0x75, 0x6e, 0x12, 0x1d, 0x0a, 0x0a, 0x74, 0x6f, 0x74, 0x61,
-	0x6c, 0x5f, 0x72, 0x75, 0x6e, 0x73, 0x18, 0x03, 0x20, 0x01, 0x28, 0x04, 0x52, 0x09, 0x74, 0x6f,
-	0x74, 0x61, 0x6c, 0x52, 0x75, 0x6e, 0x73, 0x1a, 0xa9, 0x02, 0x0a, 0x11, 0x50, 0x69, 0x70, 0x65,
-	0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x42, 0x75, 0x6e, 0x64, 0x6c, 0x65, 0x12, 0x42, 0x0a,
-	0x0c, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x5f, 0x72, 0x75, 0x6e, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e,
-	0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e,
-	0x65, 0x52, 0x75, 0x6e, 0x52, 0x0b, 0x70, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75,
-	0x6e, 0x12, 0x39, 0x0a, 0x0a, 0x71, 0x75, 0x65, 0x75, 0x65, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18,
-	0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d,
-	0x70, 0x52, 0x09, 0x71, 0x75, 0x65, 0x75, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x45, 0x0a, 0x0b,
-	0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28,
-	0x0b, 0x32, 0x23, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61,
-	0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x41, 0x70, 0x70, 0x6c, 0x69,
-	0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0b, 0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74,
-	0x69, 0x6f, 0x6e, 0x12, 0x4e, 0x0a, 0x0f, 0x64, 0x61, 0x74, 0x61, 0x5f, 0x73, 0x6f, 0x75, 0x72,
-	0x63, 0x65, 0x5f, 0x72, 0x65, 0x66, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x26, 0x2e, 0x68,
-	0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e,
-	0x74, 0x2e, 0x4a, 0x6f, 0x62, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65,
-	0x2e, 0x52, 0x65, 0x66, 0x52, 0x0d, 0x64, 0x61, 0x74, 0x61, 0x53, 0x6f, 0x75, 0x72, 0x63, 0x65,
-	0x52, 0x65, 0x66, 0x1a, 0xe8, 0x02, 0x0a, 0x16, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x65, 0x70, 0x6c,
+	0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64,
+	0x65, 0x2e, 0x53, 0x74, 0x61, 0x74, 0x65, 0x52, 0x05, 0x73, 0x74, 0x61, 0x74, 0x65, 0x12, 0x39,
+	0x0a, 0x0a, 0x73, 0x74, 0x61, 0x72, 0x74, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x62, 0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x09,
+	0x73, 0x74, 0x61, 0x72, 0x74, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x3f, 0x0a, 0x0d, 0x63, 0x6f, 0x6d,
+	0x70, 0x6c, 0x65, 0x74, 0x65, 0x5f, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
+	0x75, 0x66, 0x2e, 0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x0c, 0x63, 0x6f,
+	0x6d, 0x70, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x69, 0x6d, 0x65, 0x12, 0x45, 0x0a, 0x0b, 0x61, 0x70,
+	0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x23, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
+	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x41, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x52, 0x0b, 0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x12, 0x3f, 0x0a, 0x09, 0x77, 0x6f, 0x72, 0x6b, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x06,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70,
+	0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x57, 0x6f,
+	0x72, 0x6b, 0x73, 0x70, 0x61, 0x63, 0x65, 0x52, 0x09, 0x77, 0x6f, 0x72, 0x6b, 0x73, 0x70, 0x61,
+	0x63, 0x65, 0x12, 0x2d, 0x0a, 0x03, 0x6a, 0x6f, 0x62, 0x18, 0x07, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x1b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
+	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x66, 0x2e, 0x4a, 0x6f, 0x62, 0x52, 0x03, 0x6a, 0x6f,
+	0x62, 0x12, 0x31, 0x0a, 0x05, 0x62, 0x75, 0x69, 0x6c, 0x64, 0x18, 0x08, 0x20, 0x01, 0x28, 0x0b,
+	0x32, 0x19, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79,
+	0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x42, 0x75, 0x69, 0x6c, 0x64, 0x48, 0x00, 0x52, 0x05, 0x62,
+	0x75, 0x69, 0x6c, 0x64, 0x12, 0x40, 0x0a, 0x0a, 0x64, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65,
+	0x6e, 0x74, 0x18, 0x09, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69,
+	0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x44, 0x65,
+	0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x48, 0x00, 0x52, 0x0a, 0x64, 0x65, 0x70, 0x6c,
+	0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x37, 0x0a, 0x07, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73,
+	0x65, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63,
+	0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x52, 0x65, 0x6c,
+	0x65, 0x61, 0x73, 0x65, 0x48, 0x00, 0x52, 0x07, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x12,
+	0x52, 0x0a, 0x14, 0x6c, 0x61, 0x74, 0x65, 0x73, 0x74, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73,
+	0x5f, 0x72, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x20, 0x2e,
+	0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69,
+	0x6e, 0x74, 0x2e, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x52,
+	0x12, 0x6c, 0x61, 0x74, 0x65, 0x73, 0x74, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x52, 0x65, 0x70,
+	0x6f, 0x72, 0x74, 0x12, 0x4f, 0x0a, 0x08, 0x63, 0x68, 0x69, 0x6c, 0x64, 0x72, 0x65, 0x6e, 0x18,
+	0x0c, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x33, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
+	0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x50, 0x69,
+	0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64,
+	0x65, 0x2e, 0x43, 0x68, 0x69, 0x6c, 0x64, 0x72, 0x65, 0x6e, 0x52, 0x08, 0x63, 0x68, 0x69, 0x6c,
+	0x64, 0x72, 0x65, 0x6e, 0x1a, 0xbc, 0x01, 0x0a, 0x08, 0x43, 0x68, 0x69, 0x6c, 0x64, 0x72, 0x65,
+	0x6e, 0x12, 0x4c, 0x0a, 0x04, 0x6d, 0x6f, 0x64, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32,
+	0x38, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
+	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65,
+	0x52, 0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64, 0x65, 0x2e, 0x43, 0x68, 0x69, 0x6c,
+	0x64, 0x72, 0x65, 0x6e, 0x2e, 0x4d, 0x6f, 0x64, 0x65, 0x52, 0x04, 0x6d, 0x6f, 0x64, 0x65, 0x12,
+	0x40, 0x0a, 0x05, 0x6e, 0x6f, 0x64, 0x65, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x2a,
+	0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f,
+	0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52,
+	0x75, 0x6e, 0x54, 0x72, 0x65, 0x65, 0x4e, 0x6f, 0x64, 0x65, 0x52, 0x05, 0x6e, 0x6f, 0x64, 0x65,
+	0x73, 0x22, 0x20, 0x0a, 0x04, 0x4d, 0x6f, 0x64, 0x65, 0x12, 0x0a, 0x0a, 0x06, 0x53, 0x45, 0x52,
+	0x49, 0x41, 0x4c, 0x10, 0x00, 0x12, 0x0c, 0x0a, 0x08, 0x50, 0x41, 0x52, 0x41, 0x4c, 0x4c, 0x45,
+	0x4c, 0x10, 0x01, 0x22, 0x54, 0x0a, 0x05, 0x53, 0x74, 0x61, 0x74, 0x65, 0x12, 0x0b, 0x0a, 0x07,
+	0x55, 0x4e, 0x4b, 0x4e, 0x4f, 0x57, 0x4e, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x51, 0x55, 0x45,
+	0x55, 0x45, 0x44, 0x10, 0x01, 0x12, 0x0b, 0x0a, 0x07, 0x52, 0x55, 0x4e, 0x4e, 0x49, 0x4e, 0x47,
+	0x10, 0x02, 0x12, 0x09, 0x0a, 0x05, 0x45, 0x52, 0x52, 0x4f, 0x52, 0x10, 0x03, 0x12, 0x0d, 0x0a,
+	0x09, 0x43, 0x41, 0x4e, 0x43, 0x45, 0x4c, 0x4c, 0x45, 0x44, 0x10, 0x04, 0x12, 0x0b, 0x0a, 0x07,
+	0x53, 0x55, 0x43, 0x43, 0x45, 0x53, 0x53, 0x10, 0x05, 0x42, 0x08, 0x0a, 0x06, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x1a, 0xe8, 0x02, 0x0a, 0x16, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x65, 0x70, 0x6c,
 	0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x45,
 	0x0a, 0x0b, 0x61, 0x70, 0x70, 0x6c, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20,
 	0x01, 0x28, 0x0b, 0x32, 0x23, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e,
@@ -33480,7 +34004,7 @@ var file_pkg_server_proto_server_proto_rawDesc = []byte{
 	0x0a, 0x06, 0x50, 0x4f, 0x4c, 0x49, 0x43, 0x59, 0x10, 0x05, 0x12, 0x0a, 0x0a, 0x06, 0x43, 0x4f,
 	0x4e, 0x46, 0x49, 0x47, 0x10, 0x06, 0x12, 0x0c, 0x0a, 0x08, 0x46, 0x55, 0x4e, 0x43, 0x54, 0x49,
 	0x4f, 0x4e, 0x10, 0x07, 0x12, 0x0b, 0x0a, 0x07, 0x53, 0x54, 0x4f, 0x52, 0x41, 0x47, 0x45, 0x10,
-	0x08, 0x32, 0xb8, 0x54, 0x0a, 0x08, 0x57, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x54,
+	0x08, 0x32, 0xaa, 0x55, 0x0a, 0x08, 0x57, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x12, 0x54,
 	0x0a, 0x0e, 0x47, 0x65, 0x74, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x49, 0x6e, 0x66, 0x6f,
 	0x12, 0x16, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62,
 	0x75, 0x66, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x1a, 0x2a, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69,
@@ -34134,30 +34658,37 @@ var file_pkg_server_proto_server_proto_rawDesc = []byte{
 	0x52, 0x75, 0x6e, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x2f, 0x2e, 0x68, 0x61,
 	0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74,
 	0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65,
-	0x52, 0x75, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x73, 0x0a, 0x12,
-	0x55, 0x49, 0x5f, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e,
-	0x74, 0x73, 0x12, 0x2d, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77,
-	0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x44,
-	0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x2e, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61,
-	0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x65,
-	0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x6d, 0x0a, 0x10, 0x55, 0x49, 0x5f, 0x47, 0x65, 0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f,
-	0x79, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x2b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
-	0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x47, 0x65,
-	0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65,
-	0x73, 0x74, 0x1a, 0x2c, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77,
-	0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x47, 0x65, 0x74, 0x44, 0x65,
-	0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
-	0x12, 0x6a, 0x0a, 0x0f, 0x55, 0x49, 0x5f, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6c, 0x65, 0x61,
-	0x73, 0x65, 0x73, 0x12, 0x2a, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e,
+	0x52, 0x75, 0x6e, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x70, 0x0a, 0x11,
+	0x55, 0x49, 0x5f, 0x47, 0x65, 0x74, 0x50, 0x69, 0x70, 0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75,
+	0x6e, 0x12, 0x2c, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61,
+	0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x69, 0x70,
+	0x65, 0x6c, 0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x2d, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
+	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x47, 0x65, 0x74, 0x50, 0x69, 0x70, 0x65, 0x6c,
+	0x69, 0x6e, 0x65, 0x52, 0x75, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x73,
+	0x0a, 0x12, 0x55, 0x49, 0x5f, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d,
+	0x65, 0x6e, 0x74, 0x73, 0x12, 0x2d, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70,
+	0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73,
+	0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x71, 0x75,
+	0x65, 0x73, 0x74, 0x1a, 0x2e, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e,
 	0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74,
-	0x52, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
-	0x2b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70,
-	0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6c, 0x65,
-	0x61, 0x73, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x10, 0x5a, 0x0e,
-	0x70, 0x6b, 0x67, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2f, 0x67, 0x65, 0x6e, 0x62, 0x06,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x6d, 0x0a, 0x10, 0x55, 0x49, 0x5f, 0x47, 0x65, 0x74, 0x44, 0x65, 0x70,
+	0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x2b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63,
+	0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e,
+	0x47, 0x65, 0x74, 0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x1a, 0x2c, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70,
+	0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x47, 0x65, 0x74,
+	0x44, 0x65, 0x70, 0x6c, 0x6f, 0x79, 0x6d, 0x65, 0x6e, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x6a, 0x0a, 0x0f, 0x55, 0x49, 0x5f, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x6c,
+	0x65, 0x61, 0x73, 0x65, 0x73, 0x12, 0x2a, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72,
+	0x70, 0x2e, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69,
+	0x73, 0x74, 0x52, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x73, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x2b, 0x2e, 0x68, 0x61, 0x73, 0x68, 0x69, 0x63, 0x6f, 0x72, 0x70, 0x2e, 0x77, 0x61,
+	0x79, 0x70, 0x6f, 0x69, 0x6e, 0x74, 0x2e, 0x55, 0x49, 0x2e, 0x4c, 0x69, 0x73, 0x74, 0x52, 0x65,
+	0x6c, 0x65, 0x61, 0x73, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x10,
+	0x5a, 0x0e, 0x70, 0x6b, 0x67, 0x2f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2f, 0x67, 0x65, 0x6e,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -34172,1354 +34703,1379 @@ func file_pkg_server_proto_server_proto_rawDescGZIP() []byte {
 	return file_pkg_server_proto_server_proto_rawDescData
 }
 
-var file_pkg_server_proto_server_proto_enumTypes = make([]protoimpl.EnumInfo, 25)
-var file_pkg_server_proto_server_proto_msgTypes = make([]protoimpl.MessageInfo, 437)
+var file_pkg_server_proto_server_proto_enumTypes = make([]protoimpl.EnumInfo, 27)
+var file_pkg_server_proto_server_proto_msgTypes = make([]protoimpl.MessageInfo, 441)
 var file_pkg_server_proto_server_proto_goTypes = []interface{}{
 	(ResourceCategoryDisplayHint)(0),           // 0: hashicorp.waypoint.ResourceCategoryDisplayHint
-	(ServerFeaturesFeature)(0),                 // 1: hashicorp.waypoint.ServerFeatures.feature
-	(Variable_FinalValue_Source)(0),            // 2: hashicorp.waypoint.Variable.FinalValue.Source
-	(Project_ProjectState)(0),                  // 3: hashicorp.waypoint.Project.ProjectState
-	(Component_Type)(0),                        // 4: hashicorp.waypoint.Component.Type
-	(Status_State)(0),                          // 5: hashicorp.waypoint.Status.State
-	(Operation_PhysicalState)(0),               // 6: hashicorp.waypoint.Operation.PhysicalState
-	(OperationOrder_Order)(0),                  // 7: hashicorp.waypoint.OperationOrder.Order
-	(Task_State)(0),                            // 8: hashicorp.waypoint.Task.State
-	(OIDCAuthMethod_Kind)(0),                   // 9: hashicorp.waypoint.OIDCAuthMethod.Kind
-	(Job_State)(0),                             // 10: hashicorp.waypoint.Job.State
-	(Job_Config_Source)(0),                     // 11: hashicorp.waypoint.Job.Config.Source
-	(Runner_AdoptionState)(0),                  // 12: hashicorp.waypoint.Runner.AdoptionState
-	(UpsertDeploymentRequest_Tristate)(0),      // 13: hashicorp.waypoint.UpsertDeploymentRequest.Tristate
-	(Deployment_LoadDetails)(0),                // 14: hashicorp.waypoint.Deployment.LoadDetails
-	(Instance_Type)(0),                         // 15: hashicorp.waypoint.Instance.Type
-	(Release_LoadDetails)(0),                   // 16: hashicorp.waypoint.Release.LoadDetails
-	(StatusReport_Resource_Health)(0),          // 17: hashicorp.waypoint.StatusReport.Resource.Health
-	(LogBatch_Entry_Source)(0),                 // 18: hashicorp.waypoint.LogBatch.Entry.Source
-	(ExecStreamResponse_Output_Channel)(0),     // 19: hashicorp.waypoint.ExecStreamResponse.Output.Channel
-	(EntrypointExecRequest_Output_Channel)(0),  // 20: hashicorp.waypoint.EntrypointExecRequest.Output.Channel
-	(PipelineRun_State)(0),                     // 21: hashicorp.waypoint.PipelineRun.State
-	(GetPipelineResponse_Graph_Format)(0),      // 22: hashicorp.waypoint.GetPipelineResponse.Graph.Format
-	(Snapshot_Header_Format)(0),                // 23: hashicorp.waypoint.Snapshot.Header.Format
-	(Hcl_Format)(0),                            // 24: hashicorp.waypoint.Hcl.Format
-	(*UI)(nil),                                 // 25: hashicorp.waypoint.UI
-	(*GetVersionInfoResponse)(nil),             // 26: hashicorp.waypoint.GetVersionInfoResponse
-	(*ServerFeatures)(nil),                     // 27: hashicorp.waypoint.ServerFeatures
-	(*VersionInfo)(nil),                        // 28: hashicorp.waypoint.VersionInfo
-	(*Application)(nil),                        // 29: hashicorp.waypoint.Application
-	(*Variable)(nil),                           // 30: hashicorp.waypoint.Variable
-	(*Project)(nil),                            // 31: hashicorp.waypoint.Project
-	(*Workspace)(nil),                          // 32: hashicorp.waypoint.Workspace
-	(*User)(nil),                               // 33: hashicorp.waypoint.User
-	(*Ref)(nil),                                // 34: hashicorp.waypoint.Ref
-	(*Component)(nil),                          // 35: hashicorp.waypoint.Component
-	(*Status)(nil),                             // 36: hashicorp.waypoint.Status
-	(*StatusFilter)(nil),                       // 37: hashicorp.waypoint.StatusFilter
-	(*Operation)(nil),                          // 38: hashicorp.waypoint.Operation
-	(*OperationOrder)(nil),                     // 39: hashicorp.waypoint.OperationOrder
-	(*Generation)(nil),                         // 40: hashicorp.waypoint.Generation
-	(*DeclaredResource)(nil),                   // 41: hashicorp.waypoint.DeclaredResource
-	(*DestroyedResource)(nil),                  // 42: hashicorp.waypoint.DestroyedResource
-	(*TaskLaunchInfo)(nil),                     // 43: hashicorp.waypoint.TaskLaunchInfo
-	(*Task)(nil),                               // 44: hashicorp.waypoint.Task
-	(*UpsertTaskRequest)(nil),                  // 45: hashicorp.waypoint.UpsertTaskRequest
-	(*UpsertTaskResponse)(nil),                 // 46: hashicorp.waypoint.UpsertTaskResponse
-	(*GetTaskRequest)(nil),                     // 47: hashicorp.waypoint.GetTaskRequest
-	(*GetTaskResponse)(nil),                    // 48: hashicorp.waypoint.GetTaskResponse
-	(*DeleteTaskRequest)(nil),                  // 49: hashicorp.waypoint.DeleteTaskRequest
-	(*ListTaskRequest)(nil),                    // 50: hashicorp.waypoint.ListTaskRequest
-	(*ListTaskResponse)(nil),                   // 51: hashicorp.waypoint.ListTaskResponse
-	(*CancelTaskRequest)(nil),                  // 52: hashicorp.waypoint.CancelTaskRequest
-	(*ErrorDetail)(nil),                        // 53: hashicorp.waypoint.ErrorDetail
-	(*GetUserRequest)(nil),                     // 54: hashicorp.waypoint.GetUserRequest
-	(*GetUserResponse)(nil),                    // 55: hashicorp.waypoint.GetUserResponse
-	(*ListUsersResponse)(nil),                  // 56: hashicorp.waypoint.ListUsersResponse
-	(*UpdateUserRequest)(nil),                  // 57: hashicorp.waypoint.UpdateUserRequest
-	(*UpdateUserResponse)(nil),                 // 58: hashicorp.waypoint.UpdateUserResponse
-	(*DeleteUserRequest)(nil),                  // 59: hashicorp.waypoint.DeleteUserRequest
-	(*AuthMethod)(nil),                         // 60: hashicorp.waypoint.AuthMethod
-	(*OIDCAuthMethod)(nil),                     // 61: hashicorp.waypoint.OIDCAuthMethod
-	(*UpsertAuthMethodRequest)(nil),            // 62: hashicorp.waypoint.UpsertAuthMethodRequest
-	(*UpsertAuthMethodResponse)(nil),           // 63: hashicorp.waypoint.UpsertAuthMethodResponse
-	(*GetAuthMethodRequest)(nil),               // 64: hashicorp.waypoint.GetAuthMethodRequest
-	(*GetAuthMethodResponse)(nil),              // 65: hashicorp.waypoint.GetAuthMethodResponse
-	(*DeleteAuthMethodRequest)(nil),            // 66: hashicorp.waypoint.DeleteAuthMethodRequest
-	(*ListAuthMethodsResponse)(nil),            // 67: hashicorp.waypoint.ListAuthMethodsResponse
-	(*ListOIDCAuthMethodsResponse)(nil),        // 68: hashicorp.waypoint.ListOIDCAuthMethodsResponse
-	(*GetOIDCAuthURLRequest)(nil),              // 69: hashicorp.waypoint.GetOIDCAuthURLRequest
-	(*GetOIDCAuthURLResponse)(nil),             // 70: hashicorp.waypoint.GetOIDCAuthURLResponse
-	(*CompleteOIDCAuthRequest)(nil),            // 71: hashicorp.waypoint.CompleteOIDCAuthRequest
-	(*CompleteOIDCAuthResponse)(nil),           // 72: hashicorp.waypoint.CompleteOIDCAuthResponse
-	(*QueueJobRequest)(nil),                    // 73: hashicorp.waypoint.QueueJobRequest
-	(*QueueJobResponse)(nil),                   // 74: hashicorp.waypoint.QueueJobResponse
-	(*CancelJobRequest)(nil),                   // 75: hashicorp.waypoint.CancelJobRequest
-	(*ValidateJobRequest)(nil),                 // 76: hashicorp.waypoint.ValidateJobRequest
-	(*ValidateJobResponse)(nil),                // 77: hashicorp.waypoint.ValidateJobResponse
-	(*Job)(nil),                                // 78: hashicorp.waypoint.Job
-	(*Documentation)(nil),                      // 79: hashicorp.waypoint.Documentation
-	(*GetJobRequest)(nil),                      // 80: hashicorp.waypoint.GetJobRequest
-	(*ListJobsRequest)(nil),                    // 81: hashicorp.waypoint.ListJobsRequest
-	(*ListJobsResponse)(nil),                   // 82: hashicorp.waypoint.ListJobsResponse
-	(*GetJobStreamRequest)(nil),                // 83: hashicorp.waypoint.GetJobStreamRequest
-	(*GetJobStreamResponse)(nil),               // 84: hashicorp.waypoint.GetJobStreamResponse
-	(*Runner)(nil),                             // 85: hashicorp.waypoint.Runner
-	(*RunnerTokenRequest)(nil),                 // 86: hashicorp.waypoint.RunnerTokenRequest
-	(*RunnerTokenResponse)(nil),                // 87: hashicorp.waypoint.RunnerTokenResponse
-	(*RunnerConfigRequest)(nil),                // 88: hashicorp.waypoint.RunnerConfigRequest
-	(*RunnerConfigResponse)(nil),               // 89: hashicorp.waypoint.RunnerConfigResponse
-	(*RunnerConfig)(nil),                       // 90: hashicorp.waypoint.RunnerConfig
-	(*RunnerJobStreamRequest)(nil),             // 91: hashicorp.waypoint.RunnerJobStreamRequest
-	(*RunnerJobStreamResponse)(nil),            // 92: hashicorp.waypoint.RunnerJobStreamResponse
-	(*RunnerGetDeploymentConfigRequest)(nil),   // 93: hashicorp.waypoint.RunnerGetDeploymentConfigRequest
-	(*RunnerGetDeploymentConfigResponse)(nil),  // 94: hashicorp.waypoint.RunnerGetDeploymentConfigResponse
-	(*GetRunnerRequest)(nil),                   // 95: hashicorp.waypoint.GetRunnerRequest
-	(*ListRunnersRequest)(nil),                 // 96: hashicorp.waypoint.ListRunnersRequest
-	(*ListRunnersResponse)(nil),                // 97: hashicorp.waypoint.ListRunnersResponse
-	(*AdoptRunnerRequest)(nil),                 // 98: hashicorp.waypoint.AdoptRunnerRequest
-	(*ForgetRunnerRequest)(nil),                // 99: hashicorp.waypoint.ForgetRunnerRequest
-	(*SetServerConfigRequest)(nil),             // 100: hashicorp.waypoint.SetServerConfigRequest
-	(*GetServerConfigResponse)(nil),            // 101: hashicorp.waypoint.GetServerConfigResponse
-	(*ServerConfig)(nil),                       // 102: hashicorp.waypoint.ServerConfig
-	(*CreateHostnameRequest)(nil),              // 103: hashicorp.waypoint.CreateHostnameRequest
-	(*CreateHostnameResponse)(nil),             // 104: hashicorp.waypoint.CreateHostnameResponse
-	(*ListHostnamesRequest)(nil),               // 105: hashicorp.waypoint.ListHostnamesRequest
-	(*ListHostnamesResponse)(nil),              // 106: hashicorp.waypoint.ListHostnamesResponse
-	(*DeleteHostnameRequest)(nil),              // 107: hashicorp.waypoint.DeleteHostnameRequest
-	(*Hostname)(nil),                           // 108: hashicorp.waypoint.Hostname
-	(*ListWorkspacesRequest)(nil),              // 109: hashicorp.waypoint.ListWorkspacesRequest
-	(*ListWorkspacesResponse)(nil),             // 110: hashicorp.waypoint.ListWorkspacesResponse
-	(*GetWorkspaceRequest)(nil),                // 111: hashicorp.waypoint.GetWorkspaceRequest
-	(*GetWorkspaceResponse)(nil),               // 112: hashicorp.waypoint.GetWorkspaceResponse
-	(*UpsertWorkspaceRequest)(nil),             // 113: hashicorp.waypoint.UpsertWorkspaceRequest
-	(*UpsertWorkspaceResponse)(nil),            // 114: hashicorp.waypoint.UpsertWorkspaceResponse
-	(*UpsertProjectRequest)(nil),               // 115: hashicorp.waypoint.UpsertProjectRequest
-	(*UpsertProjectResponse)(nil),              // 116: hashicorp.waypoint.UpsertProjectResponse
-	(*GetProjectRequest)(nil),                  // 117: hashicorp.waypoint.GetProjectRequest
-	(*GetProjectResponse)(nil),                 // 118: hashicorp.waypoint.GetProjectResponse
-	(*ListProjectsRequest)(nil),                // 119: hashicorp.waypoint.ListProjectsRequest
-	(*ListProjectsResponse)(nil),               // 120: hashicorp.waypoint.ListProjectsResponse
-	(*DestroyProjectRequest)(nil),              // 121: hashicorp.waypoint.DestroyProjectRequest
-	(*GetApplicationRequest)(nil),              // 122: hashicorp.waypoint.GetApplicationRequest
-	(*GetApplicationResponse)(nil),             // 123: hashicorp.waypoint.GetApplicationResponse
-	(*UpsertApplicationRequest)(nil),           // 124: hashicorp.waypoint.UpsertApplicationRequest
-	(*UpsertApplicationResponse)(nil),          // 125: hashicorp.waypoint.UpsertApplicationResponse
-	(*UpsertBuildRequest)(nil),                 // 126: hashicorp.waypoint.UpsertBuildRequest
-	(*UpsertBuildResponse)(nil),                // 127: hashicorp.waypoint.UpsertBuildResponse
-	(*ListBuildsRequest)(nil),                  // 128: hashicorp.waypoint.ListBuildsRequest
-	(*ListBuildsResponse)(nil),                 // 129: hashicorp.waypoint.ListBuildsResponse
-	(*GetLatestBuildRequest)(nil),              // 130: hashicorp.waypoint.GetLatestBuildRequest
-	(*GetBuildRequest)(nil),                    // 131: hashicorp.waypoint.GetBuildRequest
-	(*Build)(nil),                              // 132: hashicorp.waypoint.Build
-	(*Artifact)(nil),                           // 133: hashicorp.waypoint.Artifact
-	(*OnDemandRunnerConfig)(nil),               // 134: hashicorp.waypoint.OnDemandRunnerConfig
-	(*UpsertOnDemandRunnerConfigRequest)(nil),  // 135: hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest
-	(*UpsertOnDemandRunnerConfigResponse)(nil), // 136: hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse
-	(*GetOnDemandRunnerConfigRequest)(nil),     // 137: hashicorp.waypoint.GetOnDemandRunnerConfigRequest
-	(*GetOnDemandRunnerConfigResponse)(nil),    // 138: hashicorp.waypoint.GetOnDemandRunnerConfigResponse
-	(*DeleteOnDemandRunnerConfigRequest)(nil),  // 139: hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest
-	(*DeleteOnDemandRunnerConfigResponse)(nil), // 140: hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse
-	(*ListOnDemandRunnerConfigsResponse)(nil),  // 141: hashicorp.waypoint.ListOnDemandRunnerConfigsResponse
-	(*UpsertPushedArtifactRequest)(nil),        // 142: hashicorp.waypoint.UpsertPushedArtifactRequest
-	(*UpsertPushedArtifactResponse)(nil),       // 143: hashicorp.waypoint.UpsertPushedArtifactResponse
-	(*GetLatestPushedArtifactRequest)(nil),     // 144: hashicorp.waypoint.GetLatestPushedArtifactRequest
-	(*GetPushedArtifactRequest)(nil),           // 145: hashicorp.waypoint.GetPushedArtifactRequest
-	(*ListPushedArtifactsRequest)(nil),         // 146: hashicorp.waypoint.ListPushedArtifactsRequest
-	(*ListPushedArtifactsResponse)(nil),        // 147: hashicorp.waypoint.ListPushedArtifactsResponse
-	(*PushedArtifact)(nil),                     // 148: hashicorp.waypoint.PushedArtifact
-	(*GetDeploymentRequest)(nil),               // 149: hashicorp.waypoint.GetDeploymentRequest
-	(*UpsertDeploymentRequest)(nil),            // 150: hashicorp.waypoint.UpsertDeploymentRequest
-	(*UpsertDeploymentResponse)(nil),           // 151: hashicorp.waypoint.UpsertDeploymentResponse
-	(*ListDeploymentsRequest)(nil),             // 152: hashicorp.waypoint.ListDeploymentsRequest
-	(*ListDeploymentsResponse)(nil),            // 153: hashicorp.waypoint.ListDeploymentsResponse
-	(*Deployment)(nil),                         // 154: hashicorp.waypoint.Deployment
-	(*DeploymentExpanded)(nil),                 // 155: hashicorp.waypoint.DeploymentExpanded
-	(*ListInstancesRequest)(nil),               // 156: hashicorp.waypoint.ListInstancesRequest
-	(*ListInstancesResponse)(nil),              // 157: hashicorp.waypoint.ListInstancesResponse
-	(*Instance)(nil),                           // 158: hashicorp.waypoint.Instance
-	(*UpsertReleaseRequest)(nil),               // 159: hashicorp.waypoint.UpsertReleaseRequest
-	(*UpsertReleaseResponse)(nil),              // 160: hashicorp.waypoint.UpsertReleaseResponse
-	(*GetLatestReleaseRequest)(nil),            // 161: hashicorp.waypoint.GetLatestReleaseRequest
-	(*ListReleasesRequest)(nil),                // 162: hashicorp.waypoint.ListReleasesRequest
-	(*ListReleasesResponse)(nil),               // 163: hashicorp.waypoint.ListReleasesResponse
-	(*GetReleaseRequest)(nil),                  // 164: hashicorp.waypoint.GetReleaseRequest
-	(*Release)(nil),                            // 165: hashicorp.waypoint.Release
-	(*ReleaseExpanded)(nil),                    // 166: hashicorp.waypoint.ReleaseExpanded
-	(*Trigger)(nil),                            // 167: hashicorp.waypoint.Trigger
-	(*UpsertTriggerRequest)(nil),               // 168: hashicorp.waypoint.UpsertTriggerRequest
-	(*UpsertTriggerResponse)(nil),              // 169: hashicorp.waypoint.UpsertTriggerResponse
-	(*GetTriggerRequest)(nil),                  // 170: hashicorp.waypoint.GetTriggerRequest
-	(*GetTriggerResponse)(nil),                 // 171: hashicorp.waypoint.GetTriggerResponse
-	(*DeleteTriggerRequest)(nil),               // 172: hashicorp.waypoint.DeleteTriggerRequest
-	(*RunTriggerRequest)(nil),                  // 173: hashicorp.waypoint.RunTriggerRequest
-	(*RunTriggerResponse)(nil),                 // 174: hashicorp.waypoint.RunTriggerResponse
-	(*ListTriggerRequest)(nil),                 // 175: hashicorp.waypoint.ListTriggerRequest
-	(*ListTriggerResponse)(nil),                // 176: hashicorp.waypoint.ListTriggerResponse
-	(*UpsertStatusReportRequest)(nil),          // 177: hashicorp.waypoint.UpsertStatusReportRequest
-	(*UpsertStatusReportResponse)(nil),         // 178: hashicorp.waypoint.UpsertStatusReportResponse
-	(*GetLatestStatusReportRequest)(nil),       // 179: hashicorp.waypoint.GetLatestStatusReportRequest
-	(*ListStatusReportsRequest)(nil),           // 180: hashicorp.waypoint.ListStatusReportsRequest
-	(*ListStatusReportsResponse)(nil),          // 181: hashicorp.waypoint.ListStatusReportsResponse
-	(*GetStatusReportRequest)(nil),             // 182: hashicorp.waypoint.GetStatusReportRequest
-	(*ExpediteStatusReportRequest)(nil),        // 183: hashicorp.waypoint.ExpediteStatusReportRequest
-	(*ExpediteStatusReportResponse)(nil),       // 184: hashicorp.waypoint.ExpediteStatusReportResponse
-	(*StatusReport)(nil),                       // 185: hashicorp.waypoint.StatusReport
-	(*GetLogStreamRequest)(nil),                // 186: hashicorp.waypoint.GetLogStreamRequest
-	(*LogBatch)(nil),                           // 187: hashicorp.waypoint.LogBatch
-	(*ConfigVar)(nil),                          // 188: hashicorp.waypoint.ConfigVar
-	(*ConfigSetRequest)(nil),                   // 189: hashicorp.waypoint.ConfigSetRequest
-	(*ConfigSetResponse)(nil),                  // 190: hashicorp.waypoint.ConfigSetResponse
-	(*ConfigGetRequest)(nil),                   // 191: hashicorp.waypoint.ConfigGetRequest
-	(*ConfigGetResponse)(nil),                  // 192: hashicorp.waypoint.ConfigGetResponse
-	(*ConfigSource)(nil),                       // 193: hashicorp.waypoint.ConfigSource
-	(*SetConfigSourceRequest)(nil),             // 194: hashicorp.waypoint.SetConfigSourceRequest
-	(*GetConfigSourceRequest)(nil),             // 195: hashicorp.waypoint.GetConfigSourceRequest
-	(*GetConfigSourceResponse)(nil),            // 196: hashicorp.waypoint.GetConfigSourceResponse
-	(*ExecStreamRequest)(nil),                  // 197: hashicorp.waypoint.ExecStreamRequest
-	(*ExecStreamResponse)(nil),                 // 198: hashicorp.waypoint.ExecStreamResponse
-	(*EntrypointConfigRequest)(nil),            // 199: hashicorp.waypoint.EntrypointConfigRequest
-	(*EntrypointConfigResponse)(nil),           // 200: hashicorp.waypoint.EntrypointConfigResponse
-	(*EntrypointConfig)(nil),                   // 201: hashicorp.waypoint.EntrypointConfig
-	(*EntrypointLogBatch)(nil),                 // 202: hashicorp.waypoint.EntrypointLogBatch
-	(*EntrypointExecRequest)(nil),              // 203: hashicorp.waypoint.EntrypointExecRequest
-	(*EntrypointExecResponse)(nil),             // 204: hashicorp.waypoint.EntrypointExecResponse
-	(*Pipeline)(nil),                           // 205: hashicorp.waypoint.Pipeline
-	(*PipelineRun)(nil),                        // 206: hashicorp.waypoint.PipelineRun
-	(*UpsertPipelineRequest)(nil),              // 207: hashicorp.waypoint.UpsertPipelineRequest
-	(*UpsertPipelineResponse)(nil),             // 208: hashicorp.waypoint.UpsertPipelineResponse
-	(*GetPipelineRequest)(nil),                 // 209: hashicorp.waypoint.GetPipelineRequest
-	(*GetPipelineResponse)(nil),                // 210: hashicorp.waypoint.GetPipelineResponse
-	(*RunPipelineRequest)(nil),                 // 211: hashicorp.waypoint.RunPipelineRequest
-	(*RunPipelineResponse)(nil),                // 212: hashicorp.waypoint.RunPipelineResponse
-	(*ListPipelinesRequest)(nil),               // 213: hashicorp.waypoint.ListPipelinesRequest
-	(*ListPipelinesResponse)(nil),              // 214: hashicorp.waypoint.ListPipelinesResponse
-	(*ListPipelineRunsRequest)(nil),            // 215: hashicorp.waypoint.ListPipelineRunsRequest
-	(*ListPipelineRunsResponse)(nil),           // 216: hashicorp.waypoint.ListPipelineRunsResponse
-	(*GetPipelineRunRequest)(nil),              // 217: hashicorp.waypoint.GetPipelineRunRequest
-	(*GetPipelineRunResponse)(nil),             // 218: hashicorp.waypoint.GetPipelineRunResponse
-	(*ConfigSyncPipelineRequest)(nil),          // 219: hashicorp.waypoint.ConfigSyncPipelineRequest
-	(*ConfigSyncPipelineResponse)(nil),         // 220: hashicorp.waypoint.ConfigSyncPipelineResponse
-	(*TokenTransport)(nil),                     // 221: hashicorp.waypoint.TokenTransport
-	(*Token)(nil),                              // 222: hashicorp.waypoint.Token
-	(*HMACKey)(nil),                            // 223: hashicorp.waypoint.HMACKey
-	(*DecodeTokenRequest)(nil),                 // 224: hashicorp.waypoint.DecodeTokenRequest
-	(*DecodeTokenResponse)(nil),                // 225: hashicorp.waypoint.DecodeTokenResponse
-	(*LoginTokenRequest)(nil),                  // 226: hashicorp.waypoint.LoginTokenRequest
-	(*GenerateRunnerTokenRequest)(nil),         // 227: hashicorp.waypoint.GenerateRunnerTokenRequest
-	(*InviteTokenRequest)(nil),                 // 228: hashicorp.waypoint.InviteTokenRequest
-	(*NewTokenResponse)(nil),                   // 229: hashicorp.waypoint.NewTokenResponse
-	(*ConvertInviteTokenRequest)(nil),          // 230: hashicorp.waypoint.ConvertInviteTokenRequest
-	(*CreateSnapshotResponse)(nil),             // 231: hashicorp.waypoint.CreateSnapshotResponse
-	(*RestoreSnapshotRequest)(nil),             // 232: hashicorp.waypoint.RestoreSnapshotRequest
-	(*Snapshot)(nil),                           // 233: hashicorp.waypoint.Snapshot
-	(*Hcl)(nil),                                // 234: hashicorp.waypoint.Hcl
-	(*WaypointHclFmtRequest)(nil),              // 235: hashicorp.waypoint.WaypointHclFmtRequest
-	(*WaypointHclFmtResponse)(nil),             // 236: hashicorp.waypoint.WaypointHclFmtResponse
-	(*InlineKeepalive)(nil),                    // 237: hashicorp.waypoint.InlineKeepalive
-	(*PaginationRequest)(nil),                  // 238: hashicorp.waypoint.PaginationRequest
-	(*PaginationResponse)(nil),                 // 239: hashicorp.waypoint.PaginationResponse
-	(*UI_ListProjectsRequest)(nil),             // 240: hashicorp.waypoint.UI.ListProjectsRequest
-	(*UI_ListProjectsResponse)(nil),            // 241: hashicorp.waypoint.UI.ListProjectsResponse
-	(*UI_ProjectBundle)(nil),                   // 242: hashicorp.waypoint.UI.ProjectBundle
-	(*UI_GetProjectRequest)(nil),               // 243: hashicorp.waypoint.UI.GetProjectRequest
-	(*UI_GetProjectResponse)(nil),              // 244: hashicorp.waypoint.UI.GetProjectResponse
-	(*UI_ListPipelinesRequest)(nil),            // 245: hashicorp.waypoint.UI.ListPipelinesRequest
-	(*UI_ListPipelinesResponse)(nil),           // 246: hashicorp.waypoint.UI.ListPipelinesResponse
-	(*UI_ListPipelineRunsRequest)(nil),         // 247: hashicorp.waypoint.UI.ListPipelineRunsRequest
-	(*UI_ListPipelineRunsResponse)(nil),        // 248: hashicorp.waypoint.UI.ListPipelineRunsResponse
-	(*UI_PipelineBundle)(nil),                  // 249: hashicorp.waypoint.UI.PipelineBundle
-	(*UI_PipelineRunBundle)(nil),               // 250: hashicorp.waypoint.UI.PipelineRunBundle
-	(*UI_ListDeploymentsRequest)(nil),          // 251: hashicorp.waypoint.UI.ListDeploymentsRequest
-	(*UI_ListDeploymentsResponse)(nil),         // 252: hashicorp.waypoint.UI.ListDeploymentsResponse
-	(*UI_GetDeploymentRequest)(nil),            // 253: hashicorp.waypoint.UI.GetDeploymentRequest
-	(*UI_GetDeploymentResponse)(nil),           // 254: hashicorp.waypoint.UI.GetDeploymentResponse
-	(*UI_DeploymentBundle)(nil),                // 255: hashicorp.waypoint.UI.DeploymentBundle
-	(*UI_ListReleasesRequest)(nil),             // 256: hashicorp.waypoint.UI.ListReleasesRequest
-	(*UI_ListReleasesResponse)(nil),            // 257: hashicorp.waypoint.UI.ListReleasesResponse
-	(*UI_ReleaseBundle)(nil),                   // 258: hashicorp.waypoint.UI.ReleaseBundle
-	(*VersionInfo_ProtocolVersion)(nil),        // 259: hashicorp.waypoint.VersionInfo.ProtocolVersion
-	(*Variable_File)(nil),                      // 260: hashicorp.waypoint.Variable.File
-	(*Variable_VCS)(nil),                       // 261: hashicorp.waypoint.Variable.VCS
-	(*Variable_HclPos)(nil),                    // 262: hashicorp.waypoint.Variable.HclPos
-	(*Variable_HclRange)(nil),                  // 263: hashicorp.waypoint.Variable.HclRange
-	(*Variable_FinalValue)(nil),                // 264: hashicorp.waypoint.Variable.FinalValue
-	(*Project_Poll)(nil),                       // 265: hashicorp.waypoint.Project.Poll
-	(*Project_AppStatusPoll)(nil),              // 266: hashicorp.waypoint.Project.AppStatusPoll
-	(*Workspace_Project)(nil),                  // 267: hashicorp.waypoint.Workspace.Project
-	(*Workspace_Application)(nil),              // 268: hashicorp.waypoint.Workspace.Application
-	(*User_Link)(nil),                          // 269: hashicorp.waypoint.User.Link
-	(*User_Link_OIDC)(nil),                     // 270: hashicorp.waypoint.User.Link.OIDC
-	(*Ref_Global)(nil),                         // 271: hashicorp.waypoint.Ref.Global
-	(*Ref_Application)(nil),                    // 272: hashicorp.waypoint.Ref.Application
-	(*Ref_Project)(nil),                        // 273: hashicorp.waypoint.Ref.Project
-	(*Ref_Workspace)(nil),                      // 274: hashicorp.waypoint.Ref.Workspace
-	(*Ref_Deployment)(nil),                     // 275: hashicorp.waypoint.Ref.Deployment
-	(*Ref_Artifact)(nil),                       // 276: hashicorp.waypoint.Ref.Artifact
-	(*Ref_Component)(nil),                      // 277: hashicorp.waypoint.Ref.Component
-	(*Ref_Operation)(nil),                      // 278: hashicorp.waypoint.Ref.Operation
-	(*Ref_OperationSeq)(nil),                   // 279: hashicorp.waypoint.Ref.OperationSeq
-	(*Ref_Runner)(nil),                         // 280: hashicorp.waypoint.Ref.Runner
-	(*Ref_RunnerAny)(nil),                      // 281: hashicorp.waypoint.Ref.RunnerAny
-	(*Ref_RunnerId)(nil),                       // 282: hashicorp.waypoint.Ref.RunnerId
-	(*Ref_RunnerLabels)(nil),                   // 283: hashicorp.waypoint.Ref.RunnerLabels
-	(*Ref_User)(nil),                           // 284: hashicorp.waypoint.Ref.User
-	(*Ref_UserId)(nil),                         // 285: hashicorp.waypoint.Ref.UserId
-	(*Ref_UserUsername)(nil),                   // 286: hashicorp.waypoint.Ref.UserUsername
-	(*Ref_AuthMethod)(nil),                     // 287: hashicorp.waypoint.Ref.AuthMethod
-	(*Ref_DeclaredResource)(nil),               // 288: hashicorp.waypoint.Ref.DeclaredResource
-	(*Ref_OnDemandRunnerConfig)(nil),           // 289: hashicorp.waypoint.Ref.OnDemandRunnerConfig
-	(*Ref_Trigger)(nil),                        // 290: hashicorp.waypoint.Ref.Trigger
-	(*Ref_Job)(nil),                            // 291: hashicorp.waypoint.Ref.Job
-	(*Ref_Task)(nil),                           // 292: hashicorp.waypoint.Ref.Task
-	(*Ref_Pipeline)(nil),                       // 293: hashicorp.waypoint.Ref.Pipeline
-	(*Ref_PipelineOwner)(nil),                  // 294: hashicorp.waypoint.Ref.PipelineOwner
-	(*Ref_PipelineStep)(nil),                   // 295: hashicorp.waypoint.Ref.PipelineStep
-	nil,                                        // 296: hashicorp.waypoint.Ref.RunnerLabels.LabelsEntry
-	(*StatusFilter_Filter)(nil),                // 297: hashicorp.waypoint.StatusFilter.Filter
-	nil,                                        // 298: hashicorp.waypoint.TaskLaunchInfo.EnvironmentVariablesEntry
-	(*AuthMethod_OIDC)(nil),                    // 299: hashicorp.waypoint.AuthMethod.OIDC
-	nil,                                        // 300: hashicorp.waypoint.AuthMethod.OIDC.ClaimMappingsEntry
-	nil,                                        // 301: hashicorp.waypoint.AuthMethod.OIDC.ListClaimMappingsEntry
-	(*Job_TaskOverride)(nil),                   // 302: hashicorp.waypoint.Job.TaskOverride
-	nil,                                        // 303: hashicorp.waypoint.Job.LabelsEntry
-	nil,                                        // 304: hashicorp.waypoint.Job.DataSourceOverridesEntry
-	nil,                                        // 305: hashicorp.waypoint.Job.VariableFinalValuesEntry
-	(*Job_Result)(nil),                         // 306: hashicorp.waypoint.Job.Result
-	(*Job_Config)(nil),                         // 307: hashicorp.waypoint.Job.Config
-	(*Job_DataSource)(nil),                     // 308: hashicorp.waypoint.Job.DataSource
-	(*Job_Local)(nil),                          // 309: hashicorp.waypoint.Job.Local
-	(*Job_Remote)(nil),                         // 310: hashicorp.waypoint.Job.Remote
-	(*Job_Git)(nil),                            // 311: hashicorp.waypoint.Job.Git
-	(*Job_Noop)(nil),                           // 312: hashicorp.waypoint.Job.Noop
-	(*Job_UpOp)(nil),                           // 313: hashicorp.waypoint.Job.UpOp
-	(*Job_UpResult)(nil),                       // 314: hashicorp.waypoint.Job.UpResult
-	(*Job_ValidateOp)(nil),                     // 315: hashicorp.waypoint.Job.ValidateOp
-	(*Job_ValidateResult)(nil),                 // 316: hashicorp.waypoint.Job.ValidateResult
-	(*Job_AuthOp)(nil),                         // 317: hashicorp.waypoint.Job.AuthOp
-	(*Job_AuthResult)(nil),                     // 318: hashicorp.waypoint.Job.AuthResult
-	(*Job_BuildOp)(nil),                        // 319: hashicorp.waypoint.Job.BuildOp
-	(*Job_BuildResult)(nil),                    // 320: hashicorp.waypoint.Job.BuildResult
-	(*Job_PushOp)(nil),                         // 321: hashicorp.waypoint.Job.PushOp
-	(*Job_PushResult)(nil),                     // 322: hashicorp.waypoint.Job.PushResult
-	(*Job_DeployOp)(nil),                       // 323: hashicorp.waypoint.Job.DeployOp
-	(*Job_DeployResult)(nil),                   // 324: hashicorp.waypoint.Job.DeployResult
-	(*Job_ExecOp)(nil),                         // 325: hashicorp.waypoint.Job.ExecOp
-	(*Job_ExecResult)(nil),                     // 326: hashicorp.waypoint.Job.ExecResult
-	(*Job_LogsOp)(nil),                         // 327: hashicorp.waypoint.Job.LogsOp
-	(*Job_DestroyOp)(nil),                      // 328: hashicorp.waypoint.Job.DestroyOp
-	(*Job_ReleaseOp)(nil),                      // 329: hashicorp.waypoint.Job.ReleaseOp
-	(*Job_ReleaseResult)(nil),                  // 330: hashicorp.waypoint.Job.ReleaseResult
-	(*Job_TaskPluginParams)(nil),               // 331: hashicorp.waypoint.Job.TaskPluginParams
-	(*Job_StartTaskLaunchOp)(nil),              // 332: hashicorp.waypoint.Job.StartTaskLaunchOp
-	(*Job_StartTaskResult)(nil),                // 333: hashicorp.waypoint.Job.StartTaskResult
-	(*Job_StopTaskLaunchOp)(nil),               // 334: hashicorp.waypoint.Job.StopTaskLaunchOp
-	(*Job_WatchTaskOp)(nil),                    // 335: hashicorp.waypoint.Job.WatchTaskOp
-	(*Job_WatchTaskResult)(nil),                // 336: hashicorp.waypoint.Job.WatchTaskResult
-	(*Job_StatusReportOp)(nil),                 // 337: hashicorp.waypoint.Job.StatusReportOp
-	(*Job_StatusReportResult)(nil),             // 338: hashicorp.waypoint.Job.StatusReportResult
-	(*Job_DocsOp)(nil),                         // 339: hashicorp.waypoint.Job.DocsOp
-	(*Job_DocsResult)(nil),                     // 340: hashicorp.waypoint.Job.DocsResult
-	(*Job_ConfigSyncOp)(nil),                   // 341: hashicorp.waypoint.Job.ConfigSyncOp
-	(*Job_ConfigSyncResult)(nil),               // 342: hashicorp.waypoint.Job.ConfigSyncResult
-	(*Job_PipelineConfigSyncResult)(nil),       // 343: hashicorp.waypoint.Job.PipelineConfigSyncResult
-	(*Job_ProjectDestroyResult)(nil),           // 344: hashicorp.waypoint.Job.ProjectDestroyResult
-	(*Job_PollOp)(nil),                         // 345: hashicorp.waypoint.Job.PollOp
-	(*Job_PollResult)(nil),                     // 346: hashicorp.waypoint.Job.PollResult
-	(*Job_InitOp)(nil),                         // 347: hashicorp.waypoint.Job.InitOp
-	(*Job_InitResult)(nil),                     // 348: hashicorp.waypoint.Job.InitResult
-	(*Job_PipelineStepOp)(nil),                 // 349: hashicorp.waypoint.Job.PipelineStepOp
-	(*Job_DestroyProjectOp)(nil),               // 350: hashicorp.waypoint.Job.DestroyProjectOp
-	(*Job_PipelineStepResult)(nil),             // 351: hashicorp.waypoint.Job.PipelineStepResult
-	(*Job_QueueProjectOp)(nil),                 // 352: hashicorp.waypoint.Job.QueueProjectOp
-	(*Job_QueueProjectResult)(nil),             // 353: hashicorp.waypoint.Job.QueueProjectResult
-	(*Job_DataSource_Ref)(nil),                 // 354: hashicorp.waypoint.Job.DataSource.Ref
-	(*Job_Git_Basic)(nil),                      // 355: hashicorp.waypoint.Job.Git.Basic
-	(*Job_Git_SSH)(nil),                        // 356: hashicorp.waypoint.Job.Git.SSH
-	(*Job_Git_Ref)(nil),                        // 357: hashicorp.waypoint.Job.Git.Ref
-	(*Job_AuthResult_Result)(nil),              // 358: hashicorp.waypoint.Job.AuthResult.Result
-	(*Job_DocsResult_Result)(nil),              // 359: hashicorp.waypoint.Job.DocsResult.Result
-	nil,                                        // 360: hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry
-	(*Job_QueueProjectResult_Application)(nil), // 361: hashicorp.waypoint.Job.QueueProjectResult.Application
-	nil,                                                     // 362: hashicorp.waypoint.Documentation.FieldsEntry
-	(*Documentation_Field)(nil),                             // 363: hashicorp.waypoint.Documentation.Field
-	(*Documentation_Mapper)(nil),                            // 364: hashicorp.waypoint.Documentation.Mapper
-	(*GetJobStreamResponse_Open)(nil),                       // 365: hashicorp.waypoint.GetJobStreamResponse.Open
-	(*GetJobStreamResponse_State)(nil),                      // 366: hashicorp.waypoint.GetJobStreamResponse.State
-	(*GetJobStreamResponse_JobChange)(nil),                  // 367: hashicorp.waypoint.GetJobStreamResponse.JobChange
-	(*GetJobStreamResponse_Download)(nil),                   // 368: hashicorp.waypoint.GetJobStreamResponse.Download
-	(*GetJobStreamResponse_Terminal)(nil),                   // 369: hashicorp.waypoint.GetJobStreamResponse.Terminal
-	(*GetJobStreamResponse_Error)(nil),                      // 370: hashicorp.waypoint.GetJobStreamResponse.Error
-	(*GetJobStreamResponse_Complete)(nil),                   // 371: hashicorp.waypoint.GetJobStreamResponse.Complete
-	(*GetJobStreamResponse_Terminal_Event)(nil),             // 372: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event
-	(*GetJobStreamResponse_Terminal_Event_Status)(nil),      // 373: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Status
-	(*GetJobStreamResponse_Terminal_Event_Line)(nil),        // 374: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Line
-	(*GetJobStreamResponse_Terminal_Event_Raw)(nil),         // 375: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Raw
-	(*GetJobStreamResponse_Terminal_Event_NamedValue)(nil),  // 376: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValue
-	(*GetJobStreamResponse_Terminal_Event_NamedValues)(nil), // 377: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues
-	(*GetJobStreamResponse_Terminal_Event_TableEntry)(nil),  // 378: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableEntry
-	(*GetJobStreamResponse_Terminal_Event_TableRow)(nil),    // 379: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow
-	(*GetJobStreamResponse_Terminal_Event_Table)(nil),       // 380: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table
-	(*GetJobStreamResponse_Terminal_Event_StepGroup)(nil),   // 381: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.StepGroup
-	(*GetJobStreamResponse_Terminal_Event_Step)(nil),        // 382: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Step
-	nil,                                              // 383: hashicorp.waypoint.Runner.LabelsEntry
-	(*Runner_ODR)(nil),                               // 384: hashicorp.waypoint.Runner.ODR
-	(*Runner_Local)(nil),                             // 385: hashicorp.waypoint.Runner.Local
-	(*Runner_Remote)(nil),                            // 386: hashicorp.waypoint.Runner.Remote
-	(*RunnerConfigRequest_Open)(nil),                 // 387: hashicorp.waypoint.RunnerConfigRequest.Open
-	(*RunnerJobStreamRequest_Request)(nil),           // 388: hashicorp.waypoint.RunnerJobStreamRequest.Request
-	(*RunnerJobStreamRequest_Ack)(nil),               // 389: hashicorp.waypoint.RunnerJobStreamRequest.Ack
-	(*RunnerJobStreamRequest_Complete)(nil),          // 390: hashicorp.waypoint.RunnerJobStreamRequest.Complete
-	(*RunnerJobStreamRequest_Error)(nil),             // 391: hashicorp.waypoint.RunnerJobStreamRequest.Error
-	(*RunnerJobStreamRequest_Heartbeat)(nil),         // 392: hashicorp.waypoint.RunnerJobStreamRequest.Heartbeat
-	(*RunnerJobStreamRequest_ConfigLoad)(nil),        // 393: hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad
-	(*RunnerJobStreamRequest_VariableValuesSet)(nil), // 394: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet
-	nil, // 395: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry
-	(*RunnerJobStreamResponse_JobAssignment)(nil), // 396: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment
-	(*RunnerJobStreamResponse_JobCancel)(nil),     // 397: hashicorp.waypoint.RunnerJobStreamResponse.JobCancel
-	(*ServerConfig_AdvertiseAddr)(nil),            // 398: hashicorp.waypoint.ServerConfig.AdvertiseAddr
-	nil,                                           // 399: hashicorp.waypoint.Hostname.TargetLabelsEntry
-	(*Hostname_Target)(nil),                       // 400: hashicorp.waypoint.Hostname.Target
-	(*Hostname_TargetApp)(nil),                    // 401: hashicorp.waypoint.Hostname.TargetApp
-	nil,                                           // 402: hashicorp.waypoint.Build.LabelsEntry
-	(*Build_Preload)(nil),                         // 403: hashicorp.waypoint.Build.Preload
-	nil,                                           // 404: hashicorp.waypoint.OnDemandRunnerConfig.EnvironmentVariablesEntry
-	nil,                                           // 405: hashicorp.waypoint.PushedArtifact.LabelsEntry
-	(*PushedArtifact_Preload)(nil),                // 406: hashicorp.waypoint.PushedArtifact.Preload
-	nil,                                           // 407: hashicorp.waypoint.Deployment.LabelsEntry
-	(*Deployment_Preload)(nil),                    // 408: hashicorp.waypoint.Deployment.Preload
-	(*ListInstancesRequest_Application)(nil),      // 409: hashicorp.waypoint.ListInstancesRequest.Application
-	nil,                                           // 410: hashicorp.waypoint.Release.LabelsEntry
-	(*Release_Preload)(nil),                       // 411: hashicorp.waypoint.Release.Preload
-	(*StatusReport_Resource)(nil),                 // 412: hashicorp.waypoint.StatusReport.Resource
-	(*StatusReport_Health)(nil),                   // 413: hashicorp.waypoint.StatusReport.Health
-	(*GetLogStreamRequest_Application)(nil),       // 414: hashicorp.waypoint.GetLogStreamRequest.Application
-	(*LogBatch_Entry)(nil),                        // 415: hashicorp.waypoint.LogBatch.Entry
-	(*ConfigVar_DynamicVal)(nil),                  // 416: hashicorp.waypoint.ConfigVar.DynamicVal
-	(*ConfigVar_Target)(nil),                      // 417: hashicorp.waypoint.ConfigVar.Target
-	nil,                                           // 418: hashicorp.waypoint.ConfigVar.DynamicVal.ConfigEntry
-	nil,                                           // 419: hashicorp.waypoint.ConfigGetRequest.LabelsEntry
-	nil,                                           // 420: hashicorp.waypoint.ConfigSource.ConfigEntry
-	(*ExecStreamRequest_Start)(nil),               // 421: hashicorp.waypoint.ExecStreamRequest.Start
-	(*ExecStreamRequest_Input)(nil),               // 422: hashicorp.waypoint.ExecStreamRequest.Input
-	(*ExecStreamRequest_PTY)(nil),                 // 423: hashicorp.waypoint.ExecStreamRequest.PTY
-	(*ExecStreamRequest_WindowSize)(nil),          // 424: hashicorp.waypoint.ExecStreamRequest.WindowSize
-	(*ExecStreamResponse_Open)(nil),               // 425: hashicorp.waypoint.ExecStreamResponse.Open
-	(*ExecStreamResponse_Exit)(nil),               // 426: hashicorp.waypoint.ExecStreamResponse.Exit
-	(*ExecStreamResponse_Output)(nil),             // 427: hashicorp.waypoint.ExecStreamResponse.Output
-	(*EntrypointConfig_Exec)(nil),                 // 428: hashicorp.waypoint.EntrypointConfig.Exec
-	(*EntrypointConfig_URLService)(nil),           // 429: hashicorp.waypoint.EntrypointConfig.URLService
-	(*EntrypointConfig_DeploymentInfo)(nil),       // 430: hashicorp.waypoint.EntrypointConfig.DeploymentInfo
-	nil,                                           // 431: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.LabelsEntry
-	(*EntrypointExecRequest_Open)(nil),            // 432: hashicorp.waypoint.EntrypointExecRequest.Open
-	(*EntrypointExecRequest_Exit)(nil),            // 433: hashicorp.waypoint.EntrypointExecRequest.Exit
-	(*EntrypointExecRequest_Output)(nil),          // 434: hashicorp.waypoint.EntrypointExecRequest.Output
-	(*EntrypointExecRequest_Error)(nil),           // 435: hashicorp.waypoint.EntrypointExecRequest.Error
-	nil,                                           // 436: hashicorp.waypoint.Pipeline.StepsEntry
-	(*Pipeline_Step)(nil),                         // 437: hashicorp.waypoint.Pipeline.Step
-	(*Pipeline_Step_Exec)(nil),                    // 438: hashicorp.waypoint.Pipeline.Step.Exec
-	(*Pipeline_Step_Build)(nil),                   // 439: hashicorp.waypoint.Pipeline.Step.Build
-	(*Pipeline_Step_Deploy)(nil),                  // 440: hashicorp.waypoint.Pipeline.Step.Deploy
-	(*Pipeline_Step_Release)(nil),                 // 441: hashicorp.waypoint.Pipeline.Step.Release
-	(*Pipeline_Step_Up)(nil),                      // 442: hashicorp.waypoint.Pipeline.Step.Up
-	(*Pipeline_Step_Pipeline)(nil),                // 443: hashicorp.waypoint.Pipeline.Step.Pipeline
-	(*GetPipelineResponse_Graph)(nil),             // 444: hashicorp.waypoint.GetPipelineResponse.Graph
-	nil,                                           // 445: hashicorp.waypoint.RunPipelineResponse.JobMapEntry
-	nil,                                           // 446: hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry
-	nil,                                           // 447: hashicorp.waypoint.TokenTransport.MetadataEntry
-	(*TokenTransport_OAuthCredentials)(nil),       // 448: hashicorp.waypoint.TokenTransport.OAuthCredentials
-	(*Token_Login)(nil),                           // 449: hashicorp.waypoint.Token.Login
-	(*Token_Runner)(nil),                          // 450: hashicorp.waypoint.Token.Runner
-	(*Token_Invite)(nil),                          // 451: hashicorp.waypoint.Token.Invite
-	(*Token_Entrypoint)(nil),                      // 452: hashicorp.waypoint.Token.Entrypoint
-	(*Token_Trigger)(nil),                         // 453: hashicorp.waypoint.Token.Trigger
-	(*Token_Invite_Signup)(nil),                   // 454: hashicorp.waypoint.Token.Invite.Signup
-	nil,                                           // 455: hashicorp.waypoint.GenerateRunnerTokenRequest.LabelsEntry
-	(*CreateSnapshotResponse_Open)(nil),           // 456: hashicorp.waypoint.CreateSnapshotResponse.Open
-	(*RestoreSnapshotRequest_Open)(nil),           // 457: hashicorp.waypoint.RestoreSnapshotRequest.Open
-	(*Snapshot_Header)(nil),                       // 458: hashicorp.waypoint.Snapshot.Header
-	(*Snapshot_Trailer)(nil),                      // 459: hashicorp.waypoint.Snapshot.Trailer
-	(*Snapshot_BoltChunk)(nil),                    // 460: hashicorp.waypoint.Snapshot.BoltChunk
-	nil,                                           // 461: hashicorp.waypoint.Snapshot.BoltChunk.ItemsEntry
-	(*emptypb.Empty)(nil),                         // 462: google.protobuf.Empty
-	(*timestamppb.Timestamp)(nil),                 // 463: google.protobuf.Timestamp
-	(*status.Status)(nil),                         // 464: google.rpc.Status
-	(*opaqueany.Any)(nil),                         // 465: opaqueany.Any
+	(UI_PipelineRunTreeNode_State)(0),          // 1: hashicorp.waypoint.UI.PipelineRunTreeNode.State
+	(UI_PipelineRunTreeNode_Children_Mode)(0),  // 2: hashicorp.waypoint.UI.PipelineRunTreeNode.Children.Mode
+	(ServerFeaturesFeature)(0),                 // 3: hashicorp.waypoint.ServerFeatures.feature
+	(Variable_FinalValue_Source)(0),            // 4: hashicorp.waypoint.Variable.FinalValue.Source
+	(Project_ProjectState)(0),                  // 5: hashicorp.waypoint.Project.ProjectState
+	(Component_Type)(0),                        // 6: hashicorp.waypoint.Component.Type
+	(Status_State)(0),                          // 7: hashicorp.waypoint.Status.State
+	(Operation_PhysicalState)(0),               // 8: hashicorp.waypoint.Operation.PhysicalState
+	(OperationOrder_Order)(0),                  // 9: hashicorp.waypoint.OperationOrder.Order
+	(Task_State)(0),                            // 10: hashicorp.waypoint.Task.State
+	(OIDCAuthMethod_Kind)(0),                   // 11: hashicorp.waypoint.OIDCAuthMethod.Kind
+	(Job_State)(0),                             // 12: hashicorp.waypoint.Job.State
+	(Job_Config_Source)(0),                     // 13: hashicorp.waypoint.Job.Config.Source
+	(Runner_AdoptionState)(0),                  // 14: hashicorp.waypoint.Runner.AdoptionState
+	(UpsertDeploymentRequest_Tristate)(0),      // 15: hashicorp.waypoint.UpsertDeploymentRequest.Tristate
+	(Deployment_LoadDetails)(0),                // 16: hashicorp.waypoint.Deployment.LoadDetails
+	(Instance_Type)(0),                         // 17: hashicorp.waypoint.Instance.Type
+	(Release_LoadDetails)(0),                   // 18: hashicorp.waypoint.Release.LoadDetails
+	(StatusReport_Resource_Health)(0),          // 19: hashicorp.waypoint.StatusReport.Resource.Health
+	(LogBatch_Entry_Source)(0),                 // 20: hashicorp.waypoint.LogBatch.Entry.Source
+	(ExecStreamResponse_Output_Channel)(0),     // 21: hashicorp.waypoint.ExecStreamResponse.Output.Channel
+	(EntrypointExecRequest_Output_Channel)(0),  // 22: hashicorp.waypoint.EntrypointExecRequest.Output.Channel
+	(PipelineRun_State)(0),                     // 23: hashicorp.waypoint.PipelineRun.State
+	(GetPipelineResponse_Graph_Format)(0),      // 24: hashicorp.waypoint.GetPipelineResponse.Graph.Format
+	(Snapshot_Header_Format)(0),                // 25: hashicorp.waypoint.Snapshot.Header.Format
+	(Hcl_Format)(0),                            // 26: hashicorp.waypoint.Hcl.Format
+	(*UI)(nil),                                 // 27: hashicorp.waypoint.UI
+	(*GetVersionInfoResponse)(nil),             // 28: hashicorp.waypoint.GetVersionInfoResponse
+	(*ServerFeatures)(nil),                     // 29: hashicorp.waypoint.ServerFeatures
+	(*VersionInfo)(nil),                        // 30: hashicorp.waypoint.VersionInfo
+	(*Application)(nil),                        // 31: hashicorp.waypoint.Application
+	(*Variable)(nil),                           // 32: hashicorp.waypoint.Variable
+	(*Project)(nil),                            // 33: hashicorp.waypoint.Project
+	(*Workspace)(nil),                          // 34: hashicorp.waypoint.Workspace
+	(*User)(nil),                               // 35: hashicorp.waypoint.User
+	(*Ref)(nil),                                // 36: hashicorp.waypoint.Ref
+	(*Component)(nil),                          // 37: hashicorp.waypoint.Component
+	(*Status)(nil),                             // 38: hashicorp.waypoint.Status
+	(*StatusFilter)(nil),                       // 39: hashicorp.waypoint.StatusFilter
+	(*Operation)(nil),                          // 40: hashicorp.waypoint.Operation
+	(*OperationOrder)(nil),                     // 41: hashicorp.waypoint.OperationOrder
+	(*Generation)(nil),                         // 42: hashicorp.waypoint.Generation
+	(*DeclaredResource)(nil),                   // 43: hashicorp.waypoint.DeclaredResource
+	(*DestroyedResource)(nil),                  // 44: hashicorp.waypoint.DestroyedResource
+	(*TaskLaunchInfo)(nil),                     // 45: hashicorp.waypoint.TaskLaunchInfo
+	(*Task)(nil),                               // 46: hashicorp.waypoint.Task
+	(*UpsertTaskRequest)(nil),                  // 47: hashicorp.waypoint.UpsertTaskRequest
+	(*UpsertTaskResponse)(nil),                 // 48: hashicorp.waypoint.UpsertTaskResponse
+	(*GetTaskRequest)(nil),                     // 49: hashicorp.waypoint.GetTaskRequest
+	(*GetTaskResponse)(nil),                    // 50: hashicorp.waypoint.GetTaskResponse
+	(*DeleteTaskRequest)(nil),                  // 51: hashicorp.waypoint.DeleteTaskRequest
+	(*ListTaskRequest)(nil),                    // 52: hashicorp.waypoint.ListTaskRequest
+	(*ListTaskResponse)(nil),                   // 53: hashicorp.waypoint.ListTaskResponse
+	(*CancelTaskRequest)(nil),                  // 54: hashicorp.waypoint.CancelTaskRequest
+	(*ErrorDetail)(nil),                        // 55: hashicorp.waypoint.ErrorDetail
+	(*GetUserRequest)(nil),                     // 56: hashicorp.waypoint.GetUserRequest
+	(*GetUserResponse)(nil),                    // 57: hashicorp.waypoint.GetUserResponse
+	(*ListUsersResponse)(nil),                  // 58: hashicorp.waypoint.ListUsersResponse
+	(*UpdateUserRequest)(nil),                  // 59: hashicorp.waypoint.UpdateUserRequest
+	(*UpdateUserResponse)(nil),                 // 60: hashicorp.waypoint.UpdateUserResponse
+	(*DeleteUserRequest)(nil),                  // 61: hashicorp.waypoint.DeleteUserRequest
+	(*AuthMethod)(nil),                         // 62: hashicorp.waypoint.AuthMethod
+	(*OIDCAuthMethod)(nil),                     // 63: hashicorp.waypoint.OIDCAuthMethod
+	(*UpsertAuthMethodRequest)(nil),            // 64: hashicorp.waypoint.UpsertAuthMethodRequest
+	(*UpsertAuthMethodResponse)(nil),           // 65: hashicorp.waypoint.UpsertAuthMethodResponse
+	(*GetAuthMethodRequest)(nil),               // 66: hashicorp.waypoint.GetAuthMethodRequest
+	(*GetAuthMethodResponse)(nil),              // 67: hashicorp.waypoint.GetAuthMethodResponse
+	(*DeleteAuthMethodRequest)(nil),            // 68: hashicorp.waypoint.DeleteAuthMethodRequest
+	(*ListAuthMethodsResponse)(nil),            // 69: hashicorp.waypoint.ListAuthMethodsResponse
+	(*ListOIDCAuthMethodsResponse)(nil),        // 70: hashicorp.waypoint.ListOIDCAuthMethodsResponse
+	(*GetOIDCAuthURLRequest)(nil),              // 71: hashicorp.waypoint.GetOIDCAuthURLRequest
+	(*GetOIDCAuthURLResponse)(nil),             // 72: hashicorp.waypoint.GetOIDCAuthURLResponse
+	(*CompleteOIDCAuthRequest)(nil),            // 73: hashicorp.waypoint.CompleteOIDCAuthRequest
+	(*CompleteOIDCAuthResponse)(nil),           // 74: hashicorp.waypoint.CompleteOIDCAuthResponse
+	(*QueueJobRequest)(nil),                    // 75: hashicorp.waypoint.QueueJobRequest
+	(*QueueJobResponse)(nil),                   // 76: hashicorp.waypoint.QueueJobResponse
+	(*CancelJobRequest)(nil),                   // 77: hashicorp.waypoint.CancelJobRequest
+	(*ValidateJobRequest)(nil),                 // 78: hashicorp.waypoint.ValidateJobRequest
+	(*ValidateJobResponse)(nil),                // 79: hashicorp.waypoint.ValidateJobResponse
+	(*Job)(nil),                                // 80: hashicorp.waypoint.Job
+	(*Documentation)(nil),                      // 81: hashicorp.waypoint.Documentation
+	(*GetJobRequest)(nil),                      // 82: hashicorp.waypoint.GetJobRequest
+	(*ListJobsRequest)(nil),                    // 83: hashicorp.waypoint.ListJobsRequest
+	(*ListJobsResponse)(nil),                   // 84: hashicorp.waypoint.ListJobsResponse
+	(*GetJobStreamRequest)(nil),                // 85: hashicorp.waypoint.GetJobStreamRequest
+	(*GetJobStreamResponse)(nil),               // 86: hashicorp.waypoint.GetJobStreamResponse
+	(*Runner)(nil),                             // 87: hashicorp.waypoint.Runner
+	(*RunnerTokenRequest)(nil),                 // 88: hashicorp.waypoint.RunnerTokenRequest
+	(*RunnerTokenResponse)(nil),                // 89: hashicorp.waypoint.RunnerTokenResponse
+	(*RunnerConfigRequest)(nil),                // 90: hashicorp.waypoint.RunnerConfigRequest
+	(*RunnerConfigResponse)(nil),               // 91: hashicorp.waypoint.RunnerConfigResponse
+	(*RunnerConfig)(nil),                       // 92: hashicorp.waypoint.RunnerConfig
+	(*RunnerJobStreamRequest)(nil),             // 93: hashicorp.waypoint.RunnerJobStreamRequest
+	(*RunnerJobStreamResponse)(nil),            // 94: hashicorp.waypoint.RunnerJobStreamResponse
+	(*RunnerGetDeploymentConfigRequest)(nil),   // 95: hashicorp.waypoint.RunnerGetDeploymentConfigRequest
+	(*RunnerGetDeploymentConfigResponse)(nil),  // 96: hashicorp.waypoint.RunnerGetDeploymentConfigResponse
+	(*GetRunnerRequest)(nil),                   // 97: hashicorp.waypoint.GetRunnerRequest
+	(*ListRunnersRequest)(nil),                 // 98: hashicorp.waypoint.ListRunnersRequest
+	(*ListRunnersResponse)(nil),                // 99: hashicorp.waypoint.ListRunnersResponse
+	(*AdoptRunnerRequest)(nil),                 // 100: hashicorp.waypoint.AdoptRunnerRequest
+	(*ForgetRunnerRequest)(nil),                // 101: hashicorp.waypoint.ForgetRunnerRequest
+	(*SetServerConfigRequest)(nil),             // 102: hashicorp.waypoint.SetServerConfigRequest
+	(*GetServerConfigResponse)(nil),            // 103: hashicorp.waypoint.GetServerConfigResponse
+	(*ServerConfig)(nil),                       // 104: hashicorp.waypoint.ServerConfig
+	(*CreateHostnameRequest)(nil),              // 105: hashicorp.waypoint.CreateHostnameRequest
+	(*CreateHostnameResponse)(nil),             // 106: hashicorp.waypoint.CreateHostnameResponse
+	(*ListHostnamesRequest)(nil),               // 107: hashicorp.waypoint.ListHostnamesRequest
+	(*ListHostnamesResponse)(nil),              // 108: hashicorp.waypoint.ListHostnamesResponse
+	(*DeleteHostnameRequest)(nil),              // 109: hashicorp.waypoint.DeleteHostnameRequest
+	(*Hostname)(nil),                           // 110: hashicorp.waypoint.Hostname
+	(*ListWorkspacesRequest)(nil),              // 111: hashicorp.waypoint.ListWorkspacesRequest
+	(*ListWorkspacesResponse)(nil),             // 112: hashicorp.waypoint.ListWorkspacesResponse
+	(*GetWorkspaceRequest)(nil),                // 113: hashicorp.waypoint.GetWorkspaceRequest
+	(*GetWorkspaceResponse)(nil),               // 114: hashicorp.waypoint.GetWorkspaceResponse
+	(*UpsertWorkspaceRequest)(nil),             // 115: hashicorp.waypoint.UpsertWorkspaceRequest
+	(*UpsertWorkspaceResponse)(nil),            // 116: hashicorp.waypoint.UpsertWorkspaceResponse
+	(*UpsertProjectRequest)(nil),               // 117: hashicorp.waypoint.UpsertProjectRequest
+	(*UpsertProjectResponse)(nil),              // 118: hashicorp.waypoint.UpsertProjectResponse
+	(*GetProjectRequest)(nil),                  // 119: hashicorp.waypoint.GetProjectRequest
+	(*GetProjectResponse)(nil),                 // 120: hashicorp.waypoint.GetProjectResponse
+	(*ListProjectsRequest)(nil),                // 121: hashicorp.waypoint.ListProjectsRequest
+	(*ListProjectsResponse)(nil),               // 122: hashicorp.waypoint.ListProjectsResponse
+	(*DestroyProjectRequest)(nil),              // 123: hashicorp.waypoint.DestroyProjectRequest
+	(*GetApplicationRequest)(nil),              // 124: hashicorp.waypoint.GetApplicationRequest
+	(*GetApplicationResponse)(nil),             // 125: hashicorp.waypoint.GetApplicationResponse
+	(*UpsertApplicationRequest)(nil),           // 126: hashicorp.waypoint.UpsertApplicationRequest
+	(*UpsertApplicationResponse)(nil),          // 127: hashicorp.waypoint.UpsertApplicationResponse
+	(*UpsertBuildRequest)(nil),                 // 128: hashicorp.waypoint.UpsertBuildRequest
+	(*UpsertBuildResponse)(nil),                // 129: hashicorp.waypoint.UpsertBuildResponse
+	(*ListBuildsRequest)(nil),                  // 130: hashicorp.waypoint.ListBuildsRequest
+	(*ListBuildsResponse)(nil),                 // 131: hashicorp.waypoint.ListBuildsResponse
+	(*GetLatestBuildRequest)(nil),              // 132: hashicorp.waypoint.GetLatestBuildRequest
+	(*GetBuildRequest)(nil),                    // 133: hashicorp.waypoint.GetBuildRequest
+	(*Build)(nil),                              // 134: hashicorp.waypoint.Build
+	(*Artifact)(nil),                           // 135: hashicorp.waypoint.Artifact
+	(*OnDemandRunnerConfig)(nil),               // 136: hashicorp.waypoint.OnDemandRunnerConfig
+	(*UpsertOnDemandRunnerConfigRequest)(nil),  // 137: hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest
+	(*UpsertOnDemandRunnerConfigResponse)(nil), // 138: hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse
+	(*GetOnDemandRunnerConfigRequest)(nil),     // 139: hashicorp.waypoint.GetOnDemandRunnerConfigRequest
+	(*GetOnDemandRunnerConfigResponse)(nil),    // 140: hashicorp.waypoint.GetOnDemandRunnerConfigResponse
+	(*DeleteOnDemandRunnerConfigRequest)(nil),  // 141: hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest
+	(*DeleteOnDemandRunnerConfigResponse)(nil), // 142: hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse
+	(*ListOnDemandRunnerConfigsResponse)(nil),  // 143: hashicorp.waypoint.ListOnDemandRunnerConfigsResponse
+	(*UpsertPushedArtifactRequest)(nil),        // 144: hashicorp.waypoint.UpsertPushedArtifactRequest
+	(*UpsertPushedArtifactResponse)(nil),       // 145: hashicorp.waypoint.UpsertPushedArtifactResponse
+	(*GetLatestPushedArtifactRequest)(nil),     // 146: hashicorp.waypoint.GetLatestPushedArtifactRequest
+	(*GetPushedArtifactRequest)(nil),           // 147: hashicorp.waypoint.GetPushedArtifactRequest
+	(*ListPushedArtifactsRequest)(nil),         // 148: hashicorp.waypoint.ListPushedArtifactsRequest
+	(*ListPushedArtifactsResponse)(nil),        // 149: hashicorp.waypoint.ListPushedArtifactsResponse
+	(*PushedArtifact)(nil),                     // 150: hashicorp.waypoint.PushedArtifact
+	(*GetDeploymentRequest)(nil),               // 151: hashicorp.waypoint.GetDeploymentRequest
+	(*UpsertDeploymentRequest)(nil),            // 152: hashicorp.waypoint.UpsertDeploymentRequest
+	(*UpsertDeploymentResponse)(nil),           // 153: hashicorp.waypoint.UpsertDeploymentResponse
+	(*ListDeploymentsRequest)(nil),             // 154: hashicorp.waypoint.ListDeploymentsRequest
+	(*ListDeploymentsResponse)(nil),            // 155: hashicorp.waypoint.ListDeploymentsResponse
+	(*Deployment)(nil),                         // 156: hashicorp.waypoint.Deployment
+	(*DeploymentExpanded)(nil),                 // 157: hashicorp.waypoint.DeploymentExpanded
+	(*ListInstancesRequest)(nil),               // 158: hashicorp.waypoint.ListInstancesRequest
+	(*ListInstancesResponse)(nil),              // 159: hashicorp.waypoint.ListInstancesResponse
+	(*Instance)(nil),                           // 160: hashicorp.waypoint.Instance
+	(*UpsertReleaseRequest)(nil),               // 161: hashicorp.waypoint.UpsertReleaseRequest
+	(*UpsertReleaseResponse)(nil),              // 162: hashicorp.waypoint.UpsertReleaseResponse
+	(*GetLatestReleaseRequest)(nil),            // 163: hashicorp.waypoint.GetLatestReleaseRequest
+	(*ListReleasesRequest)(nil),                // 164: hashicorp.waypoint.ListReleasesRequest
+	(*ListReleasesResponse)(nil),               // 165: hashicorp.waypoint.ListReleasesResponse
+	(*GetReleaseRequest)(nil),                  // 166: hashicorp.waypoint.GetReleaseRequest
+	(*Release)(nil),                            // 167: hashicorp.waypoint.Release
+	(*ReleaseExpanded)(nil),                    // 168: hashicorp.waypoint.ReleaseExpanded
+	(*Trigger)(nil),                            // 169: hashicorp.waypoint.Trigger
+	(*UpsertTriggerRequest)(nil),               // 170: hashicorp.waypoint.UpsertTriggerRequest
+	(*UpsertTriggerResponse)(nil),              // 171: hashicorp.waypoint.UpsertTriggerResponse
+	(*GetTriggerRequest)(nil),                  // 172: hashicorp.waypoint.GetTriggerRequest
+	(*GetTriggerResponse)(nil),                 // 173: hashicorp.waypoint.GetTriggerResponse
+	(*DeleteTriggerRequest)(nil),               // 174: hashicorp.waypoint.DeleteTriggerRequest
+	(*RunTriggerRequest)(nil),                  // 175: hashicorp.waypoint.RunTriggerRequest
+	(*RunTriggerResponse)(nil),                 // 176: hashicorp.waypoint.RunTriggerResponse
+	(*ListTriggerRequest)(nil),                 // 177: hashicorp.waypoint.ListTriggerRequest
+	(*ListTriggerResponse)(nil),                // 178: hashicorp.waypoint.ListTriggerResponse
+	(*UpsertStatusReportRequest)(nil),          // 179: hashicorp.waypoint.UpsertStatusReportRequest
+	(*UpsertStatusReportResponse)(nil),         // 180: hashicorp.waypoint.UpsertStatusReportResponse
+	(*GetLatestStatusReportRequest)(nil),       // 181: hashicorp.waypoint.GetLatestStatusReportRequest
+	(*ListStatusReportsRequest)(nil),           // 182: hashicorp.waypoint.ListStatusReportsRequest
+	(*ListStatusReportsResponse)(nil),          // 183: hashicorp.waypoint.ListStatusReportsResponse
+	(*GetStatusReportRequest)(nil),             // 184: hashicorp.waypoint.GetStatusReportRequest
+	(*ExpediteStatusReportRequest)(nil),        // 185: hashicorp.waypoint.ExpediteStatusReportRequest
+	(*ExpediteStatusReportResponse)(nil),       // 186: hashicorp.waypoint.ExpediteStatusReportResponse
+	(*StatusReport)(nil),                       // 187: hashicorp.waypoint.StatusReport
+	(*GetLogStreamRequest)(nil),                // 188: hashicorp.waypoint.GetLogStreamRequest
+	(*LogBatch)(nil),                           // 189: hashicorp.waypoint.LogBatch
+	(*ConfigVar)(nil),                          // 190: hashicorp.waypoint.ConfigVar
+	(*ConfigSetRequest)(nil),                   // 191: hashicorp.waypoint.ConfigSetRequest
+	(*ConfigSetResponse)(nil),                  // 192: hashicorp.waypoint.ConfigSetResponse
+	(*ConfigGetRequest)(nil),                   // 193: hashicorp.waypoint.ConfigGetRequest
+	(*ConfigGetResponse)(nil),                  // 194: hashicorp.waypoint.ConfigGetResponse
+	(*ConfigSource)(nil),                       // 195: hashicorp.waypoint.ConfigSource
+	(*SetConfigSourceRequest)(nil),             // 196: hashicorp.waypoint.SetConfigSourceRequest
+	(*GetConfigSourceRequest)(nil),             // 197: hashicorp.waypoint.GetConfigSourceRequest
+	(*GetConfigSourceResponse)(nil),            // 198: hashicorp.waypoint.GetConfigSourceResponse
+	(*ExecStreamRequest)(nil),                  // 199: hashicorp.waypoint.ExecStreamRequest
+	(*ExecStreamResponse)(nil),                 // 200: hashicorp.waypoint.ExecStreamResponse
+	(*EntrypointConfigRequest)(nil),            // 201: hashicorp.waypoint.EntrypointConfigRequest
+	(*EntrypointConfigResponse)(nil),           // 202: hashicorp.waypoint.EntrypointConfigResponse
+	(*EntrypointConfig)(nil),                   // 203: hashicorp.waypoint.EntrypointConfig
+	(*EntrypointLogBatch)(nil),                 // 204: hashicorp.waypoint.EntrypointLogBatch
+	(*EntrypointExecRequest)(nil),              // 205: hashicorp.waypoint.EntrypointExecRequest
+	(*EntrypointExecResponse)(nil),             // 206: hashicorp.waypoint.EntrypointExecResponse
+	(*Pipeline)(nil),                           // 207: hashicorp.waypoint.Pipeline
+	(*PipelineRun)(nil),                        // 208: hashicorp.waypoint.PipelineRun
+	(*UpsertPipelineRequest)(nil),              // 209: hashicorp.waypoint.UpsertPipelineRequest
+	(*UpsertPipelineResponse)(nil),             // 210: hashicorp.waypoint.UpsertPipelineResponse
+	(*GetPipelineRequest)(nil),                 // 211: hashicorp.waypoint.GetPipelineRequest
+	(*GetPipelineResponse)(nil),                // 212: hashicorp.waypoint.GetPipelineResponse
+	(*RunPipelineRequest)(nil),                 // 213: hashicorp.waypoint.RunPipelineRequest
+	(*RunPipelineResponse)(nil),                // 214: hashicorp.waypoint.RunPipelineResponse
+	(*ListPipelinesRequest)(nil),               // 215: hashicorp.waypoint.ListPipelinesRequest
+	(*ListPipelinesResponse)(nil),              // 216: hashicorp.waypoint.ListPipelinesResponse
+	(*ListPipelineRunsRequest)(nil),            // 217: hashicorp.waypoint.ListPipelineRunsRequest
+	(*ListPipelineRunsResponse)(nil),           // 218: hashicorp.waypoint.ListPipelineRunsResponse
+	(*GetPipelineRunRequest)(nil),              // 219: hashicorp.waypoint.GetPipelineRunRequest
+	(*GetPipelineRunResponse)(nil),             // 220: hashicorp.waypoint.GetPipelineRunResponse
+	(*ConfigSyncPipelineRequest)(nil),          // 221: hashicorp.waypoint.ConfigSyncPipelineRequest
+	(*ConfigSyncPipelineResponse)(nil),         // 222: hashicorp.waypoint.ConfigSyncPipelineResponse
+	(*TokenTransport)(nil),                     // 223: hashicorp.waypoint.TokenTransport
+	(*Token)(nil),                              // 224: hashicorp.waypoint.Token
+	(*HMACKey)(nil),                            // 225: hashicorp.waypoint.HMACKey
+	(*DecodeTokenRequest)(nil),                 // 226: hashicorp.waypoint.DecodeTokenRequest
+	(*DecodeTokenResponse)(nil),                // 227: hashicorp.waypoint.DecodeTokenResponse
+	(*LoginTokenRequest)(nil),                  // 228: hashicorp.waypoint.LoginTokenRequest
+	(*GenerateRunnerTokenRequest)(nil),         // 229: hashicorp.waypoint.GenerateRunnerTokenRequest
+	(*InviteTokenRequest)(nil),                 // 230: hashicorp.waypoint.InviteTokenRequest
+	(*NewTokenResponse)(nil),                   // 231: hashicorp.waypoint.NewTokenResponse
+	(*ConvertInviteTokenRequest)(nil),          // 232: hashicorp.waypoint.ConvertInviteTokenRequest
+	(*CreateSnapshotResponse)(nil),             // 233: hashicorp.waypoint.CreateSnapshotResponse
+	(*RestoreSnapshotRequest)(nil),             // 234: hashicorp.waypoint.RestoreSnapshotRequest
+	(*Snapshot)(nil),                           // 235: hashicorp.waypoint.Snapshot
+	(*Hcl)(nil),                                // 236: hashicorp.waypoint.Hcl
+	(*WaypointHclFmtRequest)(nil),              // 237: hashicorp.waypoint.WaypointHclFmtRequest
+	(*WaypointHclFmtResponse)(nil),             // 238: hashicorp.waypoint.WaypointHclFmtResponse
+	(*InlineKeepalive)(nil),                    // 239: hashicorp.waypoint.InlineKeepalive
+	(*PaginationRequest)(nil),                  // 240: hashicorp.waypoint.PaginationRequest
+	(*PaginationResponse)(nil),                 // 241: hashicorp.waypoint.PaginationResponse
+	(*UI_ListProjectsRequest)(nil),             // 242: hashicorp.waypoint.UI.ListProjectsRequest
+	(*UI_ListProjectsResponse)(nil),            // 243: hashicorp.waypoint.UI.ListProjectsResponse
+	(*UI_ProjectBundle)(nil),                   // 244: hashicorp.waypoint.UI.ProjectBundle
+	(*UI_GetProjectRequest)(nil),               // 245: hashicorp.waypoint.UI.GetProjectRequest
+	(*UI_GetProjectResponse)(nil),              // 246: hashicorp.waypoint.UI.GetProjectResponse
+	(*UI_ListPipelinesRequest)(nil),            // 247: hashicorp.waypoint.UI.ListPipelinesRequest
+	(*UI_ListPipelinesResponse)(nil),           // 248: hashicorp.waypoint.UI.ListPipelinesResponse
+	(*UI_ListPipelineRunsRequest)(nil),         // 249: hashicorp.waypoint.UI.ListPipelineRunsRequest
+	(*UI_ListPipelineRunsResponse)(nil),        // 250: hashicorp.waypoint.UI.ListPipelineRunsResponse
+	(*UI_GetPipelineRunRequest)(nil),           // 251: hashicorp.waypoint.UI.GetPipelineRunRequest
+	(*UI_GetPipelineRunResponse)(nil),          // 252: hashicorp.waypoint.UI.GetPipelineRunResponse
+	(*UI_PipelineBundle)(nil),                  // 253: hashicorp.waypoint.UI.PipelineBundle
+	(*UI_PipelineRunBundle)(nil),               // 254: hashicorp.waypoint.UI.PipelineRunBundle
+	(*UI_PipelineRunTreeNode)(nil),             // 255: hashicorp.waypoint.UI.PipelineRunTreeNode
+	(*UI_ListDeploymentsRequest)(nil),          // 256: hashicorp.waypoint.UI.ListDeploymentsRequest
+	(*UI_ListDeploymentsResponse)(nil),         // 257: hashicorp.waypoint.UI.ListDeploymentsResponse
+	(*UI_GetDeploymentRequest)(nil),            // 258: hashicorp.waypoint.UI.GetDeploymentRequest
+	(*UI_GetDeploymentResponse)(nil),           // 259: hashicorp.waypoint.UI.GetDeploymentResponse
+	(*UI_DeploymentBundle)(nil),                // 260: hashicorp.waypoint.UI.DeploymentBundle
+	(*UI_ListReleasesRequest)(nil),             // 261: hashicorp.waypoint.UI.ListReleasesRequest
+	(*UI_ListReleasesResponse)(nil),            // 262: hashicorp.waypoint.UI.ListReleasesResponse
+	(*UI_ReleaseBundle)(nil),                   // 263: hashicorp.waypoint.UI.ReleaseBundle
+	(*UI_PipelineRunTreeNode_Children)(nil),    // 264: hashicorp.waypoint.UI.PipelineRunTreeNode.Children
+	(*VersionInfo_ProtocolVersion)(nil),        // 265: hashicorp.waypoint.VersionInfo.ProtocolVersion
+	(*Variable_File)(nil),                      // 266: hashicorp.waypoint.Variable.File
+	(*Variable_VCS)(nil),                       // 267: hashicorp.waypoint.Variable.VCS
+	(*Variable_HclPos)(nil),                    // 268: hashicorp.waypoint.Variable.HclPos
+	(*Variable_HclRange)(nil),                  // 269: hashicorp.waypoint.Variable.HclRange
+	(*Variable_FinalValue)(nil),                // 270: hashicorp.waypoint.Variable.FinalValue
+	(*Project_Poll)(nil),                       // 271: hashicorp.waypoint.Project.Poll
+	(*Project_AppStatusPoll)(nil),              // 272: hashicorp.waypoint.Project.AppStatusPoll
+	(*Workspace_Project)(nil),                  // 273: hashicorp.waypoint.Workspace.Project
+	(*Workspace_Application)(nil),              // 274: hashicorp.waypoint.Workspace.Application
+	(*User_Link)(nil),                          // 275: hashicorp.waypoint.User.Link
+	(*User_Link_OIDC)(nil),                     // 276: hashicorp.waypoint.User.Link.OIDC
+	(*Ref_Global)(nil),                         // 277: hashicorp.waypoint.Ref.Global
+	(*Ref_Application)(nil),                    // 278: hashicorp.waypoint.Ref.Application
+	(*Ref_Project)(nil),                        // 279: hashicorp.waypoint.Ref.Project
+	(*Ref_Workspace)(nil),                      // 280: hashicorp.waypoint.Ref.Workspace
+	(*Ref_Deployment)(nil),                     // 281: hashicorp.waypoint.Ref.Deployment
+	(*Ref_Artifact)(nil),                       // 282: hashicorp.waypoint.Ref.Artifact
+	(*Ref_Component)(nil),                      // 283: hashicorp.waypoint.Ref.Component
+	(*Ref_Operation)(nil),                      // 284: hashicorp.waypoint.Ref.Operation
+	(*Ref_OperationSeq)(nil),                   // 285: hashicorp.waypoint.Ref.OperationSeq
+	(*Ref_Runner)(nil),                         // 286: hashicorp.waypoint.Ref.Runner
+	(*Ref_RunnerAny)(nil),                      // 287: hashicorp.waypoint.Ref.RunnerAny
+	(*Ref_RunnerId)(nil),                       // 288: hashicorp.waypoint.Ref.RunnerId
+	(*Ref_RunnerLabels)(nil),                   // 289: hashicorp.waypoint.Ref.RunnerLabels
+	(*Ref_User)(nil),                           // 290: hashicorp.waypoint.Ref.User
+	(*Ref_UserId)(nil),                         // 291: hashicorp.waypoint.Ref.UserId
+	(*Ref_UserUsername)(nil),                   // 292: hashicorp.waypoint.Ref.UserUsername
+	(*Ref_AuthMethod)(nil),                     // 293: hashicorp.waypoint.Ref.AuthMethod
+	(*Ref_DeclaredResource)(nil),               // 294: hashicorp.waypoint.Ref.DeclaredResource
+	(*Ref_OnDemandRunnerConfig)(nil),           // 295: hashicorp.waypoint.Ref.OnDemandRunnerConfig
+	(*Ref_Trigger)(nil),                        // 296: hashicorp.waypoint.Ref.Trigger
+	(*Ref_Job)(nil),                            // 297: hashicorp.waypoint.Ref.Job
+	(*Ref_Task)(nil),                           // 298: hashicorp.waypoint.Ref.Task
+	(*Ref_Pipeline)(nil),                       // 299: hashicorp.waypoint.Ref.Pipeline
+	(*Ref_PipelineOwner)(nil),                  // 300: hashicorp.waypoint.Ref.PipelineOwner
+	(*Ref_PipelineStep)(nil),                   // 301: hashicorp.waypoint.Ref.PipelineStep
+	nil,                                        // 302: hashicorp.waypoint.Ref.RunnerLabels.LabelsEntry
+	(*StatusFilter_Filter)(nil),                // 303: hashicorp.waypoint.StatusFilter.Filter
+	nil,                                        // 304: hashicorp.waypoint.TaskLaunchInfo.EnvironmentVariablesEntry
+	(*AuthMethod_OIDC)(nil),                    // 305: hashicorp.waypoint.AuthMethod.OIDC
+	nil,                                        // 306: hashicorp.waypoint.AuthMethod.OIDC.ClaimMappingsEntry
+	nil,                                        // 307: hashicorp.waypoint.AuthMethod.OIDC.ListClaimMappingsEntry
+	(*Job_TaskOverride)(nil),                   // 308: hashicorp.waypoint.Job.TaskOverride
+	nil,                                        // 309: hashicorp.waypoint.Job.LabelsEntry
+	nil,                                        // 310: hashicorp.waypoint.Job.DataSourceOverridesEntry
+	nil,                                        // 311: hashicorp.waypoint.Job.VariableFinalValuesEntry
+	(*Job_Result)(nil),                         // 312: hashicorp.waypoint.Job.Result
+	(*Job_Config)(nil),                         // 313: hashicorp.waypoint.Job.Config
+	(*Job_DataSource)(nil),                     // 314: hashicorp.waypoint.Job.DataSource
+	(*Job_Local)(nil),                          // 315: hashicorp.waypoint.Job.Local
+	(*Job_Remote)(nil),                         // 316: hashicorp.waypoint.Job.Remote
+	(*Job_Git)(nil),                            // 317: hashicorp.waypoint.Job.Git
+	(*Job_Noop)(nil),                           // 318: hashicorp.waypoint.Job.Noop
+	(*Job_UpOp)(nil),                           // 319: hashicorp.waypoint.Job.UpOp
+	(*Job_UpResult)(nil),                       // 320: hashicorp.waypoint.Job.UpResult
+	(*Job_ValidateOp)(nil),                     // 321: hashicorp.waypoint.Job.ValidateOp
+	(*Job_ValidateResult)(nil),                 // 322: hashicorp.waypoint.Job.ValidateResult
+	(*Job_AuthOp)(nil),                         // 323: hashicorp.waypoint.Job.AuthOp
+	(*Job_AuthResult)(nil),                     // 324: hashicorp.waypoint.Job.AuthResult
+	(*Job_BuildOp)(nil),                        // 325: hashicorp.waypoint.Job.BuildOp
+	(*Job_BuildResult)(nil),                    // 326: hashicorp.waypoint.Job.BuildResult
+	(*Job_PushOp)(nil),                         // 327: hashicorp.waypoint.Job.PushOp
+	(*Job_PushResult)(nil),                     // 328: hashicorp.waypoint.Job.PushResult
+	(*Job_DeployOp)(nil),                       // 329: hashicorp.waypoint.Job.DeployOp
+	(*Job_DeployResult)(nil),                   // 330: hashicorp.waypoint.Job.DeployResult
+	(*Job_ExecOp)(nil),                         // 331: hashicorp.waypoint.Job.ExecOp
+	(*Job_ExecResult)(nil),                     // 332: hashicorp.waypoint.Job.ExecResult
+	(*Job_LogsOp)(nil),                         // 333: hashicorp.waypoint.Job.LogsOp
+	(*Job_DestroyOp)(nil),                      // 334: hashicorp.waypoint.Job.DestroyOp
+	(*Job_ReleaseOp)(nil),                      // 335: hashicorp.waypoint.Job.ReleaseOp
+	(*Job_ReleaseResult)(nil),                  // 336: hashicorp.waypoint.Job.ReleaseResult
+	(*Job_TaskPluginParams)(nil),               // 337: hashicorp.waypoint.Job.TaskPluginParams
+	(*Job_StartTaskLaunchOp)(nil),              // 338: hashicorp.waypoint.Job.StartTaskLaunchOp
+	(*Job_StartTaskResult)(nil),                // 339: hashicorp.waypoint.Job.StartTaskResult
+	(*Job_StopTaskLaunchOp)(nil),               // 340: hashicorp.waypoint.Job.StopTaskLaunchOp
+	(*Job_WatchTaskOp)(nil),                    // 341: hashicorp.waypoint.Job.WatchTaskOp
+	(*Job_WatchTaskResult)(nil),                // 342: hashicorp.waypoint.Job.WatchTaskResult
+	(*Job_StatusReportOp)(nil),                 // 343: hashicorp.waypoint.Job.StatusReportOp
+	(*Job_StatusReportResult)(nil),             // 344: hashicorp.waypoint.Job.StatusReportResult
+	(*Job_DocsOp)(nil),                         // 345: hashicorp.waypoint.Job.DocsOp
+	(*Job_DocsResult)(nil),                     // 346: hashicorp.waypoint.Job.DocsResult
+	(*Job_ConfigSyncOp)(nil),                   // 347: hashicorp.waypoint.Job.ConfigSyncOp
+	(*Job_ConfigSyncResult)(nil),               // 348: hashicorp.waypoint.Job.ConfigSyncResult
+	(*Job_PipelineConfigSyncResult)(nil),       // 349: hashicorp.waypoint.Job.PipelineConfigSyncResult
+	(*Job_ProjectDestroyResult)(nil),           // 350: hashicorp.waypoint.Job.ProjectDestroyResult
+	(*Job_PollOp)(nil),                         // 351: hashicorp.waypoint.Job.PollOp
+	(*Job_PollResult)(nil),                     // 352: hashicorp.waypoint.Job.PollResult
+	(*Job_InitOp)(nil),                         // 353: hashicorp.waypoint.Job.InitOp
+	(*Job_InitResult)(nil),                     // 354: hashicorp.waypoint.Job.InitResult
+	(*Job_PipelineStepOp)(nil),                 // 355: hashicorp.waypoint.Job.PipelineStepOp
+	(*Job_DestroyProjectOp)(nil),               // 356: hashicorp.waypoint.Job.DestroyProjectOp
+	(*Job_PipelineStepResult)(nil),             // 357: hashicorp.waypoint.Job.PipelineStepResult
+	(*Job_QueueProjectOp)(nil),                 // 358: hashicorp.waypoint.Job.QueueProjectOp
+	(*Job_QueueProjectResult)(nil),             // 359: hashicorp.waypoint.Job.QueueProjectResult
+	(*Job_DataSource_Ref)(nil),                 // 360: hashicorp.waypoint.Job.DataSource.Ref
+	(*Job_Git_Basic)(nil),                      // 361: hashicorp.waypoint.Job.Git.Basic
+	(*Job_Git_SSH)(nil),                        // 362: hashicorp.waypoint.Job.Git.SSH
+	(*Job_Git_Ref)(nil),                        // 363: hashicorp.waypoint.Job.Git.Ref
+	(*Job_AuthResult_Result)(nil),              // 364: hashicorp.waypoint.Job.AuthResult.Result
+	(*Job_DocsResult_Result)(nil),              // 365: hashicorp.waypoint.Job.DocsResult.Result
+	nil,                                        // 366: hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry
+	(*Job_QueueProjectResult_Application)(nil), // 367: hashicorp.waypoint.Job.QueueProjectResult.Application
+	nil,                                                     // 368: hashicorp.waypoint.Documentation.FieldsEntry
+	(*Documentation_Field)(nil),                             // 369: hashicorp.waypoint.Documentation.Field
+	(*Documentation_Mapper)(nil),                            // 370: hashicorp.waypoint.Documentation.Mapper
+	(*GetJobStreamResponse_Open)(nil),                       // 371: hashicorp.waypoint.GetJobStreamResponse.Open
+	(*GetJobStreamResponse_State)(nil),                      // 372: hashicorp.waypoint.GetJobStreamResponse.State
+	(*GetJobStreamResponse_JobChange)(nil),                  // 373: hashicorp.waypoint.GetJobStreamResponse.JobChange
+	(*GetJobStreamResponse_Download)(nil),                   // 374: hashicorp.waypoint.GetJobStreamResponse.Download
+	(*GetJobStreamResponse_Terminal)(nil),                   // 375: hashicorp.waypoint.GetJobStreamResponse.Terminal
+	(*GetJobStreamResponse_Error)(nil),                      // 376: hashicorp.waypoint.GetJobStreamResponse.Error
+	(*GetJobStreamResponse_Complete)(nil),                   // 377: hashicorp.waypoint.GetJobStreamResponse.Complete
+	(*GetJobStreamResponse_Terminal_Event)(nil),             // 378: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event
+	(*GetJobStreamResponse_Terminal_Event_Status)(nil),      // 379: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Status
+	(*GetJobStreamResponse_Terminal_Event_Line)(nil),        // 380: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Line
+	(*GetJobStreamResponse_Terminal_Event_Raw)(nil),         // 381: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Raw
+	(*GetJobStreamResponse_Terminal_Event_NamedValue)(nil),  // 382: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValue
+	(*GetJobStreamResponse_Terminal_Event_NamedValues)(nil), // 383: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues
+	(*GetJobStreamResponse_Terminal_Event_TableEntry)(nil),  // 384: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableEntry
+	(*GetJobStreamResponse_Terminal_Event_TableRow)(nil),    // 385: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow
+	(*GetJobStreamResponse_Terminal_Event_Table)(nil),       // 386: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table
+	(*GetJobStreamResponse_Terminal_Event_StepGroup)(nil),   // 387: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.StepGroup
+	(*GetJobStreamResponse_Terminal_Event_Step)(nil),        // 388: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Step
+	nil,                                              // 389: hashicorp.waypoint.Runner.LabelsEntry
+	(*Runner_ODR)(nil),                               // 390: hashicorp.waypoint.Runner.ODR
+	(*Runner_Local)(nil),                             // 391: hashicorp.waypoint.Runner.Local
+	(*Runner_Remote)(nil),                            // 392: hashicorp.waypoint.Runner.Remote
+	(*RunnerConfigRequest_Open)(nil),                 // 393: hashicorp.waypoint.RunnerConfigRequest.Open
+	(*RunnerJobStreamRequest_Request)(nil),           // 394: hashicorp.waypoint.RunnerJobStreamRequest.Request
+	(*RunnerJobStreamRequest_Ack)(nil),               // 395: hashicorp.waypoint.RunnerJobStreamRequest.Ack
+	(*RunnerJobStreamRequest_Complete)(nil),          // 396: hashicorp.waypoint.RunnerJobStreamRequest.Complete
+	(*RunnerJobStreamRequest_Error)(nil),             // 397: hashicorp.waypoint.RunnerJobStreamRequest.Error
+	(*RunnerJobStreamRequest_Heartbeat)(nil),         // 398: hashicorp.waypoint.RunnerJobStreamRequest.Heartbeat
+	(*RunnerJobStreamRequest_ConfigLoad)(nil),        // 399: hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad
+	(*RunnerJobStreamRequest_VariableValuesSet)(nil), // 400: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet
+	nil, // 401: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry
+	(*RunnerJobStreamResponse_JobAssignment)(nil), // 402: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment
+	(*RunnerJobStreamResponse_JobCancel)(nil),     // 403: hashicorp.waypoint.RunnerJobStreamResponse.JobCancel
+	(*ServerConfig_AdvertiseAddr)(nil),            // 404: hashicorp.waypoint.ServerConfig.AdvertiseAddr
+	nil,                                           // 405: hashicorp.waypoint.Hostname.TargetLabelsEntry
+	(*Hostname_Target)(nil),                       // 406: hashicorp.waypoint.Hostname.Target
+	(*Hostname_TargetApp)(nil),                    // 407: hashicorp.waypoint.Hostname.TargetApp
+	nil,                                           // 408: hashicorp.waypoint.Build.LabelsEntry
+	(*Build_Preload)(nil),                         // 409: hashicorp.waypoint.Build.Preload
+	nil,                                           // 410: hashicorp.waypoint.OnDemandRunnerConfig.EnvironmentVariablesEntry
+	nil,                                           // 411: hashicorp.waypoint.PushedArtifact.LabelsEntry
+	(*PushedArtifact_Preload)(nil),                // 412: hashicorp.waypoint.PushedArtifact.Preload
+	nil,                                           // 413: hashicorp.waypoint.Deployment.LabelsEntry
+	(*Deployment_Preload)(nil),                    // 414: hashicorp.waypoint.Deployment.Preload
+	(*ListInstancesRequest_Application)(nil),      // 415: hashicorp.waypoint.ListInstancesRequest.Application
+	nil,                                           // 416: hashicorp.waypoint.Release.LabelsEntry
+	(*Release_Preload)(nil),                       // 417: hashicorp.waypoint.Release.Preload
+	(*StatusReport_Resource)(nil),                 // 418: hashicorp.waypoint.StatusReport.Resource
+	(*StatusReport_Health)(nil),                   // 419: hashicorp.waypoint.StatusReport.Health
+	(*GetLogStreamRequest_Application)(nil),       // 420: hashicorp.waypoint.GetLogStreamRequest.Application
+	(*LogBatch_Entry)(nil),                        // 421: hashicorp.waypoint.LogBatch.Entry
+	(*ConfigVar_DynamicVal)(nil),                  // 422: hashicorp.waypoint.ConfigVar.DynamicVal
+	(*ConfigVar_Target)(nil),                      // 423: hashicorp.waypoint.ConfigVar.Target
+	nil,                                           // 424: hashicorp.waypoint.ConfigVar.DynamicVal.ConfigEntry
+	nil,                                           // 425: hashicorp.waypoint.ConfigGetRequest.LabelsEntry
+	nil,                                           // 426: hashicorp.waypoint.ConfigSource.ConfigEntry
+	(*ExecStreamRequest_Start)(nil),               // 427: hashicorp.waypoint.ExecStreamRequest.Start
+	(*ExecStreamRequest_Input)(nil),               // 428: hashicorp.waypoint.ExecStreamRequest.Input
+	(*ExecStreamRequest_PTY)(nil),                 // 429: hashicorp.waypoint.ExecStreamRequest.PTY
+	(*ExecStreamRequest_WindowSize)(nil),          // 430: hashicorp.waypoint.ExecStreamRequest.WindowSize
+	(*ExecStreamResponse_Open)(nil),               // 431: hashicorp.waypoint.ExecStreamResponse.Open
+	(*ExecStreamResponse_Exit)(nil),               // 432: hashicorp.waypoint.ExecStreamResponse.Exit
+	(*ExecStreamResponse_Output)(nil),             // 433: hashicorp.waypoint.ExecStreamResponse.Output
+	(*EntrypointConfig_Exec)(nil),                 // 434: hashicorp.waypoint.EntrypointConfig.Exec
+	(*EntrypointConfig_URLService)(nil),           // 435: hashicorp.waypoint.EntrypointConfig.URLService
+	(*EntrypointConfig_DeploymentInfo)(nil),       // 436: hashicorp.waypoint.EntrypointConfig.DeploymentInfo
+	nil,                                           // 437: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.LabelsEntry
+	(*EntrypointExecRequest_Open)(nil),            // 438: hashicorp.waypoint.EntrypointExecRequest.Open
+	(*EntrypointExecRequest_Exit)(nil),            // 439: hashicorp.waypoint.EntrypointExecRequest.Exit
+	(*EntrypointExecRequest_Output)(nil),          // 440: hashicorp.waypoint.EntrypointExecRequest.Output
+	(*EntrypointExecRequest_Error)(nil),           // 441: hashicorp.waypoint.EntrypointExecRequest.Error
+	nil,                                           // 442: hashicorp.waypoint.Pipeline.StepsEntry
+	(*Pipeline_Step)(nil),                         // 443: hashicorp.waypoint.Pipeline.Step
+	(*Pipeline_Step_Exec)(nil),                    // 444: hashicorp.waypoint.Pipeline.Step.Exec
+	(*Pipeline_Step_Build)(nil),                   // 445: hashicorp.waypoint.Pipeline.Step.Build
+	(*Pipeline_Step_Deploy)(nil),                  // 446: hashicorp.waypoint.Pipeline.Step.Deploy
+	(*Pipeline_Step_Release)(nil),                 // 447: hashicorp.waypoint.Pipeline.Step.Release
+	(*Pipeline_Step_Up)(nil),                      // 448: hashicorp.waypoint.Pipeline.Step.Up
+	(*Pipeline_Step_Pipeline)(nil),                // 449: hashicorp.waypoint.Pipeline.Step.Pipeline
+	(*GetPipelineResponse_Graph)(nil),             // 450: hashicorp.waypoint.GetPipelineResponse.Graph
+	nil,                                           // 451: hashicorp.waypoint.RunPipelineResponse.JobMapEntry
+	nil,                                           // 452: hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry
+	nil,                                           // 453: hashicorp.waypoint.TokenTransport.MetadataEntry
+	(*TokenTransport_OAuthCredentials)(nil),       // 454: hashicorp.waypoint.TokenTransport.OAuthCredentials
+	(*Token_Login)(nil),                           // 455: hashicorp.waypoint.Token.Login
+	(*Token_Runner)(nil),                          // 456: hashicorp.waypoint.Token.Runner
+	(*Token_Invite)(nil),                          // 457: hashicorp.waypoint.Token.Invite
+	(*Token_Entrypoint)(nil),                      // 458: hashicorp.waypoint.Token.Entrypoint
+	(*Token_Trigger)(nil),                         // 459: hashicorp.waypoint.Token.Trigger
+	(*Token_Invite_Signup)(nil),                   // 460: hashicorp.waypoint.Token.Invite.Signup
+	nil,                                           // 461: hashicorp.waypoint.GenerateRunnerTokenRequest.LabelsEntry
+	(*CreateSnapshotResponse_Open)(nil),           // 462: hashicorp.waypoint.CreateSnapshotResponse.Open
+	(*RestoreSnapshotRequest_Open)(nil),           // 463: hashicorp.waypoint.RestoreSnapshotRequest.Open
+	(*Snapshot_Header)(nil),                       // 464: hashicorp.waypoint.Snapshot.Header
+	(*Snapshot_Trailer)(nil),                      // 465: hashicorp.waypoint.Snapshot.Trailer
+	(*Snapshot_BoltChunk)(nil),                    // 466: hashicorp.waypoint.Snapshot.BoltChunk
+	nil,                                           // 467: hashicorp.waypoint.Snapshot.BoltChunk.ItemsEntry
+	(*emptypb.Empty)(nil),                         // 468: google.protobuf.Empty
+	(*timestamppb.Timestamp)(nil),                 // 469: google.protobuf.Timestamp
+	(*status.Status)(nil),                         // 470: google.rpc.Status
+	(*opaqueany.Any)(nil),                         // 471: opaqueany.Any
 }
 var file_pkg_server_proto_server_proto_depIdxs = []int32{
-	28,  // 0: hashicorp.waypoint.GetVersionInfoResponse.info:type_name -> hashicorp.waypoint.VersionInfo
-	27,  // 1: hashicorp.waypoint.GetVersionInfoResponse.server_features:type_name -> hashicorp.waypoint.ServerFeatures
-	1,   // 2: hashicorp.waypoint.ServerFeatures.features:type_name -> hashicorp.waypoint.ServerFeatures.feature
-	259, // 3: hashicorp.waypoint.VersionInfo.api:type_name -> hashicorp.waypoint.VersionInfo.ProtocolVersion
-	259, // 4: hashicorp.waypoint.VersionInfo.entrypoint:type_name -> hashicorp.waypoint.VersionInfo.ProtocolVersion
-	273, // 5: hashicorp.waypoint.Application.project:type_name -> hashicorp.waypoint.Ref.Project
-	462, // 6: hashicorp.waypoint.Variable.cli:type_name -> google.protobuf.Empty
-	260, // 7: hashicorp.waypoint.Variable.file:type_name -> hashicorp.waypoint.Variable.File
-	462, // 8: hashicorp.waypoint.Variable.env:type_name -> google.protobuf.Empty
-	261, // 9: hashicorp.waypoint.Variable.vcs:type_name -> hashicorp.waypoint.Variable.VCS
-	462, // 10: hashicorp.waypoint.Variable.server:type_name -> google.protobuf.Empty
-	462, // 11: hashicorp.waypoint.Variable.dynamic:type_name -> google.protobuf.Empty
-	264, // 12: hashicorp.waypoint.Variable.final_value:type_name -> hashicorp.waypoint.Variable.FinalValue
-	29,  // 13: hashicorp.waypoint.Project.applications:type_name -> hashicorp.waypoint.Application
-	308, // 14: hashicorp.waypoint.Project.data_source:type_name -> hashicorp.waypoint.Job.DataSource
-	265, // 15: hashicorp.waypoint.Project.data_source_poll:type_name -> hashicorp.waypoint.Project.Poll
-	24,  // 16: hashicorp.waypoint.Project.waypoint_hcl_format:type_name -> hashicorp.waypoint.Hcl.Format
-	30,  // 17: hashicorp.waypoint.Project.variables:type_name -> hashicorp.waypoint.Variable
-	266, // 18: hashicorp.waypoint.Project.status_report_poll:type_name -> hashicorp.waypoint.Project.AppStatusPoll
-	3,   // 19: hashicorp.waypoint.Project.state:type_name -> hashicorp.waypoint.Project.ProjectState
-	267, // 20: hashicorp.waypoint.Workspace.projects:type_name -> hashicorp.waypoint.Workspace.Project
-	463, // 21: hashicorp.waypoint.Workspace.active_time:type_name -> google.protobuf.Timestamp
-	269, // 22: hashicorp.waypoint.User.links:type_name -> hashicorp.waypoint.User.Link
-	4,   // 23: hashicorp.waypoint.Component.type:type_name -> hashicorp.waypoint.Component.Type
-	5,   // 24: hashicorp.waypoint.Status.state:type_name -> hashicorp.waypoint.Status.State
-	464, // 25: hashicorp.waypoint.Status.error:type_name -> google.rpc.Status
-	463, // 26: hashicorp.waypoint.Status.start_time:type_name -> google.protobuf.Timestamp
-	463, // 27: hashicorp.waypoint.Status.complete_time:type_name -> google.protobuf.Timestamp
-	297, // 28: hashicorp.waypoint.StatusFilter.filters:type_name -> hashicorp.waypoint.StatusFilter.Filter
-	7,   // 29: hashicorp.waypoint.OperationOrder.order:type_name -> hashicorp.waypoint.OperationOrder.Order
-	465, // 30: hashicorp.waypoint.DeclaredResource.state:type_name -> opaqueany.Any
+	30,  // 0: hashicorp.waypoint.GetVersionInfoResponse.info:type_name -> hashicorp.waypoint.VersionInfo
+	29,  // 1: hashicorp.waypoint.GetVersionInfoResponse.server_features:type_name -> hashicorp.waypoint.ServerFeatures
+	3,   // 2: hashicorp.waypoint.ServerFeatures.features:type_name -> hashicorp.waypoint.ServerFeatures.feature
+	265, // 3: hashicorp.waypoint.VersionInfo.api:type_name -> hashicorp.waypoint.VersionInfo.ProtocolVersion
+	265, // 4: hashicorp.waypoint.VersionInfo.entrypoint:type_name -> hashicorp.waypoint.VersionInfo.ProtocolVersion
+	279, // 5: hashicorp.waypoint.Application.project:type_name -> hashicorp.waypoint.Ref.Project
+	468, // 6: hashicorp.waypoint.Variable.cli:type_name -> google.protobuf.Empty
+	266, // 7: hashicorp.waypoint.Variable.file:type_name -> hashicorp.waypoint.Variable.File
+	468, // 8: hashicorp.waypoint.Variable.env:type_name -> google.protobuf.Empty
+	267, // 9: hashicorp.waypoint.Variable.vcs:type_name -> hashicorp.waypoint.Variable.VCS
+	468, // 10: hashicorp.waypoint.Variable.server:type_name -> google.protobuf.Empty
+	468, // 11: hashicorp.waypoint.Variable.dynamic:type_name -> google.protobuf.Empty
+	270, // 12: hashicorp.waypoint.Variable.final_value:type_name -> hashicorp.waypoint.Variable.FinalValue
+	31,  // 13: hashicorp.waypoint.Project.applications:type_name -> hashicorp.waypoint.Application
+	314, // 14: hashicorp.waypoint.Project.data_source:type_name -> hashicorp.waypoint.Job.DataSource
+	271, // 15: hashicorp.waypoint.Project.data_source_poll:type_name -> hashicorp.waypoint.Project.Poll
+	26,  // 16: hashicorp.waypoint.Project.waypoint_hcl_format:type_name -> hashicorp.waypoint.Hcl.Format
+	32,  // 17: hashicorp.waypoint.Project.variables:type_name -> hashicorp.waypoint.Variable
+	272, // 18: hashicorp.waypoint.Project.status_report_poll:type_name -> hashicorp.waypoint.Project.AppStatusPoll
+	5,   // 19: hashicorp.waypoint.Project.state:type_name -> hashicorp.waypoint.Project.ProjectState
+	273, // 20: hashicorp.waypoint.Workspace.projects:type_name -> hashicorp.waypoint.Workspace.Project
+	469, // 21: hashicorp.waypoint.Workspace.active_time:type_name -> google.protobuf.Timestamp
+	275, // 22: hashicorp.waypoint.User.links:type_name -> hashicorp.waypoint.User.Link
+	6,   // 23: hashicorp.waypoint.Component.type:type_name -> hashicorp.waypoint.Component.Type
+	7,   // 24: hashicorp.waypoint.Status.state:type_name -> hashicorp.waypoint.Status.State
+	470, // 25: hashicorp.waypoint.Status.error:type_name -> google.rpc.Status
+	469, // 26: hashicorp.waypoint.Status.start_time:type_name -> google.protobuf.Timestamp
+	469, // 27: hashicorp.waypoint.Status.complete_time:type_name -> google.protobuf.Timestamp
+	303, // 28: hashicorp.waypoint.StatusFilter.filters:type_name -> hashicorp.waypoint.StatusFilter.Filter
+	9,   // 29: hashicorp.waypoint.OperationOrder.order:type_name -> hashicorp.waypoint.OperationOrder.Order
+	471, // 30: hashicorp.waypoint.DeclaredResource.state:type_name -> opaqueany.Any
 	0,   // 31: hashicorp.waypoint.DeclaredResource.category_display_hint:type_name -> hashicorp.waypoint.ResourceCategoryDisplayHint
-	465, // 32: hashicorp.waypoint.DestroyedResource.state:type_name -> opaqueany.Any
-	298, // 33: hashicorp.waypoint.TaskLaunchInfo.environment_variables:type_name -> hashicorp.waypoint.TaskLaunchInfo.EnvironmentVariablesEntry
-	291, // 34: hashicorp.waypoint.Task.task_job:type_name -> hashicorp.waypoint.Ref.Job
-	291, // 35: hashicorp.waypoint.Task.watch_job:type_name -> hashicorp.waypoint.Ref.Job
-	291, // 36: hashicorp.waypoint.Task.start_job:type_name -> hashicorp.waypoint.Ref.Job
-	291, // 37: hashicorp.waypoint.Task.stop_job:type_name -> hashicorp.waypoint.Ref.Job
-	465, // 38: hashicorp.waypoint.Task.state:type_name -> opaqueany.Any
-	8,   // 39: hashicorp.waypoint.Task.job_state:type_name -> hashicorp.waypoint.Task.State
-	44,  // 40: hashicorp.waypoint.UpsertTaskRequest.task:type_name -> hashicorp.waypoint.Task
-	44,  // 41: hashicorp.waypoint.UpsertTaskResponse.task:type_name -> hashicorp.waypoint.Task
-	292, // 42: hashicorp.waypoint.GetTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
-	44,  // 43: hashicorp.waypoint.GetTaskResponse.task:type_name -> hashicorp.waypoint.Task
-	78,  // 44: hashicorp.waypoint.GetTaskResponse.task_job:type_name -> hashicorp.waypoint.Job
-	78,  // 45: hashicorp.waypoint.GetTaskResponse.start_job:type_name -> hashicorp.waypoint.Job
-	78,  // 46: hashicorp.waypoint.GetTaskResponse.stop_job:type_name -> hashicorp.waypoint.Job
-	78,  // 47: hashicorp.waypoint.GetTaskResponse.watch_job:type_name -> hashicorp.waypoint.Job
-	292, // 48: hashicorp.waypoint.DeleteTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
-	8,   // 49: hashicorp.waypoint.ListTaskRequest.taskState:type_name -> hashicorp.waypoint.Task.State
-	48,  // 50: hashicorp.waypoint.ListTaskResponse.tasks:type_name -> hashicorp.waypoint.GetTaskResponse
-	292, // 51: hashicorp.waypoint.CancelTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
-	284, // 52: hashicorp.waypoint.GetUserRequest.user:type_name -> hashicorp.waypoint.Ref.User
-	33,  // 53: hashicorp.waypoint.GetUserResponse.user:type_name -> hashicorp.waypoint.User
-	33,  // 54: hashicorp.waypoint.ListUsersResponse.users:type_name -> hashicorp.waypoint.User
-	33,  // 55: hashicorp.waypoint.UpdateUserRequest.user:type_name -> hashicorp.waypoint.User
-	33,  // 56: hashicorp.waypoint.UpdateUserResponse.user:type_name -> hashicorp.waypoint.User
-	284, // 57: hashicorp.waypoint.DeleteUserRequest.user:type_name -> hashicorp.waypoint.Ref.User
-	299, // 58: hashicorp.waypoint.AuthMethod.oidc:type_name -> hashicorp.waypoint.AuthMethod.OIDC
-	9,   // 59: hashicorp.waypoint.OIDCAuthMethod.kind:type_name -> hashicorp.waypoint.OIDCAuthMethod.Kind
-	60,  // 60: hashicorp.waypoint.UpsertAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.AuthMethod
-	60,  // 61: hashicorp.waypoint.UpsertAuthMethodResponse.auth_method:type_name -> hashicorp.waypoint.AuthMethod
-	287, // 62: hashicorp.waypoint.GetAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
-	60,  // 63: hashicorp.waypoint.GetAuthMethodResponse.auth_method:type_name -> hashicorp.waypoint.AuthMethod
-	287, // 64: hashicorp.waypoint.DeleteAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
-	60,  // 65: hashicorp.waypoint.ListAuthMethodsResponse.auth_methods:type_name -> hashicorp.waypoint.AuthMethod
-	61,  // 66: hashicorp.waypoint.ListOIDCAuthMethodsResponse.auth_methods:type_name -> hashicorp.waypoint.OIDCAuthMethod
-	287, // 67: hashicorp.waypoint.GetOIDCAuthURLRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
-	287, // 68: hashicorp.waypoint.CompleteOIDCAuthRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
-	33,  // 69: hashicorp.waypoint.CompleteOIDCAuthResponse.user:type_name -> hashicorp.waypoint.User
-	78,  // 70: hashicorp.waypoint.QueueJobRequest.job:type_name -> hashicorp.waypoint.Job
-	78,  // 71: hashicorp.waypoint.ValidateJobRequest.job:type_name -> hashicorp.waypoint.Job
-	464, // 72: hashicorp.waypoint.ValidateJobResponse.validation_error:type_name -> google.rpc.Status
-	272, // 73: hashicorp.waypoint.Job.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 74: hashicorp.waypoint.Job.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	280, // 75: hashicorp.waypoint.Job.target_runner:type_name -> hashicorp.waypoint.Ref.Runner
-	289, // 76: hashicorp.waypoint.Job.ondemand_runner:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
-	302, // 77: hashicorp.waypoint.Job.ondemand_runner_task:type_name -> hashicorp.waypoint.Job.TaskOverride
-	303, // 78: hashicorp.waypoint.Job.labels:type_name -> hashicorp.waypoint.Job.LabelsEntry
-	308, // 79: hashicorp.waypoint.Job.data_source:type_name -> hashicorp.waypoint.Job.DataSource
-	304, // 80: hashicorp.waypoint.Job.data_source_overrides:type_name -> hashicorp.waypoint.Job.DataSourceOverridesEntry
-	234, // 81: hashicorp.waypoint.Job.waypoint_hcl:type_name -> hashicorp.waypoint.Hcl
-	30,  // 82: hashicorp.waypoint.Job.variables:type_name -> hashicorp.waypoint.Variable
-	312, // 83: hashicorp.waypoint.Job.noop:type_name -> hashicorp.waypoint.Job.Noop
-	319, // 84: hashicorp.waypoint.Job.build:type_name -> hashicorp.waypoint.Job.BuildOp
-	321, // 85: hashicorp.waypoint.Job.push:type_name -> hashicorp.waypoint.Job.PushOp
-	323, // 86: hashicorp.waypoint.Job.deploy:type_name -> hashicorp.waypoint.Job.DeployOp
-	328, // 87: hashicorp.waypoint.Job.destroy:type_name -> hashicorp.waypoint.Job.DestroyOp
-	329, // 88: hashicorp.waypoint.Job.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
-	315, // 89: hashicorp.waypoint.Job.validate:type_name -> hashicorp.waypoint.Job.ValidateOp
-	317, // 90: hashicorp.waypoint.Job.auth:type_name -> hashicorp.waypoint.Job.AuthOp
-	339, // 91: hashicorp.waypoint.Job.docs:type_name -> hashicorp.waypoint.Job.DocsOp
-	341, // 92: hashicorp.waypoint.Job.config_sync:type_name -> hashicorp.waypoint.Job.ConfigSyncOp
-	325, // 93: hashicorp.waypoint.Job.exec:type_name -> hashicorp.waypoint.Job.ExecOp
-	313, // 94: hashicorp.waypoint.Job.up:type_name -> hashicorp.waypoint.Job.UpOp
-	327, // 95: hashicorp.waypoint.Job.logs:type_name -> hashicorp.waypoint.Job.LogsOp
-	352, // 96: hashicorp.waypoint.Job.queue_project:type_name -> hashicorp.waypoint.Job.QueueProjectOp
-	345, // 97: hashicorp.waypoint.Job.poll:type_name -> hashicorp.waypoint.Job.PollOp
-	337, // 98: hashicorp.waypoint.Job.status_report:type_name -> hashicorp.waypoint.Job.StatusReportOp
-	332, // 99: hashicorp.waypoint.Job.start_task:type_name -> hashicorp.waypoint.Job.StartTaskLaunchOp
-	334, // 100: hashicorp.waypoint.Job.stop_task:type_name -> hashicorp.waypoint.Job.StopTaskLaunchOp
-	347, // 101: hashicorp.waypoint.Job.init:type_name -> hashicorp.waypoint.Job.InitOp
-	335, // 102: hashicorp.waypoint.Job.watch_task:type_name -> hashicorp.waypoint.Job.WatchTaskOp
-	349, // 103: hashicorp.waypoint.Job.pipeline_step:type_name -> hashicorp.waypoint.Job.PipelineStepOp
-	350, // 104: hashicorp.waypoint.Job.destroy_project:type_name -> hashicorp.waypoint.Job.DestroyProjectOp
-	10,  // 105: hashicorp.waypoint.Job.state:type_name -> hashicorp.waypoint.Job.State
-	282, // 106: hashicorp.waypoint.Job.assigned_runner:type_name -> hashicorp.waypoint.Ref.RunnerId
-	463, // 107: hashicorp.waypoint.Job.queue_time:type_name -> google.protobuf.Timestamp
-	463, // 108: hashicorp.waypoint.Job.assign_time:type_name -> google.protobuf.Timestamp
-	463, // 109: hashicorp.waypoint.Job.ack_time:type_name -> google.protobuf.Timestamp
-	463, // 110: hashicorp.waypoint.Job.complete_time:type_name -> google.protobuf.Timestamp
-	354, // 111: hashicorp.waypoint.Job.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	305, // 112: hashicorp.waypoint.Job.variable_final_values:type_name -> hashicorp.waypoint.Job.VariableFinalValuesEntry
-	307, // 113: hashicorp.waypoint.Job.config:type_name -> hashicorp.waypoint.Job.Config
-	464, // 114: hashicorp.waypoint.Job.error:type_name -> google.rpc.Status
-	306, // 115: hashicorp.waypoint.Job.result:type_name -> hashicorp.waypoint.Job.Result
-	463, // 116: hashicorp.waypoint.Job.cancel_time:type_name -> google.protobuf.Timestamp
-	463, // 117: hashicorp.waypoint.Job.expire_time:type_name -> google.protobuf.Timestamp
-	292, // 118: hashicorp.waypoint.Job.task:type_name -> hashicorp.waypoint.Ref.Task
-	295, // 119: hashicorp.waypoint.Job.pipeline:type_name -> hashicorp.waypoint.Ref.PipelineStep
-	362, // 120: hashicorp.waypoint.Documentation.fields:type_name -> hashicorp.waypoint.Documentation.FieldsEntry
-	364, // 121: hashicorp.waypoint.Documentation.mappers:type_name -> hashicorp.waypoint.Documentation.Mapper
-	274, // 122: hashicorp.waypoint.ListJobsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	273, // 123: hashicorp.waypoint.ListJobsRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 124: hashicorp.waypoint.ListJobsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	280, // 125: hashicorp.waypoint.ListJobsRequest.targetRunner:type_name -> hashicorp.waypoint.Ref.Runner
-	295, // 126: hashicorp.waypoint.ListJobsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.PipelineStep
-	10,  // 127: hashicorp.waypoint.ListJobsRequest.jobState:type_name -> hashicorp.waypoint.Job.State
-	238, // 128: hashicorp.waypoint.ListJobsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
-	78,  // 129: hashicorp.waypoint.ListJobsResponse.jobs:type_name -> hashicorp.waypoint.Job
-	239, // 130: hashicorp.waypoint.ListJobsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
-	365, // 131: hashicorp.waypoint.GetJobStreamResponse.open:type_name -> hashicorp.waypoint.GetJobStreamResponse.Open
-	366, // 132: hashicorp.waypoint.GetJobStreamResponse.state:type_name -> hashicorp.waypoint.GetJobStreamResponse.State
-	367, // 133: hashicorp.waypoint.GetJobStreamResponse.job:type_name -> hashicorp.waypoint.GetJobStreamResponse.JobChange
-	369, // 134: hashicorp.waypoint.GetJobStreamResponse.terminal:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal
-	368, // 135: hashicorp.waypoint.GetJobStreamResponse.download:type_name -> hashicorp.waypoint.GetJobStreamResponse.Download
-	370, // 136: hashicorp.waypoint.GetJobStreamResponse.error:type_name -> hashicorp.waypoint.GetJobStreamResponse.Error
-	371, // 137: hashicorp.waypoint.GetJobStreamResponse.complete:type_name -> hashicorp.waypoint.GetJobStreamResponse.Complete
-	384, // 138: hashicorp.waypoint.Runner.odr:type_name -> hashicorp.waypoint.Runner.ODR
-	385, // 139: hashicorp.waypoint.Runner.local:type_name -> hashicorp.waypoint.Runner.Local
-	386, // 140: hashicorp.waypoint.Runner.remote:type_name -> hashicorp.waypoint.Runner.Remote
-	35,  // 141: hashicorp.waypoint.Runner.components:type_name -> hashicorp.waypoint.Component
-	383, // 142: hashicorp.waypoint.Runner.labels:type_name -> hashicorp.waypoint.Runner.LabelsEntry
-	463, // 143: hashicorp.waypoint.Runner.first_seen:type_name -> google.protobuf.Timestamp
-	463, // 144: hashicorp.waypoint.Runner.last_seen:type_name -> google.protobuf.Timestamp
-	12,  // 145: hashicorp.waypoint.Runner.adoption_state:type_name -> hashicorp.waypoint.Runner.AdoptionState
-	85,  // 146: hashicorp.waypoint.RunnerTokenRequest.runner:type_name -> hashicorp.waypoint.Runner
-	387, // 147: hashicorp.waypoint.RunnerConfigRequest.open:type_name -> hashicorp.waypoint.RunnerConfigRequest.Open
-	90,  // 148: hashicorp.waypoint.RunnerConfigResponse.config:type_name -> hashicorp.waypoint.RunnerConfig
-	188, // 149: hashicorp.waypoint.RunnerConfig.config_vars:type_name -> hashicorp.waypoint.ConfigVar
-	193, // 150: hashicorp.waypoint.RunnerConfig.config_sources:type_name -> hashicorp.waypoint.ConfigSource
-	388, // 151: hashicorp.waypoint.RunnerJobStreamRequest.request:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Request
-	389, // 152: hashicorp.waypoint.RunnerJobStreamRequest.ack:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Ack
-	390, // 153: hashicorp.waypoint.RunnerJobStreamRequest.complete:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Complete
-	391, // 154: hashicorp.waypoint.RunnerJobStreamRequest.error:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Error
-	369, // 155: hashicorp.waypoint.RunnerJobStreamRequest.terminal:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal
-	368, // 156: hashicorp.waypoint.RunnerJobStreamRequest.download:type_name -> hashicorp.waypoint.GetJobStreamResponse.Download
-	393, // 157: hashicorp.waypoint.RunnerJobStreamRequest.config_load:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad
-	394, // 158: hashicorp.waypoint.RunnerJobStreamRequest.variable_values_set:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet
-	392, // 159: hashicorp.waypoint.RunnerJobStreamRequest.heartbeat:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Heartbeat
-	396, // 160: hashicorp.waypoint.RunnerJobStreamResponse.assignment:type_name -> hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment
-	397, // 161: hashicorp.waypoint.RunnerJobStreamResponse.cancel:type_name -> hashicorp.waypoint.RunnerJobStreamResponse.JobCancel
-	85,  // 162: hashicorp.waypoint.ListRunnersResponse.runners:type_name -> hashicorp.waypoint.Runner
-	102, // 163: hashicorp.waypoint.SetServerConfigRequest.config:type_name -> hashicorp.waypoint.ServerConfig
-	102, // 164: hashicorp.waypoint.GetServerConfigResponse.config:type_name -> hashicorp.waypoint.ServerConfig
-	398, // 165: hashicorp.waypoint.ServerConfig.advertise_addrs:type_name -> hashicorp.waypoint.ServerConfig.AdvertiseAddr
-	400, // 166: hashicorp.waypoint.CreateHostnameRequest.target:type_name -> hashicorp.waypoint.Hostname.Target
-	108, // 167: hashicorp.waypoint.CreateHostnameResponse.hostname:type_name -> hashicorp.waypoint.Hostname
-	400, // 168: hashicorp.waypoint.ListHostnamesRequest.target:type_name -> hashicorp.waypoint.Hostname.Target
-	108, // 169: hashicorp.waypoint.ListHostnamesResponse.hostnames:type_name -> hashicorp.waypoint.Hostname
-	399, // 170: hashicorp.waypoint.Hostname.target_labels:type_name -> hashicorp.waypoint.Hostname.TargetLabelsEntry
-	462, // 171: hashicorp.waypoint.ListWorkspacesRequest.global:type_name -> google.protobuf.Empty
-	273, // 172: hashicorp.waypoint.ListWorkspacesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 173: hashicorp.waypoint.ListWorkspacesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	32,  // 174: hashicorp.waypoint.ListWorkspacesResponse.workspaces:type_name -> hashicorp.waypoint.Workspace
-	274, // 175: hashicorp.waypoint.GetWorkspaceRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	32,  // 176: hashicorp.waypoint.GetWorkspaceResponse.workspace:type_name -> hashicorp.waypoint.Workspace
-	32,  // 177: hashicorp.waypoint.UpsertWorkspaceRequest.workspace:type_name -> hashicorp.waypoint.Workspace
-	32,  // 178: hashicorp.waypoint.UpsertWorkspaceResponse.workspace:type_name -> hashicorp.waypoint.Workspace
-	31,  // 179: hashicorp.waypoint.UpsertProjectRequest.project:type_name -> hashicorp.waypoint.Project
-	31,  // 180: hashicorp.waypoint.UpsertProjectResponse.project:type_name -> hashicorp.waypoint.Project
-	273, // 181: hashicorp.waypoint.GetProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	31,  // 182: hashicorp.waypoint.GetProjectResponse.project:type_name -> hashicorp.waypoint.Project
-	267, // 183: hashicorp.waypoint.GetProjectResponse.workspaces:type_name -> hashicorp.waypoint.Workspace.Project
-	238, // 184: hashicorp.waypoint.ListProjectsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
-	273, // 185: hashicorp.waypoint.ListProjectsResponse.projects:type_name -> hashicorp.waypoint.Ref.Project
-	239, // 186: hashicorp.waypoint.ListProjectsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
-	273, // 187: hashicorp.waypoint.DestroyProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 188: hashicorp.waypoint.GetApplicationRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	29,  // 189: hashicorp.waypoint.GetApplicationResponse.application:type_name -> hashicorp.waypoint.Application
-	273, // 190: hashicorp.waypoint.UpsertApplicationRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	29,  // 191: hashicorp.waypoint.UpsertApplicationResponse.application:type_name -> hashicorp.waypoint.Application
-	132, // 192: hashicorp.waypoint.UpsertBuildRequest.build:type_name -> hashicorp.waypoint.Build
-	132, // 193: hashicorp.waypoint.UpsertBuildResponse.build:type_name -> hashicorp.waypoint.Build
-	272, // 194: hashicorp.waypoint.ListBuildsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 195: hashicorp.waypoint.ListBuildsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	39,  // 196: hashicorp.waypoint.ListBuildsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	132, // 197: hashicorp.waypoint.ListBuildsResponse.builds:type_name -> hashicorp.waypoint.Build
-	272, // 198: hashicorp.waypoint.GetLatestBuildRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 199: hashicorp.waypoint.GetLatestBuildRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	278, // 200: hashicorp.waypoint.GetBuildRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	272, // 201: hashicorp.waypoint.Build.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 202: hashicorp.waypoint.Build.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	36,  // 203: hashicorp.waypoint.Build.status:type_name -> hashicorp.waypoint.Status
-	35,  // 204: hashicorp.waypoint.Build.component:type_name -> hashicorp.waypoint.Component
-	133, // 205: hashicorp.waypoint.Build.artifact:type_name -> hashicorp.waypoint.Artifact
-	402, // 206: hashicorp.waypoint.Build.labels:type_name -> hashicorp.waypoint.Build.LabelsEntry
-	403, // 207: hashicorp.waypoint.Build.preload:type_name -> hashicorp.waypoint.Build.Preload
-	465, // 208: hashicorp.waypoint.Artifact.artifact:type_name -> opaqueany.Any
-	280, // 209: hashicorp.waypoint.OnDemandRunnerConfig.target_runner:type_name -> hashicorp.waypoint.Ref.Runner
-	404, // 210: hashicorp.waypoint.OnDemandRunnerConfig.environment_variables:type_name -> hashicorp.waypoint.OnDemandRunnerConfig.EnvironmentVariablesEntry
-	24,  // 211: hashicorp.waypoint.OnDemandRunnerConfig.config_format:type_name -> hashicorp.waypoint.Hcl.Format
-	134, // 212: hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
-	134, // 213: hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
-	289, // 214: hashicorp.waypoint.GetOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
-	134, // 215: hashicorp.waypoint.GetOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
-	289, // 216: hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
-	134, // 217: hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
-	134, // 218: hashicorp.waypoint.ListOnDemandRunnerConfigsResponse.configs:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
-	148, // 219: hashicorp.waypoint.UpsertPushedArtifactRequest.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	148, // 220: hashicorp.waypoint.UpsertPushedArtifactResponse.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	272, // 221: hashicorp.waypoint.GetLatestPushedArtifactRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 222: hashicorp.waypoint.GetLatestPushedArtifactRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	278, // 223: hashicorp.waypoint.GetPushedArtifactRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	272, // 224: hashicorp.waypoint.ListPushedArtifactsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 225: hashicorp.waypoint.ListPushedArtifactsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	37,  // 226: hashicorp.waypoint.ListPushedArtifactsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	39,  // 227: hashicorp.waypoint.ListPushedArtifactsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	148, // 228: hashicorp.waypoint.ListPushedArtifactsResponse.artifacts:type_name -> hashicorp.waypoint.PushedArtifact
-	272, // 229: hashicorp.waypoint.PushedArtifact.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 230: hashicorp.waypoint.PushedArtifact.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	36,  // 231: hashicorp.waypoint.PushedArtifact.status:type_name -> hashicorp.waypoint.Status
-	35,  // 232: hashicorp.waypoint.PushedArtifact.component:type_name -> hashicorp.waypoint.Component
-	133, // 233: hashicorp.waypoint.PushedArtifact.artifact:type_name -> hashicorp.waypoint.Artifact
-	405, // 234: hashicorp.waypoint.PushedArtifact.labels:type_name -> hashicorp.waypoint.PushedArtifact.LabelsEntry
-	132, // 235: hashicorp.waypoint.PushedArtifact.build:type_name -> hashicorp.waypoint.Build
-	406, // 236: hashicorp.waypoint.PushedArtifact.preload:type_name -> hashicorp.waypoint.PushedArtifact.Preload
-	278, // 237: hashicorp.waypoint.GetDeploymentRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	14,  // 238: hashicorp.waypoint.GetDeploymentRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
-	154, // 239: hashicorp.waypoint.UpsertDeploymentRequest.deployment:type_name -> hashicorp.waypoint.Deployment
-	13,  // 240: hashicorp.waypoint.UpsertDeploymentRequest.auto_hostname:type_name -> hashicorp.waypoint.UpsertDeploymentRequest.Tristate
-	154, // 241: hashicorp.waypoint.UpsertDeploymentResponse.deployment:type_name -> hashicorp.waypoint.Deployment
-	272, // 242: hashicorp.waypoint.ListDeploymentsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 243: hashicorp.waypoint.ListDeploymentsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	37,  // 244: hashicorp.waypoint.ListDeploymentsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	6,   // 245: hashicorp.waypoint.ListDeploymentsRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	39,  // 246: hashicorp.waypoint.ListDeploymentsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	14,  // 247: hashicorp.waypoint.ListDeploymentsRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
-	154, // 248: hashicorp.waypoint.ListDeploymentsResponse.deployments:type_name -> hashicorp.waypoint.Deployment
-	272, // 249: hashicorp.waypoint.Deployment.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 250: hashicorp.waypoint.Deployment.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	40,  // 251: hashicorp.waypoint.Deployment.generation:type_name -> hashicorp.waypoint.Generation
-	6,   // 252: hashicorp.waypoint.Deployment.state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	36,  // 253: hashicorp.waypoint.Deployment.status:type_name -> hashicorp.waypoint.Status
-	35,  // 254: hashicorp.waypoint.Deployment.component:type_name -> hashicorp.waypoint.Component
-	465, // 255: hashicorp.waypoint.Deployment.deployment:type_name -> opaqueany.Any
-	407, // 256: hashicorp.waypoint.Deployment.labels:type_name -> hashicorp.waypoint.Deployment.LabelsEntry
-	41,  // 257: hashicorp.waypoint.Deployment.declared_resources:type_name -> hashicorp.waypoint.DeclaredResource
-	42,  // 258: hashicorp.waypoint.Deployment.destroyed_resources:type_name -> hashicorp.waypoint.DestroyedResource
-	408, // 259: hashicorp.waypoint.Deployment.preload:type_name -> hashicorp.waypoint.Deployment.Preload
-	154, // 260: hashicorp.waypoint.DeploymentExpanded.deployment:type_name -> hashicorp.waypoint.Deployment
-	185, // 261: hashicorp.waypoint.DeploymentExpanded.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
-	409, // 262: hashicorp.waypoint.ListInstancesRequest.application:type_name -> hashicorp.waypoint.ListInstancesRequest.Application
-	158, // 263: hashicorp.waypoint.ListInstancesResponse.instances:type_name -> hashicorp.waypoint.Instance
-	272, // 264: hashicorp.waypoint.Instance.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 265: hashicorp.waypoint.Instance.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	15,  // 266: hashicorp.waypoint.Instance.type:type_name -> hashicorp.waypoint.Instance.Type
-	165, // 267: hashicorp.waypoint.UpsertReleaseRequest.release:type_name -> hashicorp.waypoint.Release
-	165, // 268: hashicorp.waypoint.UpsertReleaseResponse.release:type_name -> hashicorp.waypoint.Release
-	272, // 269: hashicorp.waypoint.GetLatestReleaseRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 270: hashicorp.waypoint.GetLatestReleaseRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	16,  // 271: hashicorp.waypoint.GetLatestReleaseRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
-	272, // 272: hashicorp.waypoint.ListReleasesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 273: hashicorp.waypoint.ListReleasesRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	37,  // 274: hashicorp.waypoint.ListReleasesRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	6,   // 275: hashicorp.waypoint.ListReleasesRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	39,  // 276: hashicorp.waypoint.ListReleasesRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	16,  // 277: hashicorp.waypoint.ListReleasesRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
-	165, // 278: hashicorp.waypoint.ListReleasesResponse.releases:type_name -> hashicorp.waypoint.Release
-	278, // 279: hashicorp.waypoint.GetReleaseRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	16,  // 280: hashicorp.waypoint.GetReleaseRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
-	272, // 281: hashicorp.waypoint.Release.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 282: hashicorp.waypoint.Release.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	36,  // 283: hashicorp.waypoint.Release.status:type_name -> hashicorp.waypoint.Status
-	6,   // 284: hashicorp.waypoint.Release.state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	35,  // 285: hashicorp.waypoint.Release.component:type_name -> hashicorp.waypoint.Component
-	465, // 286: hashicorp.waypoint.Release.release:type_name -> opaqueany.Any
-	410, // 287: hashicorp.waypoint.Release.labels:type_name -> hashicorp.waypoint.Release.LabelsEntry
-	41,  // 288: hashicorp.waypoint.Release.declared_resources:type_name -> hashicorp.waypoint.DeclaredResource
-	42,  // 289: hashicorp.waypoint.Release.destroyed_resources:type_name -> hashicorp.waypoint.DestroyedResource
-	411, // 290: hashicorp.waypoint.Release.preload:type_name -> hashicorp.waypoint.Release.Preload
-	165, // 291: hashicorp.waypoint.ReleaseExpanded.release:type_name -> hashicorp.waypoint.Release
-	185, // 292: hashicorp.waypoint.ReleaseExpanded.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
-	463, // 293: hashicorp.waypoint.Trigger.active_time:type_name -> google.protobuf.Timestamp
-	319, // 294: hashicorp.waypoint.Trigger.build:type_name -> hashicorp.waypoint.Job.BuildOp
-	321, // 295: hashicorp.waypoint.Trigger.push:type_name -> hashicorp.waypoint.Job.PushOp
-	323, // 296: hashicorp.waypoint.Trigger.deploy:type_name -> hashicorp.waypoint.Job.DeployOp
-	328, // 297: hashicorp.waypoint.Trigger.destroy:type_name -> hashicorp.waypoint.Job.DestroyOp
-	329, // 298: hashicorp.waypoint.Trigger.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
-	313, // 299: hashicorp.waypoint.Trigger.up:type_name -> hashicorp.waypoint.Job.UpOp
-	347, // 300: hashicorp.waypoint.Trigger.init:type_name -> hashicorp.waypoint.Job.InitOp
-	337, // 301: hashicorp.waypoint.Trigger.status_report:type_name -> hashicorp.waypoint.Job.StatusReportOp
-	274, // 302: hashicorp.waypoint.Trigger.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	273, // 303: hashicorp.waypoint.Trigger.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 304: hashicorp.waypoint.Trigger.application:type_name -> hashicorp.waypoint.Ref.Application
-	167, // 305: hashicorp.waypoint.UpsertTriggerRequest.trigger:type_name -> hashicorp.waypoint.Trigger
-	167, // 306: hashicorp.waypoint.UpsertTriggerResponse.trigger:type_name -> hashicorp.waypoint.Trigger
-	290, // 307: hashicorp.waypoint.GetTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
-	167, // 308: hashicorp.waypoint.GetTriggerResponse.trigger:type_name -> hashicorp.waypoint.Trigger
-	290, // 309: hashicorp.waypoint.DeleteTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
-	290, // 310: hashicorp.waypoint.RunTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
-	30,  // 311: hashicorp.waypoint.RunTriggerRequest.variable_overrides:type_name -> hashicorp.waypoint.Variable
-	274, // 312: hashicorp.waypoint.ListTriggerRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	273, // 313: hashicorp.waypoint.ListTriggerRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 314: hashicorp.waypoint.ListTriggerRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	167, // 315: hashicorp.waypoint.ListTriggerResponse.triggers:type_name -> hashicorp.waypoint.Trigger
-	185, // 316: hashicorp.waypoint.UpsertStatusReportRequest.status_report:type_name -> hashicorp.waypoint.StatusReport
-	185, // 317: hashicorp.waypoint.UpsertStatusReportResponse.status_report:type_name -> hashicorp.waypoint.StatusReport
-	272, // 318: hashicorp.waypoint.GetLatestStatusReportRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 319: hashicorp.waypoint.GetLatestStatusReportRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	462, // 320: hashicorp.waypoint.GetLatestStatusReportRequest.any:type_name -> google.protobuf.Empty
-	462, // 321: hashicorp.waypoint.GetLatestStatusReportRequest.deployment_any:type_name -> google.protobuf.Empty
-	462, // 322: hashicorp.waypoint.GetLatestStatusReportRequest.release_any:type_name -> google.protobuf.Empty
-	37,  // 323: hashicorp.waypoint.ListStatusReportsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	39,  // 324: hashicorp.waypoint.ListStatusReportsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	272, // 325: hashicorp.waypoint.ListStatusReportsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 326: hashicorp.waypoint.ListStatusReportsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	278, // 327: hashicorp.waypoint.ListStatusReportsRequest.deployment:type_name -> hashicorp.waypoint.Ref.Operation
-	278, // 328: hashicorp.waypoint.ListStatusReportsRequest.release:type_name -> hashicorp.waypoint.Ref.Operation
-	185, // 329: hashicorp.waypoint.ListStatusReportsResponse.status_reports:type_name -> hashicorp.waypoint.StatusReport
-	278, // 330: hashicorp.waypoint.GetStatusReportRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	274, // 331: hashicorp.waypoint.ExpediteStatusReportRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	278, // 332: hashicorp.waypoint.ExpediteStatusReportRequest.deployment:type_name -> hashicorp.waypoint.Ref.Operation
-	278, // 333: hashicorp.waypoint.ExpediteStatusReportRequest.release:type_name -> hashicorp.waypoint.Ref.Operation
-	272, // 334: hashicorp.waypoint.StatusReport.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 335: hashicorp.waypoint.StatusReport.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	36,  // 336: hashicorp.waypoint.StatusReport.status:type_name -> hashicorp.waypoint.Status
-	465, // 337: hashicorp.waypoint.StatusReport.status_report:type_name -> opaqueany.Any
-	413, // 338: hashicorp.waypoint.StatusReport.health:type_name -> hashicorp.waypoint.StatusReport.Health
-	463, // 339: hashicorp.waypoint.StatusReport.generated_time:type_name -> google.protobuf.Timestamp
-	412, // 340: hashicorp.waypoint.StatusReport.resources:type_name -> hashicorp.waypoint.StatusReport.Resource
-	413, // 341: hashicorp.waypoint.StatusReport.deprecated_resources_health:type_name -> hashicorp.waypoint.StatusReport.Health
-	414, // 342: hashicorp.waypoint.GetLogStreamRequest.application:type_name -> hashicorp.waypoint.GetLogStreamRequest.Application
-	415, // 343: hashicorp.waypoint.LogBatch.lines:type_name -> hashicorp.waypoint.LogBatch.Entry
-	417, // 344: hashicorp.waypoint.ConfigVar.target:type_name -> hashicorp.waypoint.ConfigVar.Target
-	462, // 345: hashicorp.waypoint.ConfigVar.unset:type_name -> google.protobuf.Empty
-	416, // 346: hashicorp.waypoint.ConfigVar.dynamic:type_name -> hashicorp.waypoint.ConfigVar.DynamicVal
-	272, // 347: hashicorp.waypoint.ConfigVar.application:type_name -> hashicorp.waypoint.Ref.Application
-	273, // 348: hashicorp.waypoint.ConfigVar.project:type_name -> hashicorp.waypoint.Ref.Project
-	280, // 349: hashicorp.waypoint.ConfigVar.runner:type_name -> hashicorp.waypoint.Ref.Runner
-	188, // 350: hashicorp.waypoint.ConfigSetRequest.variables:type_name -> hashicorp.waypoint.ConfigVar
-	272, // 351: hashicorp.waypoint.ConfigGetRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	273, // 352: hashicorp.waypoint.ConfigGetRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	282, // 353: hashicorp.waypoint.ConfigGetRequest.runner:type_name -> hashicorp.waypoint.Ref.RunnerId
-	274, // 354: hashicorp.waypoint.ConfigGetRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	419, // 355: hashicorp.waypoint.ConfigGetRequest.labels:type_name -> hashicorp.waypoint.ConfigGetRequest.LabelsEntry
-	188, // 356: hashicorp.waypoint.ConfigGetResponse.variables:type_name -> hashicorp.waypoint.ConfigVar
-	271, // 357: hashicorp.waypoint.ConfigSource.global:type_name -> hashicorp.waypoint.Ref.Global
-	273, // 358: hashicorp.waypoint.ConfigSource.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 359: hashicorp.waypoint.ConfigSource.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 360: hashicorp.waypoint.ConfigSource.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	420, // 361: hashicorp.waypoint.ConfigSource.config:type_name -> hashicorp.waypoint.ConfigSource.ConfigEntry
-	193, // 362: hashicorp.waypoint.SetConfigSourceRequest.config_source:type_name -> hashicorp.waypoint.ConfigSource
-	271, // 363: hashicorp.waypoint.GetConfigSourceRequest.global:type_name -> hashicorp.waypoint.Ref.Global
-	273, // 364: hashicorp.waypoint.GetConfigSourceRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 365: hashicorp.waypoint.GetConfigSourceRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 366: hashicorp.waypoint.GetConfigSourceRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	193, // 367: hashicorp.waypoint.GetConfigSourceResponse.config_sources:type_name -> hashicorp.waypoint.ConfigSource
-	421, // 368: hashicorp.waypoint.ExecStreamRequest.start:type_name -> hashicorp.waypoint.ExecStreamRequest.Start
-	422, // 369: hashicorp.waypoint.ExecStreamRequest.input:type_name -> hashicorp.waypoint.ExecStreamRequest.Input
-	424, // 370: hashicorp.waypoint.ExecStreamRequest.winch:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
-	462, // 371: hashicorp.waypoint.ExecStreamRequest.input_eof:type_name -> google.protobuf.Empty
-	425, // 372: hashicorp.waypoint.ExecStreamResponse.open:type_name -> hashicorp.waypoint.ExecStreamResponse.Open
-	427, // 373: hashicorp.waypoint.ExecStreamResponse.output:type_name -> hashicorp.waypoint.ExecStreamResponse.Output
-	426, // 374: hashicorp.waypoint.ExecStreamResponse.exit:type_name -> hashicorp.waypoint.ExecStreamResponse.Exit
-	15,  // 375: hashicorp.waypoint.EntrypointConfigRequest.type:type_name -> hashicorp.waypoint.Instance.Type
-	201, // 376: hashicorp.waypoint.EntrypointConfigResponse.config:type_name -> hashicorp.waypoint.EntrypointConfig
-	428, // 377: hashicorp.waypoint.EntrypointConfig.exec:type_name -> hashicorp.waypoint.EntrypointConfig.Exec
-	188, // 378: hashicorp.waypoint.EntrypointConfig.env_vars:type_name -> hashicorp.waypoint.ConfigVar
-	193, // 379: hashicorp.waypoint.EntrypointConfig.config_sources:type_name -> hashicorp.waypoint.ConfigSource
-	429, // 380: hashicorp.waypoint.EntrypointConfig.url_service:type_name -> hashicorp.waypoint.EntrypointConfig.URLService
-	430, // 381: hashicorp.waypoint.EntrypointConfig.deployment:type_name -> hashicorp.waypoint.EntrypointConfig.DeploymentInfo
-	415, // 382: hashicorp.waypoint.EntrypointLogBatch.lines:type_name -> hashicorp.waypoint.LogBatch.Entry
-	432, // 383: hashicorp.waypoint.EntrypointExecRequest.open:type_name -> hashicorp.waypoint.EntrypointExecRequest.Open
-	433, // 384: hashicorp.waypoint.EntrypointExecRequest.exit:type_name -> hashicorp.waypoint.EntrypointExecRequest.Exit
-	434, // 385: hashicorp.waypoint.EntrypointExecRequest.output:type_name -> hashicorp.waypoint.EntrypointExecRequest.Output
-	435, // 386: hashicorp.waypoint.EntrypointExecRequest.error:type_name -> hashicorp.waypoint.EntrypointExecRequest.Error
-	462, // 387: hashicorp.waypoint.EntrypointExecResponse.input_eof:type_name -> google.protobuf.Empty
-	424, // 388: hashicorp.waypoint.EntrypointExecResponse.winch:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
-	273, // 389: hashicorp.waypoint.Pipeline.project:type_name -> hashicorp.waypoint.Ref.Project
-	436, // 390: hashicorp.waypoint.Pipeline.steps:type_name -> hashicorp.waypoint.Pipeline.StepsEntry
-	293, // 391: hashicorp.waypoint.PipelineRun.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	291, // 392: hashicorp.waypoint.PipelineRun.jobs:type_name -> hashicorp.waypoint.Ref.Job
-	21,  // 393: hashicorp.waypoint.PipelineRun.state:type_name -> hashicorp.waypoint.PipelineRun.State
-	205, // 394: hashicorp.waypoint.UpsertPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Pipeline
-	205, // 395: hashicorp.waypoint.UpsertPipelineResponse.pipeline:type_name -> hashicorp.waypoint.Pipeline
-	293, // 396: hashicorp.waypoint.GetPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	205, // 397: hashicorp.waypoint.GetPipelineResponse.pipeline:type_name -> hashicorp.waypoint.Pipeline
-	444, // 398: hashicorp.waypoint.GetPipelineResponse.graph:type_name -> hashicorp.waypoint.GetPipelineResponse.Graph
-	293, // 399: hashicorp.waypoint.RunPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	78,  // 400: hashicorp.waypoint.RunPipelineRequest.job_template:type_name -> hashicorp.waypoint.Job
-	445, // 401: hashicorp.waypoint.RunPipelineResponse.job_map:type_name -> hashicorp.waypoint.RunPipelineResponse.JobMapEntry
-	273, // 402: hashicorp.waypoint.ListPipelinesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	205, // 403: hashicorp.waypoint.ListPipelinesResponse.pipelines:type_name -> hashicorp.waypoint.Pipeline
-	293, // 404: hashicorp.waypoint.ListPipelineRunsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	206, // 405: hashicorp.waypoint.ListPipelineRunsResponse.pipeline_runs:type_name -> hashicorp.waypoint.PipelineRun
-	293, // 406: hashicorp.waypoint.GetPipelineRunRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	206, // 407: hashicorp.waypoint.GetPipelineRunResponse.pipeline_run:type_name -> hashicorp.waypoint.PipelineRun
-	273, // 408: hashicorp.waypoint.ConfigSyncPipelineRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	446, // 409: hashicorp.waypoint.ConfigSyncPipelineResponse.synced_pipelines:type_name -> hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry
-	447, // 410: hashicorp.waypoint.TokenTransport.metadata:type_name -> hashicorp.waypoint.TokenTransport.MetadataEntry
-	448, // 411: hashicorp.waypoint.TokenTransport.oauth_creds:type_name -> hashicorp.waypoint.TokenTransport.OAuthCredentials
-	463, // 412: hashicorp.waypoint.Token.valid_until:type_name -> google.protobuf.Timestamp
-	463, // 413: hashicorp.waypoint.Token.issued_time:type_name -> google.protobuf.Timestamp
-	449, // 414: hashicorp.waypoint.Token.login:type_name -> hashicorp.waypoint.Token.Login
-	450, // 415: hashicorp.waypoint.Token.runner:type_name -> hashicorp.waypoint.Token.Runner
-	451, // 416: hashicorp.waypoint.Token.invite:type_name -> hashicorp.waypoint.Token.Invite
-	453, // 417: hashicorp.waypoint.Token.trigger:type_name -> hashicorp.waypoint.Token.Trigger
-	452, // 418: hashicorp.waypoint.Token.unused_entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
-	222, // 419: hashicorp.waypoint.DecodeTokenResponse.token:type_name -> hashicorp.waypoint.Token
-	221, // 420: hashicorp.waypoint.DecodeTokenResponse.transport:type_name -> hashicorp.waypoint.TokenTransport
-	284, // 421: hashicorp.waypoint.LoginTokenRequest.user:type_name -> hashicorp.waypoint.Ref.User
-	455, // 422: hashicorp.waypoint.GenerateRunnerTokenRequest.labels:type_name -> hashicorp.waypoint.GenerateRunnerTokenRequest.LabelsEntry
-	449, // 423: hashicorp.waypoint.InviteTokenRequest.login:type_name -> hashicorp.waypoint.Token.Login
-	454, // 424: hashicorp.waypoint.InviteTokenRequest.signup:type_name -> hashicorp.waypoint.Token.Invite.Signup
-	452, // 425: hashicorp.waypoint.InviteTokenRequest.unused_entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
-	456, // 426: hashicorp.waypoint.CreateSnapshotResponse.open:type_name -> hashicorp.waypoint.CreateSnapshotResponse.Open
-	457, // 427: hashicorp.waypoint.RestoreSnapshotRequest.open:type_name -> hashicorp.waypoint.RestoreSnapshotRequest.Open
-	24,  // 428: hashicorp.waypoint.Hcl.format:type_name -> hashicorp.waypoint.Hcl.Format
-	238, // 429: hashicorp.waypoint.UI.ListProjectsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
-	242, // 430: hashicorp.waypoint.UI.ListProjectsResponse.project_bundles:type_name -> hashicorp.waypoint.UI.ProjectBundle
-	239, // 431: hashicorp.waypoint.UI.ListProjectsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
-	31,  // 432: hashicorp.waypoint.UI.ProjectBundle.project:type_name -> hashicorp.waypoint.Project
-	273, // 433: hashicorp.waypoint.UI.GetProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	31,  // 434: hashicorp.waypoint.UI.GetProjectResponse.project:type_name -> hashicorp.waypoint.Project
-	78,  // 435: hashicorp.waypoint.UI.GetProjectResponse.latest_init_job:type_name -> hashicorp.waypoint.Job
-	273, // 436: hashicorp.waypoint.UI.ListPipelinesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
-	238, // 437: hashicorp.waypoint.UI.ListPipelinesRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
-	249, // 438: hashicorp.waypoint.UI.ListPipelinesResponse.pipelines:type_name -> hashicorp.waypoint.UI.PipelineBundle
-	239, // 439: hashicorp.waypoint.UI.ListPipelinesResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
-	293, // 440: hashicorp.waypoint.UI.ListPipelineRunsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
-	238, // 441: hashicorp.waypoint.UI.ListPipelineRunsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
-	250, // 442: hashicorp.waypoint.UI.ListPipelineRunsResponse.pipeline_run_bundles:type_name -> hashicorp.waypoint.UI.PipelineRunBundle
-	239, // 443: hashicorp.waypoint.UI.ListPipelineRunsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
-	205, // 444: hashicorp.waypoint.UI.PipelineBundle.pipeline:type_name -> hashicorp.waypoint.Pipeline
-	250, // 445: hashicorp.waypoint.UI.PipelineBundle.last_run:type_name -> hashicorp.waypoint.UI.PipelineRunBundle
-	206, // 446: hashicorp.waypoint.UI.PipelineRunBundle.pipeline_run:type_name -> hashicorp.waypoint.PipelineRun
-	463, // 447: hashicorp.waypoint.UI.PipelineRunBundle.queue_time:type_name -> google.protobuf.Timestamp
-	272, // 448: hashicorp.waypoint.UI.PipelineRunBundle.application:type_name -> hashicorp.waypoint.Ref.Application
-	354, // 449: hashicorp.waypoint.UI.PipelineRunBundle.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	272, // 450: hashicorp.waypoint.UI.ListDeploymentsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 451: hashicorp.waypoint.UI.ListDeploymentsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	39,  // 452: hashicorp.waypoint.UI.ListDeploymentsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	37,  // 453: hashicorp.waypoint.UI.ListDeploymentsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	6,   // 454: hashicorp.waypoint.UI.ListDeploymentsRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	255, // 455: hashicorp.waypoint.UI.ListDeploymentsResponse.deployments:type_name -> hashicorp.waypoint.UI.DeploymentBundle
-	278, // 456: hashicorp.waypoint.UI.GetDeploymentRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
-	14,  // 457: hashicorp.waypoint.UI.GetDeploymentRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
-	255, // 458: hashicorp.waypoint.UI.GetDeploymentResponse.deployment:type_name -> hashicorp.waypoint.UI.DeploymentBundle
-	154, // 459: hashicorp.waypoint.UI.DeploymentBundle.deployment:type_name -> hashicorp.waypoint.Deployment
-	148, // 460: hashicorp.waypoint.UI.DeploymentBundle.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	132, // 461: hashicorp.waypoint.UI.DeploymentBundle.build:type_name -> hashicorp.waypoint.Build
-	354, // 462: hashicorp.waypoint.UI.DeploymentBundle.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	185, // 463: hashicorp.waypoint.UI.DeploymentBundle.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
-	272, // 464: hashicorp.waypoint.UI.ListReleasesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 465: hashicorp.waypoint.UI.ListReleasesRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	39,  // 466: hashicorp.waypoint.UI.ListReleasesRequest.order:type_name -> hashicorp.waypoint.OperationOrder
-	37,  // 467: hashicorp.waypoint.UI.ListReleasesRequest.status:type_name -> hashicorp.waypoint.StatusFilter
-	6,   // 468: hashicorp.waypoint.UI.ListReleasesRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
-	258, // 469: hashicorp.waypoint.UI.ListReleasesResponse.releases:type_name -> hashicorp.waypoint.UI.ReleaseBundle
-	165, // 470: hashicorp.waypoint.UI.ReleaseBundle.release:type_name -> hashicorp.waypoint.Release
-	185, // 471: hashicorp.waypoint.UI.ReleaseBundle.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
-	263, // 472: hashicorp.waypoint.Variable.File.hcl_range:type_name -> hashicorp.waypoint.Variable.HclRange
-	263, // 473: hashicorp.waypoint.Variable.VCS.hcl_range:type_name -> hashicorp.waypoint.Variable.HclRange
-	262, // 474: hashicorp.waypoint.Variable.HclRange.start:type_name -> hashicorp.waypoint.Variable.HclPos
-	262, // 475: hashicorp.waypoint.Variable.HclRange.end:type_name -> hashicorp.waypoint.Variable.HclPos
-	2,   // 476: hashicorp.waypoint.Variable.FinalValue.source:type_name -> hashicorp.waypoint.Variable.FinalValue.Source
-	273, // 477: hashicorp.waypoint.Workspace.Project.project:type_name -> hashicorp.waypoint.Ref.Project
-	274, // 478: hashicorp.waypoint.Workspace.Project.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	354, // 479: hashicorp.waypoint.Workspace.Project.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	463, // 480: hashicorp.waypoint.Workspace.Project.active_time:type_name -> google.protobuf.Timestamp
-	268, // 481: hashicorp.waypoint.Workspace.Project.applications:type_name -> hashicorp.waypoint.Workspace.Application
-	272, // 482: hashicorp.waypoint.Workspace.Application.application:type_name -> hashicorp.waypoint.Ref.Application
-	463, // 483: hashicorp.waypoint.Workspace.Application.active_time:type_name -> google.protobuf.Timestamp
-	270, // 484: hashicorp.waypoint.User.Link.oidc:type_name -> hashicorp.waypoint.User.Link.OIDC
-	4,   // 485: hashicorp.waypoint.Ref.Component.type:type_name -> hashicorp.waypoint.Component.Type
-	279, // 486: hashicorp.waypoint.Ref.Operation.sequence:type_name -> hashicorp.waypoint.Ref.OperationSeq
-	272, // 487: hashicorp.waypoint.Ref.OperationSeq.application:type_name -> hashicorp.waypoint.Ref.Application
-	281, // 488: hashicorp.waypoint.Ref.Runner.any:type_name -> hashicorp.waypoint.Ref.RunnerAny
-	282, // 489: hashicorp.waypoint.Ref.Runner.id:type_name -> hashicorp.waypoint.Ref.RunnerId
-	283, // 490: hashicorp.waypoint.Ref.Runner.labels:type_name -> hashicorp.waypoint.Ref.RunnerLabels
-	296, // 491: hashicorp.waypoint.Ref.RunnerLabels.labels:type_name -> hashicorp.waypoint.Ref.RunnerLabels.LabelsEntry
-	285, // 492: hashicorp.waypoint.Ref.User.id:type_name -> hashicorp.waypoint.Ref.UserId
-	286, // 493: hashicorp.waypoint.Ref.User.username:type_name -> hashicorp.waypoint.Ref.UserUsername
-	294, // 494: hashicorp.waypoint.Ref.Pipeline.owner:type_name -> hashicorp.waypoint.Ref.PipelineOwner
-	273, // 495: hashicorp.waypoint.Ref.PipelineOwner.project:type_name -> hashicorp.waypoint.Ref.Project
-	5,   // 496: hashicorp.waypoint.StatusFilter.Filter.state:type_name -> hashicorp.waypoint.Status.State
-	300, // 497: hashicorp.waypoint.AuthMethod.OIDC.claim_mappings:type_name -> hashicorp.waypoint.AuthMethod.OIDC.ClaimMappingsEntry
-	301, // 498: hashicorp.waypoint.AuthMethod.OIDC.list_claim_mappings:type_name -> hashicorp.waypoint.AuthMethod.OIDC.ListClaimMappingsEntry
-	43,  // 499: hashicorp.waypoint.Job.TaskOverride.launch_info:type_name -> hashicorp.waypoint.TaskLaunchInfo
-	264, // 500: hashicorp.waypoint.Job.VariableFinalValuesEntry.value:type_name -> hashicorp.waypoint.Variable.FinalValue
-	320, // 501: hashicorp.waypoint.Job.Result.build:type_name -> hashicorp.waypoint.Job.BuildResult
-	322, // 502: hashicorp.waypoint.Job.Result.push:type_name -> hashicorp.waypoint.Job.PushResult
-	324, // 503: hashicorp.waypoint.Job.Result.deploy:type_name -> hashicorp.waypoint.Job.DeployResult
-	330, // 504: hashicorp.waypoint.Job.Result.release:type_name -> hashicorp.waypoint.Job.ReleaseResult
-	316, // 505: hashicorp.waypoint.Job.Result.validate:type_name -> hashicorp.waypoint.Job.ValidateResult
-	318, // 506: hashicorp.waypoint.Job.Result.auth:type_name -> hashicorp.waypoint.Job.AuthResult
-	340, // 507: hashicorp.waypoint.Job.Result.docs:type_name -> hashicorp.waypoint.Job.DocsResult
-	342, // 508: hashicorp.waypoint.Job.Result.config_sync:type_name -> hashicorp.waypoint.Job.ConfigSyncResult
-	314, // 509: hashicorp.waypoint.Job.Result.up:type_name -> hashicorp.waypoint.Job.UpResult
-	353, // 510: hashicorp.waypoint.Job.Result.queue_project:type_name -> hashicorp.waypoint.Job.QueueProjectResult
-	346, // 511: hashicorp.waypoint.Job.Result.poll:type_name -> hashicorp.waypoint.Job.PollResult
-	338, // 512: hashicorp.waypoint.Job.Result.status_report:type_name -> hashicorp.waypoint.Job.StatusReportResult
-	333, // 513: hashicorp.waypoint.Job.Result.start_task:type_name -> hashicorp.waypoint.Job.StartTaskResult
-	348, // 514: hashicorp.waypoint.Job.Result.init:type_name -> hashicorp.waypoint.Job.InitResult
-	336, // 515: hashicorp.waypoint.Job.Result.watch_task:type_name -> hashicorp.waypoint.Job.WatchTaskResult
-	351, // 516: hashicorp.waypoint.Job.Result.pipeline_step:type_name -> hashicorp.waypoint.Job.PipelineStepResult
-	343, // 517: hashicorp.waypoint.Job.Result.pipeline_config_sync:type_name -> hashicorp.waypoint.Job.PipelineConfigSyncResult
-	344, // 518: hashicorp.waypoint.Job.Result.project_destroy:type_name -> hashicorp.waypoint.Job.ProjectDestroyResult
-	11,  // 519: hashicorp.waypoint.Job.Config.source:type_name -> hashicorp.waypoint.Job.Config.Source
-	309, // 520: hashicorp.waypoint.Job.DataSource.local:type_name -> hashicorp.waypoint.Job.Local
-	311, // 521: hashicorp.waypoint.Job.DataSource.git:type_name -> hashicorp.waypoint.Job.Git
-	310, // 522: hashicorp.waypoint.Job.DataSource.remote:type_name -> hashicorp.waypoint.Job.Remote
-	311, // 523: hashicorp.waypoint.Job.Remote.git_remote:type_name -> hashicorp.waypoint.Job.Git
-	355, // 524: hashicorp.waypoint.Job.Git.basic:type_name -> hashicorp.waypoint.Job.Git.Basic
-	356, // 525: hashicorp.waypoint.Job.Git.ssh:type_name -> hashicorp.waypoint.Job.Git.SSH
-	329, // 526: hashicorp.waypoint.Job.UpOp.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
-	277, // 527: hashicorp.waypoint.Job.AuthOp.component:type_name -> hashicorp.waypoint.Ref.Component
-	358, // 528: hashicorp.waypoint.Job.AuthResult.results:type_name -> hashicorp.waypoint.Job.AuthResult.Result
-	132, // 529: hashicorp.waypoint.Job.BuildResult.build:type_name -> hashicorp.waypoint.Build
-	148, // 530: hashicorp.waypoint.Job.BuildResult.push:type_name -> hashicorp.waypoint.PushedArtifact
-	132, // 531: hashicorp.waypoint.Job.PushOp.build:type_name -> hashicorp.waypoint.Build
-	148, // 532: hashicorp.waypoint.Job.PushResult.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	148, // 533: hashicorp.waypoint.Job.DeployOp.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	154, // 534: hashicorp.waypoint.Job.DeployResult.deployment:type_name -> hashicorp.waypoint.Deployment
-	154, // 535: hashicorp.waypoint.Job.ExecOp.deployment:type_name -> hashicorp.waypoint.Deployment
-	154, // 536: hashicorp.waypoint.Job.LogsOp.deployment:type_name -> hashicorp.waypoint.Deployment
-	463, // 537: hashicorp.waypoint.Job.LogsOp.start_time:type_name -> google.protobuf.Timestamp
-	462, // 538: hashicorp.waypoint.Job.DestroyOp.workspace:type_name -> google.protobuf.Empty
-	154, // 539: hashicorp.waypoint.Job.DestroyOp.deployment:type_name -> hashicorp.waypoint.Deployment
-	154, // 540: hashicorp.waypoint.Job.ReleaseOp.deployment:type_name -> hashicorp.waypoint.Deployment
-	165, // 541: hashicorp.waypoint.Job.ReleaseResult.release:type_name -> hashicorp.waypoint.Release
-	24,  // 542: hashicorp.waypoint.Job.TaskPluginParams.hcl_format:type_name -> hashicorp.waypoint.Hcl.Format
-	43,  // 543: hashicorp.waypoint.Job.StartTaskLaunchOp.info:type_name -> hashicorp.waypoint.TaskLaunchInfo
-	331, // 544: hashicorp.waypoint.Job.StartTaskLaunchOp.params:type_name -> hashicorp.waypoint.Job.TaskPluginParams
-	465, // 545: hashicorp.waypoint.Job.StartTaskResult.state:type_name -> opaqueany.Any
-	331, // 546: hashicorp.waypoint.Job.StopTaskLaunchOp.params:type_name -> hashicorp.waypoint.Job.TaskPluginParams
-	465, // 547: hashicorp.waypoint.Job.StopTaskLaunchOp.direct:type_name -> opaqueany.Any
-	291, // 548: hashicorp.waypoint.Job.WatchTaskOp.start_job:type_name -> hashicorp.waypoint.Ref.Job
-	154, // 549: hashicorp.waypoint.Job.StatusReportOp.deployment:type_name -> hashicorp.waypoint.Deployment
-	165, // 550: hashicorp.waypoint.Job.StatusReportOp.release:type_name -> hashicorp.waypoint.Release
-	185, // 551: hashicorp.waypoint.Job.StatusReportResult.status_report:type_name -> hashicorp.waypoint.StatusReport
-	359, // 552: hashicorp.waypoint.Job.DocsResult.results:type_name -> hashicorp.waypoint.Job.DocsResult.Result
-	360, // 553: hashicorp.waypoint.Job.PipelineConfigSyncResult.synced_pipelines:type_name -> hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry
-	354, // 554: hashicorp.waypoint.Job.PollResult.old_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	354, // 555: hashicorp.waypoint.Job.PollResult.new_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	437, // 556: hashicorp.waypoint.Job.PipelineStepOp.step:type_name -> hashicorp.waypoint.Pipeline.Step
-	273, // 557: hashicorp.waypoint.Job.DestroyProjectOp.project:type_name -> hashicorp.waypoint.Ref.Project
-	464, // 558: hashicorp.waypoint.Job.PipelineStepResult.result:type_name -> google.rpc.Status
-	78,  // 559: hashicorp.waypoint.Job.QueueProjectOp.job_template:type_name -> hashicorp.waypoint.Job
-	361, // 560: hashicorp.waypoint.Job.QueueProjectResult.applications:type_name -> hashicorp.waypoint.Job.QueueProjectResult.Application
-	462, // 561: hashicorp.waypoint.Job.DataSource.Ref.unknown:type_name -> google.protobuf.Empty
-	357, // 562: hashicorp.waypoint.Job.DataSource.Ref.git:type_name -> hashicorp.waypoint.Job.Git.Ref
-	463, // 563: hashicorp.waypoint.Job.Git.Ref.timestamp:type_name -> google.protobuf.Timestamp
-	35,  // 564: hashicorp.waypoint.Job.AuthResult.Result.component:type_name -> hashicorp.waypoint.Component
-	464, // 565: hashicorp.waypoint.Job.AuthResult.Result.check_error:type_name -> google.rpc.Status
-	464, // 566: hashicorp.waypoint.Job.AuthResult.Result.auth_error:type_name -> google.rpc.Status
-	35,  // 567: hashicorp.waypoint.Job.DocsResult.Result.component:type_name -> hashicorp.waypoint.Component
-	79,  // 568: hashicorp.waypoint.Job.DocsResult.Result.docs:type_name -> hashicorp.waypoint.Documentation
-	293, // 569: hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry.value:type_name -> hashicorp.waypoint.Ref.Pipeline
-	272, // 570: hashicorp.waypoint.Job.QueueProjectResult.Application.application:type_name -> hashicorp.waypoint.Ref.Application
-	363, // 571: hashicorp.waypoint.Documentation.FieldsEntry.value:type_name -> hashicorp.waypoint.Documentation.Field
-	10,  // 572: hashicorp.waypoint.GetJobStreamResponse.State.previous:type_name -> hashicorp.waypoint.Job.State
-	10,  // 573: hashicorp.waypoint.GetJobStreamResponse.State.current:type_name -> hashicorp.waypoint.Job.State
-	78,  // 574: hashicorp.waypoint.GetJobStreamResponse.State.job:type_name -> hashicorp.waypoint.Job
-	78,  // 575: hashicorp.waypoint.GetJobStreamResponse.JobChange.job:type_name -> hashicorp.waypoint.Job
-	354, // 576: hashicorp.waypoint.GetJobStreamResponse.Download.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	372, // 577: hashicorp.waypoint.GetJobStreamResponse.Terminal.events:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event
-	464, // 578: hashicorp.waypoint.GetJobStreamResponse.Error.error:type_name -> google.rpc.Status
-	464, // 579: hashicorp.waypoint.GetJobStreamResponse.Complete.error:type_name -> google.rpc.Status
-	306, // 580: hashicorp.waypoint.GetJobStreamResponse.Complete.result:type_name -> hashicorp.waypoint.Job.Result
-	463, // 581: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.timestamp:type_name -> google.protobuf.Timestamp
-	374, // 582: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.line:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Line
-	373, // 583: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.status:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Status
-	377, // 584: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.named_values:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues
-	375, // 585: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.raw:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Raw
-	380, // 586: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.table:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table
-	381, // 587: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.step_group:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.StepGroup
-	382, // 588: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.step:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Step
-	376, // 589: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues.values:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValue
-	378, // 590: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow.entries:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableEntry
-	379, // 591: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table.rows:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow
-	85,  // 592: hashicorp.waypoint.RunnerConfigRequest.Open.runner:type_name -> hashicorp.waypoint.Runner
-	306, // 593: hashicorp.waypoint.RunnerJobStreamRequest.Complete.result:type_name -> hashicorp.waypoint.Job.Result
-	464, // 594: hashicorp.waypoint.RunnerJobStreamRequest.Error.error:type_name -> google.rpc.Status
-	307, // 595: hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad.config:type_name -> hashicorp.waypoint.Job.Config
-	395, // 596: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.final_values:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry
-	264, // 597: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry.value:type_name -> hashicorp.waypoint.Variable.FinalValue
-	78,  // 598: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment.job:type_name -> hashicorp.waypoint.Job
-	193, // 599: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment.config_sources:type_name -> hashicorp.waypoint.ConfigSource
-	401, // 600: hashicorp.waypoint.Hostname.Target.application:type_name -> hashicorp.waypoint.Hostname.TargetApp
-	272, // 601: hashicorp.waypoint.Hostname.TargetApp.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 602: hashicorp.waypoint.Hostname.TargetApp.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	354, // 603: hashicorp.waypoint.Build.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	354, // 604: hashicorp.waypoint.PushedArtifact.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	148, // 605: hashicorp.waypoint.Deployment.Preload.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	132, // 606: hashicorp.waypoint.Deployment.Preload.build:type_name -> hashicorp.waypoint.Build
-	354, // 607: hashicorp.waypoint.Deployment.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	272, // 608: hashicorp.waypoint.ListInstancesRequest.Application.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 609: hashicorp.waypoint.ListInstancesRequest.Application.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	154, // 610: hashicorp.waypoint.Release.Preload.deployment:type_name -> hashicorp.waypoint.Deployment
-	148, // 611: hashicorp.waypoint.Release.Preload.artifact:type_name -> hashicorp.waypoint.PushedArtifact
-	132, // 612: hashicorp.waypoint.Release.Preload.build:type_name -> hashicorp.waypoint.Build
-	354, // 613: hashicorp.waypoint.Release.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
-	288, // 614: hashicorp.waypoint.StatusReport.Resource.declared_resource:type_name -> hashicorp.waypoint.Ref.DeclaredResource
-	0,   // 615: hashicorp.waypoint.StatusReport.Resource.category_display_hint:type_name -> hashicorp.waypoint.ResourceCategoryDisplayHint
-	463, // 616: hashicorp.waypoint.StatusReport.Resource.created_time:type_name -> google.protobuf.Timestamp
-	17,  // 617: hashicorp.waypoint.StatusReport.Resource.health:type_name -> hashicorp.waypoint.StatusReport.Resource.Health
-	413, // 618: hashicorp.waypoint.StatusReport.Resource.deprecated_health:type_name -> hashicorp.waypoint.StatusReport.Health
-	272, // 619: hashicorp.waypoint.GetLogStreamRequest.Application.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 620: hashicorp.waypoint.GetLogStreamRequest.Application.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	18,  // 621: hashicorp.waypoint.LogBatch.Entry.source:type_name -> hashicorp.waypoint.LogBatch.Entry.Source
-	463, // 622: hashicorp.waypoint.LogBatch.Entry.timestamp:type_name -> google.protobuf.Timestamp
-	418, // 623: hashicorp.waypoint.ConfigVar.DynamicVal.config:type_name -> hashicorp.waypoint.ConfigVar.DynamicVal.ConfigEntry
-	271, // 624: hashicorp.waypoint.ConfigVar.Target.global:type_name -> hashicorp.waypoint.Ref.Global
-	273, // 625: hashicorp.waypoint.ConfigVar.Target.project:type_name -> hashicorp.waypoint.Ref.Project
-	272, // 626: hashicorp.waypoint.ConfigVar.Target.application:type_name -> hashicorp.waypoint.Ref.Application
-	274, // 627: hashicorp.waypoint.ConfigVar.Target.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	280, // 628: hashicorp.waypoint.ConfigVar.Target.runner:type_name -> hashicorp.waypoint.Ref.Runner
-	423, // 629: hashicorp.waypoint.ExecStreamRequest.Start.pty:type_name -> hashicorp.waypoint.ExecStreamRequest.PTY
-	424, // 630: hashicorp.waypoint.ExecStreamRequest.PTY.window_size:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
-	19,  // 631: hashicorp.waypoint.ExecStreamResponse.Output.channel:type_name -> hashicorp.waypoint.ExecStreamResponse.Output.Channel
-	423, // 632: hashicorp.waypoint.EntrypointConfig.Exec.pty:type_name -> hashicorp.waypoint.ExecStreamRequest.PTY
-	35,  // 633: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.component:type_name -> hashicorp.waypoint.Component
-	431, // 634: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.labels:type_name -> hashicorp.waypoint.EntrypointConfig.DeploymentInfo.LabelsEntry
-	20,  // 635: hashicorp.waypoint.EntrypointExecRequest.Output.channel:type_name -> hashicorp.waypoint.EntrypointExecRequest.Output.Channel
-	464, // 636: hashicorp.waypoint.EntrypointExecRequest.Error.error:type_name -> google.rpc.Status
-	437, // 637: hashicorp.waypoint.Pipeline.StepsEntry.value:type_name -> hashicorp.waypoint.Pipeline.Step
-	438, // 638: hashicorp.waypoint.Pipeline.Step.exec:type_name -> hashicorp.waypoint.Pipeline.Step.Exec
-	439, // 639: hashicorp.waypoint.Pipeline.Step.build:type_name -> hashicorp.waypoint.Pipeline.Step.Build
-	440, // 640: hashicorp.waypoint.Pipeline.Step.deploy:type_name -> hashicorp.waypoint.Pipeline.Step.Deploy
-	441, // 641: hashicorp.waypoint.Pipeline.Step.release:type_name -> hashicorp.waypoint.Pipeline.Step.Release
-	442, // 642: hashicorp.waypoint.Pipeline.Step.up:type_name -> hashicorp.waypoint.Pipeline.Step.Up
-	443, // 643: hashicorp.waypoint.Pipeline.Step.pipeline:type_name -> hashicorp.waypoint.Pipeline.Step.Pipeline
-	274, // 644: hashicorp.waypoint.Pipeline.Step.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
-	275, // 645: hashicorp.waypoint.Pipeline.Step.Release.deployment:type_name -> hashicorp.waypoint.Ref.Deployment
-	293, // 646: hashicorp.waypoint.Pipeline.Step.Pipeline.ref:type_name -> hashicorp.waypoint.Ref.Pipeline
-	22,  // 647: hashicorp.waypoint.GetPipelineResponse.Graph.format:type_name -> hashicorp.waypoint.GetPipelineResponse.Graph.Format
-	295, // 648: hashicorp.waypoint.RunPipelineResponse.JobMapEntry.value:type_name -> hashicorp.waypoint.Ref.PipelineStep
-	293, // 649: hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry.value:type_name -> hashicorp.waypoint.Ref.Pipeline
-	452, // 650: hashicorp.waypoint.Token.Login.entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
-	449, // 651: hashicorp.waypoint.Token.Invite.login:type_name -> hashicorp.waypoint.Token.Login
-	454, // 652: hashicorp.waypoint.Token.Invite.signup:type_name -> hashicorp.waypoint.Token.Invite.Signup
-	28,  // 653: hashicorp.waypoint.Snapshot.Header.version:type_name -> hashicorp.waypoint.VersionInfo
-	23,  // 654: hashicorp.waypoint.Snapshot.Header.format:type_name -> hashicorp.waypoint.Snapshot.Header.Format
-	461, // 655: hashicorp.waypoint.Snapshot.BoltChunk.items:type_name -> hashicorp.waypoint.Snapshot.BoltChunk.ItemsEntry
-	462, // 656: hashicorp.waypoint.Waypoint.GetVersionInfo:input_type -> google.protobuf.Empty
-	462, // 657: hashicorp.waypoint.Waypoint.ListOIDCAuthMethods:input_type -> google.protobuf.Empty
-	69,  // 658: hashicorp.waypoint.Waypoint.GetOIDCAuthURL:input_type -> hashicorp.waypoint.GetOIDCAuthURLRequest
-	71,  // 659: hashicorp.waypoint.Waypoint.CompleteOIDCAuth:input_type -> hashicorp.waypoint.CompleteOIDCAuthRequest
-	173, // 660: hashicorp.waypoint.Waypoint.NoAuthRunTrigger:input_type -> hashicorp.waypoint.RunTriggerRequest
-	54,  // 661: hashicorp.waypoint.Waypoint.GetUser:input_type -> hashicorp.waypoint.GetUserRequest
-	462, // 662: hashicorp.waypoint.Waypoint.ListUsers:input_type -> google.protobuf.Empty
-	57,  // 663: hashicorp.waypoint.Waypoint.UpdateUser:input_type -> hashicorp.waypoint.UpdateUserRequest
-	59,  // 664: hashicorp.waypoint.Waypoint.DeleteUser:input_type -> hashicorp.waypoint.DeleteUserRequest
-	62,  // 665: hashicorp.waypoint.Waypoint.UpsertAuthMethod:input_type -> hashicorp.waypoint.UpsertAuthMethodRequest
-	64,  // 666: hashicorp.waypoint.Waypoint.GetAuthMethod:input_type -> hashicorp.waypoint.GetAuthMethodRequest
-	462, // 667: hashicorp.waypoint.Waypoint.ListAuthMethods:input_type -> google.protobuf.Empty
-	66,  // 668: hashicorp.waypoint.Waypoint.DeleteAuthMethod:input_type -> hashicorp.waypoint.DeleteAuthMethodRequest
-	109, // 669: hashicorp.waypoint.Waypoint.ListWorkspaces:input_type -> hashicorp.waypoint.ListWorkspacesRequest
-	111, // 670: hashicorp.waypoint.Waypoint.GetWorkspace:input_type -> hashicorp.waypoint.GetWorkspaceRequest
-	113, // 671: hashicorp.waypoint.Waypoint.UpsertWorkspace:input_type -> hashicorp.waypoint.UpsertWorkspaceRequest
-	115, // 672: hashicorp.waypoint.Waypoint.UpsertProject:input_type -> hashicorp.waypoint.UpsertProjectRequest
-	117, // 673: hashicorp.waypoint.Waypoint.GetProject:input_type -> hashicorp.waypoint.GetProjectRequest
-	119, // 674: hashicorp.waypoint.Waypoint.ListProjects:input_type -> hashicorp.waypoint.ListProjectsRequest
-	121, // 675: hashicorp.waypoint.Waypoint.DestroyProject:input_type -> hashicorp.waypoint.DestroyProjectRequest
-	122, // 676: hashicorp.waypoint.Waypoint.GetApplication:input_type -> hashicorp.waypoint.GetApplicationRequest
-	124, // 677: hashicorp.waypoint.Waypoint.UpsertApplication:input_type -> hashicorp.waypoint.UpsertApplicationRequest
-	128, // 678: hashicorp.waypoint.Waypoint.ListBuilds:input_type -> hashicorp.waypoint.ListBuildsRequest
-	131, // 679: hashicorp.waypoint.Waypoint.GetBuild:input_type -> hashicorp.waypoint.GetBuildRequest
-	130, // 680: hashicorp.waypoint.Waypoint.GetLatestBuild:input_type -> hashicorp.waypoint.GetLatestBuildRequest
-	146, // 681: hashicorp.waypoint.Waypoint.ListPushedArtifacts:input_type -> hashicorp.waypoint.ListPushedArtifactsRequest
-	145, // 682: hashicorp.waypoint.Waypoint.GetPushedArtifact:input_type -> hashicorp.waypoint.GetPushedArtifactRequest
-	144, // 683: hashicorp.waypoint.Waypoint.GetLatestPushedArtifact:input_type -> hashicorp.waypoint.GetLatestPushedArtifactRequest
-	152, // 684: hashicorp.waypoint.Waypoint.ListDeployments:input_type -> hashicorp.waypoint.ListDeploymentsRequest
-	149, // 685: hashicorp.waypoint.Waypoint.GetDeployment:input_type -> hashicorp.waypoint.GetDeploymentRequest
-	156, // 686: hashicorp.waypoint.Waypoint.ListInstances:input_type -> hashicorp.waypoint.ListInstancesRequest
-	162, // 687: hashicorp.waypoint.Waypoint.ListReleases:input_type -> hashicorp.waypoint.ListReleasesRequest
-	164, // 688: hashicorp.waypoint.Waypoint.GetRelease:input_type -> hashicorp.waypoint.GetReleaseRequest
-	161, // 689: hashicorp.waypoint.Waypoint.GetLatestRelease:input_type -> hashicorp.waypoint.GetLatestReleaseRequest
-	182, // 690: hashicorp.waypoint.Waypoint.GetStatusReport:input_type -> hashicorp.waypoint.GetStatusReportRequest
-	179, // 691: hashicorp.waypoint.Waypoint.GetLatestStatusReport:input_type -> hashicorp.waypoint.GetLatestStatusReportRequest
-	180, // 692: hashicorp.waypoint.Waypoint.ListStatusReports:input_type -> hashicorp.waypoint.ListStatusReportsRequest
-	183, // 693: hashicorp.waypoint.Waypoint.ExpediteStatusReport:input_type -> hashicorp.waypoint.ExpediteStatusReportRequest
-	186, // 694: hashicorp.waypoint.Waypoint.GetLogStream:input_type -> hashicorp.waypoint.GetLogStreamRequest
-	197, // 695: hashicorp.waypoint.Waypoint.StartExecStream:input_type -> hashicorp.waypoint.ExecStreamRequest
-	189, // 696: hashicorp.waypoint.Waypoint.SetConfig:input_type -> hashicorp.waypoint.ConfigSetRequest
-	191, // 697: hashicorp.waypoint.Waypoint.GetConfig:input_type -> hashicorp.waypoint.ConfigGetRequest
-	194, // 698: hashicorp.waypoint.Waypoint.SetConfigSource:input_type -> hashicorp.waypoint.SetConfigSourceRequest
-	195, // 699: hashicorp.waypoint.Waypoint.GetConfigSource:input_type -> hashicorp.waypoint.GetConfigSourceRequest
-	103, // 700: hashicorp.waypoint.Waypoint.CreateHostname:input_type -> hashicorp.waypoint.CreateHostnameRequest
-	107, // 701: hashicorp.waypoint.Waypoint.DeleteHostname:input_type -> hashicorp.waypoint.DeleteHostnameRequest
-	105, // 702: hashicorp.waypoint.Waypoint.ListHostnames:input_type -> hashicorp.waypoint.ListHostnamesRequest
-	73,  // 703: hashicorp.waypoint.Waypoint.QueueJob:input_type -> hashicorp.waypoint.QueueJobRequest
-	75,  // 704: hashicorp.waypoint.Waypoint.CancelJob:input_type -> hashicorp.waypoint.CancelJobRequest
-	80,  // 705: hashicorp.waypoint.Waypoint.GetJob:input_type -> hashicorp.waypoint.GetJobRequest
-	81,  // 706: hashicorp.waypoint.Waypoint.ListJobs:input_type -> hashicorp.waypoint.ListJobsRequest
-	76,  // 707: hashicorp.waypoint.Waypoint.ValidateJob:input_type -> hashicorp.waypoint.ValidateJobRequest
-	83,  // 708: hashicorp.waypoint.Waypoint.GetJobStream:input_type -> hashicorp.waypoint.GetJobStreamRequest
-	95,  // 709: hashicorp.waypoint.Waypoint.GetRunner:input_type -> hashicorp.waypoint.GetRunnerRequest
-	96,  // 710: hashicorp.waypoint.Waypoint.ListRunners:input_type -> hashicorp.waypoint.ListRunnersRequest
-	98,  // 711: hashicorp.waypoint.Waypoint.AdoptRunner:input_type -> hashicorp.waypoint.AdoptRunnerRequest
-	99,  // 712: hashicorp.waypoint.Waypoint.ForgetRunner:input_type -> hashicorp.waypoint.ForgetRunnerRequest
-	462, // 713: hashicorp.waypoint.Waypoint.GetServerConfig:input_type -> google.protobuf.Empty
-	100, // 714: hashicorp.waypoint.Waypoint.SetServerConfig:input_type -> hashicorp.waypoint.SetServerConfigRequest
-	462, // 715: hashicorp.waypoint.Waypoint.CreateSnapshot:input_type -> google.protobuf.Empty
-	232, // 716: hashicorp.waypoint.Waypoint.RestoreSnapshot:input_type -> hashicorp.waypoint.RestoreSnapshotRequest
-	462, // 717: hashicorp.waypoint.Waypoint.BootstrapToken:input_type -> google.protobuf.Empty
-	224, // 718: hashicorp.waypoint.Waypoint.DecodeToken:input_type -> hashicorp.waypoint.DecodeTokenRequest
-	228, // 719: hashicorp.waypoint.Waypoint.GenerateInviteToken:input_type -> hashicorp.waypoint.InviteTokenRequest
-	226, // 720: hashicorp.waypoint.Waypoint.GenerateLoginToken:input_type -> hashicorp.waypoint.LoginTokenRequest
-	227, // 721: hashicorp.waypoint.Waypoint.GenerateRunnerToken:input_type -> hashicorp.waypoint.GenerateRunnerTokenRequest
-	230, // 722: hashicorp.waypoint.Waypoint.ConvertInviteToken:input_type -> hashicorp.waypoint.ConvertInviteTokenRequest
-	86,  // 723: hashicorp.waypoint.Waypoint.RunnerToken:input_type -> hashicorp.waypoint.RunnerTokenRequest
-	88,  // 724: hashicorp.waypoint.Waypoint.RunnerConfig:input_type -> hashicorp.waypoint.RunnerConfigRequest
-	91,  // 725: hashicorp.waypoint.Waypoint.RunnerJobStream:input_type -> hashicorp.waypoint.RunnerJobStreamRequest
-	93,  // 726: hashicorp.waypoint.Waypoint.RunnerGetDeploymentConfig:input_type -> hashicorp.waypoint.RunnerGetDeploymentConfigRequest
-	199, // 727: hashicorp.waypoint.Waypoint.EntrypointConfig:input_type -> hashicorp.waypoint.EntrypointConfigRequest
-	202, // 728: hashicorp.waypoint.Waypoint.EntrypointLogStream:input_type -> hashicorp.waypoint.EntrypointLogBatch
-	203, // 729: hashicorp.waypoint.Waypoint.EntrypointExecStream:input_type -> hashicorp.waypoint.EntrypointExecRequest
-	235, // 730: hashicorp.waypoint.Waypoint.WaypointHclFmt:input_type -> hashicorp.waypoint.WaypointHclFmtRequest
-	135, // 731: hashicorp.waypoint.Waypoint.UpsertOnDemandRunnerConfig:input_type -> hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest
-	137, // 732: hashicorp.waypoint.Waypoint.GetOnDemandRunnerConfig:input_type -> hashicorp.waypoint.GetOnDemandRunnerConfigRequest
-	462, // 733: hashicorp.waypoint.Waypoint.GetDefaultOnDemandRunnerConfig:input_type -> google.protobuf.Empty
-	139, // 734: hashicorp.waypoint.Waypoint.DeleteOnDemandRunnerConfig:input_type -> hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest
-	462, // 735: hashicorp.waypoint.Waypoint.ListOnDemandRunnerConfigs:input_type -> google.protobuf.Empty
-	126, // 736: hashicorp.waypoint.Waypoint.UpsertBuild:input_type -> hashicorp.waypoint.UpsertBuildRequest
-	142, // 737: hashicorp.waypoint.Waypoint.UpsertPushedArtifact:input_type -> hashicorp.waypoint.UpsertPushedArtifactRequest
-	150, // 738: hashicorp.waypoint.Waypoint.UpsertDeployment:input_type -> hashicorp.waypoint.UpsertDeploymentRequest
-	159, // 739: hashicorp.waypoint.Waypoint.UpsertRelease:input_type -> hashicorp.waypoint.UpsertReleaseRequest
-	177, // 740: hashicorp.waypoint.Waypoint.UpsertStatusReport:input_type -> hashicorp.waypoint.UpsertStatusReportRequest
-	47,  // 741: hashicorp.waypoint.Waypoint.GetTask:input_type -> hashicorp.waypoint.GetTaskRequest
-	50,  // 742: hashicorp.waypoint.Waypoint.ListTask:input_type -> hashicorp.waypoint.ListTaskRequest
-	52,  // 743: hashicorp.waypoint.Waypoint.CancelTask:input_type -> hashicorp.waypoint.CancelTaskRequest
-	168, // 744: hashicorp.waypoint.Waypoint.UpsertTrigger:input_type -> hashicorp.waypoint.UpsertTriggerRequest
-	170, // 745: hashicorp.waypoint.Waypoint.GetTrigger:input_type -> hashicorp.waypoint.GetTriggerRequest
-	172, // 746: hashicorp.waypoint.Waypoint.DeleteTrigger:input_type -> hashicorp.waypoint.DeleteTriggerRequest
-	175, // 747: hashicorp.waypoint.Waypoint.ListTriggers:input_type -> hashicorp.waypoint.ListTriggerRequest
-	173, // 748: hashicorp.waypoint.Waypoint.RunTrigger:input_type -> hashicorp.waypoint.RunTriggerRequest
-	207, // 749: hashicorp.waypoint.Waypoint.UpsertPipeline:input_type -> hashicorp.waypoint.UpsertPipelineRequest
-	211, // 750: hashicorp.waypoint.Waypoint.RunPipeline:input_type -> hashicorp.waypoint.RunPipelineRequest
-	209, // 751: hashicorp.waypoint.Waypoint.GetPipeline:input_type -> hashicorp.waypoint.GetPipelineRequest
-	217, // 752: hashicorp.waypoint.Waypoint.GetPipelineRun:input_type -> hashicorp.waypoint.GetPipelineRunRequest
-	209, // 753: hashicorp.waypoint.Waypoint.GetLatestPipelineRun:input_type -> hashicorp.waypoint.GetPipelineRequest
-	213, // 754: hashicorp.waypoint.Waypoint.ListPipelines:input_type -> hashicorp.waypoint.ListPipelinesRequest
-	215, // 755: hashicorp.waypoint.Waypoint.ListPipelineRuns:input_type -> hashicorp.waypoint.ListPipelineRunsRequest
-	219, // 756: hashicorp.waypoint.Waypoint.ConfigSyncPipeline:input_type -> hashicorp.waypoint.ConfigSyncPipelineRequest
-	240, // 757: hashicorp.waypoint.Waypoint.UI_ListProjects:input_type -> hashicorp.waypoint.UI.ListProjectsRequest
-	243, // 758: hashicorp.waypoint.Waypoint.UI_GetProject:input_type -> hashicorp.waypoint.UI.GetProjectRequest
-	245, // 759: hashicorp.waypoint.Waypoint.UI_ListPipelines:input_type -> hashicorp.waypoint.UI.ListPipelinesRequest
-	247, // 760: hashicorp.waypoint.Waypoint.UI_ListPipelineRuns:input_type -> hashicorp.waypoint.UI.ListPipelineRunsRequest
-	251, // 761: hashicorp.waypoint.Waypoint.UI_ListDeployments:input_type -> hashicorp.waypoint.UI.ListDeploymentsRequest
-	253, // 762: hashicorp.waypoint.Waypoint.UI_GetDeployment:input_type -> hashicorp.waypoint.UI.GetDeploymentRequest
-	256, // 763: hashicorp.waypoint.Waypoint.UI_ListReleases:input_type -> hashicorp.waypoint.UI.ListReleasesRequest
-	26,  // 764: hashicorp.waypoint.Waypoint.GetVersionInfo:output_type -> hashicorp.waypoint.GetVersionInfoResponse
-	68,  // 765: hashicorp.waypoint.Waypoint.ListOIDCAuthMethods:output_type -> hashicorp.waypoint.ListOIDCAuthMethodsResponse
-	70,  // 766: hashicorp.waypoint.Waypoint.GetOIDCAuthURL:output_type -> hashicorp.waypoint.GetOIDCAuthURLResponse
-	72,  // 767: hashicorp.waypoint.Waypoint.CompleteOIDCAuth:output_type -> hashicorp.waypoint.CompleteOIDCAuthResponse
-	174, // 768: hashicorp.waypoint.Waypoint.NoAuthRunTrigger:output_type -> hashicorp.waypoint.RunTriggerResponse
-	55,  // 769: hashicorp.waypoint.Waypoint.GetUser:output_type -> hashicorp.waypoint.GetUserResponse
-	56,  // 770: hashicorp.waypoint.Waypoint.ListUsers:output_type -> hashicorp.waypoint.ListUsersResponse
-	58,  // 771: hashicorp.waypoint.Waypoint.UpdateUser:output_type -> hashicorp.waypoint.UpdateUserResponse
-	462, // 772: hashicorp.waypoint.Waypoint.DeleteUser:output_type -> google.protobuf.Empty
-	63,  // 773: hashicorp.waypoint.Waypoint.UpsertAuthMethod:output_type -> hashicorp.waypoint.UpsertAuthMethodResponse
-	65,  // 774: hashicorp.waypoint.Waypoint.GetAuthMethod:output_type -> hashicorp.waypoint.GetAuthMethodResponse
-	67,  // 775: hashicorp.waypoint.Waypoint.ListAuthMethods:output_type -> hashicorp.waypoint.ListAuthMethodsResponse
-	462, // 776: hashicorp.waypoint.Waypoint.DeleteAuthMethod:output_type -> google.protobuf.Empty
-	110, // 777: hashicorp.waypoint.Waypoint.ListWorkspaces:output_type -> hashicorp.waypoint.ListWorkspacesResponse
-	112, // 778: hashicorp.waypoint.Waypoint.GetWorkspace:output_type -> hashicorp.waypoint.GetWorkspaceResponse
-	114, // 779: hashicorp.waypoint.Waypoint.UpsertWorkspace:output_type -> hashicorp.waypoint.UpsertWorkspaceResponse
-	116, // 780: hashicorp.waypoint.Waypoint.UpsertProject:output_type -> hashicorp.waypoint.UpsertProjectResponse
-	118, // 781: hashicorp.waypoint.Waypoint.GetProject:output_type -> hashicorp.waypoint.GetProjectResponse
-	120, // 782: hashicorp.waypoint.Waypoint.ListProjects:output_type -> hashicorp.waypoint.ListProjectsResponse
-	462, // 783: hashicorp.waypoint.Waypoint.DestroyProject:output_type -> google.protobuf.Empty
-	123, // 784: hashicorp.waypoint.Waypoint.GetApplication:output_type -> hashicorp.waypoint.GetApplicationResponse
-	125, // 785: hashicorp.waypoint.Waypoint.UpsertApplication:output_type -> hashicorp.waypoint.UpsertApplicationResponse
-	129, // 786: hashicorp.waypoint.Waypoint.ListBuilds:output_type -> hashicorp.waypoint.ListBuildsResponse
-	132, // 787: hashicorp.waypoint.Waypoint.GetBuild:output_type -> hashicorp.waypoint.Build
-	132, // 788: hashicorp.waypoint.Waypoint.GetLatestBuild:output_type -> hashicorp.waypoint.Build
-	147, // 789: hashicorp.waypoint.Waypoint.ListPushedArtifacts:output_type -> hashicorp.waypoint.ListPushedArtifactsResponse
-	148, // 790: hashicorp.waypoint.Waypoint.GetPushedArtifact:output_type -> hashicorp.waypoint.PushedArtifact
-	148, // 791: hashicorp.waypoint.Waypoint.GetLatestPushedArtifact:output_type -> hashicorp.waypoint.PushedArtifact
-	153, // 792: hashicorp.waypoint.Waypoint.ListDeployments:output_type -> hashicorp.waypoint.ListDeploymentsResponse
-	154, // 793: hashicorp.waypoint.Waypoint.GetDeployment:output_type -> hashicorp.waypoint.Deployment
-	157, // 794: hashicorp.waypoint.Waypoint.ListInstances:output_type -> hashicorp.waypoint.ListInstancesResponse
-	163, // 795: hashicorp.waypoint.Waypoint.ListReleases:output_type -> hashicorp.waypoint.ListReleasesResponse
-	165, // 796: hashicorp.waypoint.Waypoint.GetRelease:output_type -> hashicorp.waypoint.Release
-	165, // 797: hashicorp.waypoint.Waypoint.GetLatestRelease:output_type -> hashicorp.waypoint.Release
-	185, // 798: hashicorp.waypoint.Waypoint.GetStatusReport:output_type -> hashicorp.waypoint.StatusReport
-	185, // 799: hashicorp.waypoint.Waypoint.GetLatestStatusReport:output_type -> hashicorp.waypoint.StatusReport
-	181, // 800: hashicorp.waypoint.Waypoint.ListStatusReports:output_type -> hashicorp.waypoint.ListStatusReportsResponse
-	184, // 801: hashicorp.waypoint.Waypoint.ExpediteStatusReport:output_type -> hashicorp.waypoint.ExpediteStatusReportResponse
-	187, // 802: hashicorp.waypoint.Waypoint.GetLogStream:output_type -> hashicorp.waypoint.LogBatch
-	198, // 803: hashicorp.waypoint.Waypoint.StartExecStream:output_type -> hashicorp.waypoint.ExecStreamResponse
-	190, // 804: hashicorp.waypoint.Waypoint.SetConfig:output_type -> hashicorp.waypoint.ConfigSetResponse
-	192, // 805: hashicorp.waypoint.Waypoint.GetConfig:output_type -> hashicorp.waypoint.ConfigGetResponse
-	462, // 806: hashicorp.waypoint.Waypoint.SetConfigSource:output_type -> google.protobuf.Empty
-	196, // 807: hashicorp.waypoint.Waypoint.GetConfigSource:output_type -> hashicorp.waypoint.GetConfigSourceResponse
-	104, // 808: hashicorp.waypoint.Waypoint.CreateHostname:output_type -> hashicorp.waypoint.CreateHostnameResponse
-	462, // 809: hashicorp.waypoint.Waypoint.DeleteHostname:output_type -> google.protobuf.Empty
-	106, // 810: hashicorp.waypoint.Waypoint.ListHostnames:output_type -> hashicorp.waypoint.ListHostnamesResponse
-	74,  // 811: hashicorp.waypoint.Waypoint.QueueJob:output_type -> hashicorp.waypoint.QueueJobResponse
-	462, // 812: hashicorp.waypoint.Waypoint.CancelJob:output_type -> google.protobuf.Empty
-	78,  // 813: hashicorp.waypoint.Waypoint.GetJob:output_type -> hashicorp.waypoint.Job
-	82,  // 814: hashicorp.waypoint.Waypoint.ListJobs:output_type -> hashicorp.waypoint.ListJobsResponse
-	77,  // 815: hashicorp.waypoint.Waypoint.ValidateJob:output_type -> hashicorp.waypoint.ValidateJobResponse
-	84,  // 816: hashicorp.waypoint.Waypoint.GetJobStream:output_type -> hashicorp.waypoint.GetJobStreamResponse
-	85,  // 817: hashicorp.waypoint.Waypoint.GetRunner:output_type -> hashicorp.waypoint.Runner
-	97,  // 818: hashicorp.waypoint.Waypoint.ListRunners:output_type -> hashicorp.waypoint.ListRunnersResponse
-	462, // 819: hashicorp.waypoint.Waypoint.AdoptRunner:output_type -> google.protobuf.Empty
-	462, // 820: hashicorp.waypoint.Waypoint.ForgetRunner:output_type -> google.protobuf.Empty
-	101, // 821: hashicorp.waypoint.Waypoint.GetServerConfig:output_type -> hashicorp.waypoint.GetServerConfigResponse
-	462, // 822: hashicorp.waypoint.Waypoint.SetServerConfig:output_type -> google.protobuf.Empty
-	231, // 823: hashicorp.waypoint.Waypoint.CreateSnapshot:output_type -> hashicorp.waypoint.CreateSnapshotResponse
-	462, // 824: hashicorp.waypoint.Waypoint.RestoreSnapshot:output_type -> google.protobuf.Empty
-	229, // 825: hashicorp.waypoint.Waypoint.BootstrapToken:output_type -> hashicorp.waypoint.NewTokenResponse
-	225, // 826: hashicorp.waypoint.Waypoint.DecodeToken:output_type -> hashicorp.waypoint.DecodeTokenResponse
-	229, // 827: hashicorp.waypoint.Waypoint.GenerateInviteToken:output_type -> hashicorp.waypoint.NewTokenResponse
-	229, // 828: hashicorp.waypoint.Waypoint.GenerateLoginToken:output_type -> hashicorp.waypoint.NewTokenResponse
-	229, // 829: hashicorp.waypoint.Waypoint.GenerateRunnerToken:output_type -> hashicorp.waypoint.NewTokenResponse
-	229, // 830: hashicorp.waypoint.Waypoint.ConvertInviteToken:output_type -> hashicorp.waypoint.NewTokenResponse
-	87,  // 831: hashicorp.waypoint.Waypoint.RunnerToken:output_type -> hashicorp.waypoint.RunnerTokenResponse
-	89,  // 832: hashicorp.waypoint.Waypoint.RunnerConfig:output_type -> hashicorp.waypoint.RunnerConfigResponse
-	92,  // 833: hashicorp.waypoint.Waypoint.RunnerJobStream:output_type -> hashicorp.waypoint.RunnerJobStreamResponse
-	94,  // 834: hashicorp.waypoint.Waypoint.RunnerGetDeploymentConfig:output_type -> hashicorp.waypoint.RunnerGetDeploymentConfigResponse
-	200, // 835: hashicorp.waypoint.Waypoint.EntrypointConfig:output_type -> hashicorp.waypoint.EntrypointConfigResponse
-	462, // 836: hashicorp.waypoint.Waypoint.EntrypointLogStream:output_type -> google.protobuf.Empty
-	204, // 837: hashicorp.waypoint.Waypoint.EntrypointExecStream:output_type -> hashicorp.waypoint.EntrypointExecResponse
-	236, // 838: hashicorp.waypoint.Waypoint.WaypointHclFmt:output_type -> hashicorp.waypoint.WaypointHclFmtResponse
-	136, // 839: hashicorp.waypoint.Waypoint.UpsertOnDemandRunnerConfig:output_type -> hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse
-	138, // 840: hashicorp.waypoint.Waypoint.GetOnDemandRunnerConfig:output_type -> hashicorp.waypoint.GetOnDemandRunnerConfigResponse
-	138, // 841: hashicorp.waypoint.Waypoint.GetDefaultOnDemandRunnerConfig:output_type -> hashicorp.waypoint.GetOnDemandRunnerConfigResponse
-	140, // 842: hashicorp.waypoint.Waypoint.DeleteOnDemandRunnerConfig:output_type -> hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse
-	141, // 843: hashicorp.waypoint.Waypoint.ListOnDemandRunnerConfigs:output_type -> hashicorp.waypoint.ListOnDemandRunnerConfigsResponse
-	127, // 844: hashicorp.waypoint.Waypoint.UpsertBuild:output_type -> hashicorp.waypoint.UpsertBuildResponse
-	143, // 845: hashicorp.waypoint.Waypoint.UpsertPushedArtifact:output_type -> hashicorp.waypoint.UpsertPushedArtifactResponse
-	151, // 846: hashicorp.waypoint.Waypoint.UpsertDeployment:output_type -> hashicorp.waypoint.UpsertDeploymentResponse
-	160, // 847: hashicorp.waypoint.Waypoint.UpsertRelease:output_type -> hashicorp.waypoint.UpsertReleaseResponse
-	178, // 848: hashicorp.waypoint.Waypoint.UpsertStatusReport:output_type -> hashicorp.waypoint.UpsertStatusReportResponse
-	48,  // 849: hashicorp.waypoint.Waypoint.GetTask:output_type -> hashicorp.waypoint.GetTaskResponse
-	51,  // 850: hashicorp.waypoint.Waypoint.ListTask:output_type -> hashicorp.waypoint.ListTaskResponse
-	462, // 851: hashicorp.waypoint.Waypoint.CancelTask:output_type -> google.protobuf.Empty
-	169, // 852: hashicorp.waypoint.Waypoint.UpsertTrigger:output_type -> hashicorp.waypoint.UpsertTriggerResponse
-	171, // 853: hashicorp.waypoint.Waypoint.GetTrigger:output_type -> hashicorp.waypoint.GetTriggerResponse
-	462, // 854: hashicorp.waypoint.Waypoint.DeleteTrigger:output_type -> google.protobuf.Empty
-	176, // 855: hashicorp.waypoint.Waypoint.ListTriggers:output_type -> hashicorp.waypoint.ListTriggerResponse
-	174, // 856: hashicorp.waypoint.Waypoint.RunTrigger:output_type -> hashicorp.waypoint.RunTriggerResponse
-	208, // 857: hashicorp.waypoint.Waypoint.UpsertPipeline:output_type -> hashicorp.waypoint.UpsertPipelineResponse
-	212, // 858: hashicorp.waypoint.Waypoint.RunPipeline:output_type -> hashicorp.waypoint.RunPipelineResponse
-	210, // 859: hashicorp.waypoint.Waypoint.GetPipeline:output_type -> hashicorp.waypoint.GetPipelineResponse
-	218, // 860: hashicorp.waypoint.Waypoint.GetPipelineRun:output_type -> hashicorp.waypoint.GetPipelineRunResponse
-	218, // 861: hashicorp.waypoint.Waypoint.GetLatestPipelineRun:output_type -> hashicorp.waypoint.GetPipelineRunResponse
-	214, // 862: hashicorp.waypoint.Waypoint.ListPipelines:output_type -> hashicorp.waypoint.ListPipelinesResponse
-	216, // 863: hashicorp.waypoint.Waypoint.ListPipelineRuns:output_type -> hashicorp.waypoint.ListPipelineRunsResponse
-	220, // 864: hashicorp.waypoint.Waypoint.ConfigSyncPipeline:output_type -> hashicorp.waypoint.ConfigSyncPipelineResponse
-	241, // 865: hashicorp.waypoint.Waypoint.UI_ListProjects:output_type -> hashicorp.waypoint.UI.ListProjectsResponse
-	244, // 866: hashicorp.waypoint.Waypoint.UI_GetProject:output_type -> hashicorp.waypoint.UI.GetProjectResponse
-	246, // 867: hashicorp.waypoint.Waypoint.UI_ListPipelines:output_type -> hashicorp.waypoint.UI.ListPipelinesResponse
-	248, // 868: hashicorp.waypoint.Waypoint.UI_ListPipelineRuns:output_type -> hashicorp.waypoint.UI.ListPipelineRunsResponse
-	252, // 869: hashicorp.waypoint.Waypoint.UI_ListDeployments:output_type -> hashicorp.waypoint.UI.ListDeploymentsResponse
-	254, // 870: hashicorp.waypoint.Waypoint.UI_GetDeployment:output_type -> hashicorp.waypoint.UI.GetDeploymentResponse
-	257, // 871: hashicorp.waypoint.Waypoint.UI_ListReleases:output_type -> hashicorp.waypoint.UI.ListReleasesResponse
-	764, // [764:872] is the sub-list for method output_type
-	656, // [656:764] is the sub-list for method input_type
-	656, // [656:656] is the sub-list for extension type_name
-	656, // [656:656] is the sub-list for extension extendee
-	0,   // [0:656] is the sub-list for field type_name
+	471, // 32: hashicorp.waypoint.DestroyedResource.state:type_name -> opaqueany.Any
+	304, // 33: hashicorp.waypoint.TaskLaunchInfo.environment_variables:type_name -> hashicorp.waypoint.TaskLaunchInfo.EnvironmentVariablesEntry
+	297, // 34: hashicorp.waypoint.Task.task_job:type_name -> hashicorp.waypoint.Ref.Job
+	297, // 35: hashicorp.waypoint.Task.watch_job:type_name -> hashicorp.waypoint.Ref.Job
+	297, // 36: hashicorp.waypoint.Task.start_job:type_name -> hashicorp.waypoint.Ref.Job
+	297, // 37: hashicorp.waypoint.Task.stop_job:type_name -> hashicorp.waypoint.Ref.Job
+	471, // 38: hashicorp.waypoint.Task.state:type_name -> opaqueany.Any
+	10,  // 39: hashicorp.waypoint.Task.job_state:type_name -> hashicorp.waypoint.Task.State
+	46,  // 40: hashicorp.waypoint.UpsertTaskRequest.task:type_name -> hashicorp.waypoint.Task
+	46,  // 41: hashicorp.waypoint.UpsertTaskResponse.task:type_name -> hashicorp.waypoint.Task
+	298, // 42: hashicorp.waypoint.GetTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
+	46,  // 43: hashicorp.waypoint.GetTaskResponse.task:type_name -> hashicorp.waypoint.Task
+	80,  // 44: hashicorp.waypoint.GetTaskResponse.task_job:type_name -> hashicorp.waypoint.Job
+	80,  // 45: hashicorp.waypoint.GetTaskResponse.start_job:type_name -> hashicorp.waypoint.Job
+	80,  // 46: hashicorp.waypoint.GetTaskResponse.stop_job:type_name -> hashicorp.waypoint.Job
+	80,  // 47: hashicorp.waypoint.GetTaskResponse.watch_job:type_name -> hashicorp.waypoint.Job
+	298, // 48: hashicorp.waypoint.DeleteTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
+	10,  // 49: hashicorp.waypoint.ListTaskRequest.taskState:type_name -> hashicorp.waypoint.Task.State
+	50,  // 50: hashicorp.waypoint.ListTaskResponse.tasks:type_name -> hashicorp.waypoint.GetTaskResponse
+	298, // 51: hashicorp.waypoint.CancelTaskRequest.ref:type_name -> hashicorp.waypoint.Ref.Task
+	290, // 52: hashicorp.waypoint.GetUserRequest.user:type_name -> hashicorp.waypoint.Ref.User
+	35,  // 53: hashicorp.waypoint.GetUserResponse.user:type_name -> hashicorp.waypoint.User
+	35,  // 54: hashicorp.waypoint.ListUsersResponse.users:type_name -> hashicorp.waypoint.User
+	35,  // 55: hashicorp.waypoint.UpdateUserRequest.user:type_name -> hashicorp.waypoint.User
+	35,  // 56: hashicorp.waypoint.UpdateUserResponse.user:type_name -> hashicorp.waypoint.User
+	290, // 57: hashicorp.waypoint.DeleteUserRequest.user:type_name -> hashicorp.waypoint.Ref.User
+	305, // 58: hashicorp.waypoint.AuthMethod.oidc:type_name -> hashicorp.waypoint.AuthMethod.OIDC
+	11,  // 59: hashicorp.waypoint.OIDCAuthMethod.kind:type_name -> hashicorp.waypoint.OIDCAuthMethod.Kind
+	62,  // 60: hashicorp.waypoint.UpsertAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.AuthMethod
+	62,  // 61: hashicorp.waypoint.UpsertAuthMethodResponse.auth_method:type_name -> hashicorp.waypoint.AuthMethod
+	293, // 62: hashicorp.waypoint.GetAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
+	62,  // 63: hashicorp.waypoint.GetAuthMethodResponse.auth_method:type_name -> hashicorp.waypoint.AuthMethod
+	293, // 64: hashicorp.waypoint.DeleteAuthMethodRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
+	62,  // 65: hashicorp.waypoint.ListAuthMethodsResponse.auth_methods:type_name -> hashicorp.waypoint.AuthMethod
+	63,  // 66: hashicorp.waypoint.ListOIDCAuthMethodsResponse.auth_methods:type_name -> hashicorp.waypoint.OIDCAuthMethod
+	293, // 67: hashicorp.waypoint.GetOIDCAuthURLRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
+	293, // 68: hashicorp.waypoint.CompleteOIDCAuthRequest.auth_method:type_name -> hashicorp.waypoint.Ref.AuthMethod
+	35,  // 69: hashicorp.waypoint.CompleteOIDCAuthResponse.user:type_name -> hashicorp.waypoint.User
+	80,  // 70: hashicorp.waypoint.QueueJobRequest.job:type_name -> hashicorp.waypoint.Job
+	80,  // 71: hashicorp.waypoint.ValidateJobRequest.job:type_name -> hashicorp.waypoint.Job
+	470, // 72: hashicorp.waypoint.ValidateJobResponse.validation_error:type_name -> google.rpc.Status
+	278, // 73: hashicorp.waypoint.Job.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 74: hashicorp.waypoint.Job.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	286, // 75: hashicorp.waypoint.Job.target_runner:type_name -> hashicorp.waypoint.Ref.Runner
+	295, // 76: hashicorp.waypoint.Job.ondemand_runner:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
+	308, // 77: hashicorp.waypoint.Job.ondemand_runner_task:type_name -> hashicorp.waypoint.Job.TaskOverride
+	309, // 78: hashicorp.waypoint.Job.labels:type_name -> hashicorp.waypoint.Job.LabelsEntry
+	314, // 79: hashicorp.waypoint.Job.data_source:type_name -> hashicorp.waypoint.Job.DataSource
+	310, // 80: hashicorp.waypoint.Job.data_source_overrides:type_name -> hashicorp.waypoint.Job.DataSourceOverridesEntry
+	236, // 81: hashicorp.waypoint.Job.waypoint_hcl:type_name -> hashicorp.waypoint.Hcl
+	32,  // 82: hashicorp.waypoint.Job.variables:type_name -> hashicorp.waypoint.Variable
+	318, // 83: hashicorp.waypoint.Job.noop:type_name -> hashicorp.waypoint.Job.Noop
+	325, // 84: hashicorp.waypoint.Job.build:type_name -> hashicorp.waypoint.Job.BuildOp
+	327, // 85: hashicorp.waypoint.Job.push:type_name -> hashicorp.waypoint.Job.PushOp
+	329, // 86: hashicorp.waypoint.Job.deploy:type_name -> hashicorp.waypoint.Job.DeployOp
+	334, // 87: hashicorp.waypoint.Job.destroy:type_name -> hashicorp.waypoint.Job.DestroyOp
+	335, // 88: hashicorp.waypoint.Job.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
+	321, // 89: hashicorp.waypoint.Job.validate:type_name -> hashicorp.waypoint.Job.ValidateOp
+	323, // 90: hashicorp.waypoint.Job.auth:type_name -> hashicorp.waypoint.Job.AuthOp
+	345, // 91: hashicorp.waypoint.Job.docs:type_name -> hashicorp.waypoint.Job.DocsOp
+	347, // 92: hashicorp.waypoint.Job.config_sync:type_name -> hashicorp.waypoint.Job.ConfigSyncOp
+	331, // 93: hashicorp.waypoint.Job.exec:type_name -> hashicorp.waypoint.Job.ExecOp
+	319, // 94: hashicorp.waypoint.Job.up:type_name -> hashicorp.waypoint.Job.UpOp
+	333, // 95: hashicorp.waypoint.Job.logs:type_name -> hashicorp.waypoint.Job.LogsOp
+	358, // 96: hashicorp.waypoint.Job.queue_project:type_name -> hashicorp.waypoint.Job.QueueProjectOp
+	351, // 97: hashicorp.waypoint.Job.poll:type_name -> hashicorp.waypoint.Job.PollOp
+	343, // 98: hashicorp.waypoint.Job.status_report:type_name -> hashicorp.waypoint.Job.StatusReportOp
+	338, // 99: hashicorp.waypoint.Job.start_task:type_name -> hashicorp.waypoint.Job.StartTaskLaunchOp
+	340, // 100: hashicorp.waypoint.Job.stop_task:type_name -> hashicorp.waypoint.Job.StopTaskLaunchOp
+	353, // 101: hashicorp.waypoint.Job.init:type_name -> hashicorp.waypoint.Job.InitOp
+	341, // 102: hashicorp.waypoint.Job.watch_task:type_name -> hashicorp.waypoint.Job.WatchTaskOp
+	355, // 103: hashicorp.waypoint.Job.pipeline_step:type_name -> hashicorp.waypoint.Job.PipelineStepOp
+	356, // 104: hashicorp.waypoint.Job.destroy_project:type_name -> hashicorp.waypoint.Job.DestroyProjectOp
+	12,  // 105: hashicorp.waypoint.Job.state:type_name -> hashicorp.waypoint.Job.State
+	288, // 106: hashicorp.waypoint.Job.assigned_runner:type_name -> hashicorp.waypoint.Ref.RunnerId
+	469, // 107: hashicorp.waypoint.Job.queue_time:type_name -> google.protobuf.Timestamp
+	469, // 108: hashicorp.waypoint.Job.assign_time:type_name -> google.protobuf.Timestamp
+	469, // 109: hashicorp.waypoint.Job.ack_time:type_name -> google.protobuf.Timestamp
+	469, // 110: hashicorp.waypoint.Job.complete_time:type_name -> google.protobuf.Timestamp
+	360, // 111: hashicorp.waypoint.Job.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	311, // 112: hashicorp.waypoint.Job.variable_final_values:type_name -> hashicorp.waypoint.Job.VariableFinalValuesEntry
+	313, // 113: hashicorp.waypoint.Job.config:type_name -> hashicorp.waypoint.Job.Config
+	470, // 114: hashicorp.waypoint.Job.error:type_name -> google.rpc.Status
+	312, // 115: hashicorp.waypoint.Job.result:type_name -> hashicorp.waypoint.Job.Result
+	469, // 116: hashicorp.waypoint.Job.cancel_time:type_name -> google.protobuf.Timestamp
+	469, // 117: hashicorp.waypoint.Job.expire_time:type_name -> google.protobuf.Timestamp
+	298, // 118: hashicorp.waypoint.Job.task:type_name -> hashicorp.waypoint.Ref.Task
+	301, // 119: hashicorp.waypoint.Job.pipeline:type_name -> hashicorp.waypoint.Ref.PipelineStep
+	368, // 120: hashicorp.waypoint.Documentation.fields:type_name -> hashicorp.waypoint.Documentation.FieldsEntry
+	370, // 121: hashicorp.waypoint.Documentation.mappers:type_name -> hashicorp.waypoint.Documentation.Mapper
+	280, // 122: hashicorp.waypoint.ListJobsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	279, // 123: hashicorp.waypoint.ListJobsRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 124: hashicorp.waypoint.ListJobsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	286, // 125: hashicorp.waypoint.ListJobsRequest.targetRunner:type_name -> hashicorp.waypoint.Ref.Runner
+	301, // 126: hashicorp.waypoint.ListJobsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.PipelineStep
+	12,  // 127: hashicorp.waypoint.ListJobsRequest.jobState:type_name -> hashicorp.waypoint.Job.State
+	240, // 128: hashicorp.waypoint.ListJobsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
+	80,  // 129: hashicorp.waypoint.ListJobsResponse.jobs:type_name -> hashicorp.waypoint.Job
+	241, // 130: hashicorp.waypoint.ListJobsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
+	371, // 131: hashicorp.waypoint.GetJobStreamResponse.open:type_name -> hashicorp.waypoint.GetJobStreamResponse.Open
+	372, // 132: hashicorp.waypoint.GetJobStreamResponse.state:type_name -> hashicorp.waypoint.GetJobStreamResponse.State
+	373, // 133: hashicorp.waypoint.GetJobStreamResponse.job:type_name -> hashicorp.waypoint.GetJobStreamResponse.JobChange
+	375, // 134: hashicorp.waypoint.GetJobStreamResponse.terminal:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal
+	374, // 135: hashicorp.waypoint.GetJobStreamResponse.download:type_name -> hashicorp.waypoint.GetJobStreamResponse.Download
+	376, // 136: hashicorp.waypoint.GetJobStreamResponse.error:type_name -> hashicorp.waypoint.GetJobStreamResponse.Error
+	377, // 137: hashicorp.waypoint.GetJobStreamResponse.complete:type_name -> hashicorp.waypoint.GetJobStreamResponse.Complete
+	390, // 138: hashicorp.waypoint.Runner.odr:type_name -> hashicorp.waypoint.Runner.ODR
+	391, // 139: hashicorp.waypoint.Runner.local:type_name -> hashicorp.waypoint.Runner.Local
+	392, // 140: hashicorp.waypoint.Runner.remote:type_name -> hashicorp.waypoint.Runner.Remote
+	37,  // 141: hashicorp.waypoint.Runner.components:type_name -> hashicorp.waypoint.Component
+	389, // 142: hashicorp.waypoint.Runner.labels:type_name -> hashicorp.waypoint.Runner.LabelsEntry
+	469, // 143: hashicorp.waypoint.Runner.first_seen:type_name -> google.protobuf.Timestamp
+	469, // 144: hashicorp.waypoint.Runner.last_seen:type_name -> google.protobuf.Timestamp
+	14,  // 145: hashicorp.waypoint.Runner.adoption_state:type_name -> hashicorp.waypoint.Runner.AdoptionState
+	87,  // 146: hashicorp.waypoint.RunnerTokenRequest.runner:type_name -> hashicorp.waypoint.Runner
+	393, // 147: hashicorp.waypoint.RunnerConfigRequest.open:type_name -> hashicorp.waypoint.RunnerConfigRequest.Open
+	92,  // 148: hashicorp.waypoint.RunnerConfigResponse.config:type_name -> hashicorp.waypoint.RunnerConfig
+	190, // 149: hashicorp.waypoint.RunnerConfig.config_vars:type_name -> hashicorp.waypoint.ConfigVar
+	195, // 150: hashicorp.waypoint.RunnerConfig.config_sources:type_name -> hashicorp.waypoint.ConfigSource
+	394, // 151: hashicorp.waypoint.RunnerJobStreamRequest.request:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Request
+	395, // 152: hashicorp.waypoint.RunnerJobStreamRequest.ack:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Ack
+	396, // 153: hashicorp.waypoint.RunnerJobStreamRequest.complete:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Complete
+	397, // 154: hashicorp.waypoint.RunnerJobStreamRequest.error:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Error
+	375, // 155: hashicorp.waypoint.RunnerJobStreamRequest.terminal:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal
+	374, // 156: hashicorp.waypoint.RunnerJobStreamRequest.download:type_name -> hashicorp.waypoint.GetJobStreamResponse.Download
+	399, // 157: hashicorp.waypoint.RunnerJobStreamRequest.config_load:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad
+	400, // 158: hashicorp.waypoint.RunnerJobStreamRequest.variable_values_set:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet
+	398, // 159: hashicorp.waypoint.RunnerJobStreamRequest.heartbeat:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.Heartbeat
+	402, // 160: hashicorp.waypoint.RunnerJobStreamResponse.assignment:type_name -> hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment
+	403, // 161: hashicorp.waypoint.RunnerJobStreamResponse.cancel:type_name -> hashicorp.waypoint.RunnerJobStreamResponse.JobCancel
+	87,  // 162: hashicorp.waypoint.ListRunnersResponse.runners:type_name -> hashicorp.waypoint.Runner
+	104, // 163: hashicorp.waypoint.SetServerConfigRequest.config:type_name -> hashicorp.waypoint.ServerConfig
+	104, // 164: hashicorp.waypoint.GetServerConfigResponse.config:type_name -> hashicorp.waypoint.ServerConfig
+	404, // 165: hashicorp.waypoint.ServerConfig.advertise_addrs:type_name -> hashicorp.waypoint.ServerConfig.AdvertiseAddr
+	406, // 166: hashicorp.waypoint.CreateHostnameRequest.target:type_name -> hashicorp.waypoint.Hostname.Target
+	110, // 167: hashicorp.waypoint.CreateHostnameResponse.hostname:type_name -> hashicorp.waypoint.Hostname
+	406, // 168: hashicorp.waypoint.ListHostnamesRequest.target:type_name -> hashicorp.waypoint.Hostname.Target
+	110, // 169: hashicorp.waypoint.ListHostnamesResponse.hostnames:type_name -> hashicorp.waypoint.Hostname
+	405, // 170: hashicorp.waypoint.Hostname.target_labels:type_name -> hashicorp.waypoint.Hostname.TargetLabelsEntry
+	468, // 171: hashicorp.waypoint.ListWorkspacesRequest.global:type_name -> google.protobuf.Empty
+	279, // 172: hashicorp.waypoint.ListWorkspacesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 173: hashicorp.waypoint.ListWorkspacesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	34,  // 174: hashicorp.waypoint.ListWorkspacesResponse.workspaces:type_name -> hashicorp.waypoint.Workspace
+	280, // 175: hashicorp.waypoint.GetWorkspaceRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	34,  // 176: hashicorp.waypoint.GetWorkspaceResponse.workspace:type_name -> hashicorp.waypoint.Workspace
+	34,  // 177: hashicorp.waypoint.UpsertWorkspaceRequest.workspace:type_name -> hashicorp.waypoint.Workspace
+	34,  // 178: hashicorp.waypoint.UpsertWorkspaceResponse.workspace:type_name -> hashicorp.waypoint.Workspace
+	33,  // 179: hashicorp.waypoint.UpsertProjectRequest.project:type_name -> hashicorp.waypoint.Project
+	33,  // 180: hashicorp.waypoint.UpsertProjectResponse.project:type_name -> hashicorp.waypoint.Project
+	279, // 181: hashicorp.waypoint.GetProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	33,  // 182: hashicorp.waypoint.GetProjectResponse.project:type_name -> hashicorp.waypoint.Project
+	273, // 183: hashicorp.waypoint.GetProjectResponse.workspaces:type_name -> hashicorp.waypoint.Workspace.Project
+	240, // 184: hashicorp.waypoint.ListProjectsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
+	279, // 185: hashicorp.waypoint.ListProjectsResponse.projects:type_name -> hashicorp.waypoint.Ref.Project
+	241, // 186: hashicorp.waypoint.ListProjectsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
+	279, // 187: hashicorp.waypoint.DestroyProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 188: hashicorp.waypoint.GetApplicationRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	31,  // 189: hashicorp.waypoint.GetApplicationResponse.application:type_name -> hashicorp.waypoint.Application
+	279, // 190: hashicorp.waypoint.UpsertApplicationRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	31,  // 191: hashicorp.waypoint.UpsertApplicationResponse.application:type_name -> hashicorp.waypoint.Application
+	134, // 192: hashicorp.waypoint.UpsertBuildRequest.build:type_name -> hashicorp.waypoint.Build
+	134, // 193: hashicorp.waypoint.UpsertBuildResponse.build:type_name -> hashicorp.waypoint.Build
+	278, // 194: hashicorp.waypoint.ListBuildsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 195: hashicorp.waypoint.ListBuildsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	41,  // 196: hashicorp.waypoint.ListBuildsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	134, // 197: hashicorp.waypoint.ListBuildsResponse.builds:type_name -> hashicorp.waypoint.Build
+	278, // 198: hashicorp.waypoint.GetLatestBuildRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 199: hashicorp.waypoint.GetLatestBuildRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	284, // 200: hashicorp.waypoint.GetBuildRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	278, // 201: hashicorp.waypoint.Build.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 202: hashicorp.waypoint.Build.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	38,  // 203: hashicorp.waypoint.Build.status:type_name -> hashicorp.waypoint.Status
+	37,  // 204: hashicorp.waypoint.Build.component:type_name -> hashicorp.waypoint.Component
+	135, // 205: hashicorp.waypoint.Build.artifact:type_name -> hashicorp.waypoint.Artifact
+	408, // 206: hashicorp.waypoint.Build.labels:type_name -> hashicorp.waypoint.Build.LabelsEntry
+	409, // 207: hashicorp.waypoint.Build.preload:type_name -> hashicorp.waypoint.Build.Preload
+	471, // 208: hashicorp.waypoint.Artifact.artifact:type_name -> opaqueany.Any
+	286, // 209: hashicorp.waypoint.OnDemandRunnerConfig.target_runner:type_name -> hashicorp.waypoint.Ref.Runner
+	410, // 210: hashicorp.waypoint.OnDemandRunnerConfig.environment_variables:type_name -> hashicorp.waypoint.OnDemandRunnerConfig.EnvironmentVariablesEntry
+	26,  // 211: hashicorp.waypoint.OnDemandRunnerConfig.config_format:type_name -> hashicorp.waypoint.Hcl.Format
+	136, // 212: hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
+	136, // 213: hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
+	295, // 214: hashicorp.waypoint.GetOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
+	136, // 215: hashicorp.waypoint.GetOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
+	295, // 216: hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest.config:type_name -> hashicorp.waypoint.Ref.OnDemandRunnerConfig
+	136, // 217: hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse.config:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
+	136, // 218: hashicorp.waypoint.ListOnDemandRunnerConfigsResponse.configs:type_name -> hashicorp.waypoint.OnDemandRunnerConfig
+	150, // 219: hashicorp.waypoint.UpsertPushedArtifactRequest.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	150, // 220: hashicorp.waypoint.UpsertPushedArtifactResponse.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	278, // 221: hashicorp.waypoint.GetLatestPushedArtifactRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 222: hashicorp.waypoint.GetLatestPushedArtifactRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	284, // 223: hashicorp.waypoint.GetPushedArtifactRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	278, // 224: hashicorp.waypoint.ListPushedArtifactsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 225: hashicorp.waypoint.ListPushedArtifactsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	39,  // 226: hashicorp.waypoint.ListPushedArtifactsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	41,  // 227: hashicorp.waypoint.ListPushedArtifactsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	150, // 228: hashicorp.waypoint.ListPushedArtifactsResponse.artifacts:type_name -> hashicorp.waypoint.PushedArtifact
+	278, // 229: hashicorp.waypoint.PushedArtifact.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 230: hashicorp.waypoint.PushedArtifact.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	38,  // 231: hashicorp.waypoint.PushedArtifact.status:type_name -> hashicorp.waypoint.Status
+	37,  // 232: hashicorp.waypoint.PushedArtifact.component:type_name -> hashicorp.waypoint.Component
+	135, // 233: hashicorp.waypoint.PushedArtifact.artifact:type_name -> hashicorp.waypoint.Artifact
+	411, // 234: hashicorp.waypoint.PushedArtifact.labels:type_name -> hashicorp.waypoint.PushedArtifact.LabelsEntry
+	134, // 235: hashicorp.waypoint.PushedArtifact.build:type_name -> hashicorp.waypoint.Build
+	412, // 236: hashicorp.waypoint.PushedArtifact.preload:type_name -> hashicorp.waypoint.PushedArtifact.Preload
+	284, // 237: hashicorp.waypoint.GetDeploymentRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	16,  // 238: hashicorp.waypoint.GetDeploymentRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
+	156, // 239: hashicorp.waypoint.UpsertDeploymentRequest.deployment:type_name -> hashicorp.waypoint.Deployment
+	15,  // 240: hashicorp.waypoint.UpsertDeploymentRequest.auto_hostname:type_name -> hashicorp.waypoint.UpsertDeploymentRequest.Tristate
+	156, // 241: hashicorp.waypoint.UpsertDeploymentResponse.deployment:type_name -> hashicorp.waypoint.Deployment
+	278, // 242: hashicorp.waypoint.ListDeploymentsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 243: hashicorp.waypoint.ListDeploymentsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	39,  // 244: hashicorp.waypoint.ListDeploymentsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	8,   // 245: hashicorp.waypoint.ListDeploymentsRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	41,  // 246: hashicorp.waypoint.ListDeploymentsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	16,  // 247: hashicorp.waypoint.ListDeploymentsRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
+	156, // 248: hashicorp.waypoint.ListDeploymentsResponse.deployments:type_name -> hashicorp.waypoint.Deployment
+	278, // 249: hashicorp.waypoint.Deployment.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 250: hashicorp.waypoint.Deployment.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	42,  // 251: hashicorp.waypoint.Deployment.generation:type_name -> hashicorp.waypoint.Generation
+	8,   // 252: hashicorp.waypoint.Deployment.state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	38,  // 253: hashicorp.waypoint.Deployment.status:type_name -> hashicorp.waypoint.Status
+	37,  // 254: hashicorp.waypoint.Deployment.component:type_name -> hashicorp.waypoint.Component
+	471, // 255: hashicorp.waypoint.Deployment.deployment:type_name -> opaqueany.Any
+	413, // 256: hashicorp.waypoint.Deployment.labels:type_name -> hashicorp.waypoint.Deployment.LabelsEntry
+	43,  // 257: hashicorp.waypoint.Deployment.declared_resources:type_name -> hashicorp.waypoint.DeclaredResource
+	44,  // 258: hashicorp.waypoint.Deployment.destroyed_resources:type_name -> hashicorp.waypoint.DestroyedResource
+	414, // 259: hashicorp.waypoint.Deployment.preload:type_name -> hashicorp.waypoint.Deployment.Preload
+	156, // 260: hashicorp.waypoint.DeploymentExpanded.deployment:type_name -> hashicorp.waypoint.Deployment
+	187, // 261: hashicorp.waypoint.DeploymentExpanded.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
+	415, // 262: hashicorp.waypoint.ListInstancesRequest.application:type_name -> hashicorp.waypoint.ListInstancesRequest.Application
+	160, // 263: hashicorp.waypoint.ListInstancesResponse.instances:type_name -> hashicorp.waypoint.Instance
+	278, // 264: hashicorp.waypoint.Instance.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 265: hashicorp.waypoint.Instance.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	17,  // 266: hashicorp.waypoint.Instance.type:type_name -> hashicorp.waypoint.Instance.Type
+	167, // 267: hashicorp.waypoint.UpsertReleaseRequest.release:type_name -> hashicorp.waypoint.Release
+	167, // 268: hashicorp.waypoint.UpsertReleaseResponse.release:type_name -> hashicorp.waypoint.Release
+	278, // 269: hashicorp.waypoint.GetLatestReleaseRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 270: hashicorp.waypoint.GetLatestReleaseRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	18,  // 271: hashicorp.waypoint.GetLatestReleaseRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
+	278, // 272: hashicorp.waypoint.ListReleasesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 273: hashicorp.waypoint.ListReleasesRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	39,  // 274: hashicorp.waypoint.ListReleasesRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	8,   // 275: hashicorp.waypoint.ListReleasesRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	41,  // 276: hashicorp.waypoint.ListReleasesRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	18,  // 277: hashicorp.waypoint.ListReleasesRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
+	167, // 278: hashicorp.waypoint.ListReleasesResponse.releases:type_name -> hashicorp.waypoint.Release
+	284, // 279: hashicorp.waypoint.GetReleaseRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	18,  // 280: hashicorp.waypoint.GetReleaseRequest.load_details:type_name -> hashicorp.waypoint.Release.LoadDetails
+	278, // 281: hashicorp.waypoint.Release.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 282: hashicorp.waypoint.Release.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	38,  // 283: hashicorp.waypoint.Release.status:type_name -> hashicorp.waypoint.Status
+	8,   // 284: hashicorp.waypoint.Release.state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	37,  // 285: hashicorp.waypoint.Release.component:type_name -> hashicorp.waypoint.Component
+	471, // 286: hashicorp.waypoint.Release.release:type_name -> opaqueany.Any
+	416, // 287: hashicorp.waypoint.Release.labels:type_name -> hashicorp.waypoint.Release.LabelsEntry
+	43,  // 288: hashicorp.waypoint.Release.declared_resources:type_name -> hashicorp.waypoint.DeclaredResource
+	44,  // 289: hashicorp.waypoint.Release.destroyed_resources:type_name -> hashicorp.waypoint.DestroyedResource
+	417, // 290: hashicorp.waypoint.Release.preload:type_name -> hashicorp.waypoint.Release.Preload
+	167, // 291: hashicorp.waypoint.ReleaseExpanded.release:type_name -> hashicorp.waypoint.Release
+	187, // 292: hashicorp.waypoint.ReleaseExpanded.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
+	469, // 293: hashicorp.waypoint.Trigger.active_time:type_name -> google.protobuf.Timestamp
+	325, // 294: hashicorp.waypoint.Trigger.build:type_name -> hashicorp.waypoint.Job.BuildOp
+	327, // 295: hashicorp.waypoint.Trigger.push:type_name -> hashicorp.waypoint.Job.PushOp
+	329, // 296: hashicorp.waypoint.Trigger.deploy:type_name -> hashicorp.waypoint.Job.DeployOp
+	334, // 297: hashicorp.waypoint.Trigger.destroy:type_name -> hashicorp.waypoint.Job.DestroyOp
+	335, // 298: hashicorp.waypoint.Trigger.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
+	319, // 299: hashicorp.waypoint.Trigger.up:type_name -> hashicorp.waypoint.Job.UpOp
+	353, // 300: hashicorp.waypoint.Trigger.init:type_name -> hashicorp.waypoint.Job.InitOp
+	343, // 301: hashicorp.waypoint.Trigger.status_report:type_name -> hashicorp.waypoint.Job.StatusReportOp
+	280, // 302: hashicorp.waypoint.Trigger.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	279, // 303: hashicorp.waypoint.Trigger.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 304: hashicorp.waypoint.Trigger.application:type_name -> hashicorp.waypoint.Ref.Application
+	169, // 305: hashicorp.waypoint.UpsertTriggerRequest.trigger:type_name -> hashicorp.waypoint.Trigger
+	169, // 306: hashicorp.waypoint.UpsertTriggerResponse.trigger:type_name -> hashicorp.waypoint.Trigger
+	296, // 307: hashicorp.waypoint.GetTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
+	169, // 308: hashicorp.waypoint.GetTriggerResponse.trigger:type_name -> hashicorp.waypoint.Trigger
+	296, // 309: hashicorp.waypoint.DeleteTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
+	296, // 310: hashicorp.waypoint.RunTriggerRequest.ref:type_name -> hashicorp.waypoint.Ref.Trigger
+	32,  // 311: hashicorp.waypoint.RunTriggerRequest.variable_overrides:type_name -> hashicorp.waypoint.Variable
+	280, // 312: hashicorp.waypoint.ListTriggerRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	279, // 313: hashicorp.waypoint.ListTriggerRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 314: hashicorp.waypoint.ListTriggerRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	169, // 315: hashicorp.waypoint.ListTriggerResponse.triggers:type_name -> hashicorp.waypoint.Trigger
+	187, // 316: hashicorp.waypoint.UpsertStatusReportRequest.status_report:type_name -> hashicorp.waypoint.StatusReport
+	187, // 317: hashicorp.waypoint.UpsertStatusReportResponse.status_report:type_name -> hashicorp.waypoint.StatusReport
+	278, // 318: hashicorp.waypoint.GetLatestStatusReportRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 319: hashicorp.waypoint.GetLatestStatusReportRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	468, // 320: hashicorp.waypoint.GetLatestStatusReportRequest.any:type_name -> google.protobuf.Empty
+	468, // 321: hashicorp.waypoint.GetLatestStatusReportRequest.deployment_any:type_name -> google.protobuf.Empty
+	468, // 322: hashicorp.waypoint.GetLatestStatusReportRequest.release_any:type_name -> google.protobuf.Empty
+	39,  // 323: hashicorp.waypoint.ListStatusReportsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	41,  // 324: hashicorp.waypoint.ListStatusReportsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	278, // 325: hashicorp.waypoint.ListStatusReportsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 326: hashicorp.waypoint.ListStatusReportsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	284, // 327: hashicorp.waypoint.ListStatusReportsRequest.deployment:type_name -> hashicorp.waypoint.Ref.Operation
+	284, // 328: hashicorp.waypoint.ListStatusReportsRequest.release:type_name -> hashicorp.waypoint.Ref.Operation
+	187, // 329: hashicorp.waypoint.ListStatusReportsResponse.status_reports:type_name -> hashicorp.waypoint.StatusReport
+	284, // 330: hashicorp.waypoint.GetStatusReportRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	280, // 331: hashicorp.waypoint.ExpediteStatusReportRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	284, // 332: hashicorp.waypoint.ExpediteStatusReportRequest.deployment:type_name -> hashicorp.waypoint.Ref.Operation
+	284, // 333: hashicorp.waypoint.ExpediteStatusReportRequest.release:type_name -> hashicorp.waypoint.Ref.Operation
+	278, // 334: hashicorp.waypoint.StatusReport.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 335: hashicorp.waypoint.StatusReport.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	38,  // 336: hashicorp.waypoint.StatusReport.status:type_name -> hashicorp.waypoint.Status
+	471, // 337: hashicorp.waypoint.StatusReport.status_report:type_name -> opaqueany.Any
+	419, // 338: hashicorp.waypoint.StatusReport.health:type_name -> hashicorp.waypoint.StatusReport.Health
+	469, // 339: hashicorp.waypoint.StatusReport.generated_time:type_name -> google.protobuf.Timestamp
+	418, // 340: hashicorp.waypoint.StatusReport.resources:type_name -> hashicorp.waypoint.StatusReport.Resource
+	419, // 341: hashicorp.waypoint.StatusReport.deprecated_resources_health:type_name -> hashicorp.waypoint.StatusReport.Health
+	420, // 342: hashicorp.waypoint.GetLogStreamRequest.application:type_name -> hashicorp.waypoint.GetLogStreamRequest.Application
+	421, // 343: hashicorp.waypoint.LogBatch.lines:type_name -> hashicorp.waypoint.LogBatch.Entry
+	423, // 344: hashicorp.waypoint.ConfigVar.target:type_name -> hashicorp.waypoint.ConfigVar.Target
+	468, // 345: hashicorp.waypoint.ConfigVar.unset:type_name -> google.protobuf.Empty
+	422, // 346: hashicorp.waypoint.ConfigVar.dynamic:type_name -> hashicorp.waypoint.ConfigVar.DynamicVal
+	278, // 347: hashicorp.waypoint.ConfigVar.application:type_name -> hashicorp.waypoint.Ref.Application
+	279, // 348: hashicorp.waypoint.ConfigVar.project:type_name -> hashicorp.waypoint.Ref.Project
+	286, // 349: hashicorp.waypoint.ConfigVar.runner:type_name -> hashicorp.waypoint.Ref.Runner
+	190, // 350: hashicorp.waypoint.ConfigSetRequest.variables:type_name -> hashicorp.waypoint.ConfigVar
+	278, // 351: hashicorp.waypoint.ConfigGetRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	279, // 352: hashicorp.waypoint.ConfigGetRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	288, // 353: hashicorp.waypoint.ConfigGetRequest.runner:type_name -> hashicorp.waypoint.Ref.RunnerId
+	280, // 354: hashicorp.waypoint.ConfigGetRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	425, // 355: hashicorp.waypoint.ConfigGetRequest.labels:type_name -> hashicorp.waypoint.ConfigGetRequest.LabelsEntry
+	190, // 356: hashicorp.waypoint.ConfigGetResponse.variables:type_name -> hashicorp.waypoint.ConfigVar
+	277, // 357: hashicorp.waypoint.ConfigSource.global:type_name -> hashicorp.waypoint.Ref.Global
+	279, // 358: hashicorp.waypoint.ConfigSource.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 359: hashicorp.waypoint.ConfigSource.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 360: hashicorp.waypoint.ConfigSource.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	426, // 361: hashicorp.waypoint.ConfigSource.config:type_name -> hashicorp.waypoint.ConfigSource.ConfigEntry
+	195, // 362: hashicorp.waypoint.SetConfigSourceRequest.config_source:type_name -> hashicorp.waypoint.ConfigSource
+	277, // 363: hashicorp.waypoint.GetConfigSourceRequest.global:type_name -> hashicorp.waypoint.Ref.Global
+	279, // 364: hashicorp.waypoint.GetConfigSourceRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 365: hashicorp.waypoint.GetConfigSourceRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 366: hashicorp.waypoint.GetConfigSourceRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	195, // 367: hashicorp.waypoint.GetConfigSourceResponse.config_sources:type_name -> hashicorp.waypoint.ConfigSource
+	427, // 368: hashicorp.waypoint.ExecStreamRequest.start:type_name -> hashicorp.waypoint.ExecStreamRequest.Start
+	428, // 369: hashicorp.waypoint.ExecStreamRequest.input:type_name -> hashicorp.waypoint.ExecStreamRequest.Input
+	430, // 370: hashicorp.waypoint.ExecStreamRequest.winch:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
+	468, // 371: hashicorp.waypoint.ExecStreamRequest.input_eof:type_name -> google.protobuf.Empty
+	431, // 372: hashicorp.waypoint.ExecStreamResponse.open:type_name -> hashicorp.waypoint.ExecStreamResponse.Open
+	433, // 373: hashicorp.waypoint.ExecStreamResponse.output:type_name -> hashicorp.waypoint.ExecStreamResponse.Output
+	432, // 374: hashicorp.waypoint.ExecStreamResponse.exit:type_name -> hashicorp.waypoint.ExecStreamResponse.Exit
+	17,  // 375: hashicorp.waypoint.EntrypointConfigRequest.type:type_name -> hashicorp.waypoint.Instance.Type
+	203, // 376: hashicorp.waypoint.EntrypointConfigResponse.config:type_name -> hashicorp.waypoint.EntrypointConfig
+	434, // 377: hashicorp.waypoint.EntrypointConfig.exec:type_name -> hashicorp.waypoint.EntrypointConfig.Exec
+	190, // 378: hashicorp.waypoint.EntrypointConfig.env_vars:type_name -> hashicorp.waypoint.ConfigVar
+	195, // 379: hashicorp.waypoint.EntrypointConfig.config_sources:type_name -> hashicorp.waypoint.ConfigSource
+	435, // 380: hashicorp.waypoint.EntrypointConfig.url_service:type_name -> hashicorp.waypoint.EntrypointConfig.URLService
+	436, // 381: hashicorp.waypoint.EntrypointConfig.deployment:type_name -> hashicorp.waypoint.EntrypointConfig.DeploymentInfo
+	421, // 382: hashicorp.waypoint.EntrypointLogBatch.lines:type_name -> hashicorp.waypoint.LogBatch.Entry
+	438, // 383: hashicorp.waypoint.EntrypointExecRequest.open:type_name -> hashicorp.waypoint.EntrypointExecRequest.Open
+	439, // 384: hashicorp.waypoint.EntrypointExecRequest.exit:type_name -> hashicorp.waypoint.EntrypointExecRequest.Exit
+	440, // 385: hashicorp.waypoint.EntrypointExecRequest.output:type_name -> hashicorp.waypoint.EntrypointExecRequest.Output
+	441, // 386: hashicorp.waypoint.EntrypointExecRequest.error:type_name -> hashicorp.waypoint.EntrypointExecRequest.Error
+	468, // 387: hashicorp.waypoint.EntrypointExecResponse.input_eof:type_name -> google.protobuf.Empty
+	430, // 388: hashicorp.waypoint.EntrypointExecResponse.winch:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
+	279, // 389: hashicorp.waypoint.Pipeline.project:type_name -> hashicorp.waypoint.Ref.Project
+	442, // 390: hashicorp.waypoint.Pipeline.steps:type_name -> hashicorp.waypoint.Pipeline.StepsEntry
+	299, // 391: hashicorp.waypoint.PipelineRun.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	297, // 392: hashicorp.waypoint.PipelineRun.jobs:type_name -> hashicorp.waypoint.Ref.Job
+	23,  // 393: hashicorp.waypoint.PipelineRun.state:type_name -> hashicorp.waypoint.PipelineRun.State
+	207, // 394: hashicorp.waypoint.UpsertPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Pipeline
+	207, // 395: hashicorp.waypoint.UpsertPipelineResponse.pipeline:type_name -> hashicorp.waypoint.Pipeline
+	299, // 396: hashicorp.waypoint.GetPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	207, // 397: hashicorp.waypoint.GetPipelineResponse.pipeline:type_name -> hashicorp.waypoint.Pipeline
+	450, // 398: hashicorp.waypoint.GetPipelineResponse.graph:type_name -> hashicorp.waypoint.GetPipelineResponse.Graph
+	299, // 399: hashicorp.waypoint.RunPipelineRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	80,  // 400: hashicorp.waypoint.RunPipelineRequest.job_template:type_name -> hashicorp.waypoint.Job
+	451, // 401: hashicorp.waypoint.RunPipelineResponse.job_map:type_name -> hashicorp.waypoint.RunPipelineResponse.JobMapEntry
+	279, // 402: hashicorp.waypoint.ListPipelinesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	207, // 403: hashicorp.waypoint.ListPipelinesResponse.pipelines:type_name -> hashicorp.waypoint.Pipeline
+	299, // 404: hashicorp.waypoint.ListPipelineRunsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	208, // 405: hashicorp.waypoint.ListPipelineRunsResponse.pipeline_runs:type_name -> hashicorp.waypoint.PipelineRun
+	299, // 406: hashicorp.waypoint.GetPipelineRunRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	208, // 407: hashicorp.waypoint.GetPipelineRunResponse.pipeline_run:type_name -> hashicorp.waypoint.PipelineRun
+	279, // 408: hashicorp.waypoint.ConfigSyncPipelineRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	452, // 409: hashicorp.waypoint.ConfigSyncPipelineResponse.synced_pipelines:type_name -> hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry
+	453, // 410: hashicorp.waypoint.TokenTransport.metadata:type_name -> hashicorp.waypoint.TokenTransport.MetadataEntry
+	454, // 411: hashicorp.waypoint.TokenTransport.oauth_creds:type_name -> hashicorp.waypoint.TokenTransport.OAuthCredentials
+	469, // 412: hashicorp.waypoint.Token.valid_until:type_name -> google.protobuf.Timestamp
+	469, // 413: hashicorp.waypoint.Token.issued_time:type_name -> google.protobuf.Timestamp
+	455, // 414: hashicorp.waypoint.Token.login:type_name -> hashicorp.waypoint.Token.Login
+	456, // 415: hashicorp.waypoint.Token.runner:type_name -> hashicorp.waypoint.Token.Runner
+	457, // 416: hashicorp.waypoint.Token.invite:type_name -> hashicorp.waypoint.Token.Invite
+	459, // 417: hashicorp.waypoint.Token.trigger:type_name -> hashicorp.waypoint.Token.Trigger
+	458, // 418: hashicorp.waypoint.Token.unused_entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
+	224, // 419: hashicorp.waypoint.DecodeTokenResponse.token:type_name -> hashicorp.waypoint.Token
+	223, // 420: hashicorp.waypoint.DecodeTokenResponse.transport:type_name -> hashicorp.waypoint.TokenTransport
+	290, // 421: hashicorp.waypoint.LoginTokenRequest.user:type_name -> hashicorp.waypoint.Ref.User
+	461, // 422: hashicorp.waypoint.GenerateRunnerTokenRequest.labels:type_name -> hashicorp.waypoint.GenerateRunnerTokenRequest.LabelsEntry
+	455, // 423: hashicorp.waypoint.InviteTokenRequest.login:type_name -> hashicorp.waypoint.Token.Login
+	460, // 424: hashicorp.waypoint.InviteTokenRequest.signup:type_name -> hashicorp.waypoint.Token.Invite.Signup
+	458, // 425: hashicorp.waypoint.InviteTokenRequest.unused_entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
+	462, // 426: hashicorp.waypoint.CreateSnapshotResponse.open:type_name -> hashicorp.waypoint.CreateSnapshotResponse.Open
+	463, // 427: hashicorp.waypoint.RestoreSnapshotRequest.open:type_name -> hashicorp.waypoint.RestoreSnapshotRequest.Open
+	26,  // 428: hashicorp.waypoint.Hcl.format:type_name -> hashicorp.waypoint.Hcl.Format
+	240, // 429: hashicorp.waypoint.UI.ListProjectsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
+	244, // 430: hashicorp.waypoint.UI.ListProjectsResponse.project_bundles:type_name -> hashicorp.waypoint.UI.ProjectBundle
+	241, // 431: hashicorp.waypoint.UI.ListProjectsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
+	33,  // 432: hashicorp.waypoint.UI.ProjectBundle.project:type_name -> hashicorp.waypoint.Project
+	279, // 433: hashicorp.waypoint.UI.GetProjectRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	33,  // 434: hashicorp.waypoint.UI.GetProjectResponse.project:type_name -> hashicorp.waypoint.Project
+	80,  // 435: hashicorp.waypoint.UI.GetProjectResponse.latest_init_job:type_name -> hashicorp.waypoint.Job
+	279, // 436: hashicorp.waypoint.UI.ListPipelinesRequest.project:type_name -> hashicorp.waypoint.Ref.Project
+	240, // 437: hashicorp.waypoint.UI.ListPipelinesRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
+	253, // 438: hashicorp.waypoint.UI.ListPipelinesResponse.pipelines:type_name -> hashicorp.waypoint.UI.PipelineBundle
+	241, // 439: hashicorp.waypoint.UI.ListPipelinesResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
+	299, // 440: hashicorp.waypoint.UI.ListPipelineRunsRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	240, // 441: hashicorp.waypoint.UI.ListPipelineRunsRequest.pagination:type_name -> hashicorp.waypoint.PaginationRequest
+	254, // 442: hashicorp.waypoint.UI.ListPipelineRunsResponse.pipeline_run_bundles:type_name -> hashicorp.waypoint.UI.PipelineRunBundle
+	241, // 443: hashicorp.waypoint.UI.ListPipelineRunsResponse.pagination:type_name -> hashicorp.waypoint.PaginationResponse
+	299, // 444: hashicorp.waypoint.UI.GetPipelineRunRequest.pipeline:type_name -> hashicorp.waypoint.Ref.Pipeline
+	208, // 445: hashicorp.waypoint.UI.GetPipelineRunResponse.pipeline_run:type_name -> hashicorp.waypoint.PipelineRun
+	255, // 446: hashicorp.waypoint.UI.GetPipelineRunResponse.root_tree_node:type_name -> hashicorp.waypoint.UI.PipelineRunTreeNode
+	207, // 447: hashicorp.waypoint.UI.PipelineBundle.pipeline:type_name -> hashicorp.waypoint.Pipeline
+	254, // 448: hashicorp.waypoint.UI.PipelineBundle.last_run:type_name -> hashicorp.waypoint.UI.PipelineRunBundle
+	208, // 449: hashicorp.waypoint.UI.PipelineRunBundle.pipeline_run:type_name -> hashicorp.waypoint.PipelineRun
+	469, // 450: hashicorp.waypoint.UI.PipelineRunBundle.queue_time:type_name -> google.protobuf.Timestamp
+	278, // 451: hashicorp.waypoint.UI.PipelineRunBundle.application:type_name -> hashicorp.waypoint.Ref.Application
+	360, // 452: hashicorp.waypoint.UI.PipelineRunBundle.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	443, // 453: hashicorp.waypoint.UI.PipelineRunTreeNode.step:type_name -> hashicorp.waypoint.Pipeline.Step
+	1,   // 454: hashicorp.waypoint.UI.PipelineRunTreeNode.state:type_name -> hashicorp.waypoint.UI.PipelineRunTreeNode.State
+	469, // 455: hashicorp.waypoint.UI.PipelineRunTreeNode.start_time:type_name -> google.protobuf.Timestamp
+	469, // 456: hashicorp.waypoint.UI.PipelineRunTreeNode.complete_time:type_name -> google.protobuf.Timestamp
+	278, // 457: hashicorp.waypoint.UI.PipelineRunTreeNode.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 458: hashicorp.waypoint.UI.PipelineRunTreeNode.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	297, // 459: hashicorp.waypoint.UI.PipelineRunTreeNode.job:type_name -> hashicorp.waypoint.Ref.Job
+	134, // 460: hashicorp.waypoint.UI.PipelineRunTreeNode.build:type_name -> hashicorp.waypoint.Build
+	156, // 461: hashicorp.waypoint.UI.PipelineRunTreeNode.deployment:type_name -> hashicorp.waypoint.Deployment
+	167, // 462: hashicorp.waypoint.UI.PipelineRunTreeNode.release:type_name -> hashicorp.waypoint.Release
+	187, // 463: hashicorp.waypoint.UI.PipelineRunTreeNode.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
+	264, // 464: hashicorp.waypoint.UI.PipelineRunTreeNode.children:type_name -> hashicorp.waypoint.UI.PipelineRunTreeNode.Children
+	278, // 465: hashicorp.waypoint.UI.ListDeploymentsRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 466: hashicorp.waypoint.UI.ListDeploymentsRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	41,  // 467: hashicorp.waypoint.UI.ListDeploymentsRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	39,  // 468: hashicorp.waypoint.UI.ListDeploymentsRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	8,   // 469: hashicorp.waypoint.UI.ListDeploymentsRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	260, // 470: hashicorp.waypoint.UI.ListDeploymentsResponse.deployments:type_name -> hashicorp.waypoint.UI.DeploymentBundle
+	284, // 471: hashicorp.waypoint.UI.GetDeploymentRequest.ref:type_name -> hashicorp.waypoint.Ref.Operation
+	16,  // 472: hashicorp.waypoint.UI.GetDeploymentRequest.load_details:type_name -> hashicorp.waypoint.Deployment.LoadDetails
+	260, // 473: hashicorp.waypoint.UI.GetDeploymentResponse.deployment:type_name -> hashicorp.waypoint.UI.DeploymentBundle
+	156, // 474: hashicorp.waypoint.UI.DeploymentBundle.deployment:type_name -> hashicorp.waypoint.Deployment
+	150, // 475: hashicorp.waypoint.UI.DeploymentBundle.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	134, // 476: hashicorp.waypoint.UI.DeploymentBundle.build:type_name -> hashicorp.waypoint.Build
+	360, // 477: hashicorp.waypoint.UI.DeploymentBundle.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	187, // 478: hashicorp.waypoint.UI.DeploymentBundle.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
+	278, // 479: hashicorp.waypoint.UI.ListReleasesRequest.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 480: hashicorp.waypoint.UI.ListReleasesRequest.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	41,  // 481: hashicorp.waypoint.UI.ListReleasesRequest.order:type_name -> hashicorp.waypoint.OperationOrder
+	39,  // 482: hashicorp.waypoint.UI.ListReleasesRequest.status:type_name -> hashicorp.waypoint.StatusFilter
+	8,   // 483: hashicorp.waypoint.UI.ListReleasesRequest.physical_state:type_name -> hashicorp.waypoint.Operation.PhysicalState
+	263, // 484: hashicorp.waypoint.UI.ListReleasesResponse.releases:type_name -> hashicorp.waypoint.UI.ReleaseBundle
+	167, // 485: hashicorp.waypoint.UI.ReleaseBundle.release:type_name -> hashicorp.waypoint.Release
+	187, // 486: hashicorp.waypoint.UI.ReleaseBundle.latest_status_report:type_name -> hashicorp.waypoint.StatusReport
+	2,   // 487: hashicorp.waypoint.UI.PipelineRunTreeNode.Children.mode:type_name -> hashicorp.waypoint.UI.PipelineRunTreeNode.Children.Mode
+	255, // 488: hashicorp.waypoint.UI.PipelineRunTreeNode.Children.nodes:type_name -> hashicorp.waypoint.UI.PipelineRunTreeNode
+	269, // 489: hashicorp.waypoint.Variable.File.hcl_range:type_name -> hashicorp.waypoint.Variable.HclRange
+	269, // 490: hashicorp.waypoint.Variable.VCS.hcl_range:type_name -> hashicorp.waypoint.Variable.HclRange
+	268, // 491: hashicorp.waypoint.Variable.HclRange.start:type_name -> hashicorp.waypoint.Variable.HclPos
+	268, // 492: hashicorp.waypoint.Variable.HclRange.end:type_name -> hashicorp.waypoint.Variable.HclPos
+	4,   // 493: hashicorp.waypoint.Variable.FinalValue.source:type_name -> hashicorp.waypoint.Variable.FinalValue.Source
+	279, // 494: hashicorp.waypoint.Workspace.Project.project:type_name -> hashicorp.waypoint.Ref.Project
+	280, // 495: hashicorp.waypoint.Workspace.Project.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	360, // 496: hashicorp.waypoint.Workspace.Project.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	469, // 497: hashicorp.waypoint.Workspace.Project.active_time:type_name -> google.protobuf.Timestamp
+	274, // 498: hashicorp.waypoint.Workspace.Project.applications:type_name -> hashicorp.waypoint.Workspace.Application
+	278, // 499: hashicorp.waypoint.Workspace.Application.application:type_name -> hashicorp.waypoint.Ref.Application
+	469, // 500: hashicorp.waypoint.Workspace.Application.active_time:type_name -> google.protobuf.Timestamp
+	276, // 501: hashicorp.waypoint.User.Link.oidc:type_name -> hashicorp.waypoint.User.Link.OIDC
+	6,   // 502: hashicorp.waypoint.Ref.Component.type:type_name -> hashicorp.waypoint.Component.Type
+	285, // 503: hashicorp.waypoint.Ref.Operation.sequence:type_name -> hashicorp.waypoint.Ref.OperationSeq
+	278, // 504: hashicorp.waypoint.Ref.OperationSeq.application:type_name -> hashicorp.waypoint.Ref.Application
+	287, // 505: hashicorp.waypoint.Ref.Runner.any:type_name -> hashicorp.waypoint.Ref.RunnerAny
+	288, // 506: hashicorp.waypoint.Ref.Runner.id:type_name -> hashicorp.waypoint.Ref.RunnerId
+	289, // 507: hashicorp.waypoint.Ref.Runner.labels:type_name -> hashicorp.waypoint.Ref.RunnerLabels
+	302, // 508: hashicorp.waypoint.Ref.RunnerLabels.labels:type_name -> hashicorp.waypoint.Ref.RunnerLabels.LabelsEntry
+	291, // 509: hashicorp.waypoint.Ref.User.id:type_name -> hashicorp.waypoint.Ref.UserId
+	292, // 510: hashicorp.waypoint.Ref.User.username:type_name -> hashicorp.waypoint.Ref.UserUsername
+	300, // 511: hashicorp.waypoint.Ref.Pipeline.owner:type_name -> hashicorp.waypoint.Ref.PipelineOwner
+	279, // 512: hashicorp.waypoint.Ref.PipelineOwner.project:type_name -> hashicorp.waypoint.Ref.Project
+	7,   // 513: hashicorp.waypoint.StatusFilter.Filter.state:type_name -> hashicorp.waypoint.Status.State
+	306, // 514: hashicorp.waypoint.AuthMethod.OIDC.claim_mappings:type_name -> hashicorp.waypoint.AuthMethod.OIDC.ClaimMappingsEntry
+	307, // 515: hashicorp.waypoint.AuthMethod.OIDC.list_claim_mappings:type_name -> hashicorp.waypoint.AuthMethod.OIDC.ListClaimMappingsEntry
+	45,  // 516: hashicorp.waypoint.Job.TaskOverride.launch_info:type_name -> hashicorp.waypoint.TaskLaunchInfo
+	270, // 517: hashicorp.waypoint.Job.VariableFinalValuesEntry.value:type_name -> hashicorp.waypoint.Variable.FinalValue
+	326, // 518: hashicorp.waypoint.Job.Result.build:type_name -> hashicorp.waypoint.Job.BuildResult
+	328, // 519: hashicorp.waypoint.Job.Result.push:type_name -> hashicorp.waypoint.Job.PushResult
+	330, // 520: hashicorp.waypoint.Job.Result.deploy:type_name -> hashicorp.waypoint.Job.DeployResult
+	336, // 521: hashicorp.waypoint.Job.Result.release:type_name -> hashicorp.waypoint.Job.ReleaseResult
+	322, // 522: hashicorp.waypoint.Job.Result.validate:type_name -> hashicorp.waypoint.Job.ValidateResult
+	324, // 523: hashicorp.waypoint.Job.Result.auth:type_name -> hashicorp.waypoint.Job.AuthResult
+	346, // 524: hashicorp.waypoint.Job.Result.docs:type_name -> hashicorp.waypoint.Job.DocsResult
+	348, // 525: hashicorp.waypoint.Job.Result.config_sync:type_name -> hashicorp.waypoint.Job.ConfigSyncResult
+	320, // 526: hashicorp.waypoint.Job.Result.up:type_name -> hashicorp.waypoint.Job.UpResult
+	359, // 527: hashicorp.waypoint.Job.Result.queue_project:type_name -> hashicorp.waypoint.Job.QueueProjectResult
+	352, // 528: hashicorp.waypoint.Job.Result.poll:type_name -> hashicorp.waypoint.Job.PollResult
+	344, // 529: hashicorp.waypoint.Job.Result.status_report:type_name -> hashicorp.waypoint.Job.StatusReportResult
+	339, // 530: hashicorp.waypoint.Job.Result.start_task:type_name -> hashicorp.waypoint.Job.StartTaskResult
+	354, // 531: hashicorp.waypoint.Job.Result.init:type_name -> hashicorp.waypoint.Job.InitResult
+	342, // 532: hashicorp.waypoint.Job.Result.watch_task:type_name -> hashicorp.waypoint.Job.WatchTaskResult
+	357, // 533: hashicorp.waypoint.Job.Result.pipeline_step:type_name -> hashicorp.waypoint.Job.PipelineStepResult
+	349, // 534: hashicorp.waypoint.Job.Result.pipeline_config_sync:type_name -> hashicorp.waypoint.Job.PipelineConfigSyncResult
+	350, // 535: hashicorp.waypoint.Job.Result.project_destroy:type_name -> hashicorp.waypoint.Job.ProjectDestroyResult
+	13,  // 536: hashicorp.waypoint.Job.Config.source:type_name -> hashicorp.waypoint.Job.Config.Source
+	315, // 537: hashicorp.waypoint.Job.DataSource.local:type_name -> hashicorp.waypoint.Job.Local
+	317, // 538: hashicorp.waypoint.Job.DataSource.git:type_name -> hashicorp.waypoint.Job.Git
+	316, // 539: hashicorp.waypoint.Job.DataSource.remote:type_name -> hashicorp.waypoint.Job.Remote
+	317, // 540: hashicorp.waypoint.Job.Remote.git_remote:type_name -> hashicorp.waypoint.Job.Git
+	361, // 541: hashicorp.waypoint.Job.Git.basic:type_name -> hashicorp.waypoint.Job.Git.Basic
+	362, // 542: hashicorp.waypoint.Job.Git.ssh:type_name -> hashicorp.waypoint.Job.Git.SSH
+	335, // 543: hashicorp.waypoint.Job.UpOp.release:type_name -> hashicorp.waypoint.Job.ReleaseOp
+	283, // 544: hashicorp.waypoint.Job.AuthOp.component:type_name -> hashicorp.waypoint.Ref.Component
+	364, // 545: hashicorp.waypoint.Job.AuthResult.results:type_name -> hashicorp.waypoint.Job.AuthResult.Result
+	134, // 546: hashicorp.waypoint.Job.BuildResult.build:type_name -> hashicorp.waypoint.Build
+	150, // 547: hashicorp.waypoint.Job.BuildResult.push:type_name -> hashicorp.waypoint.PushedArtifact
+	134, // 548: hashicorp.waypoint.Job.PushOp.build:type_name -> hashicorp.waypoint.Build
+	150, // 549: hashicorp.waypoint.Job.PushResult.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	150, // 550: hashicorp.waypoint.Job.DeployOp.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	156, // 551: hashicorp.waypoint.Job.DeployResult.deployment:type_name -> hashicorp.waypoint.Deployment
+	156, // 552: hashicorp.waypoint.Job.ExecOp.deployment:type_name -> hashicorp.waypoint.Deployment
+	156, // 553: hashicorp.waypoint.Job.LogsOp.deployment:type_name -> hashicorp.waypoint.Deployment
+	469, // 554: hashicorp.waypoint.Job.LogsOp.start_time:type_name -> google.protobuf.Timestamp
+	468, // 555: hashicorp.waypoint.Job.DestroyOp.workspace:type_name -> google.protobuf.Empty
+	156, // 556: hashicorp.waypoint.Job.DestroyOp.deployment:type_name -> hashicorp.waypoint.Deployment
+	156, // 557: hashicorp.waypoint.Job.ReleaseOp.deployment:type_name -> hashicorp.waypoint.Deployment
+	167, // 558: hashicorp.waypoint.Job.ReleaseResult.release:type_name -> hashicorp.waypoint.Release
+	26,  // 559: hashicorp.waypoint.Job.TaskPluginParams.hcl_format:type_name -> hashicorp.waypoint.Hcl.Format
+	45,  // 560: hashicorp.waypoint.Job.StartTaskLaunchOp.info:type_name -> hashicorp.waypoint.TaskLaunchInfo
+	337, // 561: hashicorp.waypoint.Job.StartTaskLaunchOp.params:type_name -> hashicorp.waypoint.Job.TaskPluginParams
+	471, // 562: hashicorp.waypoint.Job.StartTaskResult.state:type_name -> opaqueany.Any
+	337, // 563: hashicorp.waypoint.Job.StopTaskLaunchOp.params:type_name -> hashicorp.waypoint.Job.TaskPluginParams
+	471, // 564: hashicorp.waypoint.Job.StopTaskLaunchOp.direct:type_name -> opaqueany.Any
+	297, // 565: hashicorp.waypoint.Job.WatchTaskOp.start_job:type_name -> hashicorp.waypoint.Ref.Job
+	156, // 566: hashicorp.waypoint.Job.StatusReportOp.deployment:type_name -> hashicorp.waypoint.Deployment
+	167, // 567: hashicorp.waypoint.Job.StatusReportOp.release:type_name -> hashicorp.waypoint.Release
+	187, // 568: hashicorp.waypoint.Job.StatusReportResult.status_report:type_name -> hashicorp.waypoint.StatusReport
+	365, // 569: hashicorp.waypoint.Job.DocsResult.results:type_name -> hashicorp.waypoint.Job.DocsResult.Result
+	366, // 570: hashicorp.waypoint.Job.PipelineConfigSyncResult.synced_pipelines:type_name -> hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry
+	360, // 571: hashicorp.waypoint.Job.PollResult.old_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	360, // 572: hashicorp.waypoint.Job.PollResult.new_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	443, // 573: hashicorp.waypoint.Job.PipelineStepOp.step:type_name -> hashicorp.waypoint.Pipeline.Step
+	279, // 574: hashicorp.waypoint.Job.DestroyProjectOp.project:type_name -> hashicorp.waypoint.Ref.Project
+	470, // 575: hashicorp.waypoint.Job.PipelineStepResult.result:type_name -> google.rpc.Status
+	80,  // 576: hashicorp.waypoint.Job.QueueProjectOp.job_template:type_name -> hashicorp.waypoint.Job
+	367, // 577: hashicorp.waypoint.Job.QueueProjectResult.applications:type_name -> hashicorp.waypoint.Job.QueueProjectResult.Application
+	468, // 578: hashicorp.waypoint.Job.DataSource.Ref.unknown:type_name -> google.protobuf.Empty
+	363, // 579: hashicorp.waypoint.Job.DataSource.Ref.git:type_name -> hashicorp.waypoint.Job.Git.Ref
+	469, // 580: hashicorp.waypoint.Job.Git.Ref.timestamp:type_name -> google.protobuf.Timestamp
+	37,  // 581: hashicorp.waypoint.Job.AuthResult.Result.component:type_name -> hashicorp.waypoint.Component
+	470, // 582: hashicorp.waypoint.Job.AuthResult.Result.check_error:type_name -> google.rpc.Status
+	470, // 583: hashicorp.waypoint.Job.AuthResult.Result.auth_error:type_name -> google.rpc.Status
+	37,  // 584: hashicorp.waypoint.Job.DocsResult.Result.component:type_name -> hashicorp.waypoint.Component
+	81,  // 585: hashicorp.waypoint.Job.DocsResult.Result.docs:type_name -> hashicorp.waypoint.Documentation
+	299, // 586: hashicorp.waypoint.Job.PipelineConfigSyncResult.SyncedPipelinesEntry.value:type_name -> hashicorp.waypoint.Ref.Pipeline
+	278, // 587: hashicorp.waypoint.Job.QueueProjectResult.Application.application:type_name -> hashicorp.waypoint.Ref.Application
+	369, // 588: hashicorp.waypoint.Documentation.FieldsEntry.value:type_name -> hashicorp.waypoint.Documentation.Field
+	12,  // 589: hashicorp.waypoint.GetJobStreamResponse.State.previous:type_name -> hashicorp.waypoint.Job.State
+	12,  // 590: hashicorp.waypoint.GetJobStreamResponse.State.current:type_name -> hashicorp.waypoint.Job.State
+	80,  // 591: hashicorp.waypoint.GetJobStreamResponse.State.job:type_name -> hashicorp.waypoint.Job
+	80,  // 592: hashicorp.waypoint.GetJobStreamResponse.JobChange.job:type_name -> hashicorp.waypoint.Job
+	360, // 593: hashicorp.waypoint.GetJobStreamResponse.Download.data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	378, // 594: hashicorp.waypoint.GetJobStreamResponse.Terminal.events:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event
+	470, // 595: hashicorp.waypoint.GetJobStreamResponse.Error.error:type_name -> google.rpc.Status
+	470, // 596: hashicorp.waypoint.GetJobStreamResponse.Complete.error:type_name -> google.rpc.Status
+	312, // 597: hashicorp.waypoint.GetJobStreamResponse.Complete.result:type_name -> hashicorp.waypoint.Job.Result
+	469, // 598: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.timestamp:type_name -> google.protobuf.Timestamp
+	380, // 599: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.line:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Line
+	379, // 600: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.status:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Status
+	383, // 601: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.named_values:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues
+	381, // 602: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.raw:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Raw
+	386, // 603: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.table:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table
+	387, // 604: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.step_group:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.StepGroup
+	388, // 605: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.step:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Step
+	382, // 606: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValues.values:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.NamedValue
+	384, // 607: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow.entries:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableEntry
+	385, // 608: hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.Table.rows:type_name -> hashicorp.waypoint.GetJobStreamResponse.Terminal.Event.TableRow
+	87,  // 609: hashicorp.waypoint.RunnerConfigRequest.Open.runner:type_name -> hashicorp.waypoint.Runner
+	312, // 610: hashicorp.waypoint.RunnerJobStreamRequest.Complete.result:type_name -> hashicorp.waypoint.Job.Result
+	470, // 611: hashicorp.waypoint.RunnerJobStreamRequest.Error.error:type_name -> google.rpc.Status
+	313, // 612: hashicorp.waypoint.RunnerJobStreamRequest.ConfigLoad.config:type_name -> hashicorp.waypoint.Job.Config
+	401, // 613: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.final_values:type_name -> hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry
+	270, // 614: hashicorp.waypoint.RunnerJobStreamRequest.VariableValuesSet.FinalValuesEntry.value:type_name -> hashicorp.waypoint.Variable.FinalValue
+	80,  // 615: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment.job:type_name -> hashicorp.waypoint.Job
+	195, // 616: hashicorp.waypoint.RunnerJobStreamResponse.JobAssignment.config_sources:type_name -> hashicorp.waypoint.ConfigSource
+	407, // 617: hashicorp.waypoint.Hostname.Target.application:type_name -> hashicorp.waypoint.Hostname.TargetApp
+	278, // 618: hashicorp.waypoint.Hostname.TargetApp.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 619: hashicorp.waypoint.Hostname.TargetApp.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	360, // 620: hashicorp.waypoint.Build.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	360, // 621: hashicorp.waypoint.PushedArtifact.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	150, // 622: hashicorp.waypoint.Deployment.Preload.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	134, // 623: hashicorp.waypoint.Deployment.Preload.build:type_name -> hashicorp.waypoint.Build
+	360, // 624: hashicorp.waypoint.Deployment.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	278, // 625: hashicorp.waypoint.ListInstancesRequest.Application.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 626: hashicorp.waypoint.ListInstancesRequest.Application.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	156, // 627: hashicorp.waypoint.Release.Preload.deployment:type_name -> hashicorp.waypoint.Deployment
+	150, // 628: hashicorp.waypoint.Release.Preload.artifact:type_name -> hashicorp.waypoint.PushedArtifact
+	134, // 629: hashicorp.waypoint.Release.Preload.build:type_name -> hashicorp.waypoint.Build
+	360, // 630: hashicorp.waypoint.Release.Preload.job_data_source_ref:type_name -> hashicorp.waypoint.Job.DataSource.Ref
+	294, // 631: hashicorp.waypoint.StatusReport.Resource.declared_resource:type_name -> hashicorp.waypoint.Ref.DeclaredResource
+	0,   // 632: hashicorp.waypoint.StatusReport.Resource.category_display_hint:type_name -> hashicorp.waypoint.ResourceCategoryDisplayHint
+	469, // 633: hashicorp.waypoint.StatusReport.Resource.created_time:type_name -> google.protobuf.Timestamp
+	19,  // 634: hashicorp.waypoint.StatusReport.Resource.health:type_name -> hashicorp.waypoint.StatusReport.Resource.Health
+	419, // 635: hashicorp.waypoint.StatusReport.Resource.deprecated_health:type_name -> hashicorp.waypoint.StatusReport.Health
+	278, // 636: hashicorp.waypoint.GetLogStreamRequest.Application.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 637: hashicorp.waypoint.GetLogStreamRequest.Application.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	20,  // 638: hashicorp.waypoint.LogBatch.Entry.source:type_name -> hashicorp.waypoint.LogBatch.Entry.Source
+	469, // 639: hashicorp.waypoint.LogBatch.Entry.timestamp:type_name -> google.protobuf.Timestamp
+	424, // 640: hashicorp.waypoint.ConfigVar.DynamicVal.config:type_name -> hashicorp.waypoint.ConfigVar.DynamicVal.ConfigEntry
+	277, // 641: hashicorp.waypoint.ConfigVar.Target.global:type_name -> hashicorp.waypoint.Ref.Global
+	279, // 642: hashicorp.waypoint.ConfigVar.Target.project:type_name -> hashicorp.waypoint.Ref.Project
+	278, // 643: hashicorp.waypoint.ConfigVar.Target.application:type_name -> hashicorp.waypoint.Ref.Application
+	280, // 644: hashicorp.waypoint.ConfigVar.Target.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	286, // 645: hashicorp.waypoint.ConfigVar.Target.runner:type_name -> hashicorp.waypoint.Ref.Runner
+	429, // 646: hashicorp.waypoint.ExecStreamRequest.Start.pty:type_name -> hashicorp.waypoint.ExecStreamRequest.PTY
+	430, // 647: hashicorp.waypoint.ExecStreamRequest.PTY.window_size:type_name -> hashicorp.waypoint.ExecStreamRequest.WindowSize
+	21,  // 648: hashicorp.waypoint.ExecStreamResponse.Output.channel:type_name -> hashicorp.waypoint.ExecStreamResponse.Output.Channel
+	429, // 649: hashicorp.waypoint.EntrypointConfig.Exec.pty:type_name -> hashicorp.waypoint.ExecStreamRequest.PTY
+	37,  // 650: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.component:type_name -> hashicorp.waypoint.Component
+	437, // 651: hashicorp.waypoint.EntrypointConfig.DeploymentInfo.labels:type_name -> hashicorp.waypoint.EntrypointConfig.DeploymentInfo.LabelsEntry
+	22,  // 652: hashicorp.waypoint.EntrypointExecRequest.Output.channel:type_name -> hashicorp.waypoint.EntrypointExecRequest.Output.Channel
+	470, // 653: hashicorp.waypoint.EntrypointExecRequest.Error.error:type_name -> google.rpc.Status
+	443, // 654: hashicorp.waypoint.Pipeline.StepsEntry.value:type_name -> hashicorp.waypoint.Pipeline.Step
+	444, // 655: hashicorp.waypoint.Pipeline.Step.exec:type_name -> hashicorp.waypoint.Pipeline.Step.Exec
+	445, // 656: hashicorp.waypoint.Pipeline.Step.build:type_name -> hashicorp.waypoint.Pipeline.Step.Build
+	446, // 657: hashicorp.waypoint.Pipeline.Step.deploy:type_name -> hashicorp.waypoint.Pipeline.Step.Deploy
+	447, // 658: hashicorp.waypoint.Pipeline.Step.release:type_name -> hashicorp.waypoint.Pipeline.Step.Release
+	448, // 659: hashicorp.waypoint.Pipeline.Step.up:type_name -> hashicorp.waypoint.Pipeline.Step.Up
+	449, // 660: hashicorp.waypoint.Pipeline.Step.pipeline:type_name -> hashicorp.waypoint.Pipeline.Step.Pipeline
+	280, // 661: hashicorp.waypoint.Pipeline.Step.workspace:type_name -> hashicorp.waypoint.Ref.Workspace
+	281, // 662: hashicorp.waypoint.Pipeline.Step.Release.deployment:type_name -> hashicorp.waypoint.Ref.Deployment
+	299, // 663: hashicorp.waypoint.Pipeline.Step.Pipeline.ref:type_name -> hashicorp.waypoint.Ref.Pipeline
+	24,  // 664: hashicorp.waypoint.GetPipelineResponse.Graph.format:type_name -> hashicorp.waypoint.GetPipelineResponse.Graph.Format
+	301, // 665: hashicorp.waypoint.RunPipelineResponse.JobMapEntry.value:type_name -> hashicorp.waypoint.Ref.PipelineStep
+	299, // 666: hashicorp.waypoint.ConfigSyncPipelineResponse.SyncedPipelinesEntry.value:type_name -> hashicorp.waypoint.Ref.Pipeline
+	458, // 667: hashicorp.waypoint.Token.Login.entrypoint:type_name -> hashicorp.waypoint.Token.Entrypoint
+	455, // 668: hashicorp.waypoint.Token.Invite.login:type_name -> hashicorp.waypoint.Token.Login
+	460, // 669: hashicorp.waypoint.Token.Invite.signup:type_name -> hashicorp.waypoint.Token.Invite.Signup
+	30,  // 670: hashicorp.waypoint.Snapshot.Header.version:type_name -> hashicorp.waypoint.VersionInfo
+	25,  // 671: hashicorp.waypoint.Snapshot.Header.format:type_name -> hashicorp.waypoint.Snapshot.Header.Format
+	467, // 672: hashicorp.waypoint.Snapshot.BoltChunk.items:type_name -> hashicorp.waypoint.Snapshot.BoltChunk.ItemsEntry
+	468, // 673: hashicorp.waypoint.Waypoint.GetVersionInfo:input_type -> google.protobuf.Empty
+	468, // 674: hashicorp.waypoint.Waypoint.ListOIDCAuthMethods:input_type -> google.protobuf.Empty
+	71,  // 675: hashicorp.waypoint.Waypoint.GetOIDCAuthURL:input_type -> hashicorp.waypoint.GetOIDCAuthURLRequest
+	73,  // 676: hashicorp.waypoint.Waypoint.CompleteOIDCAuth:input_type -> hashicorp.waypoint.CompleteOIDCAuthRequest
+	175, // 677: hashicorp.waypoint.Waypoint.NoAuthRunTrigger:input_type -> hashicorp.waypoint.RunTriggerRequest
+	56,  // 678: hashicorp.waypoint.Waypoint.GetUser:input_type -> hashicorp.waypoint.GetUserRequest
+	468, // 679: hashicorp.waypoint.Waypoint.ListUsers:input_type -> google.protobuf.Empty
+	59,  // 680: hashicorp.waypoint.Waypoint.UpdateUser:input_type -> hashicorp.waypoint.UpdateUserRequest
+	61,  // 681: hashicorp.waypoint.Waypoint.DeleteUser:input_type -> hashicorp.waypoint.DeleteUserRequest
+	64,  // 682: hashicorp.waypoint.Waypoint.UpsertAuthMethod:input_type -> hashicorp.waypoint.UpsertAuthMethodRequest
+	66,  // 683: hashicorp.waypoint.Waypoint.GetAuthMethod:input_type -> hashicorp.waypoint.GetAuthMethodRequest
+	468, // 684: hashicorp.waypoint.Waypoint.ListAuthMethods:input_type -> google.protobuf.Empty
+	68,  // 685: hashicorp.waypoint.Waypoint.DeleteAuthMethod:input_type -> hashicorp.waypoint.DeleteAuthMethodRequest
+	111, // 686: hashicorp.waypoint.Waypoint.ListWorkspaces:input_type -> hashicorp.waypoint.ListWorkspacesRequest
+	113, // 687: hashicorp.waypoint.Waypoint.GetWorkspace:input_type -> hashicorp.waypoint.GetWorkspaceRequest
+	115, // 688: hashicorp.waypoint.Waypoint.UpsertWorkspace:input_type -> hashicorp.waypoint.UpsertWorkspaceRequest
+	117, // 689: hashicorp.waypoint.Waypoint.UpsertProject:input_type -> hashicorp.waypoint.UpsertProjectRequest
+	119, // 690: hashicorp.waypoint.Waypoint.GetProject:input_type -> hashicorp.waypoint.GetProjectRequest
+	121, // 691: hashicorp.waypoint.Waypoint.ListProjects:input_type -> hashicorp.waypoint.ListProjectsRequest
+	123, // 692: hashicorp.waypoint.Waypoint.DestroyProject:input_type -> hashicorp.waypoint.DestroyProjectRequest
+	124, // 693: hashicorp.waypoint.Waypoint.GetApplication:input_type -> hashicorp.waypoint.GetApplicationRequest
+	126, // 694: hashicorp.waypoint.Waypoint.UpsertApplication:input_type -> hashicorp.waypoint.UpsertApplicationRequest
+	130, // 695: hashicorp.waypoint.Waypoint.ListBuilds:input_type -> hashicorp.waypoint.ListBuildsRequest
+	133, // 696: hashicorp.waypoint.Waypoint.GetBuild:input_type -> hashicorp.waypoint.GetBuildRequest
+	132, // 697: hashicorp.waypoint.Waypoint.GetLatestBuild:input_type -> hashicorp.waypoint.GetLatestBuildRequest
+	148, // 698: hashicorp.waypoint.Waypoint.ListPushedArtifacts:input_type -> hashicorp.waypoint.ListPushedArtifactsRequest
+	147, // 699: hashicorp.waypoint.Waypoint.GetPushedArtifact:input_type -> hashicorp.waypoint.GetPushedArtifactRequest
+	146, // 700: hashicorp.waypoint.Waypoint.GetLatestPushedArtifact:input_type -> hashicorp.waypoint.GetLatestPushedArtifactRequest
+	154, // 701: hashicorp.waypoint.Waypoint.ListDeployments:input_type -> hashicorp.waypoint.ListDeploymentsRequest
+	151, // 702: hashicorp.waypoint.Waypoint.GetDeployment:input_type -> hashicorp.waypoint.GetDeploymentRequest
+	158, // 703: hashicorp.waypoint.Waypoint.ListInstances:input_type -> hashicorp.waypoint.ListInstancesRequest
+	164, // 704: hashicorp.waypoint.Waypoint.ListReleases:input_type -> hashicorp.waypoint.ListReleasesRequest
+	166, // 705: hashicorp.waypoint.Waypoint.GetRelease:input_type -> hashicorp.waypoint.GetReleaseRequest
+	163, // 706: hashicorp.waypoint.Waypoint.GetLatestRelease:input_type -> hashicorp.waypoint.GetLatestReleaseRequest
+	184, // 707: hashicorp.waypoint.Waypoint.GetStatusReport:input_type -> hashicorp.waypoint.GetStatusReportRequest
+	181, // 708: hashicorp.waypoint.Waypoint.GetLatestStatusReport:input_type -> hashicorp.waypoint.GetLatestStatusReportRequest
+	182, // 709: hashicorp.waypoint.Waypoint.ListStatusReports:input_type -> hashicorp.waypoint.ListStatusReportsRequest
+	185, // 710: hashicorp.waypoint.Waypoint.ExpediteStatusReport:input_type -> hashicorp.waypoint.ExpediteStatusReportRequest
+	188, // 711: hashicorp.waypoint.Waypoint.GetLogStream:input_type -> hashicorp.waypoint.GetLogStreamRequest
+	199, // 712: hashicorp.waypoint.Waypoint.StartExecStream:input_type -> hashicorp.waypoint.ExecStreamRequest
+	191, // 713: hashicorp.waypoint.Waypoint.SetConfig:input_type -> hashicorp.waypoint.ConfigSetRequest
+	193, // 714: hashicorp.waypoint.Waypoint.GetConfig:input_type -> hashicorp.waypoint.ConfigGetRequest
+	196, // 715: hashicorp.waypoint.Waypoint.SetConfigSource:input_type -> hashicorp.waypoint.SetConfigSourceRequest
+	197, // 716: hashicorp.waypoint.Waypoint.GetConfigSource:input_type -> hashicorp.waypoint.GetConfigSourceRequest
+	105, // 717: hashicorp.waypoint.Waypoint.CreateHostname:input_type -> hashicorp.waypoint.CreateHostnameRequest
+	109, // 718: hashicorp.waypoint.Waypoint.DeleteHostname:input_type -> hashicorp.waypoint.DeleteHostnameRequest
+	107, // 719: hashicorp.waypoint.Waypoint.ListHostnames:input_type -> hashicorp.waypoint.ListHostnamesRequest
+	75,  // 720: hashicorp.waypoint.Waypoint.QueueJob:input_type -> hashicorp.waypoint.QueueJobRequest
+	77,  // 721: hashicorp.waypoint.Waypoint.CancelJob:input_type -> hashicorp.waypoint.CancelJobRequest
+	82,  // 722: hashicorp.waypoint.Waypoint.GetJob:input_type -> hashicorp.waypoint.GetJobRequest
+	83,  // 723: hashicorp.waypoint.Waypoint.ListJobs:input_type -> hashicorp.waypoint.ListJobsRequest
+	78,  // 724: hashicorp.waypoint.Waypoint.ValidateJob:input_type -> hashicorp.waypoint.ValidateJobRequest
+	85,  // 725: hashicorp.waypoint.Waypoint.GetJobStream:input_type -> hashicorp.waypoint.GetJobStreamRequest
+	97,  // 726: hashicorp.waypoint.Waypoint.GetRunner:input_type -> hashicorp.waypoint.GetRunnerRequest
+	98,  // 727: hashicorp.waypoint.Waypoint.ListRunners:input_type -> hashicorp.waypoint.ListRunnersRequest
+	100, // 728: hashicorp.waypoint.Waypoint.AdoptRunner:input_type -> hashicorp.waypoint.AdoptRunnerRequest
+	101, // 729: hashicorp.waypoint.Waypoint.ForgetRunner:input_type -> hashicorp.waypoint.ForgetRunnerRequest
+	468, // 730: hashicorp.waypoint.Waypoint.GetServerConfig:input_type -> google.protobuf.Empty
+	102, // 731: hashicorp.waypoint.Waypoint.SetServerConfig:input_type -> hashicorp.waypoint.SetServerConfigRequest
+	468, // 732: hashicorp.waypoint.Waypoint.CreateSnapshot:input_type -> google.protobuf.Empty
+	234, // 733: hashicorp.waypoint.Waypoint.RestoreSnapshot:input_type -> hashicorp.waypoint.RestoreSnapshotRequest
+	468, // 734: hashicorp.waypoint.Waypoint.BootstrapToken:input_type -> google.protobuf.Empty
+	226, // 735: hashicorp.waypoint.Waypoint.DecodeToken:input_type -> hashicorp.waypoint.DecodeTokenRequest
+	230, // 736: hashicorp.waypoint.Waypoint.GenerateInviteToken:input_type -> hashicorp.waypoint.InviteTokenRequest
+	228, // 737: hashicorp.waypoint.Waypoint.GenerateLoginToken:input_type -> hashicorp.waypoint.LoginTokenRequest
+	229, // 738: hashicorp.waypoint.Waypoint.GenerateRunnerToken:input_type -> hashicorp.waypoint.GenerateRunnerTokenRequest
+	232, // 739: hashicorp.waypoint.Waypoint.ConvertInviteToken:input_type -> hashicorp.waypoint.ConvertInviteTokenRequest
+	88,  // 740: hashicorp.waypoint.Waypoint.RunnerToken:input_type -> hashicorp.waypoint.RunnerTokenRequest
+	90,  // 741: hashicorp.waypoint.Waypoint.RunnerConfig:input_type -> hashicorp.waypoint.RunnerConfigRequest
+	93,  // 742: hashicorp.waypoint.Waypoint.RunnerJobStream:input_type -> hashicorp.waypoint.RunnerJobStreamRequest
+	95,  // 743: hashicorp.waypoint.Waypoint.RunnerGetDeploymentConfig:input_type -> hashicorp.waypoint.RunnerGetDeploymentConfigRequest
+	201, // 744: hashicorp.waypoint.Waypoint.EntrypointConfig:input_type -> hashicorp.waypoint.EntrypointConfigRequest
+	204, // 745: hashicorp.waypoint.Waypoint.EntrypointLogStream:input_type -> hashicorp.waypoint.EntrypointLogBatch
+	205, // 746: hashicorp.waypoint.Waypoint.EntrypointExecStream:input_type -> hashicorp.waypoint.EntrypointExecRequest
+	237, // 747: hashicorp.waypoint.Waypoint.WaypointHclFmt:input_type -> hashicorp.waypoint.WaypointHclFmtRequest
+	137, // 748: hashicorp.waypoint.Waypoint.UpsertOnDemandRunnerConfig:input_type -> hashicorp.waypoint.UpsertOnDemandRunnerConfigRequest
+	139, // 749: hashicorp.waypoint.Waypoint.GetOnDemandRunnerConfig:input_type -> hashicorp.waypoint.GetOnDemandRunnerConfigRequest
+	468, // 750: hashicorp.waypoint.Waypoint.GetDefaultOnDemandRunnerConfig:input_type -> google.protobuf.Empty
+	141, // 751: hashicorp.waypoint.Waypoint.DeleteOnDemandRunnerConfig:input_type -> hashicorp.waypoint.DeleteOnDemandRunnerConfigRequest
+	468, // 752: hashicorp.waypoint.Waypoint.ListOnDemandRunnerConfigs:input_type -> google.protobuf.Empty
+	128, // 753: hashicorp.waypoint.Waypoint.UpsertBuild:input_type -> hashicorp.waypoint.UpsertBuildRequest
+	144, // 754: hashicorp.waypoint.Waypoint.UpsertPushedArtifact:input_type -> hashicorp.waypoint.UpsertPushedArtifactRequest
+	152, // 755: hashicorp.waypoint.Waypoint.UpsertDeployment:input_type -> hashicorp.waypoint.UpsertDeploymentRequest
+	161, // 756: hashicorp.waypoint.Waypoint.UpsertRelease:input_type -> hashicorp.waypoint.UpsertReleaseRequest
+	179, // 757: hashicorp.waypoint.Waypoint.UpsertStatusReport:input_type -> hashicorp.waypoint.UpsertStatusReportRequest
+	49,  // 758: hashicorp.waypoint.Waypoint.GetTask:input_type -> hashicorp.waypoint.GetTaskRequest
+	52,  // 759: hashicorp.waypoint.Waypoint.ListTask:input_type -> hashicorp.waypoint.ListTaskRequest
+	54,  // 760: hashicorp.waypoint.Waypoint.CancelTask:input_type -> hashicorp.waypoint.CancelTaskRequest
+	170, // 761: hashicorp.waypoint.Waypoint.UpsertTrigger:input_type -> hashicorp.waypoint.UpsertTriggerRequest
+	172, // 762: hashicorp.waypoint.Waypoint.GetTrigger:input_type -> hashicorp.waypoint.GetTriggerRequest
+	174, // 763: hashicorp.waypoint.Waypoint.DeleteTrigger:input_type -> hashicorp.waypoint.DeleteTriggerRequest
+	177, // 764: hashicorp.waypoint.Waypoint.ListTriggers:input_type -> hashicorp.waypoint.ListTriggerRequest
+	175, // 765: hashicorp.waypoint.Waypoint.RunTrigger:input_type -> hashicorp.waypoint.RunTriggerRequest
+	209, // 766: hashicorp.waypoint.Waypoint.UpsertPipeline:input_type -> hashicorp.waypoint.UpsertPipelineRequest
+	213, // 767: hashicorp.waypoint.Waypoint.RunPipeline:input_type -> hashicorp.waypoint.RunPipelineRequest
+	211, // 768: hashicorp.waypoint.Waypoint.GetPipeline:input_type -> hashicorp.waypoint.GetPipelineRequest
+	219, // 769: hashicorp.waypoint.Waypoint.GetPipelineRun:input_type -> hashicorp.waypoint.GetPipelineRunRequest
+	211, // 770: hashicorp.waypoint.Waypoint.GetLatestPipelineRun:input_type -> hashicorp.waypoint.GetPipelineRequest
+	215, // 771: hashicorp.waypoint.Waypoint.ListPipelines:input_type -> hashicorp.waypoint.ListPipelinesRequest
+	217, // 772: hashicorp.waypoint.Waypoint.ListPipelineRuns:input_type -> hashicorp.waypoint.ListPipelineRunsRequest
+	221, // 773: hashicorp.waypoint.Waypoint.ConfigSyncPipeline:input_type -> hashicorp.waypoint.ConfigSyncPipelineRequest
+	242, // 774: hashicorp.waypoint.Waypoint.UI_ListProjects:input_type -> hashicorp.waypoint.UI.ListProjectsRequest
+	245, // 775: hashicorp.waypoint.Waypoint.UI_GetProject:input_type -> hashicorp.waypoint.UI.GetProjectRequest
+	247, // 776: hashicorp.waypoint.Waypoint.UI_ListPipelines:input_type -> hashicorp.waypoint.UI.ListPipelinesRequest
+	249, // 777: hashicorp.waypoint.Waypoint.UI_ListPipelineRuns:input_type -> hashicorp.waypoint.UI.ListPipelineRunsRequest
+	251, // 778: hashicorp.waypoint.Waypoint.UI_GetPipelineRun:input_type -> hashicorp.waypoint.UI.GetPipelineRunRequest
+	256, // 779: hashicorp.waypoint.Waypoint.UI_ListDeployments:input_type -> hashicorp.waypoint.UI.ListDeploymentsRequest
+	258, // 780: hashicorp.waypoint.Waypoint.UI_GetDeployment:input_type -> hashicorp.waypoint.UI.GetDeploymentRequest
+	261, // 781: hashicorp.waypoint.Waypoint.UI_ListReleases:input_type -> hashicorp.waypoint.UI.ListReleasesRequest
+	28,  // 782: hashicorp.waypoint.Waypoint.GetVersionInfo:output_type -> hashicorp.waypoint.GetVersionInfoResponse
+	70,  // 783: hashicorp.waypoint.Waypoint.ListOIDCAuthMethods:output_type -> hashicorp.waypoint.ListOIDCAuthMethodsResponse
+	72,  // 784: hashicorp.waypoint.Waypoint.GetOIDCAuthURL:output_type -> hashicorp.waypoint.GetOIDCAuthURLResponse
+	74,  // 785: hashicorp.waypoint.Waypoint.CompleteOIDCAuth:output_type -> hashicorp.waypoint.CompleteOIDCAuthResponse
+	176, // 786: hashicorp.waypoint.Waypoint.NoAuthRunTrigger:output_type -> hashicorp.waypoint.RunTriggerResponse
+	57,  // 787: hashicorp.waypoint.Waypoint.GetUser:output_type -> hashicorp.waypoint.GetUserResponse
+	58,  // 788: hashicorp.waypoint.Waypoint.ListUsers:output_type -> hashicorp.waypoint.ListUsersResponse
+	60,  // 789: hashicorp.waypoint.Waypoint.UpdateUser:output_type -> hashicorp.waypoint.UpdateUserResponse
+	468, // 790: hashicorp.waypoint.Waypoint.DeleteUser:output_type -> google.protobuf.Empty
+	65,  // 791: hashicorp.waypoint.Waypoint.UpsertAuthMethod:output_type -> hashicorp.waypoint.UpsertAuthMethodResponse
+	67,  // 792: hashicorp.waypoint.Waypoint.GetAuthMethod:output_type -> hashicorp.waypoint.GetAuthMethodResponse
+	69,  // 793: hashicorp.waypoint.Waypoint.ListAuthMethods:output_type -> hashicorp.waypoint.ListAuthMethodsResponse
+	468, // 794: hashicorp.waypoint.Waypoint.DeleteAuthMethod:output_type -> google.protobuf.Empty
+	112, // 795: hashicorp.waypoint.Waypoint.ListWorkspaces:output_type -> hashicorp.waypoint.ListWorkspacesResponse
+	114, // 796: hashicorp.waypoint.Waypoint.GetWorkspace:output_type -> hashicorp.waypoint.GetWorkspaceResponse
+	116, // 797: hashicorp.waypoint.Waypoint.UpsertWorkspace:output_type -> hashicorp.waypoint.UpsertWorkspaceResponse
+	118, // 798: hashicorp.waypoint.Waypoint.UpsertProject:output_type -> hashicorp.waypoint.UpsertProjectResponse
+	120, // 799: hashicorp.waypoint.Waypoint.GetProject:output_type -> hashicorp.waypoint.GetProjectResponse
+	122, // 800: hashicorp.waypoint.Waypoint.ListProjects:output_type -> hashicorp.waypoint.ListProjectsResponse
+	468, // 801: hashicorp.waypoint.Waypoint.DestroyProject:output_type -> google.protobuf.Empty
+	125, // 802: hashicorp.waypoint.Waypoint.GetApplication:output_type -> hashicorp.waypoint.GetApplicationResponse
+	127, // 803: hashicorp.waypoint.Waypoint.UpsertApplication:output_type -> hashicorp.waypoint.UpsertApplicationResponse
+	131, // 804: hashicorp.waypoint.Waypoint.ListBuilds:output_type -> hashicorp.waypoint.ListBuildsResponse
+	134, // 805: hashicorp.waypoint.Waypoint.GetBuild:output_type -> hashicorp.waypoint.Build
+	134, // 806: hashicorp.waypoint.Waypoint.GetLatestBuild:output_type -> hashicorp.waypoint.Build
+	149, // 807: hashicorp.waypoint.Waypoint.ListPushedArtifacts:output_type -> hashicorp.waypoint.ListPushedArtifactsResponse
+	150, // 808: hashicorp.waypoint.Waypoint.GetPushedArtifact:output_type -> hashicorp.waypoint.PushedArtifact
+	150, // 809: hashicorp.waypoint.Waypoint.GetLatestPushedArtifact:output_type -> hashicorp.waypoint.PushedArtifact
+	155, // 810: hashicorp.waypoint.Waypoint.ListDeployments:output_type -> hashicorp.waypoint.ListDeploymentsResponse
+	156, // 811: hashicorp.waypoint.Waypoint.GetDeployment:output_type -> hashicorp.waypoint.Deployment
+	159, // 812: hashicorp.waypoint.Waypoint.ListInstances:output_type -> hashicorp.waypoint.ListInstancesResponse
+	165, // 813: hashicorp.waypoint.Waypoint.ListReleases:output_type -> hashicorp.waypoint.ListReleasesResponse
+	167, // 814: hashicorp.waypoint.Waypoint.GetRelease:output_type -> hashicorp.waypoint.Release
+	167, // 815: hashicorp.waypoint.Waypoint.GetLatestRelease:output_type -> hashicorp.waypoint.Release
+	187, // 816: hashicorp.waypoint.Waypoint.GetStatusReport:output_type -> hashicorp.waypoint.StatusReport
+	187, // 817: hashicorp.waypoint.Waypoint.GetLatestStatusReport:output_type -> hashicorp.waypoint.StatusReport
+	183, // 818: hashicorp.waypoint.Waypoint.ListStatusReports:output_type -> hashicorp.waypoint.ListStatusReportsResponse
+	186, // 819: hashicorp.waypoint.Waypoint.ExpediteStatusReport:output_type -> hashicorp.waypoint.ExpediteStatusReportResponse
+	189, // 820: hashicorp.waypoint.Waypoint.GetLogStream:output_type -> hashicorp.waypoint.LogBatch
+	200, // 821: hashicorp.waypoint.Waypoint.StartExecStream:output_type -> hashicorp.waypoint.ExecStreamResponse
+	192, // 822: hashicorp.waypoint.Waypoint.SetConfig:output_type -> hashicorp.waypoint.ConfigSetResponse
+	194, // 823: hashicorp.waypoint.Waypoint.GetConfig:output_type -> hashicorp.waypoint.ConfigGetResponse
+	468, // 824: hashicorp.waypoint.Waypoint.SetConfigSource:output_type -> google.protobuf.Empty
+	198, // 825: hashicorp.waypoint.Waypoint.GetConfigSource:output_type -> hashicorp.waypoint.GetConfigSourceResponse
+	106, // 826: hashicorp.waypoint.Waypoint.CreateHostname:output_type -> hashicorp.waypoint.CreateHostnameResponse
+	468, // 827: hashicorp.waypoint.Waypoint.DeleteHostname:output_type -> google.protobuf.Empty
+	108, // 828: hashicorp.waypoint.Waypoint.ListHostnames:output_type -> hashicorp.waypoint.ListHostnamesResponse
+	76,  // 829: hashicorp.waypoint.Waypoint.QueueJob:output_type -> hashicorp.waypoint.QueueJobResponse
+	468, // 830: hashicorp.waypoint.Waypoint.CancelJob:output_type -> google.protobuf.Empty
+	80,  // 831: hashicorp.waypoint.Waypoint.GetJob:output_type -> hashicorp.waypoint.Job
+	84,  // 832: hashicorp.waypoint.Waypoint.ListJobs:output_type -> hashicorp.waypoint.ListJobsResponse
+	79,  // 833: hashicorp.waypoint.Waypoint.ValidateJob:output_type -> hashicorp.waypoint.ValidateJobResponse
+	86,  // 834: hashicorp.waypoint.Waypoint.GetJobStream:output_type -> hashicorp.waypoint.GetJobStreamResponse
+	87,  // 835: hashicorp.waypoint.Waypoint.GetRunner:output_type -> hashicorp.waypoint.Runner
+	99,  // 836: hashicorp.waypoint.Waypoint.ListRunners:output_type -> hashicorp.waypoint.ListRunnersResponse
+	468, // 837: hashicorp.waypoint.Waypoint.AdoptRunner:output_type -> google.protobuf.Empty
+	468, // 838: hashicorp.waypoint.Waypoint.ForgetRunner:output_type -> google.protobuf.Empty
+	103, // 839: hashicorp.waypoint.Waypoint.GetServerConfig:output_type -> hashicorp.waypoint.GetServerConfigResponse
+	468, // 840: hashicorp.waypoint.Waypoint.SetServerConfig:output_type -> google.protobuf.Empty
+	233, // 841: hashicorp.waypoint.Waypoint.CreateSnapshot:output_type -> hashicorp.waypoint.CreateSnapshotResponse
+	468, // 842: hashicorp.waypoint.Waypoint.RestoreSnapshot:output_type -> google.protobuf.Empty
+	231, // 843: hashicorp.waypoint.Waypoint.BootstrapToken:output_type -> hashicorp.waypoint.NewTokenResponse
+	227, // 844: hashicorp.waypoint.Waypoint.DecodeToken:output_type -> hashicorp.waypoint.DecodeTokenResponse
+	231, // 845: hashicorp.waypoint.Waypoint.GenerateInviteToken:output_type -> hashicorp.waypoint.NewTokenResponse
+	231, // 846: hashicorp.waypoint.Waypoint.GenerateLoginToken:output_type -> hashicorp.waypoint.NewTokenResponse
+	231, // 847: hashicorp.waypoint.Waypoint.GenerateRunnerToken:output_type -> hashicorp.waypoint.NewTokenResponse
+	231, // 848: hashicorp.waypoint.Waypoint.ConvertInviteToken:output_type -> hashicorp.waypoint.NewTokenResponse
+	89,  // 849: hashicorp.waypoint.Waypoint.RunnerToken:output_type -> hashicorp.waypoint.RunnerTokenResponse
+	91,  // 850: hashicorp.waypoint.Waypoint.RunnerConfig:output_type -> hashicorp.waypoint.RunnerConfigResponse
+	94,  // 851: hashicorp.waypoint.Waypoint.RunnerJobStream:output_type -> hashicorp.waypoint.RunnerJobStreamResponse
+	96,  // 852: hashicorp.waypoint.Waypoint.RunnerGetDeploymentConfig:output_type -> hashicorp.waypoint.RunnerGetDeploymentConfigResponse
+	202, // 853: hashicorp.waypoint.Waypoint.EntrypointConfig:output_type -> hashicorp.waypoint.EntrypointConfigResponse
+	468, // 854: hashicorp.waypoint.Waypoint.EntrypointLogStream:output_type -> google.protobuf.Empty
+	206, // 855: hashicorp.waypoint.Waypoint.EntrypointExecStream:output_type -> hashicorp.waypoint.EntrypointExecResponse
+	238, // 856: hashicorp.waypoint.Waypoint.WaypointHclFmt:output_type -> hashicorp.waypoint.WaypointHclFmtResponse
+	138, // 857: hashicorp.waypoint.Waypoint.UpsertOnDemandRunnerConfig:output_type -> hashicorp.waypoint.UpsertOnDemandRunnerConfigResponse
+	140, // 858: hashicorp.waypoint.Waypoint.GetOnDemandRunnerConfig:output_type -> hashicorp.waypoint.GetOnDemandRunnerConfigResponse
+	140, // 859: hashicorp.waypoint.Waypoint.GetDefaultOnDemandRunnerConfig:output_type -> hashicorp.waypoint.GetOnDemandRunnerConfigResponse
+	142, // 860: hashicorp.waypoint.Waypoint.DeleteOnDemandRunnerConfig:output_type -> hashicorp.waypoint.DeleteOnDemandRunnerConfigResponse
+	143, // 861: hashicorp.waypoint.Waypoint.ListOnDemandRunnerConfigs:output_type -> hashicorp.waypoint.ListOnDemandRunnerConfigsResponse
+	129, // 862: hashicorp.waypoint.Waypoint.UpsertBuild:output_type -> hashicorp.waypoint.UpsertBuildResponse
+	145, // 863: hashicorp.waypoint.Waypoint.UpsertPushedArtifact:output_type -> hashicorp.waypoint.UpsertPushedArtifactResponse
+	153, // 864: hashicorp.waypoint.Waypoint.UpsertDeployment:output_type -> hashicorp.waypoint.UpsertDeploymentResponse
+	162, // 865: hashicorp.waypoint.Waypoint.UpsertRelease:output_type -> hashicorp.waypoint.UpsertReleaseResponse
+	180, // 866: hashicorp.waypoint.Waypoint.UpsertStatusReport:output_type -> hashicorp.waypoint.UpsertStatusReportResponse
+	50,  // 867: hashicorp.waypoint.Waypoint.GetTask:output_type -> hashicorp.waypoint.GetTaskResponse
+	53,  // 868: hashicorp.waypoint.Waypoint.ListTask:output_type -> hashicorp.waypoint.ListTaskResponse
+	468, // 869: hashicorp.waypoint.Waypoint.CancelTask:output_type -> google.protobuf.Empty
+	171, // 870: hashicorp.waypoint.Waypoint.UpsertTrigger:output_type -> hashicorp.waypoint.UpsertTriggerResponse
+	173, // 871: hashicorp.waypoint.Waypoint.GetTrigger:output_type -> hashicorp.waypoint.GetTriggerResponse
+	468, // 872: hashicorp.waypoint.Waypoint.DeleteTrigger:output_type -> google.protobuf.Empty
+	178, // 873: hashicorp.waypoint.Waypoint.ListTriggers:output_type -> hashicorp.waypoint.ListTriggerResponse
+	176, // 874: hashicorp.waypoint.Waypoint.RunTrigger:output_type -> hashicorp.waypoint.RunTriggerResponse
+	210, // 875: hashicorp.waypoint.Waypoint.UpsertPipeline:output_type -> hashicorp.waypoint.UpsertPipelineResponse
+	214, // 876: hashicorp.waypoint.Waypoint.RunPipeline:output_type -> hashicorp.waypoint.RunPipelineResponse
+	212, // 877: hashicorp.waypoint.Waypoint.GetPipeline:output_type -> hashicorp.waypoint.GetPipelineResponse
+	220, // 878: hashicorp.waypoint.Waypoint.GetPipelineRun:output_type -> hashicorp.waypoint.GetPipelineRunResponse
+	220, // 879: hashicorp.waypoint.Waypoint.GetLatestPipelineRun:output_type -> hashicorp.waypoint.GetPipelineRunResponse
+	216, // 880: hashicorp.waypoint.Waypoint.ListPipelines:output_type -> hashicorp.waypoint.ListPipelinesResponse
+	218, // 881: hashicorp.waypoint.Waypoint.ListPipelineRuns:output_type -> hashicorp.waypoint.ListPipelineRunsResponse
+	222, // 882: hashicorp.waypoint.Waypoint.ConfigSyncPipeline:output_type -> hashicorp.waypoint.ConfigSyncPipelineResponse
+	243, // 883: hashicorp.waypoint.Waypoint.UI_ListProjects:output_type -> hashicorp.waypoint.UI.ListProjectsResponse
+	246, // 884: hashicorp.waypoint.Waypoint.UI_GetProject:output_type -> hashicorp.waypoint.UI.GetProjectResponse
+	248, // 885: hashicorp.waypoint.Waypoint.UI_ListPipelines:output_type -> hashicorp.waypoint.UI.ListPipelinesResponse
+	250, // 886: hashicorp.waypoint.Waypoint.UI_ListPipelineRuns:output_type -> hashicorp.waypoint.UI.ListPipelineRunsResponse
+	252, // 887: hashicorp.waypoint.Waypoint.UI_GetPipelineRun:output_type -> hashicorp.waypoint.UI.GetPipelineRunResponse
+	257, // 888: hashicorp.waypoint.Waypoint.UI_ListDeployments:output_type -> hashicorp.waypoint.UI.ListDeploymentsResponse
+	259, // 889: hashicorp.waypoint.Waypoint.UI_GetDeployment:output_type -> hashicorp.waypoint.UI.GetDeploymentResponse
+	262, // 890: hashicorp.waypoint.Waypoint.UI_ListReleases:output_type -> hashicorp.waypoint.UI.ListReleasesResponse
+	782, // [782:891] is the sub-list for method output_type
+	673, // [673:782] is the sub-list for method input_type
+	673, // [673:673] is the sub-list for extension type_name
+	673, // [673:673] is the sub-list for extension extendee
+	0,   // [0:673] is the sub-list for field type_name
 }
 
 func init() { file_pkg_server_proto_server_proto_init() }
@@ -38217,7 +38773,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[224].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_PipelineBundle); i {
+			switch v := v.(*UI_GetPipelineRunRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38229,7 +38785,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[225].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_PipelineRunBundle); i {
+			switch v := v.(*UI_GetPipelineRunResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38241,7 +38797,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[226].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_ListDeploymentsRequest); i {
+			switch v := v.(*UI_PipelineBundle); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38253,7 +38809,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[227].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_ListDeploymentsResponse); i {
+			switch v := v.(*UI_PipelineRunBundle); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38265,7 +38821,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[228].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_GetDeploymentRequest); i {
+			switch v := v.(*UI_PipelineRunTreeNode); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38277,7 +38833,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[229].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_GetDeploymentResponse); i {
+			switch v := v.(*UI_ListDeploymentsRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38289,7 +38845,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[230].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_DeploymentBundle); i {
+			switch v := v.(*UI_ListDeploymentsResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38301,7 +38857,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[231].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_ListReleasesRequest); i {
+			switch v := v.(*UI_GetDeploymentRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38313,7 +38869,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[232].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_ListReleasesResponse); i {
+			switch v := v.(*UI_GetDeploymentResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38325,7 +38881,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[233].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UI_ReleaseBundle); i {
+			switch v := v.(*UI_DeploymentBundle); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38337,7 +38893,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[234].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*VersionInfo_ProtocolVersion); i {
+			switch v := v.(*UI_ListReleasesRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38349,7 +38905,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[235].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Variable_File); i {
+			switch v := v.(*UI_ListReleasesResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38361,7 +38917,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[236].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Variable_VCS); i {
+			switch v := v.(*UI_ReleaseBundle); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38373,7 +38929,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[237].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Variable_HclPos); i {
+			switch v := v.(*UI_PipelineRunTreeNode_Children); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38385,7 +38941,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[238].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Variable_HclRange); i {
+			switch v := v.(*VersionInfo_ProtocolVersion); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38397,7 +38953,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[239].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Variable_FinalValue); i {
+			switch v := v.(*Variable_File); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38409,7 +38965,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[240].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Project_Poll); i {
+			switch v := v.(*Variable_VCS); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38421,7 +38977,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[241].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Project_AppStatusPoll); i {
+			switch v := v.(*Variable_HclPos); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38433,7 +38989,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[242].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Workspace_Project); i {
+			switch v := v.(*Variable_HclRange); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38445,7 +39001,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[243].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Workspace_Application); i {
+			switch v := v.(*Variable_FinalValue); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38457,7 +39013,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[244].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*User_Link); i {
+			switch v := v.(*Project_Poll); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38469,7 +39025,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[245].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*User_Link_OIDC); i {
+			switch v := v.(*Project_AppStatusPoll); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38481,7 +39037,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[246].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Global); i {
+			switch v := v.(*Workspace_Project); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38493,7 +39049,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[247].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Application); i {
+			switch v := v.(*Workspace_Application); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38505,7 +39061,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[248].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Project); i {
+			switch v := v.(*User_Link); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38517,7 +39073,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[249].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Workspace); i {
+			switch v := v.(*User_Link_OIDC); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38529,7 +39085,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[250].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Deployment); i {
+			switch v := v.(*Ref_Global); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38541,7 +39097,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[251].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Artifact); i {
+			switch v := v.(*Ref_Application); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38553,7 +39109,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[252].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Component); i {
+			switch v := v.(*Ref_Project); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38565,7 +39121,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[253].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Operation); i {
+			switch v := v.(*Ref_Workspace); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38577,7 +39133,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[254].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_OperationSeq); i {
+			switch v := v.(*Ref_Deployment); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38589,7 +39145,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[255].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Runner); i {
+			switch v := v.(*Ref_Artifact); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38601,7 +39157,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[256].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_RunnerAny); i {
+			switch v := v.(*Ref_Component); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38613,7 +39169,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[257].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_RunnerId); i {
+			switch v := v.(*Ref_Operation); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38625,7 +39181,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[258].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_RunnerLabels); i {
+			switch v := v.(*Ref_OperationSeq); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38637,7 +39193,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[259].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_User); i {
+			switch v := v.(*Ref_Runner); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38649,7 +39205,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[260].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_UserId); i {
+			switch v := v.(*Ref_RunnerAny); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38661,7 +39217,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[261].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_UserUsername); i {
+			switch v := v.(*Ref_RunnerId); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38673,7 +39229,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[262].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_AuthMethod); i {
+			switch v := v.(*Ref_RunnerLabels); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38685,7 +39241,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[263].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_DeclaredResource); i {
+			switch v := v.(*Ref_User); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38697,7 +39253,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[264].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_OnDemandRunnerConfig); i {
+			switch v := v.(*Ref_UserId); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38709,7 +39265,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[265].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Trigger); i {
+			switch v := v.(*Ref_UserUsername); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38721,7 +39277,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[266].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Job); i {
+			switch v := v.(*Ref_AuthMethod); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38733,7 +39289,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[267].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Task); i {
+			switch v := v.(*Ref_DeclaredResource); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38745,7 +39301,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[268].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_Pipeline); i {
+			switch v := v.(*Ref_OnDemandRunnerConfig); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38757,7 +39313,7 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[269].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_PipelineOwner); i {
+			switch v := v.(*Ref_Trigger); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38769,7 +39325,19 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[270].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Ref_PipelineStep); i {
+			switch v := v.(*Ref_Job); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pkg_server_proto_server_proto_msgTypes[271].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Ref_Task); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38781,7 +39349,19 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[272].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StatusFilter_Filter); i {
+			switch v := v.(*Ref_Pipeline); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pkg_server_proto_server_proto_msgTypes[273].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Ref_PipelineOwner); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -38793,6 +39373,30 @@ func file_pkg_server_proto_server_proto_init() {
 			}
 		}
 		file_pkg_server_proto_server_proto_msgTypes[274].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Ref_PipelineStep); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pkg_server_proto_server_proto_msgTypes[276].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*StatusFilter_Filter); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_pkg_server_proto_server_proto_msgTypes[278].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AuthMethod_OIDC); i {
 			case 0:
 				return &v.state
@@ -38804,7 +39408,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[277].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[281].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_TaskOverride); i {
 			case 0:
 				return &v.state
@@ -38816,7 +39420,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[281].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[285].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Result); i {
 			case 0:
 				return &v.state
@@ -38828,7 +39432,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[282].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[286].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Config); i {
 			case 0:
 				return &v.state
@@ -38840,7 +39444,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[283].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[287].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DataSource); i {
 			case 0:
 				return &v.state
@@ -38852,7 +39456,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[284].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[288].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Local); i {
 			case 0:
 				return &v.state
@@ -38864,7 +39468,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[285].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[289].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Remote); i {
 			case 0:
 				return &v.state
@@ -38876,7 +39480,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[286].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[290].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Git); i {
 			case 0:
 				return &v.state
@@ -38888,7 +39492,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[287].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[291].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Noop); i {
 			case 0:
 				return &v.state
@@ -38900,7 +39504,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[288].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[292].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_UpOp); i {
 			case 0:
 				return &v.state
@@ -38912,7 +39516,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[289].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[293].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_UpResult); i {
 			case 0:
 				return &v.state
@@ -38924,7 +39528,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[290].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[294].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ValidateOp); i {
 			case 0:
 				return &v.state
@@ -38936,7 +39540,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[291].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[295].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ValidateResult); i {
 			case 0:
 				return &v.state
@@ -38948,7 +39552,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[292].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[296].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_AuthOp); i {
 			case 0:
 				return &v.state
@@ -38960,7 +39564,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[293].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[297].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_AuthResult); i {
 			case 0:
 				return &v.state
@@ -38972,7 +39576,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[294].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[298].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_BuildOp); i {
 			case 0:
 				return &v.state
@@ -38984,7 +39588,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[295].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[299].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_BuildResult); i {
 			case 0:
 				return &v.state
@@ -38996,7 +39600,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[296].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[300].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PushOp); i {
 			case 0:
 				return &v.state
@@ -39008,7 +39612,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[297].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[301].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PushResult); i {
 			case 0:
 				return &v.state
@@ -39020,7 +39624,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[298].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[302].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DeployOp); i {
 			case 0:
 				return &v.state
@@ -39032,7 +39636,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[299].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[303].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DeployResult); i {
 			case 0:
 				return &v.state
@@ -39044,7 +39648,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[300].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[304].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ExecOp); i {
 			case 0:
 				return &v.state
@@ -39056,7 +39660,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[301].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[305].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ExecResult); i {
 			case 0:
 				return &v.state
@@ -39068,7 +39672,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[302].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[306].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_LogsOp); i {
 			case 0:
 				return &v.state
@@ -39080,7 +39684,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[303].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[307].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DestroyOp); i {
 			case 0:
 				return &v.state
@@ -39092,7 +39696,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[304].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[308].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ReleaseOp); i {
 			case 0:
 				return &v.state
@@ -39104,7 +39708,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[305].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[309].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ReleaseResult); i {
 			case 0:
 				return &v.state
@@ -39116,7 +39720,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[306].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[310].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_TaskPluginParams); i {
 			case 0:
 				return &v.state
@@ -39128,7 +39732,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[307].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[311].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_StartTaskLaunchOp); i {
 			case 0:
 				return &v.state
@@ -39140,7 +39744,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[308].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[312].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_StartTaskResult); i {
 			case 0:
 				return &v.state
@@ -39152,7 +39756,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[309].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[313].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_StopTaskLaunchOp); i {
 			case 0:
 				return &v.state
@@ -39164,7 +39768,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[310].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[314].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_WatchTaskOp); i {
 			case 0:
 				return &v.state
@@ -39176,7 +39780,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[311].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[315].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_WatchTaskResult); i {
 			case 0:
 				return &v.state
@@ -39188,7 +39792,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[312].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[316].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_StatusReportOp); i {
 			case 0:
 				return &v.state
@@ -39200,7 +39804,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[313].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[317].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_StatusReportResult); i {
 			case 0:
 				return &v.state
@@ -39212,7 +39816,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[314].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[318].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DocsOp); i {
 			case 0:
 				return &v.state
@@ -39224,7 +39828,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[315].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[319].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DocsResult); i {
 			case 0:
 				return &v.state
@@ -39236,7 +39840,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[316].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[320].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ConfigSyncOp); i {
 			case 0:
 				return &v.state
@@ -39248,7 +39852,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[317].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[321].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ConfigSyncResult); i {
 			case 0:
 				return &v.state
@@ -39260,7 +39864,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[318].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[322].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PipelineConfigSyncResult); i {
 			case 0:
 				return &v.state
@@ -39272,7 +39876,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[319].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[323].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_ProjectDestroyResult); i {
 			case 0:
 				return &v.state
@@ -39284,7 +39888,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[320].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[324].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PollOp); i {
 			case 0:
 				return &v.state
@@ -39296,7 +39900,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[321].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[325].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PollResult); i {
 			case 0:
 				return &v.state
@@ -39308,7 +39912,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[322].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[326].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_InitOp); i {
 			case 0:
 				return &v.state
@@ -39320,7 +39924,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[323].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[327].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_InitResult); i {
 			case 0:
 				return &v.state
@@ -39332,7 +39936,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[324].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[328].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PipelineStepOp); i {
 			case 0:
 				return &v.state
@@ -39344,7 +39948,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[325].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[329].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DestroyProjectOp); i {
 			case 0:
 				return &v.state
@@ -39356,7 +39960,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[326].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[330].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_PipelineStepResult); i {
 			case 0:
 				return &v.state
@@ -39368,7 +39972,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[327].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[331].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_QueueProjectOp); i {
 			case 0:
 				return &v.state
@@ -39380,7 +39984,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[328].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[332].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_QueueProjectResult); i {
 			case 0:
 				return &v.state
@@ -39392,7 +39996,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[329].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[333].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DataSource_Ref); i {
 			case 0:
 				return &v.state
@@ -39404,7 +40008,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[330].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[334].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Git_Basic); i {
 			case 0:
 				return &v.state
@@ -39416,7 +40020,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[331].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[335].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Git_SSH); i {
 			case 0:
 				return &v.state
@@ -39428,7 +40032,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[332].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[336].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_Git_Ref); i {
 			case 0:
 				return &v.state
@@ -39440,7 +40044,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[333].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[337].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_AuthResult_Result); i {
 			case 0:
 				return &v.state
@@ -39452,7 +40056,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[334].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[338].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_DocsResult_Result); i {
 			case 0:
 				return &v.state
@@ -39464,7 +40068,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[336].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[340].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Job_QueueProjectResult_Application); i {
 			case 0:
 				return &v.state
@@ -39476,7 +40080,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[338].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[342].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Documentation_Field); i {
 			case 0:
 				return &v.state
@@ -39488,7 +40092,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[339].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[343].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Documentation_Mapper); i {
 			case 0:
 				return &v.state
@@ -39500,7 +40104,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[340].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[344].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Open); i {
 			case 0:
 				return &v.state
@@ -39512,7 +40116,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[341].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[345].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_State); i {
 			case 0:
 				return &v.state
@@ -39524,7 +40128,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[342].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[346].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_JobChange); i {
 			case 0:
 				return &v.state
@@ -39536,7 +40140,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[343].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[347].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Download); i {
 			case 0:
 				return &v.state
@@ -39548,7 +40152,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[344].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[348].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal); i {
 			case 0:
 				return &v.state
@@ -39560,7 +40164,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[345].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[349].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Error); i {
 			case 0:
 				return &v.state
@@ -39572,7 +40176,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[346].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[350].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Complete); i {
 			case 0:
 				return &v.state
@@ -39584,7 +40188,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[347].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[351].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event); i {
 			case 0:
 				return &v.state
@@ -39596,7 +40200,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[348].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[352].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_Status); i {
 			case 0:
 				return &v.state
@@ -39608,7 +40212,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[349].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[353].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_Line); i {
 			case 0:
 				return &v.state
@@ -39620,7 +40224,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[350].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[354].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_Raw); i {
 			case 0:
 				return &v.state
@@ -39632,7 +40236,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[351].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[355].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_NamedValue); i {
 			case 0:
 				return &v.state
@@ -39644,7 +40248,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[352].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[356].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_NamedValues); i {
 			case 0:
 				return &v.state
@@ -39656,7 +40260,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[353].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[357].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_TableEntry); i {
 			case 0:
 				return &v.state
@@ -39668,7 +40272,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[354].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[358].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_TableRow); i {
 			case 0:
 				return &v.state
@@ -39680,7 +40284,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[355].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[359].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_Table); i {
 			case 0:
 				return &v.state
@@ -39692,7 +40296,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[356].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[360].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_StepGroup); i {
 			case 0:
 				return &v.state
@@ -39704,7 +40308,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[357].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[361].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetJobStreamResponse_Terminal_Event_Step); i {
 			case 0:
 				return &v.state
@@ -39716,7 +40320,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[359].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[363].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Runner_ODR); i {
 			case 0:
 				return &v.state
@@ -39728,7 +40332,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[360].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[364].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Runner_Local); i {
 			case 0:
 				return &v.state
@@ -39740,7 +40344,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[361].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[365].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Runner_Remote); i {
 			case 0:
 				return &v.state
@@ -39752,7 +40356,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[362].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[366].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerConfigRequest_Open); i {
 			case 0:
 				return &v.state
@@ -39764,7 +40368,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[363].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[367].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_Request); i {
 			case 0:
 				return &v.state
@@ -39776,7 +40380,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[364].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[368].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_Ack); i {
 			case 0:
 				return &v.state
@@ -39788,7 +40392,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[365].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[369].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_Complete); i {
 			case 0:
 				return &v.state
@@ -39800,7 +40404,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[366].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[370].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_Error); i {
 			case 0:
 				return &v.state
@@ -39812,7 +40416,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[367].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[371].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_Heartbeat); i {
 			case 0:
 				return &v.state
@@ -39824,7 +40428,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[368].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[372].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_ConfigLoad); i {
 			case 0:
 				return &v.state
@@ -39836,7 +40440,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[369].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[373].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamRequest_VariableValuesSet); i {
 			case 0:
 				return &v.state
@@ -39848,7 +40452,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[371].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[375].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamResponse_JobAssignment); i {
 			case 0:
 				return &v.state
@@ -39860,7 +40464,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[372].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[376].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RunnerJobStreamResponse_JobCancel); i {
 			case 0:
 				return &v.state
@@ -39872,7 +40476,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[373].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[377].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ServerConfig_AdvertiseAddr); i {
 			case 0:
 				return &v.state
@@ -39884,7 +40488,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[375].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[379].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Hostname_Target); i {
 			case 0:
 				return &v.state
@@ -39896,7 +40500,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[376].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[380].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Hostname_TargetApp); i {
 			case 0:
 				return &v.state
@@ -39908,7 +40512,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[378].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[382].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Build_Preload); i {
 			case 0:
 				return &v.state
@@ -39920,7 +40524,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[381].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[385].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PushedArtifact_Preload); i {
 			case 0:
 				return &v.state
@@ -39932,7 +40536,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[383].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[387].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Deployment_Preload); i {
 			case 0:
 				return &v.state
@@ -39944,7 +40548,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[384].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[388].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ListInstancesRequest_Application); i {
 			case 0:
 				return &v.state
@@ -39956,7 +40560,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[386].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[390].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Release_Preload); i {
 			case 0:
 				return &v.state
@@ -39968,7 +40572,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[387].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[391].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StatusReport_Resource); i {
 			case 0:
 				return &v.state
@@ -39980,7 +40584,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[388].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[392].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*StatusReport_Health); i {
 			case 0:
 				return &v.state
@@ -39992,7 +40596,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[389].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[393].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetLogStreamRequest_Application); i {
 			case 0:
 				return &v.state
@@ -40004,7 +40608,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[390].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[394].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*LogBatch_Entry); i {
 			case 0:
 				return &v.state
@@ -40016,7 +40620,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[391].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[395].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ConfigVar_DynamicVal); i {
 			case 0:
 				return &v.state
@@ -40028,7 +40632,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[392].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[396].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ConfigVar_Target); i {
 			case 0:
 				return &v.state
@@ -40040,7 +40644,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[396].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[400].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamRequest_Start); i {
 			case 0:
 				return &v.state
@@ -40052,7 +40656,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[397].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[401].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamRequest_Input); i {
 			case 0:
 				return &v.state
@@ -40064,7 +40668,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[398].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[402].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamRequest_PTY); i {
 			case 0:
 				return &v.state
@@ -40076,7 +40680,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[399].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[403].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamRequest_WindowSize); i {
 			case 0:
 				return &v.state
@@ -40088,7 +40692,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[400].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[404].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamResponse_Open); i {
 			case 0:
 				return &v.state
@@ -40100,7 +40704,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[401].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[405].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamResponse_Exit); i {
 			case 0:
 				return &v.state
@@ -40112,7 +40716,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[402].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[406].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ExecStreamResponse_Output); i {
 			case 0:
 				return &v.state
@@ -40124,7 +40728,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[403].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[407].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointConfig_Exec); i {
 			case 0:
 				return &v.state
@@ -40136,7 +40740,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[404].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[408].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointConfig_URLService); i {
 			case 0:
 				return &v.state
@@ -40148,7 +40752,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[405].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[409].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointConfig_DeploymentInfo); i {
 			case 0:
 				return &v.state
@@ -40160,7 +40764,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[407].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[411].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointExecRequest_Open); i {
 			case 0:
 				return &v.state
@@ -40172,7 +40776,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[408].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[412].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointExecRequest_Exit); i {
 			case 0:
 				return &v.state
@@ -40184,7 +40788,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[409].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[413].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointExecRequest_Output); i {
 			case 0:
 				return &v.state
@@ -40196,7 +40800,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[410].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[414].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*EntrypointExecRequest_Error); i {
 			case 0:
 				return &v.state
@@ -40208,7 +40812,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[412].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[416].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step); i {
 			case 0:
 				return &v.state
@@ -40220,7 +40824,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[413].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[417].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Exec); i {
 			case 0:
 				return &v.state
@@ -40232,7 +40836,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[414].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[418].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Build); i {
 			case 0:
 				return &v.state
@@ -40244,7 +40848,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[415].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[419].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Deploy); i {
 			case 0:
 				return &v.state
@@ -40256,7 +40860,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[416].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[420].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Release); i {
 			case 0:
 				return &v.state
@@ -40268,7 +40872,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[417].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[421].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Up); i {
 			case 0:
 				return &v.state
@@ -40280,7 +40884,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[418].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[422].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Pipeline_Step_Pipeline); i {
 			case 0:
 				return &v.state
@@ -40292,7 +40896,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[419].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[423].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetPipelineResponse_Graph); i {
 			case 0:
 				return &v.state
@@ -40304,7 +40908,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[423].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[427].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenTransport_OAuthCredentials); i {
 			case 0:
 				return &v.state
@@ -40316,7 +40920,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[424].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[428].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Login); i {
 			case 0:
 				return &v.state
@@ -40328,7 +40932,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[425].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[429].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Runner); i {
 			case 0:
 				return &v.state
@@ -40340,7 +40944,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[426].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[430].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Invite); i {
 			case 0:
 				return &v.state
@@ -40352,7 +40956,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[427].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[431].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Entrypoint); i {
 			case 0:
 				return &v.state
@@ -40364,7 +40968,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[428].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[432].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Trigger); i {
 			case 0:
 				return &v.state
@@ -40376,7 +40980,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[429].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[433].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token_Invite_Signup); i {
 			case 0:
 				return &v.state
@@ -40388,7 +40992,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[431].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[435].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CreateSnapshotResponse_Open); i {
 			case 0:
 				return &v.state
@@ -40400,7 +41004,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[432].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[436].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RestoreSnapshotRequest_Open); i {
 			case 0:
 				return &v.state
@@ -40412,7 +41016,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[433].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[437].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Snapshot_Header); i {
 			case 0:
 				return &v.state
@@ -40424,7 +41028,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[434].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[438].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Snapshot_Trailer); i {
 			case 0:
 				return &v.state
@@ -40436,7 +41040,7 @@ func file_pkg_server_proto_server_proto_init() {
 				return nil
 			}
 		}
-		file_pkg_server_proto_server_proto_msgTypes[435].Exporter = func(v interface{}, i int) interface{} {
+		file_pkg_server_proto_server_proto_msgTypes[439].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Snapshot_BoltChunk); i {
 			case 0:
 				return &v.state
@@ -40628,74 +41232,79 @@ func file_pkg_server_proto_server_proto_init() {
 		(*RestoreSnapshotRequest_Open_)(nil),
 		(*RestoreSnapshotRequest_Chunk)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[239].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[228].OneofWrappers = []interface{}{
+		(*UI_PipelineRunTreeNode_Build)(nil),
+		(*UI_PipelineRunTreeNode_Deployment)(nil),
+		(*UI_PipelineRunTreeNode_Release)(nil),
+	}
+	file_pkg_server_proto_server_proto_msgTypes[243].OneofWrappers = []interface{}{
 		(*Variable_FinalValue_Sensitive)(nil),
 		(*Variable_FinalValue_Str)(nil),
 		(*Variable_FinalValue_Bool)(nil),
 		(*Variable_FinalValue_Num)(nil),
 		(*Variable_FinalValue_Hcl)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[244].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[248].OneofWrappers = []interface{}{
 		(*User_Link_Oidc)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[250].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[254].OneofWrappers = []interface{}{
 		(*Ref_Deployment_Latest)(nil),
 		(*Ref_Deployment_Sequence)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[251].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[255].OneofWrappers = []interface{}{
 		(*Ref_Artifact_Latest)(nil),
 		(*Ref_Artifact_Sequence)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[253].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[257].OneofWrappers = []interface{}{
 		(*Ref_Operation_Id)(nil),
 		(*Ref_Operation_Sequence)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[255].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[259].OneofWrappers = []interface{}{
 		(*Ref_Runner_Any)(nil),
 		(*Ref_Runner_Id)(nil),
 		(*Ref_Runner_Labels)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[259].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[263].OneofWrappers = []interface{}{
 		(*Ref_User_Id)(nil),
 		(*Ref_User_Username)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[267].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[271].OneofWrappers = []interface{}{
 		(*Ref_Task_Id)(nil),
 		(*Ref_Task_JobId)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[268].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[272].OneofWrappers = []interface{}{
 		(*Ref_Pipeline_Id)(nil),
 		(*Ref_Pipeline_Owner)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[272].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[276].OneofWrappers = []interface{}{
 		(*StatusFilter_Filter_State)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[283].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[287].OneofWrappers = []interface{}{
 		(*Job_DataSource_Local)(nil),
 		(*Job_DataSource_Git)(nil),
 		(*Job_DataSource_Remote)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[286].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[290].OneofWrappers = []interface{}{
 		(*Job_Git_Basic_)(nil),
 		(*Job_Git_Ssh)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[303].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[307].OneofWrappers = []interface{}{
 		(*Job_DestroyOp_Workspace)(nil),
 		(*Job_DestroyOp_Deployment)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[309].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[313].OneofWrappers = []interface{}{
 		(*Job_StopTaskLaunchOp_Direct)(nil),
 		(*Job_StopTaskLaunchOp_StartJobId)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[312].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[316].OneofWrappers = []interface{}{
 		(*Job_StatusReportOp_Deployment)(nil),
 		(*Job_StatusReportOp_Release)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[329].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[333].OneofWrappers = []interface{}{
 		(*Job_DataSource_Ref_Unknown)(nil),
 		(*Job_DataSource_Ref_Git)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[347].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[351].OneofWrappers = []interface{}{
 		(*GetJobStreamResponse_Terminal_Event_Line_)(nil),
 		(*GetJobStreamResponse_Terminal_Event_Status_)(nil),
 		(*GetJobStreamResponse_Terminal_Event_NamedValues_)(nil),
@@ -40704,19 +41313,19 @@ func file_pkg_server_proto_server_proto_init() {
 		(*GetJobStreamResponse_Terminal_Event_StepGroup_)(nil),
 		(*GetJobStreamResponse_Terminal_Event_Step_)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[375].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[379].OneofWrappers = []interface{}{
 		(*Hostname_Target_Application)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[392].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[396].OneofWrappers = []interface{}{
 		(*ConfigVar_Target_Global)(nil),
 		(*ConfigVar_Target_Project)(nil),
 		(*ConfigVar_Target_Application)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[396].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[400].OneofWrappers = []interface{}{
 		(*ExecStreamRequest_Start_DeploymentId)(nil),
 		(*ExecStreamRequest_Start_InstanceId)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[412].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[416].OneofWrappers = []interface{}{
 		(*Pipeline_Step_Exec_)(nil),
 		(*Pipeline_Step_Build_)(nil),
 		(*Pipeline_Step_Deploy_)(nil),
@@ -40724,7 +41333,7 @@ func file_pkg_server_proto_server_proto_init() {
 		(*Pipeline_Step_Up_)(nil),
 		(*Pipeline_Step_Pipeline_)(nil),
 	}
-	file_pkg_server_proto_server_proto_msgTypes[434].OneofWrappers = []interface{}{
+	file_pkg_server_proto_server_proto_msgTypes[438].OneofWrappers = []interface{}{
 		(*Snapshot_Trailer_Sha256)(nil),
 	}
 	type x struct{}
@@ -40732,8 +41341,8 @@ func file_pkg_server_proto_server_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_pkg_server_proto_server_proto_rawDesc,
-			NumEnums:      25,
-			NumMessages:   437,
+			NumEnums:      27,
+			NumMessages:   441,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
