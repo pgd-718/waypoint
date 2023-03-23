@@ -28,11 +28,11 @@ func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, err
 	for _, job := range jobs {
 		step := job.GetPipelineStep().Step
 		node := &pb.UI_PipelineRunTreeNode{
-			Step:      step,
-			Job:       &pb.Ref_Job{Id: job.Id},
-			State:     computeTreeNodeState(job),
-			StartTime: job.AckTime,
-			// TODO(jgwhite): CompleteTime *timestamppb.Timestamp
+			Step:         step,
+			Job:          &pb.Ref_Job{Id: job.Id},
+			State:        computeTreeNodeState(job),
+			StartTime:    job.AckTime,
+			CompleteTime: job.CompleteTime,
 			// TODO(jgwhite): Application: *pb.Ref_Application
 			// TODO(jgwhite): Workspace: *pb.Ref_Workspace
 			// TODO(jgwhite): Result: nil,
