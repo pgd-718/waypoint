@@ -180,7 +180,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one queued exec step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -212,7 +212,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 				State: pb.UI_PipelineRunTreeNode_QUEUED,
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -223,7 +223,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one running exec step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -257,7 +257,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				State:     pb.UI_PipelineRunTreeNode_RUNNING,
 				StartTime: quickTimestamp("2023-01-01T13:00:00Z"),
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -268,7 +268,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one successful exec step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -304,7 +304,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
 				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -315,7 +315,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one errored exec step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -351,7 +351,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
 				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -362,7 +362,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one cancelled exec step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -399,7 +399,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
 				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -410,7 +410,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		"one running step and one queued step": {
 			Jobs: []*pb.Job{
 				{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -430,7 +430,8 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 					State:   pb.Job_RUNNING,
 				},
 				{
-					Id: "job-2",
+					Id:        "job-for-bye-step",
+					DependsOn: []string{"job-for-hello-step"},
 					Operation: &pb.Job_PipelineStep{
 						PipelineStep: &pb.Job_PipelineStepOp{
 							Step: &pb.Pipeline_Step{
@@ -463,7 +464,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				State:     pb.UI_PipelineRunTreeNode_RUNNING,
 				StartTime: quickTimestamp("2023-01-01T13:00:00Z"),
 				Job: &pb.Ref_Job{
-					Id: "job-1",
+					Id: "job-for-hello-step",
 				},
 				Children: &pb.UI_PipelineRunTreeNode_Children{
 					Mode: pb.UI_PipelineRunTreeNode_Children_SERIAL,
@@ -481,7 +482,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 								DependsOn: []string{"hello"},
 							},
 							State: pb.UI_PipelineRunTreeNode_QUEUED,
-							Job:   &pb.Ref_Job{Id: "job-2"},
+							Job:   &pb.Ref_Job{Id: "job-for-bye-step"},
 							Children: &pb.UI_PipelineRunTreeNode_Children{
 								Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
 								Nodes: []*pb.UI_PipelineRunTreeNode{},
