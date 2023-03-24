@@ -30,7 +30,7 @@ func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, err
 		node := &pb.UI_PipelineRunTreeNode{
 			Step:         step,
 			Job:          &pb.Ref_Job{Id: job.Id},
-			State:        computeTreeNodeState(job),
+			State:        uiPipelineRunTreeNodeStateForJob(job),
 			StartTime:    job.AckTime,
 			CompleteTime: job.CompleteTime,
 			// TODO(jgwhite): Application: *pb.Ref_Application
@@ -59,7 +59,7 @@ func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, err
 	return rootNode, nil
 }
 
-func computeTreeNodeState(j *pb.Job) pb.UI_PipelineRunTreeNode_State {
+func uiPipelineRunTreeNodeStateForJob(j *pb.Job) pb.UI_PipelineRunTreeNode_State {
 	switch j.State {
 	case pb.Job_QUEUED, pb.Job_WAITING:
 		return pb.UI_PipelineRunTreeNode_QUEUED

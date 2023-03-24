@@ -269,7 +269,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 			},
 		},
 		{
-			Name: "one success exec step",
+			Name: "one successful exec step",
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -305,6 +305,103 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 					},
 				},
 				State:        pb.UI_PipelineRunTreeNode_SUCCESS,
+				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
+				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
+				Job: &pb.Ref_Job{
+					Id: "job-1",
+				},
+				Children: &pb.UI_PipelineRunTreeNode_Children{
+					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
+					Nodes: []*pb.UI_PipelineRunTreeNode{},
+				},
+			},
+		},
+		{
+			Name: "one errored exec step",
+			Jobs: []*pb.Job{
+				{
+					Id: "job-1",
+					Operation: &pb.Job_PipelineStep{
+						PipelineStep: &pb.Job_PipelineStepOp{
+							Step: &pb.Pipeline_Step{
+								Name:      "hello",
+								DependsOn: []string{},
+								Kind: &pb.Pipeline_Step_Exec_{
+									Exec: &pb.Pipeline_Step_Exec{
+										Image:   "busybox",
+										Command: "echo",
+										Args:    []string{"hello"},
+									},
+								},
+							},
+						},
+					},
+					State:        pb.Job_ERROR,
+					AckTime:      quickTimestamp("2023-01-01T13:00:00Z"),
+					CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
+				},
+			},
+			Tree: &pb.UI_PipelineRunTreeNode{
+				Step: &pb.Pipeline_Step{
+					Name: "hello",
+					Kind: &pb.Pipeline_Step_Exec_{
+						Exec: &pb.Pipeline_Step_Exec{
+							Image:   "busybox",
+							Command: "echo",
+							Args:    []string{"hello"},
+						},
+					},
+				},
+				State:        pb.UI_PipelineRunTreeNode_ERROR,
+				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
+				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
+				Job: &pb.Ref_Job{
+					Id: "job-1",
+				},
+				Children: &pb.UI_PipelineRunTreeNode_Children{
+					Mode:  pb.UI_PipelineRunTreeNode_Children_SERIAL,
+					Nodes: []*pb.UI_PipelineRunTreeNode{},
+				},
+			},
+		},
+		{
+			Name: "one cancelled exec step",
+			Jobs: []*pb.Job{
+				{
+					Id: "job-1",
+					Operation: &pb.Job_PipelineStep{
+						PipelineStep: &pb.Job_PipelineStepOp{
+							Step: &pb.Pipeline_Step{
+								Name:      "hello",
+								DependsOn: []string{},
+								Kind: &pb.Pipeline_Step_Exec_{
+									Exec: &pb.Pipeline_Step_Exec{
+										Image:   "busybox",
+										Command: "echo",
+										Args:    []string{"hello"},
+									},
+								},
+							},
+						},
+					},
+					State:        pb.Job_ERROR,
+					AckTime:      quickTimestamp("2023-01-01T13:00:00Z"),
+					CancelTime:   quickTimestamp("2023-01-01T13:08:00Z"),
+					CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
+				},
+			},
+			Tree: &pb.UI_PipelineRunTreeNode{
+				Step: &pb.Pipeline_Step{
+					Name: "hello",
+					Kind: &pb.Pipeline_Step_Exec_{
+						Exec: &pb.Pipeline_Step_Exec{
+							Image:   "busybox",
+							Command: "echo",
+							Args:    []string{"hello"},
+						},
+					},
+				},
+				State:        pb.UI_PipelineRunTreeNode_CANCELLED,
 				StartTime:    quickTimestamp("2023-01-01T13:00:00Z"),
 				CompleteTime: quickTimestamp("2023-01-01T13:10:00Z"),
 				Job: &pb.Ref_Job{
@@ -418,7 +515,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 	}
 }
 
-// quickTimestamp parses an RFC3339 formatted string and returns the time it
+// quickTimestamp parses an RFC3339-formatted string and returns the time it
 // represents as a timestamppb.Timestamp.
 //
 // This is intended purely to make tests more readble and robust to daylight
