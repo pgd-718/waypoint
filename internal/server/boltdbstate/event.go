@@ -4,6 +4,8 @@ import (
 	"context"
 	"github.com/hashicorp/go-memdb"
 	pb "github.com/hashicorp/waypoint/pkg/server/gen"
+	"google.golang.org/grpc/codes"
+	"google.golang.org/grpc/status"
 )
 
 // EventListBundles returns the list of events
@@ -19,5 +21,5 @@ func (s *State) eventListBundles(
 	memTxn *memdb.Txn,
 	paginationRequest *pb.UI_ListEventsRequest,
 ) ([]*pb.UI_EventBundle, *pb.PaginationResponse, error) {
-	return nil, &pb.PaginationResponse{}, nil
+	return nil, &pb.PaginationResponse{}, status.Errorf(codes.Unimplemented, "method EventListBundles not implemented")
 }

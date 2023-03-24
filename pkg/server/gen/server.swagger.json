@@ -12294,6 +12294,27 @@
       },
       "description": "A deployment packaged alongside prefetched related messages."
     },
+    "hashicorp.waypoint.UI.EventBuild": {
+      "type": "object",
+      "properties": {
+        "build_id": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "component": {
+          "$ref": "#/definitions/hashicorp.waypoint.Component"
+        },
+        "workspace": {
+          "$ref": "#/definitions/hashicorp.waypoint.Ref.Workspace"
+        },
+        "status": {
+          "$ref": "#/definitions/hashicorp.waypoint.Status"
+        }
+      }
+    },
     "hashicorp.waypoint.UI.EventBundle": {
       "type": "object",
       "properties": {
@@ -12301,20 +12322,63 @@
           "type": "string",
           "format": "date-time"
         },
-        "build": {
-          "$ref": "#/definitions/hashicorp.waypoint.Build"
+        "eventType": {
+          "type": "string"
         },
-        "deployment": {
-          "$ref": "#/definitions/hashicorp.waypoint.UI.DeploymentBundle"
-        },
-        "release": {
-          "$ref": "#/definitions/hashicorp.waypoint.UI.ReleaseBundle"
-        },
-        "pipeline_run": {
-          "$ref": "#/definitions/hashicorp.waypoint.PipelineRun"
+        "eventData": {
+          "type": "string",
+          "format": "byte"
         }
       },
       "description": "An event packaged alongside prefetched related messages."
+    },
+    "hashicorp.waypoint.UI.EventDeployment": {
+      "type": "object",
+      "properties": {
+        "deployment_id": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "component": {
+          "$ref": "#/definitions/hashicorp.waypoint.Component"
+        },
+        "workspace": {
+          "$ref": "#/definitions/hashicorp.waypoint.Ref.Workspace"
+        },
+        "build_id": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/hashicorp.waypoint.Status"
+        }
+      }
+    },
+    "hashicorp.waypoint.UI.EventRelease": {
+      "type": "object",
+      "properties": {
+        "release_id": {
+          "type": "string"
+        },
+        "sequence": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "component": {
+          "$ref": "#/definitions/hashicorp.waypoint.Component"
+        },
+        "workspace": {
+          "$ref": "#/definitions/hashicorp.waypoint.Ref.Workspace"
+        },
+        "deployment_id": {
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/definitions/hashicorp.waypoint.Status"
+        }
+      }
     },
     "hashicorp.waypoint.UI.GetDeploymentResponse": {
       "type": "object",
@@ -12347,6 +12411,21 @@
           "description": "The list of deployments with related messages prefetched."
         }
       }
+    },
+    "hashicorp.waypoint.UI.ListEventSchemasResponse": {
+      "type": "object",
+      "properties": {
+        "eventBuildSchema": {
+          "$ref": "#/definitions/hashicorp.waypoint.UI.EventBuild"
+        },
+        "eventDeployment": {
+          "$ref": "#/definitions/hashicorp.waypoint.UI.EventDeployment"
+        },
+        "eventRelease": {
+          "$ref": "#/definitions/hashicorp.waypoint.UI.EventRelease"
+        }
+      },
+      "title": "NOTE(Cassie): This should be implemented once pipeline_runs are app scoped\nmessage EventPipelineRun {\nstring pipelineRun_id = 1;\nuint64 sequence = 2;\n//    Component component = 3; //aka platform\n//    Ref.Workspace workspace = 4;\n}"
     },
     "hashicorp.waypoint.UI.ListEventsResponse": {
       "type": "object",
