@@ -12323,7 +12323,7 @@
           "format": "date-time"
         },
         "eventType": {
-          "type": "string"
+          "$ref": "#/definitions/hashicorp.waypoint.UI.EventBundle.EventType"
         },
         "eventData": {
           "type": "string",
@@ -12331,6 +12331,16 @@
         }
       },
       "description": "An event packaged alongside prefetched related messages."
+    },
+    "hashicorp.waypoint.UI.EventBundle.EventType": {
+      "type": "string",
+      "enum": [
+        "BUILD",
+        "DEPLOY",
+        "RELEASE"
+      ],
+      "default": "BUILD",
+      "title": "Supported EventTypes"
     },
     "hashicorp.waypoint.UI.EventDeployment": {
       "type": "object",
