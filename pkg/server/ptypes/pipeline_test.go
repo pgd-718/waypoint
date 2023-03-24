@@ -173,13 +173,11 @@ func TestValidatePipeline(t *testing.T) {
 }
 
 func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
-	cases := []struct {
-		Name string
+	cases := map[string]struct {
 		Jobs []*pb.Job
 		Tree *pb.UI_PipelineRunTreeNode
 	}{
-		{
-			Name: "one queued exec step",
+		"one queued exec step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -222,8 +220,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 			},
 		},
-		{
-			Name: "one running exec step",
+		"one running exec step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -268,8 +265,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 			},
 		},
-		{
-			Name: "one successful exec step",
+		"one successful exec step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -316,8 +312,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 			},
 		},
-		{
-			Name: "one errored exec step",
+		"one errored exec step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -364,8 +359,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 			},
 		},
-		{
-			Name: "one cancelled exec step",
+		"one cancelled exec step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -413,8 +407,7 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 				},
 			},
 		},
-		{
-			Name: "one running step and one queued step",
+		"one running step and one queued step": {
 			Jobs: []*pb.Job{
 				{
 					Id: "job-1",
@@ -500,8 +493,8 @@ func TestUI_PipelineRunTreeFromJobs(t *testing.T) {
 		},
 	}
 
-	for _, tt := range cases {
-		t.Run(tt.Name, func(t *testing.T) {
+	for name, tt := range cases {
+		t.Run(name, func(t *testing.T) {
 			require := require.New(t)
 			result, err := UI_PipelineRunTreeFromJobs(tt.Jobs)
 
