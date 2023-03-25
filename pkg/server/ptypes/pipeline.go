@@ -23,8 +23,14 @@ func PipelineGraph(v *pb.Pipeline) (*graph.Graph, error) {
 func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, error) {
 	var rootNode *pb.UI_PipelineRunTreeNode
 
-	// Populate nodeMap
-	nodeMap := make(map[string]*pb.UI_PipelineRunTreeNode)
+	type rec struct {
+		job  *pb.Job
+		node *pb.UI_PipelineRunTreeNode
+	}
+
+	// Populate recs
+	recs := make(map[string]rec)
+
 	for _, job := range jobs {
 		step := job.GetPipelineStep().Step
 		node := &pb.UI_PipelineRunTreeNode{
@@ -42,17 +48,24 @@ func UI_PipelineRunTreeFromJobs(jobs []*pb.Job) (*pb.UI_PipelineRunTreeNode, err
 				Nodes: []*pb.UI_PipelineRunTreeNode{},
 			},
 		}
-		nodeMap[step.Name] = node
-		if len(step.DependsOn) == 0 {
-			rootNode = node
-		}
+		recs[job.Id] = rec{job: job, node: node}
 	}
 
-	// Populate edges
-	for _, node := range nodeMap {
-		for _, name := range node.Step.DependsOn {
-			antecedent := nodeMap[name]
-			antecedent.Children.Nodes = append(antecedent.Children.Nodes, node)
+	// Populate children
+	for _, rec := range recs {
+		isRoot := true
+
+		for _, jobId := range rec.job.DependsOn {
+			antecedent, ok := recs[jobId]
+			if !ok {
+				continue
+			}
+			antecedent.node.Children.Nodes = append(antecedent.node.Children.Nodes, rec.node)
+			isRoot = false
+		}
+
+		if isRoot {
+			rootNode = rec.node
 		}
 	}
 
